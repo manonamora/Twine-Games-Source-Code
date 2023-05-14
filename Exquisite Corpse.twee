@@ -1,0 +1,1192 @@
+:: StoryTitle
+Exquisite Corpse
+
+
+:: StoryData
+{
+  "ifid": "1B62A6BD-A1F4-4A83-A29D-C8A281641ED0",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "start": "Title Page",
+  "tag-colors": {
+    "DONE": "green",
+    "END": "red",
+    "MC": "yellow",
+    "OK": "green",
+    "Script": "red",
+    "Sidebar": "orange",
+    "Story": "purple",
+    "done": "orange",
+    "endless": "blue",
+    "sidebar": "orange"
+  },
+  "zoom": 0.6
+}
+
+
+:: 1st Round [Story done] {"position":"941,275","size":"100,100"}
+Next to the //The//, you end up writing $MCad1 on the page. You follow again Renaud's instructions, as you fold the paper to hide you handwriting and hand it to Camille. You see her write something down as well and pass the folded sheet to Renaud. He follows suit and hands you the paper when he is done.
+
+You are struck with some curiosity, wanting to know what your friends had written down. You still don't get it. With so much randomness, the sentence will make absolutely no sense.
+
+//“Pfft. I can't believe $they would try to cheat...”// smirks Renaud.
+//“Ah! $name, don't peak,”// cries out Camille.
+//“What? no! I wasn’t going to cheat,”// you object. //“See, the paper is still folded!”//
+//“Come on, $name. Stop fussing around and write down the next adjective.”//
+
+You rush it and scribble something down.
+
+<label>''What do you end up writing?''
+<<textbox "$MCad2" "Type in an adjective">></label>
+
+[[Confirm|1st Round End][$adjs +=1]]
+
+
+:: 1st Round End [Story done] {"position":"1066,275","size":"100,100"}
+<<silently>><<set $noun1 to either($Noun)>><<set $noun2 to either($Noun)>><<set $verb to either($Verb)>><</silently>>You write $MCad2 on the page and hand it again to Camille, as she needs to finish the sentence. Happy with her choice of noun, she folds it neatly and hands it to Renaud, who unfolds the whole piece and clears his throat.
+
+//“Ahem! Let's see what crazy thing we have written here,”// he starts. //''“The $MCad1 $noun1 $verb the $MCad2 $noun2.”''//
+
+There is a few silent seconds.
+
+//“What in the world?”// you say, confused.
+//“This really is weird, hahaha,”// laughs Camille. 
+//“So, $name... Wanna play another round?”// Renaud asks.
+
+* [[Play another game. |Game2Starts][$game +=1]]
+* [[One game was enough for you. |End2]]
+<<include "Notifications">>
+
+
+:: 2nd Round [Story done] {"position":"941,400","size":"100,100"}
+You wrote $MCnoun1 on the page, folded it and handed it to Camille. She adds something to the paper before giving it to Renaud. He takes some time to think before adding something as well and passing you again the paper.
+
+It's now your turn to finish the sentence, by adding another noun to the page.
+
+<label>''What do you write?''
+<<textbox "$MCnoun2" "Type in a noun">></label>
+
+[[Confirm|2nd Round End][$nouns +=1]]
+
+
+:: 2nd Round End [Story done] {"position":"1066,400","size":"100,100"}
+<<silently>>
+	<<set $adj1 to either($Adjective)>>
+	<<set $adj2 to either($Adjective)>>
+	<<set $verb to either($Verb)>>
+<</silently>>You write $MCnoun2 on the page and hands it to Camille, so she can reveal what your brains have just come up with. She snorts as she unfolds the page.
+
+//“Alright guys. Get ready for this,”// she announces. //''“The $adj1 $MCnoun1 $verb the $adj2 $MCnoun2.”''//
+
+You all burst into laughter at the absurdity written on the paper. Even though it does not make any sense, it is still great fun.
+
+//“Let's play another round!”// appealed Camille.
+//“Sure... $name, are you up for it?”// asks Renaud.
+
+<<if $game gte 30>>* [[Play another game. |End2]]
+* [[There's been enough shenanigans for today. |End2]]<<else>>* [[Play another game. |Game3Starts][$game +=1]]
+* [[There's been enough shenanigans for today. |End2]]<</if>>
+
+<<include "Notifications">>
+
+
+:: 3rd Round End [Story done] {"position":"941,525","size":"100,100"}
+<<silently>>
+	<<set $noun1 to either($Noun)>>
+	<<set $noun2 to either($Noun)>>
+	<<set $adj1 to either($Adjective)>>
+	<<set $adj2 to either($Adjective)>>
+	<<set $story to true>>
+<</silently>>You have written $MCverb on the piece of paper and hands it to Camille. She scribbles something and hands it to Renaud. He does the same and hands the paper back to you.
+
+Since the sentence is complete, you now have to unfold the sheet and read it aloud.
+
+//''“The $adj1 $noun1 $MCverb the $adj2 $noun2,”''// you announce. //“What went into your brains to pick these words?”//
+//“what went into yours, $name?”// Renaud jokes.
+//“Are you all up for another round?”// asks Camille.
+
+<<if $game gte 30>>* [[Play another game. |End2]]
+* [[Refuse to play another time|End2]]<<else>>* [[Play another game|Game4Starts][$game +=1]]
+* [[Refuse to play another time|End2]]<</if>>
+
+<<include "Notifications">>
+
+
+:: 4th Round [Story done] {"position":"941,650","size":"100,100"}
+You write $MCad1 on the page. Again, you fold the paper and hand it to Camille. She writes her word below the fold, folds it again and passes it to Renaud. You see your friend scribbling something before handing you the sheet of paper.
+
+<label>''What do you end up writing?''
+<<textbox "$MCad2" "Type in an adjective">></label>
+
+[[Confirm|4th Round End][$adjs +=1]]
+
+
+:: 4th Round End [Story done] {"position":"1066,650","size":"100,100"}
+<<silently>>
+	<<set $noun1 to either($Noun)>>
+	<<set $noun2 to either($Noun)>>
+	<<set $verb to either($Verb)>>
+<</silently>>You ended up writing $MCad2 just below the fold, before handing the paper to Camille, so she can finish the sentence again. She thinks for a moment of what to write down, as she needs to add one last noun. After a bit, she finally puts her pen on the paper, folds the sheet and hands it to Renaud. 
+
+//“My turn to read already? Alright, let's see what's in there.”// Renaud unfolds the sheet and reads the following, trying not to laugh at the same time: //''“The $MCad1 $noun1 $verb the $MCad2 $noun2.”''//
+//“Hahaha...”// you laugh along. //“This makes no sense at all.”//
+//“Well, that's the point of the game isn't it?”// smiles Camille. //“You either get something with a shred of sense, even if improbable. Or you just get a sentence that is grammatically correct, but any shred of sense has jumped out of the window.”//
+//“And with these wise words, shall we play again?”// asks Roland.
+
+<<if $game gte 30>>* [[Play another game. |End2]]
+* [[Refuse to play another time|End2]]<<else>>* [[Play another game|Game2Starts][$game +=1]]
+* [[Refuse to play another time|End2]]<</if>>
+<<include "Notifications">>
+
+
+:: Adjective1 [endless] {"position":"541,800","size":"100,100"}
+<label>Please enter an adjective.
+<<textbox "$MCad1" "Type here">></label>
+
+[[Confirm|Adjective2][$adjend +=1]]
+
+<<linkappend "Note">>: do not enter numbered adjectives (ex: two, three, etc.) or invoking multiple of a noun (ex: many, various, etc.). It will make the sentence gramatically incorrect.<</linkappend>>
+
+
+:: Adjective2 [endless] {"position":"666,800","size":"100,100"}
+<label>Please enter another adjective.
+<<textbox "$MCad2" "Type here">></label>
+
+[[Confirm|End Adjective][$adjend +=1]]
+
+<<linkappend "Note">>: do not enter numbered adjectives (ex: two, three, etc.) or invoking multiple of a noun (ex: many, various, etc.). It will make the sentence gramatically incorrect.<</linkappend>>
+
+
+:: Adjectives {"position":"41,425","size":"100,100"}
+<<set $Adjective to ["abandoned", "abducted", "aberrant", "abominable", "abhorrent", "abiding", "ambitious", "abject", "able",  "abnormal", "abolishable", "abominable", "above", "abrasive", "abridgeable", "abridged", "abroad", "abrupt", "absent", "absolute", "absolved", "absorbed", "absorbent", "absorbing", "abstinent", "abstract", "absurd", "abundant", "abysmal", "accelerated", "accelerating", "accented", "acceptable", "acceptant", "accepted", "accepting", "accessible", "accidental", "accommodable", "accommodating", "accompanied", "accompanying", "accomplished",	"accountable", "accredited", "accumulated", "accumulative", "accurate", "accusing", "accused", "achievable", "achromatic", "achy", "acidic", "acidulent", "acidulous", "acknowledgeable", "acknowledged", "acoustic", "acquainted", "acquired", "acquitted", "acrobatic", "acting", "activated", "activating", "active", "actual", "adaptable", "adaptative", "adapted", "addicted", "addictive", "adept", "adequate", "adjacent", "admirable", "admired", "adopted", "adorable", "adored", "advanced", "advancing", "advantaged", "advantageous", "adventuresome", "adventurous", "advised", "aerobatic", "aeronautic", "affected", "affectionate", "affiliated", "afflicted", "affluent", "affordable", "aforementioned", "afraid", "ageless", "aggravated", "aggravating", "aggressive", "agile", "aging", "agitated", "agonizing", "agoraphobic", "agreeable", "agreeing", "aimless", "alarmed", "alarming", "alert", "alien", "alienated", "alive", "alleged", "allegoric", "allotted", "alluring", "allusive", "almighty", "aloof", "alpine", "alterative", "alternate", "altruistic", "amateur", "amazed", "amazing", "ambiguous", "ambitious", "ambivalent", "amenable", "amended", "amiable", "amicable", "ammoniac", "amnesic", "amoral", "amphibious", "ample", "amused", "amusing", "anachronistic", "anaemic", "analogous", "analytical", "analyzed", "anatomical", "anchorless", "ancient", "androgynous", "anecdotal", "anemic", "anesthetized", "angelic", "angelical", "angered", "angled", "angry", "animated", "annihilated", "announced", "annoyed", "annoying", "annual", "anonymous", "answering", "antagonistic", "antagonizing", "anticipated", "anticlimactic", "antiquarian", "antiquated", "antique", "antisocial", "anxious", "apathetic", "apocalyptic", "apolitical", "apologetic", "appalled", "appalling", "apparent", "appealing", "appeasing", "applied", "appointed", "appraised", "appreciated", "appropriate", "approved", "approximate", "apt", "aquatic", "aquiline", "arabesque", "arachnidan", "arachnoid", "arboreal", "arcane", "archaeological", "archaic", "arched", "arching", "architectural", "archival", "archived", "ardent", "argent", "arguable", "arguing", "argumentative", "arid", "aristocratic", "armed", "armless", "armored", "aromatic", "aroused", "arranged", "arrested", "arriving", "arrogant", "artful", "articulated", "artificial", "artisanal", "artistic", "ascending", "asexual", "ashy", "asinine", "asking", "asleep", "asocial", "asphyxiated", "aspirant", "assassinated", "assertive", "assigned", "assisting", "assorted", "assumed", "asthmatic", "astigmatic", "astonishing", "astounding", "astral", "astrological", "astronomical", "asymmetric", "asymptomatic", "asynchronous", "atomic", "atonal", "atrocious", "attached", "attacking", "attainable", "attained", "attentive", "attested", "attractive", "atypical", "auburn", "audacious", "audible", "augmented", "augmenting", "auspicious", "austere", "authentic", "authorised", "authoritarian", "autistic", "autobiographical", "autocratic", "automated", "automatic", "autumnal", "auxiliary", "available", "avengeful", "avenged", "average", "averse", "avid", "avoidable", "awaited", "awake", "awakened", "awakening", "aware", "awed", "awesome", "awful", "awkward", "axillary", "azure", "babbling", "baby", "back", "backboned", "backboneless", "backbreaking", "backed", "backhanded", "backless", "backstage", "backward", "bacterial", "bad", "baffled", "baffling", "baggy", "baked", "baking", "balanced", "bald", "balky", "balmy", "bamboo", "banal", "bandaged", "banging", "bankrupt", "banned", "bantering", "barbarian", "barbaric", "barbecued", "bare", "bared", "bargain", "barky", "baroque", "barred", "barren", "barricaded", "baseless", "bashful", "basic", "bastard", "bated", "battered", "battled", "bawdy", "beached", "beaded", "beady", "beamy", "bearable", "bearded", "beastly", "beat", "beaten", "beautiful", "becoming", "bedded", "bedridden", "beefy", "beguiled", "beheaded", "behind", "beige", "bejeweled", "belated", "believable", "belittled", "belligerent", "beloved", "bemused", "bended", "bending", "benefic", "beneficial", "benevolent", "benign", "bent", "berserk", "besieged", "bespoke", "best", "bested", "bestial", "betraying", "betrayed", "betrothed", "bewildered", "bewitched", "biannual", "biased", "bicentennial", "big", "bighearted", "bilingual", "billed", "bimillenary", "bimonthly", "binary", "binding", "biodegradable", "bionic", "biracial", "birch", "bisexual", "bitchy", "biting", "bitten", "bitter", "bittersweet", "biyearly", "bizarre", "black", "blackened", "blamed", "blameful", "blameless", "bland", "blank", "blasphemous", "blazing", "bleached", "bleak", "bleeding", "blemished", "blended", "blessed", "blighted", "blind", "blinded", "blindfolded", "blinking", "blissful", "blistered", "blizzardy", "bloated", "blocked", "blond", "blooded", "bloody", "bloomed", "bloomy", "blown", "blowy", "blue", "blunt", "blushing", "blurry", "bodied", "bogus", "boiled", "boiling", "bold", "bolted", "bombastic", "bonded", "boned", "bony", "booked", "bookish", "booming", "bootlicking", "boozy", "bordered", "bordering", "borderless", "borderline", "bored", "boring", "born", "bossy", "botanical", "botched", "bothered", "bothersome", "bottom", "bottomless", "bouffant", "bought", "bouncing", "bouncy", "bound", "boundless", "bourgeois", "bovine", "bowed", "bowing", "boxed", "boyish", "bracing", "bragging", "braided", "brainless", "brainy", "branded", "brash", "bratty", "brave", "brawny", "brazen", "breached", "breakable", "breaking", "breathing", "breathless", "breathtaking", "breathy", "breeched", "breeding", "breezy", "brick", "bricky", "bridal", "brief", "bright", "brilliant", "brisk", "brittle", "broad", "broadcast", "broadside", "broiled", "broke", "broken", "bronze", "bronzed", "bronzy", "brooding", "broody", "brotherly", "brown", "browned", "browny", "bruised", "bruising", "brunette", "brusque", "brutal", "brute", "brutish", "bubbly", "bubonic", "budgetary", "buff", "bugged", "buggy", "building", "built", "bulgy", "bulky", "bullied", "bullying", "bumpy", "bunchy", "buoyant", "burdened", "bureaucratic", "buried", "burlesque", "burnt", "burst", "bursting", "bushed", "bushy", "busted", "busty", "busy", "butch", "buttery", "buttoned", "buzzing", "cacophonic", "cacophonous", "calamitous", "calculated", "calculating", "calibrated", "callous", "calm", "calming", "caloric", "calved", "camouflaged", "camp", "campy", "canary", "cancelled", "cancerous", "candid", "candied", "canicular", "canine", "canned", "cannibalistic", "canonical", "capable", "caped", "capital", "capitalist", "capitalistic", "capitulated", "capricious", "captivated", "captivating", "captive", "caramel", "carbonated", "carcinogenic", "cardboard", "cardiac", "cardinal", "carefree", "careful", "careless", "caressing", "caring", "carnal", "carneous", "carnivorous", "carpeted", "carsick", "carved", "cased", "cashed", "cast", "castrated", "casual", "cataclysmal", "catastrophic", "catchable", "catching", "catchy", "categorized", "catty", "causal", "causative", "causeless", "cautious", "cavalier", "cavernous", "cayenned", "ceaseless", "celebrated", "celebratory", "celestial", "celiac", "celibate", "cellular", "censored", "censured", "centaurian", "centenarian", "centenary", "centennial", "center", "centered", "central", "centralized", "centrist", "ceramic", "cerated", "ceremonial", "ceremonious", "cerise", "certain", "certifiable", "certified", "cerulean", "chagrined", "chained", "chainless", "challengeable", "challenging", "chambered", "champion", "chanceful", "chanceless", "changeable", "changed", "changeful", "changeless", "changing", "chanted", "chaotic", "charged", "chargeful", "chargeless", "charismatic", "charitable", "charmed", "charming", "charmless", "chaste", "chatty", "chauvinistic", "cheap", "cheating", "checkered", "cheeky", "cheerful", "cheering", "cheery", "cheesy", "chemical", "cherished", "cherry", "chestnut", "chic", "chicken", "chief", "chiffon", "childly", "chill", "chilled", "chilly", "chipped", "chipper", "chiseled", "chivalrous", "chocolate", "chocolaty", "chopped", "chosen", "chromatic", "chubby", "chunky", "cinematic", "circular", "citric", "citrous", "citrus", "civil", "civilized", "clairvoyant", "clandestine", "clarified", "clarifying", "classic", "classical", "classy", "claustrophobic", "clean", "cleaned", "cleansed", "clear", "cleared", "clement", "clever", "climatic", "clingy", "clinical", "cloaked", "clockwise", "close", "closed", "closing", "clothed", "cloudy", "cloven", "clownish", "clueless", "clumsy", "coarse", "cocky", "coconut", "coercive", "coherent", "cohesive", "coincidental", "cold", "collapsed", "collected", "collective", "colonial", "colonialist", "colonized", "coloured", "colourful", "colourless", "comatose", "combatant", "combustive", "comedic", "comfortable", "comforted", "comforting", "comical", "compact", "completed", "complex", "complying", "composed", "compressed", "concealed", "concealing", "conceded", "conceding", "conceited", "concerned", "concise", "concrete", "condemned", "condensed", "condescending", "confessed", "confident", "configured", "confined", "confining", "confirmed", "conflicting", "confused", "congenial", "congratulant", "connected", "conquered", "conscious", "consenting", "conservative", "conserved", "constant", "constipated", "constrained", "constraining", "constricted", "constructive", "consumed", "consummated", "contactual", "contained", "contaminated", "content", "contestable", "contested", "controlled", "controlling", "converted", "conveyed", "convict", "convicted", "convinced", "convincing", "convivial", "convoluted", "cooked", "cool", "cooled", "cooperative", "coordinated", "copied", "copious", "coppery", "coquettish", "coral", "cordial", "corked", "corky", "cornered", "corny", "corporal", "correct", "corrected", "correctional", "corrective", "corrigible", "corrosive", "corrupt", "corrupted", "corruptible", "corrupting", "cosmetic", "cosmic", "cosmopolitan", "costal", "costly", "costumed", "cosy", "counterfeit", "courageous", "courteous", "covered", "covert", "coveted", "coward", "cowardly", "cowering", "coy", "cozy", "crabby", "crafty", "cranky", "crass", "crazy", "creamy", "creative", "credible", "credited", "credulous", "creeping", "creepy", "crematory", "criminal", "crimson", "crinkled", "crinkly", "crippled", "crippling", "crisp", "crispy", "critical", "criticized", "croaking", "crocus", "crook", "cropped", "crossed", "crouched", "crowded", "crowned", "crowning", "crucial", "crude", "cruel", "crumbly", "crushable", "crushed", "crushing", "crustacean", "crusted", "crusty", "crying", "cryptal", "cryptic", "cryptical", "crystal", "crystallized", "cubic", "cubist", "cuddly", "culinary", "culminant", "cultish", "cultivated", "cultural", "cultured", "cultureless", "cumberless", "cumbersome", "cunning", "curable", "cured", "curious", "curled", "curly", "current", "cursed", "cursing", "cursive", "curved", "curvy", "cushy", "cussed", "custodial", "custom", "customable", "customary", "cut", "cute", "cutting", "cyan", "cybernetic", "cyclical", "cylindrical", "cynical", "cyprian", "damaged", "damp", "dangerous", "deafening", "decent", "decisive", "delicate", "dep", "delicious", "delightful", "delusional", "depressed", "desperate", "detailed", "discreet", "disturbed", "dizzy", "doubting", "dry", "drunk", "dull", "dusty", "dynamic", "dysfunctional", "eager", "easy", "eatable", "educated", "efficient", "elated", "elegant", "elite", "embarrassed", "embarrassing", "emotional", "empty", "enchanting", "energetic", "enormous", "entertaining", "enthusiastic", "equal", "erratic", "ethereal", "evasive", "excellent", "excited", "exciting", "exclusive", "exotic", "expensive", "faint", "false", "familiar", "famous", "fanatical", "fast", "federal", "festive", "fierce", "filthy", "first", "five", "flat", "flawless", "foamy", "foolish", "foreign", "fragile", "frantic", "freezing", "fresh", "frightened", "frightening", "full", "future", "fuzzy", "gainful", "general", "gentle", "gigantic", "gifted", "glamorous", "global", "glorious", "godly", "good", "gorgeous", "graceful", "grateful", "gray", "greasy", "great", "greedy", "green", "grotesque", "grubby", "grumpy", "guilty", "habitual", "handsome", "handy", "happy", "hard", "hard-boiled", "harsh", "hated", "hateful", "healthy", "heavenly", "heavy", "helpful", "helpless", "high", "hilarious", "historical", "hollow", "honorable", "horrible", "hospitable", "hot", "huge", "humorous", "hungry", "hurried", "hurt", "hushed", "husky", "hypnotic", "hysterical", "icky", "icy", "idiotic", "ignorant", "ill", "illegal", "imaginary", "imminent", "impartial", "imperfect", "impolite", "important", "impossible", "impressive", "incompetent", "inconclusive", "incredible", "infamous", "informed", "inner", "innocent", "inquisitive", "insidious", "intelligent", "interesting", "invicible", "irritating", "jade", "jaded", "jaggy", "jailed", "jammed", "jaundiced", "jazzy", "jealous", "jellied", "jerking", "jerky", "jestful", "jesting", "jewelled", "jiggly", "jinxed", "jittery", "joking", "joyful", "joyless", "joyous", "jubilant", "judgmental", "judicious", "juicy", "jumbo", "jumpy", "junior", "just", "justifiable", "justified", "juvenile", "keen", "kempt", "kept", "key", "keyed", "keyless", "kickable", "kicked", "killing", "killed", "kilted", "kin", "kind", "kindred", "kinetic", "kingdomless", "kingless", "kingly", "kinky", "kneeling", "knightly", "knitted", "knobbed", "knobbly", "knobby", "knocked-down", "knotted", "knotty", "knowable", "knowing", "knowledgeable", "known", "kooky", "kosher", "large", "last", "late", "lavish", "lazy", "lean", "learned", "lethal", "lewd", "light", "likeable", "liquid", "little", "living", "logical", "lonely", "long", "longing", "loud", "lovely", "low", "lucky", "lyrical", "macabre", "mad", "magenta", "magical", "magnificent", "malicious", "marvelous", "mature", "mean", "measly", "mellow", "melted", "merciful", "messy", "milky", "mindless", "modern", "moaning", "moldy", "mundane", "mute", "mysterious", "naive", "nappy", "narrow", "nasty", "natural", "naughty", "nauseating", "neat", "nebulous", "necessary", "needy", "nervous", "new", "nice", "nifty", "nimble", "noiseless", "noisy", "nonchalant", "normal", "nostalgic", "nosy", "nutty", "null", "nutricious", "oak", "obconic", "obedient", "obese", "objectionable", "oblatory", "obligatory", "obliged", "obliging", "oblivious", "obnoxious", "obscene", "obscure", "observant", "observed", "observing", "obsessed", "obsessive", "obsolete", "obstructed", "obstructive", "obtainable", "obtect", "obtrusive", "obtuse", "obvious", "occasional", "occidental", "occult", "occupied", "occurrent", "oceanic", "odd", "oddball", "odious", "odorous", "odourless", "offended", "offending", "offensive", "official", "oiled", "oily", "old", "oldish", "olfactive", "olive", "ominous", "omnipotent", "omnipresent", "omniscient", "omnivorous", "only", "oozing", "opal", "opalescent", "opaque", "open", "opened", "opening", "operational", "operative", "opinionated", "opponent", "opportune", "opportunist", "opportunistic", "opposed", "opposing", "oppressed", "oppressive", "optical", "optimal", "optimistic", "optimum", "optional", "opulent", "oral", "orange", "orbital", "orchestrated", "ordained", "ordered", "orderly", "ordinary", "organic", "organized", "oriental", "oriented", "orienting", "original", "ornamental", "ornamented", "ornate", "orphan", "orphaned", "oscillating", "ostentatious", "otherworldly", "outdated", "outdone", "outdoor", "outdoorsy", "outermost", "outgoing", "outlandish", "outlawed", "outraged", "outrageous", "outspoken", "oval", "overbearing", "overblown", "overcritical", "overdressed", "overdue", "overexcited", "overheated", "overindulgent", "overjoyed", "overnight", "overprotective", "overscrupulous", "oversea", "oversensitive", "oversimplified", "overstuffed", "overt", "overwhelmed", "overwhelming", "overzealous", "ovular", "owed", "owned", "ownerless", "painful", "pale", "past", "pathetic", "peaceful", "plain", "pleasant", "pointless", "poised", "poisenous", "poor", "popular", "powerful", "practical", "precious", "pretty", "productive", "protective", "proud", "pure", "purple", "pushy", "puzzled", "quack", "quaint", "qualified", "quarrelsome", "quartered", "quarterly", "queasy", "queenly", "queer", "questionable", "quick", "quiet", "quirky", "quotable", "quotidian", "rampant", "rapid", "rare", "ready", "real", "realistic", "reasonable", "recent", "receptive", "red", "redundant", "reflective", "relevant", "relieved", "regular", "resolute", "rethorical", "rigged", "right", "righteous", "rigid", "ripe", "roasted", "robust", "romantic", "rotten", "round", "rough", "royal", "rude", "rural", "rustic", "sad", "salty", "scandalous", "scary", "scattered", "secretive", "shallow", "short", "sick", "silly", "simple", "skillful", "sleepy", "smart", "smelly", "smiling", "soft", "solid", "sore", "sparkling", "spectacular", "spicy", "spooky", "stale", "standing", "strong", "stupid", "sudden", "superficial", "suspicious", "sweet", "taboo", "tacky", "talented", "tall", "tame", "tangible", "tasteless", "tasty", "temporary", "tender", "tense", "terrible", "terrific", "tested", "thin", "thirsty", "thoughtful", "thoughtless", "threatening", "tight", "tired", "tiresome", "tough", "traditional", "tranquil", "trashy", "tremendous", "tricky", "troubled", "true", "truthful", "ugly", "ultra", "undesirable", "unfair", "unhealthy", "united", "unique", "unkempt", "unnatural", "unruly", "upbeat", "upset", "uptight", "used", "useful", "utopian", "vacant", "vaccinated", "vacuous", "vagabond", "vagrant", "vague", "vain", "valiant", "valid", "validated", "validating", "valuable", "valued", "valved", "vampiric", "vanished", "vanishing", "vanquished", "vapid", "vaporized", "variable", "variant", "varnished", "vascular", "vast", "vegetal", "vegetarian", "vegetative", "veiled", "veined", "veiny", "velvet", "velvety", "venerable", "venerated", "vengeful", "venomous", "ventilated", "veracious", "verified", "veritable", "vernacular", "versatile", "vertebrate", "veteran", "vexed", "vexing", "viable", "vibrant", "vibrating", "vicarious", "vicious", "victimized", "victorious", "vigilant", "vigorous", "villainous", "vindicated", "vindictive", "vintage", "violent", "violet", "viral", "virgin", "virile", "virtual", "virtuous", "visible", "visionary", "visiting", "vital", "vitriolic", "vivacious", "vivid", "vixen", "vocal", "voiced", "voiceless", "volatile", "volcanic", "volumed", "voluminous", "voluntary", "voodooistic", "voyeuristic", "vulcanian", "vulgar", "vulnerable", "wacky", "wailing", "waisted", "waiting", "waking", "walking", "walnut", "wandering", "waney", "wanted", "warm", "warming", "warning", "warped", "warranted", "washable", "washed", "wasted", "wasteful", "watchful", "waterproof", "watertight", "watery", "wavy", "waxed", "wayfaring", "weak", "weakened", "weakening", "weakly", "wealthy", "wearable", "weary", "weaving", "wed", "wedgy", "weeded", "weedy", "weekly", "weeping", "weighted", "weighty", "weird", "welcoming", "well", "west", "western", "wet", "whacked", "whacky", "wheeled", "wheeling", "wheezy", "whimsical", "whining", "whiny", "whirling", "whiskered", "whispering", "white", "whitened", "whitewashed", "whole", "wholesome", "whopping", "whorish", "wicked", "wide", "widowed", "wieldy", "wiggly", "wild", "willed", "willful", "willing", "wilted", "wimpy", "winding", "windless", "windy", "winey", "winking", "winning", "wintery", "wired", "wireless", "wiry", "wise", "wised", "wishful", "witching", "witchy", "withdrawn", "withered", "withering", "witless", "witnessed", "witty", "wobbling", "wobbly", "wonderful", "wondering", "wonky", "wooden", "woodsy", "woody", "woolly", "wordless", "wordy", "worked", "working", "workless", "worldly", "worn", "worried", "worrisome", "worrying", "worsened", "worsening", "worshipped", "worshipping", "worst", "worthless", "worthwhile", "worthy", "wounded", "woven", "wrapped", "wrathful", "wrathless", "wrecked", "wretched", "wrinkled", "wrinkly", "written", "wrong", "wronged", "wrongful", "wrought", "wry", "wuthering", "yawning", "yearlong", "yearly", "yearning", "yeasty", "yelling", "yellow", "yellowed", "yellowish", "yielding", "yolky", "young", "younger", "youngish", "youthful", "yucky", "yummy", "zaniest", "zany", "zealous", "zenithal", "zeolitic", "zestful", "zesty", "zigzagy", "zingy", "zippy", "zonal", "zoological", "zoomorphic", "zoophilous", "zoophobous"]>>
+
+
+:: Cafe [Story done] {"position":"816,150","size":"100,100"}
+Sitting at a table on the terrace of a quaint café, you await the arrival of your friends, Camille and Renaud. You've been waiting for this meeting for a while now, as your friends have been quite busy lately. You hope that seeing them will take you out of the funk you have been feeling recently.
+
+//“$name!”// you hear someone shout.
+
+You turn your head and see Camille waving at you from the other side of the street. Next to her, you see Renaud looking around the street for oncoming traffic. When it is clear that crossing the street would be safe, he puts his hands on Camille's shoulders and push her gently forwards to join you.
+
+//“Ouf... Look at $them, Renaud. $Theylook like shit.”// you hear Camille whisper. 
+
+You try not to take it personally. Camille is right after all: you do look like shit, with your bloodshot eyes and large bags under them. 
+
+//“We've missed you at Benji's party last week, $name. You should have come,”// starts Renaud, while sitting at the table.
+//“Yeah, we've had so much fun there. Why did you not join us? It would have done you some good,”// continues Camille, sitting as well.
+//“Well,”// you respond, //“I was hoping to be able to do some writing, but I've been sitting in front of this blank page for days now,”// you add as you throw a notebook on the table. //“I would have just been a party pooper if I had come.”//
+
+An awkward silence sets around the table. You sigh. This was probably not the right way of starting this friendly gathering. You see Renaud scratching the back of his neck, and Camille pulling out something from her purse.
+
+//“Here, $name. Read this,”// says Camille, as she hands you a piece of paper she had taken from her purse. The piece has been folded on itself multiple times.
+
+[[Open the folded paper. |Paper]]
+<<notify 6s>>Achivements enabled.<</notify>>
+
+
+:: Credits {"position":"166,525","size":"100,100"}
+* //Sidebar Background Picture://
+<a href="https://unsplash.com/photos/wcMysLw5ROM">Dark Mode</a>
+<a href="https://unsplash.com/photos/CKlHKtCJZKk">Light Mode</a>
+
+* //CSS Stylesheet://
+<a href="https://nyehilism.itch.io/twine-template">CSS Stylesheet Template</a>
+<a href="https://www.dafontfree.io/playlist-script-font-free/">Title Font</a>
+
+
+
+
+
+:: End Adjective [endless] {"position":"791,800","size":"100,100"}
+<<silently>>
+	<<set $noun1 to either($Noun)>>
+	<<set $noun2 to either($Noun)>>
+	<<set $verb to either($Verb)>>
+<</silently>>You entered //$MCad1// and //$MCad2//.
+
+<<linkreplace "See result.">>
+Result: ''"The $MCad1 $noun1 $verb the $MCad2 $noun2."''<</linkreplace>>
+
+<<if $all is true>>[[Next Round|Noun1][$gameem +=1]]
+[[Stop Playing|Endless Mode]]
+<<else>>[[Next Round|Adjective1][$gameem +=1]]
+[[Stop Playing|Endless Mode]]
+<</if>>
+
+
+:: End Noun [endless] {"position":"791,925","size":"100,100"}
+<<silently>>
+	<<set $adj1 to either($Adjective)>>
+	<<set $adj2 to either($Adjective)>>
+	<<set $verb to either($Verb)>>
+<</silently>>You entered //$MCnoun1// and //$MCnoun2//.
+
+<<linkreplace "See result.">>
+Result: ''"The $adj1 $MCnoun1 $verb the $adj2 $MCnoun2."''<</linkreplace>>
+
+<<if $all is true>>[[Next Round|Verb][$gameem +=1]]
+[[Stop Playing|Endless Mode]]
+<<else>>[[Next Round|Noun1][$gameem +=1]]
+[[Stop Playing|Endless Mode]]
+<</if>>
+
+
+:: End Verb [endless] {"position":"666,1050","size":"100,100"}
+<<silently>><<set $noun1 to either($Noun)>><<set $noun2 to either($Noun)>><<set $adj1 to either($Adjective)>><<set $adj2 to either($Adjective)>><</silently>>You entered //$MCverb//.
+
+<<linkreplace "See result.">>
+Result: ''"The $adj1 $noun1 $MCverb the $adj2 $noun1."''<</linkreplace>>
+
+<<if $all is true>>[[Next Round|Verb][$gameem +=1]]
+[[Stop Playing|Endless Mode]]
+<<else>>[[Next Round|Noun1][$gameem +=1]]
+[[Stop Playing|Endless Mode]]
+<</if>>
+
+
+:: End1 [Story END done] {"position":"1066,150","size":"100,100"}
+<<include "Notifications">><<set $ach4 to true>>//“Err... No thanks. I think I'll pass.”//
+
+Your friends are a bit saddened by your response, since the game is more fun when it is played with more than two people.
+
+//“Maybe $theyare a party pooper after all...”// you hear Renaud whisper towards Camille, who snorts in response.
+
+//“Anyway...”// you say, trying to change the subject. //“What have you been up to? It's been a while since we saw each other...”//
+
+While you still end up catching up with Camille and Renaud, it does not take long after that for the conversation to dwindle. Soon enough, your friends say their goodbyes and leave you at the café. 
+
+Even though it was nice to see them, you still don't feel like you've managed to get out of the funk you felt earlier.
+
+[[Try Again? |Title Page]]
+
+
+
+:: End2 [Story END done] {"position":"1216,425","size":"100,100"}
+<<if $game gte 30>><<set $ach3 to true>><<notify 6s>>No more pages.<</notify>>You take your notebook to rip out a new page. As you open it, you realize that it is empty. You've already used all of the pages. It has been a while since you had managed to use a whole notebook.
+
+//“Did we really play that many games?”// asks Camille, surprised by the pile.
+//“Yeah...”//
+//“Wow, I didn't realize we did this much already,”// interjects Renaud. //“Wasn't this so fun?”//
+//“We maybe should get going though, we've been here for quite some time.”//
+//“Yeah... I think the servers probably wants us gone too.”//
+
+You gather up the used papers and stuff them in your pocket. You've ended up playing $game rounds with your friends. You don't remember the last time you had this much fun.
+
+As you say your goodbyes to Camille and Renaud and leave the café, you realize that you feel much better than a few hours ago. You recognize that Camille was right, missing Benji's party had been a mistake. This game had been stimulating your brain in a way you haven't felt in a while. 
+
+You can't wait to get home and shuffle through the pages Camille, Renaud and you had written so many nonsensical sentences. With this, you know you can face this writer's block once and for all. 
+
+<<elseif $game is 1>>A single round is enough for you to get the point of this weird game. As nonsensical it is, you don't really get all the fuss about this. Part of you is even glad to not have gone to Benji's party, as you probably would have been stuck playing rounds after rounds of //this//. You don't understand why Camille thought this would help you feel better.
+
+Your friends seem a bit disappointed that the game ended so quickly, even after they managed to make you play a round. 
+
+//“Anyway...”// you say, trying to change the subject. //“What have you been up to? It's been a while since we saw each other...”//
+
+While you still end up catching up with Camille and Renaud, it does not take long after that for the conversation to dwindle. Soon enough, your friends say their goodbyes and leave you at the café. 
+
+<<else>>After $game rounds, you feel like you got a good enough grasp of the game. It has been quite fun to play it with your friends, even if the result always ended in nonsensical sentences.
+
+You gather up the used papers and stuff them in your pocket. You don't remember the last time you had this much fun. Camille and Renaud seemed also to have much fun with it too. It seems like they are relieved to see you enjoying yourself like this as well.
+
+You three still stay for a while in the café, catching up with each other. You are glad you spent time outside, away from your white pages. After some time, you and your friends say your goodbyes and leave the café.
+
+<</if>><<linkappend "Show statistics">>: You have written $nouns nouns, $adjs adjectives, and $verbs verbs.<</linkappend>>
+
+[[END.|Title Page]]
+
+
+:: Endless Mode [endless] {"position":"416,925","size":"100,100"}
+<h1>Welcome to the Endless mode.</h1> 
+In this mode, you can play //exquisite cadaver// to infinity. You can choose to play the game with a different position each round or with the same position each time.
+
+* [[Let's play the regular game! |Adjective1][$all to true, $gameem +=1]]
+* [[I just want to play the adjective rounds.|Adjective1][$gameem +=1]]
+* [[I just want to play the noun rounds. |Noun1][$gameem +=1]]
+* [[I just want to play the verb rounds. |Verb][$gameem +=1]]
+[[Return|Title Page]]
+
+
+:: Game2Starts [Story done] {"position":"816,400","size":"100,100"}
+<<if $game is 1>>You agreed to play another round. //This is really a weird game//, you think. It seems like you really missed something at Benji's party. 
+
+<<else>>You agree to play another round. <</if>>Renaud nods at you and rips a page from your notebook. He then starts writing something down on the paper, folds it and hands it to you.
+
+Since Renaud seems to have started this round, you assume that he must have written an adjective. As it is your turn, you should be writing down a noun. You think for a moment and scribble something down on the page.
+
+<label>''What did you write?''
+<<textbox "$MCnoun1" "Type in a noun">></label>
+
+[[Confirm|2nd Round][$nouns +=1]]
+
+
+:: Game3Starts [Story done] {"position":"816,525","size":"100,100"}
+Since both you and Renaud had started the two previous games, it is now Camille's turn to write the first word. You rip out and hand her a new piece of paper from your notebook. She chuckles a bit, still thinking of the previous result as she puts her pen down on the paper. When she is done, she passes Renaud the paper, which she folded to hide her word. Renaud does the same and hands you the sheet when he is done.
+
+This round is a bit shorter than the other, as you only need to think of one verb.
+
+<label>''What will you write?''
+<<textbox "$MCverb" "Type in a verb">></label>
+
+[[Confirm|3rd Round End][$verbs +=1]]
+
+
+:: Game4Starts [Story done] {"position":"816,650","size":"100,100"}
+//“Yeah, let's continue!”//
+
+You rip out another piece of paper from your notebook. You realize how much fun you are having with your friends. It's been nice to get out of the house and not having to stare at that white page. 
+
+Since it is your turn to start the game, you write down a new adjective. //Best not to use $MCad1 or $MCad2 again.//
+
+<label>''What do you end up writing?''
+<<textbox "$MCad1" "Type in an adjective">></label>
+
+[[Confirm|4th Round][$adjs +=1]]
+
+
+:: GameStarts [Story done] {"position":"816,275","size":"100,100"}
+You agree to try out the game. Maybe this will help you get out of this writer's block you have been feeling lately. At this point, you would try anything to not see a blank page again.
+
+//“How about $name starts?”// chimes in Camille.
+//“Me? I-”//
+//“Oh, come on $name,”// interjects Renaud. //“Don't be a baby, it's not that hard to think of random words. It should also be even easier for you since you are writer. Hahaha.”//
+
+Both your friends laugh. You chuckle along. They are not wrong though, it should not be hard to write down some words. Writing is what you are passionate about. But you feel some dread building inside of you, as you rip out a page from your notebook. You've been having trouble putting down words.
+
+You think for a moment.
+
+//“Wait... What am I supposed to do again?”//
+//“Every sentence starts with The, then you write an adjective,”// Renaud explains again. //“You fold the paper to hide what you wrote and hand the paper to Camille. She will write a noun. I'll add a verb. You write another adjective and Camille another noun. Then we read the result.”//
+//“Right.”//
+
+You do as instructed and put your pen on the paper.
+
+<label>''What do you end up writing?''
+<<textbox "$MCad1" "Type in an adjective">></label>
+
+[[Confirm|1st Round][$adjs +=1]]
+
+
+:: GenderMC [Script] {"position":"41,325","size":"100,100"}
+<<silently>>
+	<<if $pronouns is "She/Her">>
+		<<set $They to "She">>
+		<<set $they to "she">>
+		<<set $Theyare to "She is">>
+		<<set $theyare to "she is">>
+		<<set $Arethey to "Is she">>
+		<<set $arethey to "is she">>
+		<<set $them to "her">>
+		<<set $Theylook to "She looks">>
+	<<elseif $pronouns is "He/Him">>
+		<<set $body to "man">>
+		<<set $They to "He">>
+		<<set $they to "he">>
+		<<set $Theyare to "He is">>
+		<<set $theyare to "he is">>
+		<<set $Arethey to "Is he">>
+		<<set $arethey to "is he">>
+		<<set $them to "him">>
+		<<set $Theylook to "He looks">>
+	<<else>>
+		<<set $They to "They">>
+		<<set $they to "they">>
+		<<set $Theyare to "They are">>
+		<<set $theyare to "they are">>
+		<<set $Arethey to "Are they">>
+		<<set $arethey to "are they">>
+		<<set $them to "them">>
+		<<set $Theylook to "They look">>
+	<</if>>
+<</silently>>
+
+
+:: MC1 [MC] {"position":"691,150","size":"100,100"}
+<<if $namechange gte 1>>You don't feel as if $name actually suits you.<<else>>Before the story starts, let's set a few things up.<</if>>
+
+<label>''What's your name?''
+<<textbox "$name" "Type in your name">></label>
+
+[[Confirm|MC2]]
+
+
+:: MC2 [MC] {"position":"691,275","size":"100,100"}
+<<if $pronounschange gte 1>>You don't feel like $pronouns is right for you.<<else>>Your name is $name.<</if>>
+
+''What pronouns do you use?''
+* [[She/Her|MC3][$pronouns to "She/Her"]]
+* [[He/Him|MC3][$pronouns to "He/Him"]]
+* [[They/Them|MC3][$pronouns to "They/Them"]]
+<hr>
+* [[Wait, my name is not correct. Let me change it first. |MC1][$namechange +=1]]
+
+
+
+:: MC3 [MC] {"position":"691,400","size":"100,100"}
+Your name is $name and you use the pronouns $pronouns.<<include "GenderMC">>
+
+* [[This is correct. |Cafe]]
+<hr>
+* [[My name is not correct. |MC1][$namechange +=1]]
+* [[My pronouns are not correct. |MC2][$pronounschange +=1]]
+
+
+:: Notifications {"position":"41,725","size":"100,100"}
+<<if $game is 3>><<notify 6s>>Endless Mode is now available.<</notify>><</if>>
+<<if $ach1 isnot true>><<if $MCnoun1 eq $MCnoun2 or $MCad1 eq $MCad2>><<set $ach1 to true>><<notify 6s>>Are you even trying?<</notify>><</if>><</if>>
+<<if $noun1 eq $noun2 or $adj1 eq $adj2>><<set $ach2 to true>><<notify 6s>>One in a million.<</notify>><</if>>
+<<if $NEO isnot true>><<if $ach4 is true>><<set $NEO to true>><<notify 6s>>Not even once.<</notify>><</if>><</if>>
+
+
+:: Noun1 [endless] {"position":"541,925","size":"100,100"}
+<label>Please enter a noun.
+<<textbox "$MCnoun1" "Type here">></label>
+
+[[Confirm|Noun2][$nounend +=1]]
+
+
+<<linkappend "Note">>: only enter a singular noun (Ex: //apple// and not //apples//). Otherwise, it will make the sentence gramatically incorrect.<</linkappend>>
+
+
+:: Noun2 [endless] {"position":"666,925","size":"100,100"}
+<label>Please enter another noun.
+<<textbox "$MCnoun2" "Type here">></label>
+
+[[Confirm|End Noun][$nounend +=1]]
+
+<<linkappend "Note">>: only enter a singular noun (Ex: //apple// and not //apples//). Otherwise, it will make the sentence gramatically incorrect.<</linkappend>>
+
+
+:: Nouns {"position":"41,525","size":"100,100"}
+<<set $Noun to ["ardvark", "abalone", "abbess", "abbey", "abbot", "abdication", "abdicator", "abdomen", "abduction", "abductor", "aberration", "ability", "abnormality", "abode", "abolisher", "abomination", "absence", "absentee", "absinthe", "abstention", "abstinence", "abuser", "abyss", "academia", "academy", "accent", "access", "accessory", "accident", "acclaim", "accolade", "accommodation", "accomplice", "accompt", "accord", "accordion", "account", "accountant", "accuracy", "accused", "accuser", "acetone", "ache", "achievement", "achiever", "acid", "acidity", "acknowledgement", "acolyte", "acorn", "acquaintance", "acquisition", "acquittal", "acre", "acrobat", "acropolis", "act", "acting", "action", "activation", "activism", "activist", "actor", "actress", "acumen", "acupuncture", "adaptability", "adaptation", "adapter", "addict", "addiction", "address", "adept", "adieu", "adjective", "admin", "administration", "administrator", "admiral", "admiration", "admirer", "admissibility", "admission", "admonishment", "admonition", "admonitor", "adolescence", "adolescent", "adopter", "adoption", "adoration", "adorer", "adornment", "adrenaline", "adsorption", "adult", "adulterer", "adulteress", "adultery", "adulthood", "advancement", "advances", "advantage", "advent", "adventure", "adventurer", "adventuress", "adverb", "adversary", "adversity", "advertisement", "advertiser", "advice", "adviser", "advisor", "advocacy", "advocate", "aeon", "aeration", "aerodrome", "aerodynamicist", "aerologist", "aerology", "aeronaut", "aeroplane", "aerosol", "aerospace", "aesthetic", "aether", "affair", "affaire", "affection", "affiche", "affidavit", "affiliate", "affiliation", "affinity", "affirmation", "affliction", "affluence", "affluent", "afflux", "affranchisement", "affront", "afterburner", "aftercare", "aftermath", "afternoon", "aftershock", "aftertaste", "afterthought", "afterword", "age", "agency", "agenda", "agent", "agglomeration", "aggravation", "aggression", "aggressor", "agility", "agitator", "agony", "agora", "agraffe", "agreeability", "agreeableness", "agreement", "agriculture", "agronomy", "aid", "aide", "aiglet", "aigret", "aigrette", "aiguille", "aiguillette", "aileron", "ailette", "ailment", "aim", "air", "airbrush", "airburst", "airbus", "aircraft", "aircrew", "airdrome", "airfield", "airflow", "airfoil", "airframe", "airhead", "airline", "airplane", "airport", "airship", "airsickness", "airspace", "airwave", "airway", "aisle", "alarm", "alarmist", "albacore", "albatross", "albino", "album", "alchemist", "alchemy", "alcohol", "alcoholic", "alcove", "ale", "alert", "algae", "algebra", "algorism", "alias", "alibi", "alien", "alienation", "alienator", "alienist", "alignment", "aliment", "alimony", "allegation", "alleger", "allegiance", "allegory", "allergen", "allergy", "alley", "alliance", "alligator", "alliteration", "allowance", "alloy", "allure", "allusion", "ally", "almanac", "almandine", "almighty", "almond", "aloe", "alpaca", "alphabet", "altar", "alteration", "alternative", "altitude", "altruism", "altruist", "alure", "amalgam", "amateur", "amazement", "ambassador", "ambassadress", "amber", "ambiance", "ambiguity", "ambition", "ambivalence", "ambulance", "ambuscade", "ambush", "ambusher", "amendment", "amenity", "amethyst", "amiability", "amicability", "ammoniac", "ammunition", "amnesia", "amnesiac", "amnesic", "amnesty", "amoretto", "amount", "amphetamine", "amphibian", "amphitheater", "amphitheatre", "amphora", "ampoule", "amputation", "amputee", "amusement", "amygdala", "anachronism", "anaconda", "anaesthesia", "anaesthesiologist", "anaesthesiology", "anaesthetic", "anaesthetist", "anagram", "analog", "analogy", "analyser", "analysis", "analyst", "analyzer", "ananas", "anarch", "anarchist", "anarchy", "anatomy", "ancestor", "ancestress", "ancestry", "anchor", "anchorage", "anchovy", "androgyny", "android", "andromeda", "anecdote", "anecdotes", "anemia", "anemone", "anesthesia", "anesthesiologist", "anesthesiology", "anesthetic", "anesthetist", "aneurysm", "angel", "anger", "angle", "angora", "angst", "anguish", "animal", "animation", "animator", "anime", "ankh", "ankle", "annalist", "annex", "annexation", "annihilator", "anniversary", "annotation", "announcement", "announcer", "annoyance", "annoyer", "annual", "annulment", "anointer", "anointment", "anomaly", "anonym", "anonymity", "answer", "ant", "antagonist", "antecedent", "antecessor", "antediluvian", "antelope", "antenna", "anterior", "anthem", "anthology", "anthrax", "anthropology", "antic", "anticipant", "anticipation", "anticyclone", "antidote", "antihero", "antioxidant", "antipathy", "antipode", "antiquarian", "antiquary", "antique", "antiquity", "antirust", "antiseptic", "antithesis", "antler", "antonym", "anvil", "anxiety", "anybody", "anything", "aorta", "apartment", "apathy", "ape", "aperitif", "aphrodisiac", "apiculture", "apiculturist", "apnea", "apocalypse", "apologia", "apologiser", "apologist", "apology", "apostate", "apothecary", "apparatus", "apparel", "apparition", "appeal", "appearance", "appendage", "appendix", "appetite", "appetizer", "applause", "apple", "appliance", "applicant", "application", "appointee", "appointment", "appraisal", "apprentice", "approach", "approbation", "approval", "approximation", "apricot", "apron", "aptitude", "aquaculture", "aquamarine", "aquanaut", "aquaphobia", "aquarelle", "aquarellist", "aquarist", "aquarium", "arabesque", "arachnid", "arbalest", "arbiter", "arbitrage", "arbitrary", "arbitration", "arbitrator", "arborescence", "arboriculture", "arborist", "arc", "arcade", "arcanist", "arch", "archaeologist", "archaeology", "archangel", "archbishop", "archdeacon", "archduchess", "archduchy", "archduke", "archeology", "archer", "archery", "archetype", "archipelago", "architect", "architecture", "archive", "archivist", "area", "arena", "areola", "argent", "argile", "argonaut", "argument", "argumentation", "aridity", "aristocracy", "aristocrat", "arithmetic", "ark", "arm", "armada", "armadillo", "armament", "armature", "armband", "armchair", "armhole", "armistice", "armoire", "armor", "armory", "armpit", "armrest", "army", "arnica", "aroma", "arousal", "arouser", "arpent", "arrangement", "array", "arrest", "arrival", "arrogance", "arrondissement", "arrow", "arsenal", "arsenic", "arson", "arsonist", "art", "artery", "artichoke", "article", "artifact", "artifice", "artillery", "artisan", "artist", "artistry", "artwork", "asbestos", "ascendance", "ascendancy", "ascendant", "ascension", "ascent", "ash", "ashram", "asp", "asparagus", "aspartame", "aspect", "asphalt", "aspirant", "aspirator", "aspirin", "assailant", "assassin", "assassination", "assault", "assaulter", "assemblage", "assembler", "assembly", "assent", "assessment", "assessor", "asset", "assignee", "assimilation", "assistance", "assistant", "associate", "association", "assortment", "assumption", "assurance", "assured", "assurer", "asterisk", "asteroid", "asthma", "asthmatic", "astonishment", "astringent", "astroid", "astrologer", "astrology", "astronaut", "astronomer", "astronomy", "asylum", "asymmetry", "asynchrony", "atelier", "athlete", "atmosphere", "atoll", "atom", "atonement", "atrocity", "attachment", "attack", "attacker", "attempt", "attendance", "attendant", "attention", "attic", "attire", "attitude", "attorney", "attraction", "attribute", "auberge", "aubergine", "aubergines", "auburn", "auction", "auctioneer", "audacity", "audience", "audio", "audit", "audition", "auditorium", "auger", "augment", "augmentation", "augur", "august", "aunt", "aura", "aureole", "aurora", "auspice", "austerity", "austral", "auteur", "authentication", "authenticity", "author", "authoress", "authorisation", "authoritarian", "authority", "authorization", "authorship", "auto", "autobiographer", "autobiography", "autobus", "autocracy", "autocrat", "autograph", "automation", "automaton", "automobile", "autonomy", "autopilot", "autopsy", "autoroute", "autotomy", "autumn", "avail", "availability", "avalanche", "avant-garde", "avant-gardism", "avarice", "avatar", "avenger", "avenue", "average", "aversion", "aviation", "aviator", "aviatress", "aviatrix", "aviculture", "avidity", "avocado", "avoidance", "awakening", "award", "awe", "awesomeness", "awfulness", "awkwardness", "axe", "axel", "axillary", "axiom", "axis", "axle", "axman", "basis", "bird", "blood", "boyfriend", "brother", "camera", "category", "cell", "chemistry", "child", "city", "client", "collection", "combination", "communication", "community", "competition", "computer", "concept", "control", "country", "customer", "data", "dealer", "death", "decision", "definition", "department", "depression", "depth", "development", "difference", "direction", "discussion", "disease", "disk", "distribution", "driver", "emission", "emotion", "empathy", "emperor", "emphasis", "empire", "employee", "employer", "employment", "emporium", "empowerment", "empress", "emprise", "emulator", "emulsification", "emulsifier", "emulsion", "enabler", "enactment", "enactor", "enamel", "encampment", "encasement", "enchainment", "enchanter", "enchantment", "enchantress", "enchilada", "enclave", "enclosure", "encoder", "encompassment", "encore", "encounter", "encouragement", "encourager", "encrinite", "encyclopaedia", "encyclopedia", "end", "endearment", "endgames", "endeavor", "endeavour", "endgame", "ending", "endive", "endocrine", "endorsement", "endurance", "endurer", "enemy", "energy", "engagement", "engine", "engraver", "engraving", "enhancement", "enhancer", "enigma", "enjoyment", "enlargement", "enlightenment", "enlisting", "enlistment", "enmity", "ennoblement", "ennui", "enormity", "enquirer", "enquiry", "enragement", "enrichment", "enrollment", "ensemble", "enshrinement", "ensign", "enslavement", "enslaver", "entanglement", "entente", "enterprise", "entertainer", "enthusiasm", "enthusiast", "enticement", "entitlement", "entity", "entourage", "entrance", "entrepot", "entrepreneur", "entry", "envelope", "environment", "environmentalist", "envoy", "envy", "enzyme", "eon", "epaulet", "epaulette", "epic", "epicenter", "epicure", "epidemic", "epigraph", "epilation", "epilator", "epilepsy", "epilogue", "episode", "epitaph", "epoch", "equal", "equaliser", "equalitarian", "equality", "equation", "equator", "equatorial", "equestrian", "equilibrium", "equinox", "equipment", "equity", "equivalence", "era", "eradiation", "eradicator", "eraser", "erasion", "erasure", "erosion", "errand", "erratic", "error", "erudition", "eruption", "escadrille", "escalade", "escalator", "escalope", "escapade", "escapism", "escapist", "escargot", "eschalot", "escort", "escrow", "esophagus", "espadrille", "espagnolette", "espionage", "esplanade", "espresso", "esprit", "esquire", "essay", "essence", "establishment", "estate", "esteem", "esthetic", "estimate", "estimation", "estrade", "estrangement", "eternity", "ethane", "ethanol", "ether", "ethic", "ethylene", "etiquette", "etymology", "eucalyptus", "eulogy", "eunuch", "euphemism", "euphoria", "euthanasia", "evacuation", "evacuator", "evacuee", "evaluation", "evaporation", "evasion", "eve", "evening", "event", "eventuality", "everglade", "everlasting", "eviction", "evidence", "evil", "evolution", "evolvement", "exactitude", "exactness", "exaggeration", "exam", "examen", "examination", "examiner", "example", "exasperation", "excavation", "excavator", "excellence", "excellency", "excentric", "exception", "excerpt", "excess", "excessiveness", "exchange", "exclamation", "exclusion", "exclusive", "exclusivity", "excursion", "excuse", "execution", "executioner", "executive", "executor", "exempt", "exemption", "exercise", "exercitation", "exfoliant", "exhaustion", "exhibit", "exhibition", "exhumation", "exhumer", "exile", "existence", "existentialism", "existentialist", "exit", "exode", "exodus", "exoplasm", "exoskeleton", "exotic", "expanse", "expansion", "expatriate", "expatriation", "expectation", "expedition", "expeditor", "expenditure", "expense", "experience", "experiment", "expert", "expertise", "expiration", "expiry", "explainer", "explanation", "exploit", "exploration", "explorer", "explosion", "explosive", "export", "exposure", "expression", "expresso", "expressway", "expulsion", "exquisiteness", "extender", "extension", "extent", "exterior", "extermination", "exterminator", "extern", "extinguisher", "extortion", "extra", "extract", "extraction", "extravagance", "extravaganza", "extravert", "extreme", "extremist", "extremity", "extrovert", "extruder", "exuberance", "eye", "eyebrow", "eyeglass", "eyelash", "eyelid", "eyeliner", "eyepatch", "eyesight", "fact", "failure", "family", "farmer", "father", "feedback", "finding", "fishing", "flight", "food", "fortune", "foundation", "freedom", "friendship", "funeral", "garbage", "gate", "gene", "girl", "girlfriend", "grandfather", "grandmother", "goal", "government", "grocery", "growth", "guest", "guidance", "guitar", "hair", "hall", "hat", "health", "heart", "height", "highway", "historian", "history", "home", "homework", "honey", "hospital", "hotel", "house", "housing", "idea", "imagination", "importance", "income", "industry", "inflation", "information", "instance", "insurance", "internet", "introduction", "investment",
+"judge", "judgement", "knowledge", "king", "lab", "ladder", "lady", "lake", "language", "law", "leader", "leadership", "length", "library", "literature", "location", "loss", "love", "magazine", "management", "map", "marriage", "math", "meaning", "meat", "medecine", "media", "member", "message", "method", "moment", "month", "mood", "mother", "movie", "music", "nation", "nature", "negociation", "news", "newspaper", "night", "obligation", "office", "operation", "opinion", "opportunity", "orange", "organization", "outcome", "oven", "owner", "painting", "paper", "passion", "payment", "percentage", "performance", "person", "perspective", "philosophy", "phone", "photo", "player", "policy", "population", "power", "president", "problem", "product", "property", "quality", "queen", "quantity", "reaction", "reality", "recipe", "recommendation", "recording", "reflection", "region", "relationship", "replacement", "reputation", "requirement", "resource", "response", "responsibility", "restaurant", "revenue", "revolution", "river", "road", "role", "safety", "scene", "science", "security", "setting", "shopping", "sister", "situation", "skill", "society", "software", "soup", "speech", "statement", "story", "strategy", "student", "studio", "success", "system", "tale", "tea", "teacher", "teaching", "technology", "television", "temperature", "tension", "theory", "thing", "thought", "tongue", "tooth", "topic", "town", "tradition", "trainer", "transportation", "truth", "uncle", "union", "unit", "university", "variation", "variety", "vehicule", "version", "village", "video", "virus", "volume", "warning", "way", "wealth", "wedding", "week", "wife", "woman", "wood", "world", "writer", "writing", "xenophile", "xenophobe", "xenophobia", "xylophone", "xylophonist", "yacht", "yack", "yak", "yale", "yam", "yard", "yarn", "year", "yeast", "yell", "yeoman", "yesterday", "yeti", "yield", "yo-yo", "yodel", "yodeler", "yoga", "yoghurt", "yogi", "yogurt", "yoke", "yolk", "youngberry", "youngling", "youth", "yucca", "yuppie", "zeal", "zealot", "zealotry", "zealots", "zebra", "zebu", "zen", "zenith", "zephyr", "zeppelin", "zest", "zestfulness", "zigzag", "zinc", "zipper", "zodiac", "zombie", "zone", "zoning", "zoo", "zoologist", "zoology", "zoom", "zoophile", "zucchini"]>>
+
+
+:: Paper [Story done] {"position":"941,150","size":"100,100"}
+You open the folded paper. Within each fold, you find a word. You read out loud the following sentence:
+
+//''The exquisite corpse drank the new wine.''//
+
+//“What?”// you chuckle. //“This makes no sense.”//
+//“I know, right?”// Camille giggles. //“Isn't it funny?”//
+//“How... Why...”// you try to say, flabbergasted by the sentence.
+//“This is what you missed when skipping the party $name.”// says Renaud.
+//“What?”//
+//“Well, Benji wanted to try this new game he had heard about: the exquisite cadaver.”// Renaud explains. //“One person writes a word on a sheet of paper, folds it to hide what they just wrote, and gives it to their neighbour, who does the same. The paper is folded and handed over until the sentence is complete.”//
+//“How do you make the sentence still structurally correct if you don't know what the previous person wrote?”// you ask.
+//“The game follows the same formula every time: adjective-noun-verb-adjective-noun,” //Renaud continues.
+//“And we decide to some rules beforehand too,”// adds Camille.// “Like, no plural nouns. Or no proper nouns. And use only the 'the' article.”//
+//“But why would you want to make sentences without any sense though?”//
+//“Because it's fun, you dummy!”// nudges Camille. //“Why don't you try it?”//
+//“Oh yeah, let's play!”//
+
+* [[Play the game. |GameStarts][$game +=1]]
+* [[Refuse to play. |End1]]
+
+
+:: Random Words [Sidebar DONE] {"position":"166,325","size":"100,100"}
+<<linkappend "I need an adjective.">>
+<<print either($Adjective)>>
+<<print either($Adjective)>>
+<<print either($Adjective)>>
+<<print either($Adjective)>>
+<<print either($Adjective)>>
+<<print either($Adjective)>><</linkappend>>
+
+<<linkappend "I need a noun.">>
+<<print either($Noun)>>
+<<print either($Noun)>>
+<<print either($Noun)>>
+<<print either($Noun)>>
+<<print either($Noun)>>
+<<print either($Noun)>><</linkappend>>
+
+<<linkappend "I need a verb.">>
+<<print either($Verb)>>
+<<print either($Verb)>>
+<<print either($Verb)>>
+<<print either($Verb)>>
+<<print either($Verb)>>
+<<print either($Verb)>><</linkappend>>
+
+
+:: StoryAuthor [sidebar] {"position":"141,100","size":"100,100"}
+by manonamora
+
+
+:: StoryDisplayTitle [sidebar] {"position":"41,100","size":"100,100"}
+Exquisite Cadaver
+
+
+:: StoryInit [sidebar] {"position":"41,225","size":"100,100"}
+<<silently>>
+	<<set $game to 0, $adjs to 0, $nouns to 0, $verbs to 0, $gameem to 0, $adjend to 0, $nounend to 0, $verbend to 0, $adj1 to 1, $adj2 to 2, $noun1 to 1, $noun2 to 2, $MCnoun1 to 1, $MCnoun2 to 2, $Mcad1 to 1, $MCad2 to 2>>
+	<<set $sentences = []>>
+	<<include "Adjectives">>
+	<<include "Nouns">>
+	<<include "Verbs">>
+<</silently>>
+
+
+:: StoryMenu [nobr sidebar] {"position":"166,225","size":"100,100"}
+<<link "Random Words">>
+	<<script>>
+		Dialog.setup("Random Words");
+		Dialog.wiki(Story.get("Random Words").processText());
+		Dialog.open();
+	<</script>>
+<</link>>
+<<link "Stats">>
+	<<script>>
+		Dialog.setup("Stats");
+		Dialog.wiki(Story.get("stats").processText());
+		Dialog.open();
+	<</script>><<set $need +=1>>
+<</link>>
+<<link "Achievements">>
+	<<script>>
+		Dialog.setup("Achievements");
+		Dialog.wiki(Story.get("achievements").processText());
+		Dialog.open();
+	<</script>>
+<</link>>
+<<link "Credits">>
+	<<script>>
+		Dialog.setup("Credits");
+		Dialog.wiki(Story.get("Credits").processText());
+		Dialog.open();
+	<</script>>
+<</link>>
+
+
+:: StorySubtitle [sidebar] {"position":"241,100","size":"100,100"}
+A surrealist interactive game
+
+
+:: Title Page [Story] {"position":"566,150","size":"100,100"}
+<img src="Title Card.png" style="display: block;
+	margin: 0 auto;
+	max-width: 100%;
+    max-height: 100vh;
+    height: auto;">
+//cadavre exquis// - a method by which a collection of words or images is collectively assembled, each collaborator adding to the composition in sequence, following a previously fixed rule.
+
+<<if $story is true>><div align='center' style='font-size: 150%'>[[Story Mode|MC1]]</div><hr><div align='center' style='font-size: 150%'>
+[[Endless Mode|Endless Mode]]</div><<else>><div align='center' style='font-size: 150%'>[[Start|MC1]]</div><</if>>
+
+
+<<notify 8s>>Test
+Test<</notify>>
+
+
+:: Verb [endless] {"position":"541,1050","size":"100,100"}
+<label>Please enter a verb.
+<<textbox "$MCverb" "Type here">></label>
+
+[[Confirm|End Verb][$verbend +=1]]
+
+<<linkappend "Note">>: only enter a verb in the following forms:
+- third person singular (ex: it sees)
+- simple past (ex: it saw)
+- future (ex: it will see)
+
+Any other form will render the sentence gramatically incorrect.<</linkappend>>
+
+
+:: Verbs {"position":"41,625","size":"100,100"}
+<<set $Verb to ["called", "calls", "enforced", "enforces", "inherited", "inherits", "kept", "keeps", "keyd", "keyed", "kicked", "kicks", "kidnaps", "kidnapped", "killed", "kills", "kissed", "kisses", "kneaded", "kneads", "knees", "kneed", "knew", "knows", "knifes", "knifes", "knighted", "knights", "nagged", "nags", "nailed", "nails", "named", "names", "napped", "naps", "narrated", "narrates", "navigated", "navigates", "needed", "needs", "neglected", "neglects", "neutralized", "neutralizes", "nicknamed", "nicknames", "nominated", "nominates", "normalised", "normalises", "noted", "notes", "noticed", "notices", "notified", "notifies", "nudges", "nudged", "nuked", "nukes", "nullified", "nullifies", "nursed", "nurses", "nurtured", "nurtures", "obeyed", "obeys", "obfuscated", "obfuscates", "objected", "objects", "objectifies", "objectified", "obscured", "obscures", "observed", "observes", "obsessed over", "obsesses over", "obstructed", "obstructs", "obtained", "obtains", "occupies", "occupied", "offended", "offends", "offered", "offers", "offset", "offsets", "ogled", "ogles", "opened", "opens", "operated", "operates", "opposed", "opposes", "oppressed", "oppresses", "optimized", "optimizes", "orchestrated", "orchestrates", "ordered", "orders", "outshined", "outshines", "overcame", "overcomes", "owed", "owes", "owned", "owns", "talks to", "talked to", "teaches", "teached", "tears", "tore", "telephones", "telephoned", "tells", "told", "tempts", "tempted", "tests", "tested", "throws", "threw", "ties", "tied", "trades", "traded", "transports", "transported", "undermines", "undermined", "understands", "understood", "unites", "united", "upsets", "upset", "urges", "urged", "uses", "used", "vacated", "vacates", "vaccinated", "vaccinates", "vacuumed", "vacuums", "validated", "validates", "valorized", "valorizes", "valued", "values", "vandalized", "vandalizes", "vaporized", "vaporizes", "varnished", "varnishes", "veneered", "veneers", "ventilated", "ventilates", "verbalized", "verbalizes", "verified", "verifies", "vetoed", "vetoes", "vexed", "vexes", "victimized", "victimizes", "videotaped", "videotapes", "viewed", "views", "vilified", "vilifies", "vindicated", "vindicates", "violated", "violates", "visited", "visits", "vocalized", "vocalizes", "vomited", "vomits", "voted for", "votes for", "vouched for", "vouches for", "wagered", "wagers", "waited for", "waits for", "waived", "waives", "waked", "wakes", "walked", "walks", "walked with", "walks with", "waltzed with", "waltzes with", "wanted", "wants", "warded off", "wards off", "warmed", "warms", "warned", "warns", "washed", "washes", "wasted", "wastes", "watched", "watches", "waved", "waves", "waved at", "waves at", "weakened", "weakens", "wears", "wore", "weaveed", "weaves", "wedded", "weds", "welcomed", "welcomes", "wet", "wets", "whacked", "whacks", "whipped", "whips", "whisked", "whisks", "whispered", "whispers", "wins", "won", "winked at", "winks at", "wiped", "wipes", "wished for", "wishes for", "withdraws", "withdrew", "withheld", "withholds", "worked", "works", "worked for", "works for", "worshipped", "worships", "wound", "wounds", "wrapped", "wraps", "wrecked", "wrecks", "wrestled", "wrestles", "writes", "wrong", "wrongs", "wrote", "yapped", "yaps", "yearned for", "yearns for", "yelled", "yells", "yellowed", "yellows", "yielded", "yields", "yodeled", "yodels", "yowled", "yowls", "zapped", "zaps", "zested", "zests", "zigzagged", "zigzags", "zoomed","zooms"]>>
+
+
+:: achievements {"position":"266,425","size":"100,100"}
+* <<if $game is 3>>Endless Mode Unlocked.<<else>>Play the game a bit longer to unlock this.<</if>>
+* <<if $ach1 is true>>''Are you even trying?''
+You use the same nouns or adjectives during a round.<<else>>Be a bit boring to unlock this.<</if>>
+* <<if $ach2 is true>>''One in a million.''
+Camille or Roland used the same words during their rounds.<<else>>You need a lot of luck to unlock this one.<</if>>
+* <<if $ach3 is true>>''No more pages.''
+You've empied your notebook playing with your friends.<<else>>You should play a lot of rounds to unlock this.<</if>>
+* <<if $ach4 is true>>''Not even once.''
+You don't even play the game.<<else>>Be a party pooper to unlock this.<</if>>
+
+
+:: stats {"position":"166,425","size":"100,100"}
+//''Story Mode''//
+
+You have played $game rounds with Camille and Renaud.
+
+You have written: 
+* $adjs adjectives
+* $nouns nouns
+* $verbs verbs
+
+//''Endless Mode''//
+You have played $gameem rounds in Endless mode.
+
+You have written: 
+* $adjend adjectives
+* $nounend nouns
+* $verbend verbs
+
+
+:: StoryScript [script]
+// adds autosaves - tag a passage 'autosave' to trigger saving
+config.saves.autosave = "autosave";
+
+// NAMING SAVES (use only one of the following)
+// uses passage names as save names, rather than the first line of the passage
+//Config.passages.descriptions = true;
+
+// Alternatively, to name a save after a variable, use the below
+// Config.saves.onSave = function (save) {
+//	save.title = State.variables.variablename;
+//};
+
+// Or, to allow players to name their own saves, use the code below:
+//Config.saves.onSave = function (save) {
+//   save.title = prompt("Enter Save Slot Title:", save.title);
+//};
+
+
+// add a heading to the settings dialog
+Setting.addHeader("Content Settings", "Settings controlling what content is made available in the game.");
+
+//minimise the ui bar by default on launch
+UIBar.stow();
+
+// SETTINGS
+
+// change font size
+var settingFontSize = ["100%", "130%", "150%"];
+var resizeFont = function() {
+	var size = document.getElementById("passages");
+	switch (settings.fontSize) {
+		case "100%":
+			size.style.fontSize = "100%";
+			break;
+	}
+	switch (settings.fontSize) {
+		case "130%":
+			size.style.fontSize = "130%";
+			break;
+	}
+	switch (settings.fontSize) {
+		case "150%":
+			size.style.fontSize = "150%";
+			break;
+	}
+};
+Setting.addList("fontSize", {
+	label		: "Change font size.",
+	list		: settingFontSize,
+	onInit		: resizeFont,
+	onChange	: resizeFont
+});
+// end change font size
+
+// change theme
+var settingThemeNames = ["Light Mode", "Dark Mode"];
+var settingThemeHandler = function () {
+	var $html = $("html");
+	$html.removeClass("dm");
+	switch (settings.theme) {
+	case "Dark Mode":
+		$html.addClass("dm");
+		break;
+	}
+};
+Setting.addList("theme", {
+	label    : "Switch display mode.",
+	list     : settingThemeNames,
+	onInit   : settingThemeHandler,
+	onChange : settingThemeHandler
+});
+//end change theme
+
+// change font
+var settingFontFamily = ["Georgia", "Montserrat"];
+var fontFamily = function() {
+	var $html = $("html");
+		$html.removeClass("sanserif");
+	switch (settings.fontFamily) {
+		case "Georgia":
+			break;
+	}
+	switch (settings.fontFamily) {
+		case "Montserrat":
+			$html.addClass("sanserif");
+			break;
+	}
+};
+Setting.addList("fontFamily", {
+	label		: "Change font style.",
+	list		: settingFontFamily,
+	onInit		: fontFamily,
+	onChange	: fontFamily
+});
+//end change font
+
+// notify.min.js, for SugarCube 2, by Chapel
+// v1.1.1, 2021-01-22, 404cc7678295ca61a8b0b8bc3fa5d54dba6ac858
+;!function(){var s=/\d+m?s$/;function e(s,e,t){"string"==typeof s&&("number"!=typeof e&&(e=!1),$(document).trigger({type:":notify",message:s,delay:e,class:t||""}))}$(document.body).append("<div id='notify'></div>"),$(document).on(":notify",(function(s){s.message&&"string"==typeof s.message&&(s.message.trim(),s.class?"string"==typeof s.class?s.class="open macro-notify "+s.class:Array.isArray(s.class)?s.class="open macro-notify "+s.class.join(" "):s.class="open macro-notify":s.class="open macro-notify",s.delay?("number"!=typeof s.delay&&(s.delay=Number(s.delay)),Number.isNaN(s.delay)&&(s.delay=2e3)):s.delay=2e3,$("#notify").empty().wiki(s.message).addClass(s.class),setTimeout((function(){$("#notify").removeClass()}),s.delay))})),Macro.add("notify",{tags:null,handler:function(){var t=this.payload[0].contents,a=!1,n=!1;if(this.args.length>0){var i=s.test(this.args[0]);"number"==typeof this.args[0]||i?(a=i?Util.fromCssTime(this.args[0]):this.args[0],n=this.args.length>1&&this.args.slice(1).flatten()):n=this.args.flatten().join(" ")}e(t,a,n)}}),setup.notify=e}();
+// end notify.min.js
+
+// Liveupdate Macro (Cycy)
+(function () {
+	"use strict";
+
+	$(document).on(":liveupdate", function () {
+		$(".macro-live").trigger(":liveupdateinternal");
+	});
+
+	Macro.add(['update', 'upd'], {
+		handler: function handler() {
+			$(document).trigger(":liveupdate");
+		}
+	});
+
+	Macro.add(['live', 'l', 'lh'], {
+		skipArgs: true,
+		handler: function handler() {
+			if (this.args.full.length === 0) {
+				return this.error('no expression specified');
+			}
+			try {
+				var statement = this.args.full;
+				var result = toStringOrDefault(Scripting.evalJavaScript(statement), null);
+				if (result !== null) {
+					var lh = this.name === "lh";
+					var $el = $("<span></span>").addClass("macro-live").wiki(lh ? Util.escape(result) : result).appendTo(this.output);
+					$el.on(":liveupdateinternal", this.createShadowWrapper(function (ev) {
+						var out = toStringOrDefault(Scripting.evalJavaScript(statement), null);
+						$el.empty().wiki(lh ? Util.escape(out) : out);
+					}));
+				}
+			} catch (ex) {
+				return this.error("bad evaluation: " + (_typeof(ex) === 'object' ? ex.message : ex));
+			}
+		}
+	});
+
+	Macro.add(['liveblock', 'lb'], {
+		tags: null,
+		handler: function handler() {
+			try {
+				var content = this.payload[0].contents.trim();
+				if (content) {
+					var $el = $("<span></span>").addClass("macro-live macro-live-block").wiki(content).appendTo(this.output);
+					$el.on(":liveupdateinternal", this.createShadowWrapper(function (ev) {
+						$el.empty().wiki(content);
+					}));
+				}
+			} catch (ex) {
+				return this.error("bad evaluation: " + (_typeof(ex) === 'object' ? ex.message : ex));
+			}
+		}
+	});
+})();
+// end liveupdate
+
+:: StoryStylesheet [stylesheet]
+@import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+  /* (default) light mode */
+  --bg: #ebe3d9;
+  --text: #000;
+  --link: #1a1a1a;
+  --accent: #f0e6e6;
+  --accent2: #d5d5d5;
+  /* dark mode */
+  --dm-bg: #000;
+  --dm-text: #fff;
+  --dm-link: #fff;
+  --dm-accent: #1a1a1a;
+  --dm-accent2: #111111;
+}
+  
+/* body */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+    font-family: 'Georgia', serif;
+  font-size: 20px;
+}
+.dm body {
+  background-color: var(--dm-bg);
+  color: var(--dm-text);
+}
+.sanserif body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* passages */
+.passage {
+  overflow-y: scroll; /* allows the player to scroll within the passage, rather than the overall page */
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  padding: 1em;
+  height: auto;
+  width: auto;
+  background-color: var(--accent2);
+  /* hides the scrollbars in various browsers - will still scroll. to show scrollbars, remove these two lines. */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.dm .passage {
+  background-color: var(--dm-accent2);
+  border: 1px solid var(--dm-accent);
+}
+
+/* links */
+a {
+  color: var(--link);
+  font-weight: bold;
+}
+a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--link);
+}
+.dm a {
+  color: var(--dm-link);
+}
+.dm a:hover {
+  color: var(--dm-link);
+}
+
+/* creates a div that contains the links as shown in the passages - if you don't use a div container for your links, feel free to delete this css up to the ui bar styling and make sure to adjust the hover colours of the link css */
+.choice {
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  padding: 1em;
+  margin-top: .1em;
+}
+.choice:before {
+  content: "";
+  padding: 1em;
+}
+.choice:hover {
+  background-color: var(--accent);
+  transition: .5s linear;
+}
+.dm .choice {
+  border: 1px solid var(--dm-accent);
+}
+.dm .choice:hover {
+  background-color: var(--dm-accent);
+}
+
+/* ui bar */
+#story {
+	margin-left: 20em;
+	transition: margin-left 200ms ease-in;
+}
+#ui-bar.stowed ~ #story {
+	margin-left: 4.5em;
+}
+@media screen and (max-width: 1136px) {
+	#story {
+		margin-left: 19em;
+	}
+	#ui-bar.stowed ~ #story {
+		margin-left: 3.5em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#story {
+		margin-left: 3.5em;
+	}
+}
+
+
+#ui-bar {
+  background-color: var(--accent);
+  color: var(--text);
+  background-image: url('https://images.unsplash.com/photo-1462642109801-4ac2971a3a51?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=966&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.dm #ui-bar {
+  background-color: var(--dm-accent);
+  color: var(--dm-text);
+  background-image: url('https://images.unsplash.com/photo-1587135991058-8816b028691f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+}
+
+}
+#ui-bar.stowed {
+	left: -15.5em;
+}
+#ui-bar-tray {
+	position: absolute;
+	top: 0.2em;
+	left: 0;
+	right: 0;
+}
+#ui-bar-body {
+	height: 90%; /* fallback for browsers without support for calc() */
+	height: calc(100% - 2.5em);
+	margin: 2.5em 0;
+	padding: 0 1.5em;
+}
+#ui-bar.stowed #ui-bar-history,
+#ui-bar.stowed #ui-bar-body {
+	visibility: hidden;
+	transition: visibility 200ms step-end;
+}
+
+/* ui bar information - story title, author name, subtitle */
+#story-title {
+	margin: 0;
+	font-size: 162.5%;
+}
+#story-author {
+	margin-top: 2em;
+	font-weight: bold;
+}
+#story-subtitle {
+}
+/* ui bar list (menu links) */
+#menu ul {
+	margin: 0 0 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+}
+#menu ul:empty {
+	display: none;
+}
+#menu li {
+	margin: 0;
+}
+#menu li:not(:first-child) {
+	border-top: none;
+}
+#menu li a {
+	display: block;
+	padding: 0.25em 0.75em;
+	border: none;
+	color: var(--link);
+	text-transform: uppercase;
+}
+.dm #menu li a {
+  color: var(--dm-link);
+}
+#menu li a:hover {
+	background-color: var(--accent2);
+}
+.dm #menu li a:hover {
+  background-color: var(--dm-accent2);
+}
+
+/* the buttons at the top of the ui bar that allow the player to collapse/expand it and to go back and forwards - to remove these, add display: none; as a line */
+#ui-bar-toggle,
+#ui-bar-history [id|="history"] {
+	font-size: 1.2em;
+	line-height: inherit;
+	color: var(--text);
+	background-color: transparent;
+	border: none;
+}
+.dm #ui-bar-toggle, #ui-bar-history [id|="history"] {
+  color: var(--dm-text);
+}
+#ui-bar-toggle {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-right: none;
+	padding: 0.3em 0.45em 0.25em;
+}
+#ui-bar.stowed #ui-bar-toggle {
+	padding: 0.3em 0.35em 0.25em 0.55em;
+}
+#ui-bar-toggle:hover {
+	background-color: var(--accent2);
+}
+.dm #ui-bar-toggle:hover {
+  background-color: var(--dm-accent2);
+}
+#ui-bar-history {
+	margin: 0 auto;
+}
+#ui-bar-history [id|="history"] {
+	padding: 0.2em 0.45em 0.35em;
+  color: var(--link);
+}
+.dm #ui-bar-history [id|="history"] {
+  color: var(--dm-link);
+}
+#ui-bar-history #history-jumpto {
+	padding: 0.2em 0.665em 0.35em;
+}
+#ui-bar-history [id|="history"]:not(:first-child) {
+	margin-left: 1.2em;
+}
+#ui-bar-history [id|="history"]:hover {
+	background-color: var(--accent2);
+}
+.dm #ui-bar-history [id|="history"]:hover {
+	background-color: var(--dm-accent2);
+}
+
+/* ui dialog box titlebars */
+#ui-dialog-titlebar {
+	background-color: var(--bg);
+	min-height: 24px;
+  border: 1px solid var(--accent);
+}
+.dm #ui-dialog-titlebar {
+  background-color: var(--dm-bg);
+  border: 1px solid var(--dm-accent);
+}
+#ui-dialog-title {
+	margin: 0;
+	padding: 0.2em 3.5em 0.2em 0.5em;
+	font-size: 1.5em;
+	text-align: center;
+	text-transform: uppercase;
+}
+#ui-dialog-close {
+	cursor: pointer;
+	font-size: 120%;
+	margin: 0;
+	padding: 0;
+	width: 3.6em;
+	height: 92%;
+	background-color: transparent;
+	border: none;
+	transition-duration: 200ms;
+  color: black;
+}
+.dm #ui-dialog-close {
+  color: white;
+}
+#ui-dialog-close:hover {
+	background-color: var(--bg);
+  color: var(--text);
+}
+.dm #ui-dialog-close:hover {
+	background-color: var(--dm-bg);
+  color: var(--dm-text);
+}
+
+/* the dialog boxes (settings, saves, other dialogs you add) */
+#ui-dialog-body {
+	background-color: var(--bg);
+	border: 1px solid var(--accent);
+	text-align: left;
+	line-height: 1.5;
+	padding: 1em;
+}
+.dm #ui-dialog-body {
+  background-color: var(--dm-bg);
+  border: 1px solid var(--accent);
+}
+#ui-dialog-body > *:first-child {
+	margin-top: 0;
+}
+#ui-dialog-body hr {
+	background-color: #000;
+}
+
+/* Default dialog button styling. */
+#ui-dialog-body ul.buttons {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#ui-dialog-body ul.buttons li {
+	display: inline-block;
+	margin: 0;
+	padding: 0.4em 0.4em 0 0;
+}
+#ui-dialog-body ul.buttons > li + li > button {
+	margin-left: 1em;
+}
+
+/* selectors in settings */
+#setting-control-theme, #setting-control-fontsize, #setting-control-fontfamily,  #setting-control-mastervolume {
+    color: var(--text);
+    background-color: var(--bg);
+}
+.dm #setting-control-theme, .dm #setting-control-fontsize, .dm #setting-control-fontfamily, .dm #setting-control-mastervolume {
+    color: var(--dm-text);
+    background-color: var(--dm-bg);
+}
+
+/* notifications bar */
+#notify {
+    position : fixed;
+    display : block;
+    width : 16em;
+    right : -20em; top : 5%;
+    padding : 0.5em;
+    background-color : var(--bg);
+    color : var(--text);
+	border: 1px solid var(--accent);
+    text-align: left;
+    -webkit-transition : right 1s;
+    -moz-transition : right 1s;
+    -o-transition : right 1s;
+    transition : right 1s;
+}
+.dm #notify {
+  color: var(--dm-text);
+  background-color: var(--dm-bg);
+  border: 1px solid var(--dm-accent);
+}
+#notify.open { right : 0; }
+
+/* buttons */
+
+button {
+  background-color: green;
+}
+
+/*scrollbar*/
+ ::-webkit-scrollbar {
+  width: 8px;
+  }
+ ::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+  border-radius: 10px,
+ }
+ ::-webkit-scrollbar-thumb {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+  border: 1px solid rgba(233, 231, 231, 0.4);
+  border-radius:10px;
+  width: 5px;
+ }
+
+/*Textbox*/
+
+input, select, textarea {
+	color: #000;
+	background-color: transparent;
+	border: 1px solid #444;
+	padding: 0.4em;
+}
+  
+.dm input, select, textarea {
+	color: #fff;
+	background-color: transparent;
+	border: 1px solid #444;
+	padding: 0.4em;
+}
+
+input:not(:disabled):focus, select:not(:disabled):focus, textarea:not(:disabled):focus,
+input:not(:disabled):hover, select:not(:disabled):hover, textarea:not(:disabled):hover {
+  background-color: #333;
+  	color:#eee;
+}
+
+.dm input:not(:disabled):focus, select:not(:disabled):focus, textarea:not(:disabled):focus,
+input:not(:disabled):hover, select:not(:disabled):hover, textarea:not(:disabled):hover {
+  background-color: #333;
+  	color:#eee;
+}
