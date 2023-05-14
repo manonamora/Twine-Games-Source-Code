@@ -1,12 +1,13 @@
-#Twine-Game-Source-Code
+# Twine-Game-Source-Code
+
 This repository is meant as an archive for older version of my Twine games. It will occasionelly be updated.
 
 You can play those games and more on [Itch.io](https://manonamora.itch.io/). You can also find some of them on the [Interactive Fiction DataBase](https://ifdb.org/search?searchfor=authorid:r8zj2ybma6r0emy4).
 
-###List of Source Codes:
+### List of Source Codes:
 - Meeting the Parents
 
-###Coming Soon:
+### Coming Soon:
 - Exquisite Cadaver V1
 - The Roads Not Taken (SpringThing version)
 
