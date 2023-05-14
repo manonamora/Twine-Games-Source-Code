@@ -12,6 +12,6 @@ You can play those games and more on [Itch.io](https://manonamora.itch.io/). You
 - The Roads Not Taken (SpringThing version)
 
 ### Last Updates:
-- 14-May-2023 : Added the Jam Version of // Exquisite Cadaver //
-- 22-Arp-2023 : Added the SugarCube version (which includes a French Translation) of // Metting the Parents //
-- 1-Apr-2023  : Repository made public with the Harlowe version of // Meeting the Parents //
+- 14-May-2023 : Added the Jam Version of *Exquisite Cadaver*
+- 22-Arp-2023 : Added the SugarCube version (which includes a French Translation) of *Metting the Parents*
+- 1-Apr-2023  : Repository made public with the Harlowe version of *Meeting the Parents*
