@@ -1,0 +1,594 @@
+:: Widget [widget]
+    /*** TEXTBOX ***/
+<<widget "BlockTextbox">>
+    <div id="textbox"><<listen>>
+        <i class="fa-solid fa-chevron-right"></i> <<textbox '_textbox' '' autofocus>> <<button "Confirm">><<ControlsOption>><<CountTurns>><<run $("#textbox--textbox").val('');>><</button>> <span id="confirm"></span>
+        <div id="help"></div>
+    <<when 'keypress'>>
+        <<if _event.code === 'Enter'>>
+            <<ControlsOption>><<CountTurns>><<run $("#textbox--textbox").val('');>>
+        <</if>>
+    <</listen>></div>
+<</widget>>
+    /*** COMMANDS FOR EACH PASSAGE ***/
+<<widget "CmdExpl">>
+    <<if State.length === State.size>><<goto "Intro">><</if>>
+<</widget>>
+<<widget "CmdIntro">>
+    <<if !$found.includes("IntroLook")>>
+    /*If first screen is not shown*/
+        <<if ["look", "look up", "c", "continue", "look around"].contains(_cmd)>>
+        /*show first screen*/
+            <<set $found.push("IntroLook"), _used.push("look", "look up", "c", "continue")>>
+            <<append "#intro" t8n>><<include "IntroLook">><</append>>
+            <<replace "#help" t8n>><<include "IntroHelp">><</replace>>
+        <<else>>
+            <<set $transcript.push("Error Early")>>
+            <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t do this right now.<</fadeout>><</replace>>
+        <</if>>
+    <<elseif ["n", "north", "ne", "north east ", "nw", "northwest", "e", "w", "east", "west", "leave", "go to door", "go door"].contains(_cmd) && $found.includes("IntroLeave")>>
+    /*EWnding*/
+        <<set $transcript.push(_cmd), $name to "Adley">>
+        <<goto "IntroLeave">>
+    <<elseif ["c", "continue", "name", "name ", "name  "].contains(_cmd) && $found.includes("IntroLook")>>
+    /*Name Bad -> Adley*/
+        <<set $transcript.push(_cmd), $name to "Adley">>
+        <<goto "NameBad">>
+    <<elseif $found.includes("IntroLook") && _textbox.split(" ").contains("name")>>
+    /*Name approved*/
+        <<set $name to _textbox.slice(5), $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Name">>
+    /*<<elseif $found.includes("IntroLook") && ["clear"].contains(_cmd)>>
+    Clear Page of extra text
+        <<set _used to ["look", "look up", "c", "continue"], $turns -->>
+        <<replace "#intro" t8n>><<include "IntroLook">><</replace>><<run setup.scrollToTop("passages")>>*/
+    <<elseif _used.includes(_cmd)>>
+    /*Already done the action */
+        <<set $transcript.push("Error Double")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You’ve already tried this command.<</fadeout>><</replace>>
+    <<elseif ["room", "look room", "look at room", "look around room", "look around"].contains(_cmd)>>
+    /*Look around Room*/
+        <<set $found.push("IntroRoom"), _used.push("room", "look room", "look at room", "look around room", "look around")>>
+        <<append "#textbox" t8n>><<include "IntroRoom">><</append>>
+        <<run setup.scrollToView("room")>>
+    <<elseif ["ledger", "look ledger", "look at ledger"].contains(_cmd)>>
+    /*Look at ledger*/
+        <<set $found.push("IntroLedger"), _used.push("ledger", "look ledger", "look at ledger")>>
+        <<append "#textbox" t8n>><<include "IntroLedger">><</append>>
+        <<run setup.scrollToView("legder")>>
+    <<elseif ["take ledger", "touch ledger", "loot ledger", "reach ledger"].contains(_cmd)>>
+    /*Take ledger*/
+        <<set $found.push("IntroTakeLedger"), _used.push("take ledger", "touch ledger", "loot ledger", "reach ledger")>>
+        <<append "#textbox" t8n>><<include "IntroTakeLedger">><</append>>
+        <<run setup.scrollToView("takeledger")>>
+    <<elseif ["being", "scrawny being", "male", "look being", "look scrawny being", "look male", "look at being", "look at scrawny being", "look at male"].contains(_cmd)>>
+    /*Look at Kodyn*/
+        <<set $found.push("IntroBeing"), _used.push("being", "scrawny being", "male", "look being", "look scrawny being", "look male", "look at being", "look at scrawny being", "look at male")>>
+        <<append "#textbox" t8n>><<include "IntroBeing">><</append>>
+        <<run setup.scrollToView("being")>>
+    <<elseif ["talk being", "talk scrawny being", "talk male", "talk to being", "talk to scrawny being", "talk to male", "talk kodyn", "kodyn", "talk to kodyn"].contains(_cmd)>>
+    /*Look at Kodyn*/
+        <<set $found.push("IntroTalkKodyn"), _used.push("talk being", "talk scrawny being", "talk male", "talk to being", "talk to scrawny being", "talk to male", "talk kodyn", "kodyn", "talk to kodyn")>>
+        <<append "#textbox" t8n>><<include "IntroTalkKodyn">><</append>>
+        <<run setup.scrollToView("talkkodyn")>>
+    <<elseif ["initiate", "look initiate", "look at initiate", "remember initiate", "initiates", "look initiates", "look at initiates", "remember initiates", "recall initiate", "recall initiates"].contains(_cmd)>>
+    /*Look at Initiate*/
+        <<set $found.push("IntroInitiate"), _used.push("initiate", "look initiate", "look at initiate", "remember initiate", "initiates", "look initiates", "look at initiates", "remember initiates", "recall initiate", "recall initiates")>>
+        <<append "#textbox" t8n>><<include "IntroInitiate">><</append>>
+        <<run setup.scrollToView("initiate")>>
+    <<elseif ["talk initiate", "talk to initiate", "talk initiates", "talk to initiates"].contains(_cmd)>>
+    /*Talk to Initiate*/
+        <<set $found.push("IntroTalkInitiate"), _used.push("talk initiate", "talk to initiate", "talk initiates", "talk to initiates")>>
+        <<append "#textbox" t8n>><<include "IntroTalkInitiate">><</append>>
+        <<run setup.scrollToView("talkinitiate")>>
+    <<elseif ["words", "remember words", "recall words", "word", "remember word", "recall word"].contains(_cmd)>>
+    /*Remember words*/
+        <<set $found.push("IntroWord"), _used.push("words", "remember words", "recall words", "word", "remember word", "recall word")>>
+        <<append "#textbox" t8n>><<include "IntroWord">><</append>>
+        <<run setup.scrollToView("word")>>
+    <<else>>
+        <<set $transcript.push("Error")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t do that here.<</fadeout>><</replace>>
+    <</if>>
+    <<set $transcript.push(_cmd)>>
+<</widget>>
+<<widget "CmdBadName">>
+    <<if ["c", "continue"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $name to "Adley">>
+        <<goto "Name">>
+    <<else>>
+        <<set $transcript.push("Error")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t do that here.<</fadeout>><</replace>>
+    <</if>>
+    <<set $transcript.push(_cmd)>>
+<</widget>>
+<<widget "CmdName">>
+    <<if _used.includes(_cmd)>>
+    /*Already done the action */
+        <<set $transcript.push("Error Double")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You’ve already tried this command.<</fadeout>><</replace>>
+    <<elseif ["c", "continue", "n", "north", "up"].contains(_cmd)>>
+    /*Go Next Part*/
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Whistle">>
+    <<elseif ["h", "help"].contains(_cmd)>>
+    /*help line*/
+        <<set $found.push("NameHelp"), _used.push("h", "help")>>
+        <<replace "#help" t8n>><<include "NameHelp">><</replace>>
+    /*<<elseif ["clear"].contains(_cmd)>>
+    Clear Page of extra text
+        <<set _used to [], $turns -->>
+        <<replace "#textbox" t8n>><</replace>><<run setup.scrollToTop("passages")>>*/
+    <<elseif ["being", "scrawny being", "male", "look being", "look scrawny being", "look male", "look at being", "look at scrawny being", "look at male", "kodyn", "look kodyn", "look at kodyn"].contains(_cmd)>>
+    /*Look at Kodyn*/
+        <<set _used.push("being", "scrawny being", "male", "look being", "look scrawny being", "look male", "look at being", "look at scrawny being", "look at male")>>
+        <<if $found.includes("IntroBeing")>>
+            <<set $found.push("NameBeingVar")>>
+            <<append "#textbox" t8n>><<include "NameBeingVar">><</append>>
+        <<else>>
+            <<set $found.push("IntroBeing")>>
+            <<append "#textbox" t8n>><<include "IntroBeing">><</append>>
+        <</if>>
+        <<run setup.scrollToView("being")>>
+    <<elseif ["talk being", "talk scrawny being", "talk male", "talk to being", "talk to scrawny being", "talk to male", "talk to kodyn", "talk kodyn"].contains(_cmd)>>
+    /*Look at Kodyn*/
+        <<set $found.push("NameTalkKodyn"), _used.push("talk being", "talk scrawny being", "talk male", "talk to being", "talk to scrawny being", "talk to male", "talk to kodyn", "talk kodyn")>>
+        <<append "#textbox" t8n>><<include "NameTalkKodyn">><</append>>
+        <<run setup.scrollToView("kodyn")>>
+    <<elseif ["talk initiate", "talk to initiate", "talk initiates", "talk to initiates"].contains(_cmd)>>
+    /*Talk to Initiate*/
+        <<set $found.push("NameTalkInitiate"), _used.push("talk initiate", "talk to initiate", "talk initiates", "talk to initiates")>>
+        <<append "#textbox" t8n>><<include "NameTalkInitiate">><</append>>
+        <<run setup.scrollToView("talkinitiate")>>
+    <<elseif ["room", "look room", "look at room", "look around room", "inspect room"].contains(_cmd)>>
+    /*Look around Room*/
+        <<set $found.push("NameRoom"), _used.push("room", "look room", "look at room", "look around room", "inspect room")>>
+        <<append "#textbox" t8n>><<include "NameRoom">><</append>>
+        <<run setup.scrollToView("room")>>
+    <<elseif ["ritual", "think about ritual", "feel ritual", "remember ritual", "look ritual", "think ritual", "recall ritual"].contains(_cmd)>>
+    /*Remeber Ritual*/
+        <<set $found.push("NameRitual"), _used.push("ritual", "think about ritual", "feel ritual", "remember ritual", "look ritual", "think ritual", "recall ritual")>>
+        <<append "#textbox" t8n>><<include "NameRitual">><</append>>
+        <<run setup.scrollToView("ritual")>>
+    <<elseif ["dark room", "look dark room", "look at dark room", "think about dark room", "think dark room", "remember dark room", "mystical room", "look mystical room", "look at mystical room", "think about mystical room", "think mystical room", "remember mystical room"].contains(_cmd)>>
+    /*Remeber Dark Room*/
+        <<set $found.push("NameDarkRoom"), _used.push("dark room", "look dark room", "look at dark room", "think about dark room", "think dark room", "remember dark room", "mystical room", "look mystical room", "look at mystical room", "think about mystical room", "think mystical room", "remember mystical room")>>
+        <<append "#textbox" t8n>><<include "NameDarkRoom">><</append>>
+        <<run setup.scrollToView("darkroom")>>
+    <<elseif ["words", "word", "remember words", "remember word", "think words", "think word", "think about words", "think about word", "recall word", "recall words"].contains(_cmd)>>
+        <<set $found.push("NameWords"), _used.push("words", "word", "remember words", "remember word", "think words", "think word", "think about words", "think about word", "recall word", "recall words")>>
+        <<append "#textbox" t8n>><<include "NameWords">><</append>>
+        <<run setup.scrollToView("word")>>
+    <<else>>
+        <<set $transcript.push("Error")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t do that here.<</fadeout>><</replace>>
+    <</if>>
+    <<set $transcript.push(_cmd)>>
+<</widget>>
+<<widget "CmdWhistle">>
+    <<if ["c", "continue", "leave room", "leave", "n", "north"].contains(_cmd)>>
+        <<if $found.includes("WhistleComplain")>>
+            /*Ending Complain */
+            <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+            <<goto "ENDComplain">>
+        <<elseif $found.includes("WhistleUp") or $found.includes("WhistleTakeLedger")>>
+        /*Story Next Passage */
+            <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+            <<goto "Corridor">>
+        <<else>>
+            <<set $transcript.push("Error")>><<set _error to false>>
+            <<replace "#confirm" t8n>><<fadeout 2s 1s>>Please try a different command before this one.<</fadeout>><</replace>>
+        <</if>>
+    <<elseif $found.includes("WhistleComplain") or $found.includes("WhistleUp") or $found.includes("WhistleTakeLedger")>>
+        <<set $transcript.push("Error")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>Enter ‘c’ or ‘continue’, to get to the next screen.<</fadeout>><</replace>>
+    <<elseif ["complain", "speak out"].contains(_cmd)>>
+        /*Complain -> Ending */
+        <<set $found.push("WhistleComplain"), _used.push("complain", "speak out", "grumble", "protest")>>
+        <<append "#textbox" t8n>><<include "WhistleComplain">><</append>>
+        <<run setup.scrollToView("complain")>>
+    <<elseif $found.includes("WhistleSit2") && ["sit", "sit down", "sit on bench", "sit on chair", "stay sit", "stay seated", "no move", "still", "stay"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "ENDSitting">>
+    <<elseif $found.includes("WhistleSit") && ["sit", "sit down", "sit on bench", "sit on chair", "stay sit", "stay seated", "no move", "still", "stay"].contains(_cmd)>>
+        <<set $found.push("WhistleSit2")>>
+        <<append "#textbox" t8n>><<include "WhistleSit2">><</append>>
+        <<run setup.scrollToView("sittwo")>>
+    <<elseif ["sit", "sit down", "sit on bench", "sit on chair", "stay sit", "stay seated", "no move", "still", "stay"].contains(_cmd)>>
+        <<set $found.push("WhistleSit"), _used.push("sit", "sit down", "sit on bench", "sit on chair", "stay sit", "stay seated", "no move", "still", "stay")>>
+        <<append "#textbox" t8n>><<include "WhistleSit">><</append>>
+        <<run setup.scrollToView("sit")>>
+    <<elseif _used.includes(_cmd)>>
+    /*Already done the action */
+        <<set $transcript.push("Error Double")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You’ve already tried this command.<</fadeout>><</replace>>
+    <<elseif ["up", "get up", "u", "n", "north", "e", "east", "s", "south", "w", "west", "nw", "north west", "ne", "nort east", "se", "south east", "sw", "south west", "move", "stand", "stand up"].contains(_cmd)>>
+        /*Stand Up*/
+        <<set $found.push("WhistleUp"), _used.push("up", "get up", "u", "n", "north", "e", "east", "s", "south", "w", "west", "nw", "north west", "ne", "nort east", "se", "south east", "sw", "south west", "move", "stand", "stand up")>>
+        <<append "#textbox" t8n>><<include "WhistleUp">><</append>>
+        <<run setup.scrollToView("upidiup")>>
+    <<elseif ["h", "help"].contains(_cmd)>>
+        /*help line */
+        <<set $found.push("WhistleHelp"), _used.push("h", "help")>>
+        <<replace "#help" t8n>><<include "WhistleHelp">><</replace>>
+    <<elseif ["being", "scrawny being", "male", "look being", "look scrawny being", "look male", "look at being", "look at scrawny being", "look at male", "kodyn", "look kodyn", "look at kodyn"].contains(_cmd)>>
+    /*Look at Kodyn*/
+        <<set $found.push("WhistleKodyn"), _used.push("being", "scrawny being", "male", "look being", "look scrawny being", "look male", "look at being", "look at scrawny being", "look at male", "kodyn", "look kodyn", "look at kodyn")>>
+        <<append "#textbox" t8n>><<include "WhistleKodyn">><</append>>
+        <<run setup.scrollToView("kodyn")>>  
+    <<elseif ["ledger", "look ledger", "look at ledger"].contains(_cmd)>>
+    /*Look at ledger*/
+        <<set $found.push("WhistleLedger"), _used.push("ledger", "look ledger", "look at ledger")>>
+        <<append "#textbox" t8n>><<include "WhistleLedger">><</append>>
+        <<run setup.scrollToView("ledger")>>   
+    <<elseif ["take ledger", "touch ledger", "loot ledger"].contains(_cmd)>>
+    /*Take ledger*/
+        <<set $found.push("WhistleTakeLedger"), _used.push("take ledger", "touch ledger", "loot ledger")>>
+        <<append "#textbox" t8n>><<include "WhistleTakeLedger">><</append>>  
+        <<run setup.scrollToView("takeledger")>>   
+    <<elseif ["talk initiate", "talk to initiate", "talk initiates", "talk to initiates"].contains(_cmd)>>
+    /*Take ledger*/
+        <<set $found.push("WhistleTalkInitiate"), _used.push("talk initiate", "talk to initiate", "talk initiates", "talk to initiates")>>
+        <<append "#textbox" t8n>><<include "WhistleTalkInitiate">><</append>>  
+        <<run setup.scrollToView("talkinitiate")>>    
+    /*<<elseif ["clear"].contains(_cmd)>>
+        Clear Page
+        <<set _used to [], $turns -->>
+        <<replace "#help" t8n>><<fadeout 2s 1s>>You can’t clear this passage.<</fadeout>><</replace>><<run setup.scrollToTop("passages")>>*/
+    <<else>>
+        <<set $transcript.push("Error")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t do that here.<</fadeout>><</replace>>
+    <</if>>
+    <<set $transcript.push(_cmd)>>
+<</widget>>
+<<widget "CmdCorridor">>
+    /*Go to the next passage */
+    <<if ($found.includes("Corridor3No") or $found.includes("Corridor3See")) && ["c", "continue", "n", "north", "forward", "reach door", "go door", "go doors", "reach doors", "approach door", "approach doors"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Doors">>
+    /* Check the sound */
+    <<elseif !$found.includes("Corridor3No") && $found.includes("Corridor3") && ["still", "stand", "no", "no movement", "z"].contains(_cmd)>>
+        <<set $found.push("Corridor3No")>>
+        <<append "#textbox" t8n>><<include "Corridor3No">><</append>>
+        <<run setup.scrollToView("threeno")>>
+    /* Dont check the sound */
+    <<elseif !$found.includes("Corridor3See") && $found.includes("Corridor3") && ["e", "east", "w", "west", "jump", "move", "look commotion"].contains(_cmd)>>
+        <<set $found.push("Corridor3See")>>
+        <<append "#textbox" t8n>><<include "Corridor3See">><</append>>
+        <<run setup.scrollToView("threesee")>>
+    /*try to go a different direction */
+    <<elseif (!$found.includes("Corridor2NS") or !$found.includes("Corridor2N2") or !$found.includes("Corridor2Stop")) && $found.includes("Corridor2N") && ["e", "east", "w", "west", "nw", "north west", "sw", "south west", "se", "south east"].contains(_cmd)>>
+        <<set $found.push("Corridor2NOther")>>
+        <<append "#textbox" t8n>><<include "Corridor2NOther">><</append>>
+        <<run setup.scrollToView("twonother")>>
+    /*Bump Natisse*/
+    <<elseif !$found.includes("Corridor3") && $found.includes("Corridor2N") && ["c", "continue", "n", "north"].contains(_cmd)>>
+        <<set $found.push("Corridor2N2", "Corridor3")>>
+        <<append "#textbox" t8n>><<include "Corridor2N2">><<include "Corridor3">><</append>>
+        <<run setup.scrollToView("twontwo")>>
+    /*Bump Zouma */
+    <<elseif !$found.includes("Corridor3") && $found.includes("Corridor2N") && ["s", "south"].contains(_cmd)>>
+        <<set $found.push("Corridor2NS", "Corridor3")>>
+        <<append "#textbox" t8n>><<include "Corridor2NS">><<include "Corridor3">><</append>>
+        <<run setup.scrollToView("twons")>>
+    /*Correct*/
+    <<elseif !$found.includes("Corridor3") && $found.includes("Corridor2N") && ["stop", "stand", "still", "stand still", "stay"].contains(_cmd)>>  
+        <<set $found.push("Corridor2Stop", "Corridor3")>>
+        <<append "#textbox" t8n>><<include "Corridor2Stop">><<include "Corridor3">><</append>>
+        <<run setup.scrollToView("twostop")>>
+    <<elseif !$found.includes("Corridor2N") && ["c", "continue", "n", "north"].contains(_cmd)>>
+        <<set $found.push("Corridor2N")>>
+        <<append "#textbox" t8n>><<include "Corridor2N">><</append>>
+        <<run setup.scrollToView("twon")>>
+    <<elseif _used.includes(_cmd)>>
+    /*Already done the action */
+        <<set $transcript.push("Error Double")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You’ve already tried this command.<</fadeout>><</replace>>
+    <<elseif ["think", "remember", "worry", "you", "think about me", "think me", "think you", "think about you", "recall"].contains(_cmd)>>
+    /*Remeber you*/
+        <<set $found.push("CorridorYou"), _used.push("think", "remember", "worry", "you", "think about me", "think me", "think you", "think about you", "recall")>>
+        <<append "#textbox" t8n>><<include "CorridorYou">><</append>>
+        <<run setup.scrollToView("you")>>
+    <<elseif ["natisse", "look natisse", "look at natisse", "see natisse", "examine natisse"].contains(_cmd)>>
+    /*Look at Natisse*/
+        <<set $found.push("Natisse"), _used.push("natisse", "look natisse", "look at natisse", "see natisse", "examine natisse", "remember natisse")>>
+        <<append "#textbox" t8n>><<include "Natisse">><</append>>
+        <<run setup.scrollToView("natisse")>>
+    <<elseif ["talk natisse", "talk to natisse"].contains(_cmd)>>
+    /*Talk to Natisse*/
+        <<set $found.push("CorridorNatisse"), _used.push("talk natisse", "talk to natisse")>>
+        <<append "#textbox" t8n>><<include "CorridorNatisse">><</append>>
+        <<run setup.scrollToView("talknatisse")>>
+    <<elseif ["zouma", "look zouma", "look at zouma", "see zouma", "examine zouma"].contains(_cmd)>>
+    /*Look at Zouma*/
+        <<set $found.push("Zouma"), _used.push("zouma", "look zouma", "look at zouma", "see zouma", "examine zouma")>>
+        <<append "#textbox" t8n>><<include "Zouma">><</append>>
+        <<run setup.scrollToView("zouma")>>
+    <<elseif ["talk zouma", "talk to zouma"].contains(_cmd)>>
+    /*Talk to Natisse*/
+        <<set $found.push("CorridorZouma"), _used.push("talk zouma", "talk to zouma")>>
+        <<append "#textbox" t8n>><<include "CorridorZouma">><</append>>
+        <<run setup.scrollToView("talkzouma")>>
+    <<elseif ["headstand", "do headstand", "try headstand"].contains(_cmd)>>
+    /*Remeber you*/
+        <<set $found.push("CorridorHeadstand"), _used.push("headstand", "do headstand", "try headstand")>>
+        <<append "#textbox" t8n>><<include "CorridorHeadstand">><</append>>
+        <<run setup.scrollToView("headstand")>>
+    <<else>>
+        <<set $transcript.push("Error")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t do that here.<</fadeout>><</replace>>
+    <</if>>
+    <<set $transcript.push(_cmd)>>
+<</widget>>
+<<widget "CmdDoors">>
+    <<if _used.includes(_cmd)>>
+        /*Already done the action */
+        <<set $transcript.push("Error Double")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You’ve already tried this command.<</fadeout>><</replace>>
+    <<elseif ["c", "continue", "n", "north", "go forward", "go", "go inside"].contains(_cmd)>>
+        <<if !$found.includes("Doors2")>>
+            <<set $found.push("Doors2")>>
+            <<append "#textbox" t8n>><<include "Doors2">><</append>>
+            <<run setup.scrollToView("doorstwo")>>
+        <<elseif !$found.includes("Doors3")>>
+            <<set $found.push("Doors3")>>
+            <<append "#textbox" t8n>><<include "Doors3">><</append>>
+            <<run setup.scrollToView("doorsthree")>>
+        <<elseif $found.includes("Doors3")>>
+            <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Enter">>
+        <</if>>
+    <<elseif ["s", "south"].contains(_cmd)>>
+        <<if !$found.includes("Doors3")>>
+            <<append "#textbox" t8n>><<include "DoorsS">><</append>>
+            <<set $found.push("DoorsS")>>
+            <<run setup.scrollToView("doorssouth")>>
+        <<else>>
+            <<set $transcript.push("Error")>><<set _error to false>>
+            <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t do that here.<</fadeout>><</replace>>
+        <</if>>
+    <<elseif ["tariaia", "look tariaia", "look at tariaia", "think tariaia", "think of tariaia", "think about tariaia", "remember tariaia"].contains(_cmd)>>
+        <<set $found.push("Doorstariaia"), _used.push("tariaia", "look tariaia", "look at tariaia", "think tariaia", "think of tariaia", "think about tariaia", "remember tariaia")>>
+        <<append "#textbox" t8n>><<include "DoorsTariaia">><</append>>
+        <<run setup.scrollToView("tariaia")>>
+    <<elseif ["gideron", "look gideron", "look at gideron", "think gideron", "think of gideron", "think about gideron"].contains(_cmd)>>
+        <<set $found.push("Doorsgideron"), _used.push("gideron", "look gideron", "look at gideron", "think gideron", "think of gideron", "think about gideron")>>
+        <<append "#textbox" t8n>><<include "DoorsGideron">><</append>>
+        <<run setup.scrollToView("gideron")>>
+    <<elseif ["zouma", "look zouma", "look at zouma", "see zouma", "examine zouma"].contains(_cmd)>>
+    /*Look at Zouma*/
+        <<set $found.push("Zouma"), _used.push("zouma", "look zouma", "look at zouma", "see zouma", "examine zouma")>>
+        <<append "#textbox" t8n>><<include "Zouma">><</append>>
+        <<run setup.scrollToView("zouma")>>
+    <<elseif ["smell", "recall smell", "remember smell"].contains(_cmd)>>
+        <<set $found.push("DoorsSmell"), _used.push("smell")>>
+        <<append "#textbox" t8n>><<include "DoorsSmell">><</append>>
+        <<run setup.scrollToView("smell")>>
+    <<elseif ["whistle", "listen whistle", "think whistle", "think of whistle", "think about whistle"].contains(_cmd)>>
+        <<set $found.push("DoorsWhistle"), _used.push("whistle", "listen whistle", "think whistle", "think of whistle", "think about whistle")>>
+        <<append "#textbox" t8n>><<include "DoorsWhistle">><</append>>
+        <<run setup.scrollToView("whistle")>>
+    <<elseif ["voice", "listen voice", "think voice", "think of voice", "think about voice"].contains(_cmd)>>
+        <<set $found.push("DoorsVoice"), _used.push("voice", "listen voice", "think voice", "think of voice", "think about voice")>>
+        <<append "#textbox" t8n>><<include "DoorsVoice">><</append>>
+        <<run setup.scrollToView("voice")>>
+    <<elseif ["e", "east", "w", "west", "nw", "north west", "sw", "south west", "se", "south east"].contains(_cmd)>>
+        <<set $found.push("DoorsDirection")>>
+        <<append "#textbox" t8n>><<include "DoorsDirection">><</append>>
+        <<run setup.scrollToView("doorother")>>
+    /*voice -> TODO*/
+    <<else>>
+        <<set $transcript.push("Error")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t do that here.<</fadeout>><</replace>>
+    <</if>>
+    <<set $transcript.push(_cmd)>>
+<</widget>>
+<<widget "CmdEnter">>
+    <<if !$found.includes("Enter2") && ["c", "continue", "go to altar", "go altar", "reach altar", "approach altar", "n", "come closer"].contains(_cmd)>>
+        <<set $found.push("Enter2")>>
+        <<append "#textbox" t8n>><<include "Enter2">><</append>>
+        <<run setup.scrollToView("entertwo")>>
+    <<elseif ["c", "continue", "go to altar", "go altar", "reach altar", "approach altar", "n", "come closer"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Altar">>
+    <<elseif _used.includes(_cmd)>>
+        /*Already done the action */
+        <<set $transcript.push("Error Double")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You’ve already tried this command.<</fadeout>><</replace>>
+    <<elseif ["h", "help"].contains(_cmd)>>
+    /*help line*/
+        <<set $found.push("NameHelp"), _used.push("h", "help")>>
+        <<replace "#help" t8n>><<include "NameHelp">><</replace>>
+    <<elseif ["recall", "remember", "once", "recall once", "remember once"].contains(_cmd)>>
+        <<set $found.push("EnterRecall"), _used.push("recall", "remember", "once", "recall once", "remember once")>>
+        <<append "#textbox" t8n>><<include "EnterRecall">><</append>>
+        <<run setup.scrollToView("recall")>>
+    <<elseif ["look", "look around", "look room", "look at room", "look around room"].contains(_cmd)>>
+        <<set $found.push("EnterLook"), _used.push("look", "look around", "look room", "look at room", "look around room")>>
+        <<append "#textbox" t8n>><<include "EnterLook">><</append>>
+        <<run setup.scrollToView("look")>>
+    <<elseif ["altar", "look altar", "look at altar"].contains(_cmd)>>
+        <<set $found.push("EnterAltar"), _used.push("altar", "look altar", "look at altar")>>
+        <<append "#textbox" t8n>><<include "EnterAltar">><</append>>
+        <<run setup.scrollToView("altar")>>
+    <<elseif ["braziers", "look braziers", "look at braziers", "brazier", "look brazier", "look at brazier"].contains(_cmd)>>
+        <<set $found.push("EnterBrasiers"), _used.push("braziers", "look braziers", "look at braziers", "brazier", "look brazier", "look at brazier")>>
+        <<append "#textbox" t8n>><<include "EnterBrasiers">><</append>>
+        <<run setup.scrollToView("braziers")>>
+    <<elseif ["initiate", "look initiate", "look for initiate", "initiates", "look initiates", "look for initiates"].contains(_cmd)>>
+        <<set $found.push("EnterInitiate"), _used.push("initiate", "look initiate", "look for initiate", "initiates", "look initiates", "look for initiates")>>
+        <<append "#textbox" t8n>><<include "EnterInitiate">><</append>>
+        <<run setup.scrollToView("initiate")>>
+    <<elseif ["choice", "remember choice", "recall choice", "think choice", "think about choice"].contains(_cmd)>>
+        <<set $found.push("EnterChoice"), _used.push("choice", "remember choice", "recall choice", "think choice", "think about choice")>>
+        <<append "#textbox" t8n>><<include "EnterChoice">><</append>>
+        <<run setup.scrollToView("choice")>>
+    <<else>>
+        <<set $transcript.push("Error")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t do that here.<</fadeout>><</replace>>
+    <</if>>
+    <<set $transcript.push(_cmd)>>
+<</widget>>
+<<widget "CmdAltar">>
+    <<if _test is true>>
+    /*Choices/Escapes */
+    <<elseif ["nothing", "choose nothing", "i choose nothing"].contains(_cmd) && !$found.includes("Nothing")>>
+        <<set $found.push("Nothing")>>
+        <<append "#textbox" t8n>><<include "Nothing">><</append>>
+        <<run setup.scrollToView("nothing")>>
+    <<elseif ["nothing", "choose nothing", "i choose nothing"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Nothing2">>
+    <<elseif ["cultivation", "choose cultivation", "i choose cultivation"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Cultivation">>
+    <<elseif ["maintenance", "choose maintenance", "i choose maintenance"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Maintenance">>
+    <<elseif ["care", "choose care", "i choose care"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Care">>
+    <<elseif ["transmission", "choose transmission", "i choose transmission"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Transmission">>
+    <<elseif ["education", "choose education", "i choose education"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Education">>
+    <<elseif ["s", "south", "e", "east", "w", "west", "se", "south east", "sw", "south west", "leave", "turnback", "go", "exit"].contains(_cmd)>>
+        <<set $transcript.push(_cmd), $transcript.push("Next Passage")>>
+        <<goto "Escape">>
+    /*Already Done*/
+    <<elseif _used.includes(_cmd)>>
+        /*Already done the action */
+        <<set $transcript.push("Error Double")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You’ve already tried this command.<</fadeout>><</replace>>
+    <<elseif ["organisation", "choose organisation", "i choose organisation"].contains(_cmd) && !$found.includes("RefusedOrga")>>
+        <<set $found.push("RefusedOrga")>>
+        <<append "#textbox" t8n>><<include "RefusedOrga">><</append>>
+        <<run setup.scrollToView("orga")>>
+    <<elseif ["construction", "choose construction", "i choose construction"].contains(_cmd) && !$found.includes("RefusedConstruct")>>
+        <<set $found.push("RefusedConstruct")>>
+        <<append "#textbox" t8n>><<include "RefusedConstruct">><</append>>
+        <<run setup.scrollToView("construct")>>
+    <<elseif ["safety", "choose safety", "i choose safety"].contains(_cmd) && !$found.includes("RefusedSafety")>>
+        <<set $found.push("RefusedSafety")>>
+        <<append "#textbox" t8n>><<include "RefusedSafety">><</append>>
+        <<run setup.scrollToView("safety")>>
+    /*Interactions */
+    <<elseif ["altar", "look altar", "look at altar", "reach altar", "approach altar", "examine altar"].contains(_cmd)>>
+        <<set $found.push("AltarLookAltar"), _used.push("altar", "look altar", "look at altar", "reach altar", "approach altar", "examine altar")>>
+        <<append "#textbox" t8n>><<include "AltarLookAltar">><</append>>
+        <<run setup.scrollToView("altar")>>
+    <<elseif ["paper", "look paper", "look at paper", "read paper"].contains(_cmd)>>
+        <<set $found.push("AltarLookPaper"), _used.push("paper", "look paper", "look at paper", "read paper")>>
+        <<append "#textbox" t8n>><<include "AltarLookPaper">><</append>>
+        <<run setup.scrollToView("paper")>>
+    <<elseif ["list", "look list", "look at list", "read list"].contains(_cmd)>>
+        <<set $found.push("AltarLookList"), _used.push("list", "look list", "look at list", "read list")>>
+        <<append "#textbox" t8n>><<include "AltarLookList">><</append>>
+        <<run setup.scrollToView("list")>>
+    <<elseif ["braziers", "look braziers", "look at braziers", "brazier", "look brazier", "look at brazier"].contains(_cmd)>>
+        <<set $found.push("EnterBrasiers"), _used.push("braziers", "look braziers", "look at braziers", "brazier", "look brazier", "look at brazier")>>
+        <<append "#textbox" t8n>><<include "EnterBrasiers">><</append>>
+        <<run setup.scrollToView("braziers")>>
+
+    /*Errors*/    
+    <<elseif ["n", "north", "nw", "north west", "ne", "north east"].contains(_cmd)>>
+        <<set $transcript.push("Error")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t move in this direction.<</fadeout>><</replace>>
+    <<else>>
+        <<set $transcript.push("Error")>><<set _error to false>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>You can’t do that here.<</fadeout>><</replace>>
+    <</if>>
+    <<set $transcript.push(_cmd)>>
+<</widget>>
+    /*** GENRAL COMMANDS ***/
+<<widget "ControlsOption">>
+	<<set $controls to true>>
+    <<set _cmd to _textbox.toLowerCase()>>
+	<<if ["", " ", "  ", "   "].contains(_cmd)>>
+        <<replace "#confirm" t8n>><<fadeout 2s 1s>>Please enter a command.<</fadeout>><</replace>>
+    <<elseif ["transcript"].contains(_cmd)>>
+		<<export $transcript $turns $found>>
+    <<elseif ["rule", "rules"].contains(_cmd)>>
+		<<popup 'Rules' 'Rules'>>
+    <<elseif ["hint", "hints"].contains(_cmd)>>
+		<<popup 'Hints' 'Hints'>>
+    <<elseif ["key", "keys"].contains(_cmd)>>
+		<<popup 'Keys' 'Keys'>>
+    <<elseif ["credit", "credits", "end credit", "thanks"].contains(_cmd)>>
+		<<popup 'Credits' 'Credits'>>  
+    <<elseif ["i", "inventory", "inv", "open inventory"].contains(_cmd)>>
+		<<append "#textbox" t8n>><<include "Inventory">><<set $found.push("Player")>><</append>>
+        <<run setup.scrollToView("inve")>>
+	<<elseif ["x me", "me", "look me", "look at me", "inspect me", "examine me"].contains(_cmd)>>
+		<<append "#textbox" t8n>><<include "Player">><<if !$found.includes("Player")>><<set $found.push("Player")>><</if>><</append>>
+        <<run setup.scrollToView("player")>>        
+    <<elseif ["compound", "think compound", "think about compound", "remember compound", "recall compound", "consider compound"].contains(_cmd)>>
+		<<append "#textbox" t8n>><<include "Compoud">><<set $found.push("Compoud")>><</append>>
+        <<run setup.scrollToView("compound")>>
+	/*SETTINGS/MENUs*/
+	<<elseif ["setting", "settings"].contains(_cmd)>>
+		<<run UI.settings()>>
+	<<elseif ["save", "saves", "saving"].contains(_cmd)>>
+		<<run UI.saves()>>
+	<<elseif ["restart", "restarting"].contains(_cmd)>>
+		<<run UI.restart()>>
+    <<elseif ["back"].contains(_cmd)>>
+        <<if passage() isnot "END">>
+            <<run Engine.backward()>>
+        <<else>>
+            <<EndingBack>>
+        <</if>>
+    <<elseif ["forward"].contains(_cmd)>>
+        <<run Engine.forward()>>
+    <<elseif ["scroll up"].contains(_cmd)>>
+        <<run setup.scrollToTop("text")>>
+    <<elseif ["scroll down"].contains(_cmd)>>
+        <<run setup.scrollToBottom("text")>>
+	/*OTHER POPUPS*/
+	<<else>>
+		<<set $controls to false>>
+	<</if>>
+<</widget>>
+<<widget "CountTurns">>
+	<<if !$controls>>
+		<<set $turns ++, _error to true>>
+        <<if passage() is "Explanation">><<CmdExpl>>
+        <<elseif passage() is "Intro">><<CmdIntro>>
+        <<elseif passage() is "NameBad">><<CmdBadName>>
+        <<elseif passage() is "Name">><<CmdName>>
+        <<elseif passage() is "Whistle">><<CmdWhistle>>
+        <<elseif passage() is "Corridor">><<CmdCorridor>>
+        <<elseif passage() is "Doors">><<CmdDoors>>
+        <<elseif passage() is "Enter">><<CmdEnter>>
+        <<elseif passage() is "Altar">><<CmdAltar>>
+        <</if>>
+	<</if>>
+    <<if _error>>
+        <<replace "#confirm">><<fadeout 2s 1s>> Loaded.<</fadeout>><</replace>>
+    <</if>>
+<</widget>>
+<<widget "EndingBack">>
+    <<if previous() is "Nothing3">>
+        <<run Engine.backward()>><<run Engine.backward()>><<run Engine.backward()>><<run Engine.backward()>>
+    <<elseif previous() is "Cultivation2">>
+        <<run Engine.backward()>><<run Engine.backward()>><<run Engine.backward()>>
+    <<elseif previous() is "Maintenance2">>
+        <<run Engine.backward()>><<run Engine.backward()>><<run Engine.backward()>>
+    <<elseif previous() is "Escape">>
+        <<run Engine.backward()>><<run Engine.backward()>>
+    <<elseif previous() is "Care2">>
+        <<run Engine.backward()>><<run Engine.backward()>><<run Engine.backward()>>
+    <<elseif previous() is "Transmission2">>
+        <<run Engine.backward()>><<run Engine.backward()>><<run Engine.backward()>>
+    <<elseif previous() is "IntroLeave">>
+        <<run Engine.backward()>><<run Engine.backward()>>
+    <<elseif previous() is "Education2">>
+        <<run Engine.backward()>><<run Engine.backward()>><<run Engine.backward()>>
+    <<elseif previous() is "ENDComplain">>
+        <<run Engine.backward()>><<run Engine.backward()>>
+    <<elseif previous() is "ENDSitting2">>
+        <<run Engine.backward()>><<run Engine.backward()>><<run Engine.backward()>>
+    <</if>>
+<</widget>>

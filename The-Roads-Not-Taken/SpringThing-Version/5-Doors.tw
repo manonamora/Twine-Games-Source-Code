@@ -1,0 +1,84 @@
+:: Doors [hall interact]
+    <div id="text"><p>Kodyn’s <span class="hint">whistle</span> resonated once more, followed by the sound of the massive doors creaking as they fully opened. A wispy draft escaped from the room, filling the corridor with the <span class="hint">smell</span> of burning incense and pine. Whispers arose among the initiates, audibly giddy with excitement, as they were getting ever so closer to their goal.</p>
+
+    <p>“Initiate, <span class="hint">Tariaia</span>,” a shaky <span class="hint">voice</span> echoed from the dark room.</p>
+    
+    <p>At the call of her name, the first being in line broke ranks, and quietly entered the room. Without being commended to do so, the initiates behind her took a step forward.</p>
+
+    <span id="textbox"></span>
+    </div>
+
+    <<BlockTextbox>>
+    <<set _used to [], $transcript.push("Passage: Doors", "Actions ->")>>
+
+:: DoorsWhistle
+    <hr id="whistle">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>This time, you were glad you were not standing close enough to the male to feel the noise ring so painfully in your ears. You pitied, however, the ears of the initiates besides him.</p>
+
+:: DoorsSmell
+    <hr id="smell">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>You recognised the smell, from your attendance to the Ritual in past aeons – as a spectator, then. Its peppery scent tickled your nostrils, like it used to when you were younger. This time, however, your eyes did not water.</p>
+
+:: DoorsTariaia
+    <hr id="tariaia">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>You had seen the female around the Compound before, even shared part of your education path with her. Being a frail and quiet being, you had not interacted much with her during your childhood. You could remember her spending more time nosing around the Archive than creating bonds with youngins her age. If you were asked to wager on her future, you would most likely bet on her becoming an ‘Organiser’ or maybe an ‘Educator’.</p>
+
+:: Doors2 [interact]
+    <hr id="doorstwo">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>You followed suit and moved one step forward. The sound of whispers among the initiates became louder, no matter how much shushing Kodyn did.</p>
+
+    <p>“Initiate <span class="hint">Gideron</span>,” the shaky <span class="hint">voice</span> echoed again.</p>
+
+    <p>Another initiate left the line, and stomped inside the room. The ones behind him took another step forward.</p>
+
+:: DoorsGideron
+    <hr id="gideron">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>You did not particularly like the soon-to-be adult, so you had avoided his presence whenever possible. He irked you to no end with his better-than-thou attitude. Gideron was the type of being who attached status to the path an individual had chosen – though this practice was frowned upon, it was nonetheless common among the Community. Coming from a family of ‘Maintainers’ was unfortunately not as prestigious as coming from one of ‘Organisers’ – somehow, to them, physical labour was seen as lesser. And youngins with this mentality can be so cruel…</p>
+
+:: Doors3
+    <hr id="doorsthree">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Again, you took a step forward. And another step after the third-in-line initiate disappeared inside the room. And another one after the being behind them passed the dark doors. And another. And another. And another. And another…</p>
+
+    <p>You slowly moved along the corridor, step by step. Until there were no initiate left before you. Until you stood by the massive dark doors, waiting to be called.</p>
+
+    <p>“Initiate $name!”</p>
+    
+    <p>Though the words echoed from the darkness, your eyes automatically tried to find the Kodyn’s. You did not know why you did so, considering what you felt about him, but the sight of the scrawny male, still standing by the door with his ceremonial robes and his whistle on his lips, was strangely comforting. He gave you a curt nod, wishing you would hurry already and enter the Auditorium.</p>
+
+:: DoorsDirection
+    <hr id="doorother">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>The corridor is much too narrow for you to step in this direction.</p>
+:: DoorsS
+    <hr id="doorssouth">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p><<if !$found.includes("DoorsS")>>Instead of following your fellow initiates forward, you took a step back and unceremoniously bumped into Zouma<<if !$found.includes("Zouma")>>, the being standing behind you<</if>>. With a frowning face and unnerving guttural sounds, the male towered over you, eyeing you with a stern glare. It made you feel small and ashamed. Hunching, you took a few step forwards.<<else>>Yet again, you did not take a step forward when the rest of the line did. Your back met Zouma’s body once more, as he was advancing to take his spot, the one you denied him. He moved his head close to yours and voiced his growing frustration with frightening grumbles. You decided it was best to take a step forward, after all…<</if>></p>
+
+    <<if !$found.includes("Doors2") or !$founds.includes("DoorsS")>><p>“Initiate <span class="hint">Gideron</span>,” the shaky <span class="hint">voice</span> echoed again.</p>
+
+    <p>Another initiate left the line, and stomped inside the room. The ones behind him took another step forward.</p>
+    <<else>>
+    <<include "Doors3">><<set $found.push("Doors3")>>
+    <</if>>
+
+:: DoorsVoice
+    <hr id="voice">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>The shakiness of the spoken words and the tone of the echo sounded strangely familiar to you. You were certain you had heard this voice before, but you could not remember where or when…</p>
+
+    <p>Granted, this would surprise no one. The Elders were part of the Community, even if their true identity was only known by the Head Organiser – and it was a very well kept secret. Every aeon, a handful of beings from the oldest generations were selected to become the Elders of that aeon, and supervise the proceeding of the Ritual. It was a mighty honour to be chosen.</p>

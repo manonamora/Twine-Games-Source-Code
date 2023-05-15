@@ -1,0 +1,76 @@
+:: Name [room interact]
+    <div id="text"><<if previous() isnot "NameBad">><p>“$name,” you replied, with a straight face.</p>
+
+    <p>The <span class="hint">male</span> added your answer to the page, stared you down, scribbled some more. As he moved on to the next initiate, you sat there, confused. Unlike the others, he had not asked anything else but your name, nor did he utter another single word to you. Not even a ‘congratulation’ like the other adults who crossed your path had done all morning.</p><</if>>
+
+    <p>With a hint of bitterness in your mouth, you watched the male continuing his task – though you did not linger, in fear that others would think you cared about him. Ultimately, you realised you should relish the short interaction you experienced instead, as others were clearly not as lucky.</p>
+
+    <p>So, you looked away, gazing into the distance rather than anything in particular in the <span class="hint">room</span>, as you waited for the moment you would be allowed to leave your seat and undertake the <span class="hint">Ritual</span> in that mystical <span class="hint">dark room</span>. While other initiates fretted about the ordeal, you were as cool as a cucumber, repeating the same <span class="hint">words</span> as before.</p>
+
+    <span id="textbox"></span></div>
+    <<BlockTextbox>>
+    <<set _used to [], $transcript.push("Passage: Name", "Actions ->")>>
+
+:: NameHelp
+    <hr>
+    <p>''Help:'' To continue to the next screen, type “//c//” or “//continue//”.</p>
+
+:: NameRoom
+    <hr id="room">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>The room was plain and simple, with cream painted walls and grey concrete floors – a common colour scheme around the Compound. Someone had pushed the wooden benches against the walls, and, in the corner, stacked the tables. This ‘waiting room’, currently filled with anxious initiates, was located on the ground floor of the building. It was usually used for meetings and small assemblies. You had come here a few times before, among those for the Organisers’ presentation of the Ritual.</p>
+
+    <p>There was not really much else of interest in this room. The other initiates either had found a seat, letting their knees shake and twitch, or were pacing around the room, fidgeting with their hands. A handful were whispering to one another, asking what the other had planned to do during the ceremony.</p>
+
+:: NameRitual
+    <hr id="ritual">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>The Ritual, this rite of passage for every youngin in the Compound, the Community’s cornerstone, was the aeon’s event, during which an initiate would shed their innocence and childishness behind to become an adult. Through the Ritual, they got to choose their path. The one they would follow for the rest of their lives.</p>
+
+    <p>The simple ceremony – or so you have been told – determined what contribution and initiate would make from what point onward, what they would give back to the Community that raised them, what tasks they would do until the day they would leave this place.</p>
+
+    <p>Every initiate in this room, you included, had either been looking forward or been dreading – or both! – this event for clicks! And even aeons, for some! With you, it had haunted every single of your dreams, as well as your thoughts, ever since you received your robes. You wasted many hours on the Organisers’ presentation of the ceremony, and still you had not been sure what you would do when the time came. That is, until a few days ago.</p>
+
+:: NameDarkRoom
+    <hr id="darkroom">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>The mystical dark room was not really that mystical, but the Auditorium dressed up for the occasion. It was only dubbed so because of the transformation the court received every aeon ahead of the ceremony.</p>
+
+    <p>Usually a light and welcoming environment, with its wide windows, cascading greeneries, and tranquil pond, the Auditorium was a place of calm and rest, where many being came to recharge or put on a show for others.</p>
+
+    <p>But once an aeon, the court was fenced off, so the Organisers could ready it for the Ritual. Covering every inch of brightness with sooty cloth, they let darkness swallow the pleasant space whole.</p>
+
+:: NameBeingVar
+    <hr id="being">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Yet again, you found yourself looking towards Kodyn, now barking at another initiate. You wondered if you had missed something when you last glanced at him, but he was still the scrawny being you always tried to avoid. </p>
+
+:: NameTalkKodyn
+    <hr id="kodyn">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Feeling the strange want to talk to the male who took your name, you stared at Kodyn for a while. For some unknown reason, your mind would not let go of the idea of sparking a conversation with the being you despised the most in the Compound. And so, you sat there, with your jaw hanging, thinking of what you could say to him. Your thoughts pulling blanks, and seeing the male walking away, you soon gave up on this idiotic want.</p>
+
+:: NameWords
+    <hr id="word">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>//I choose nothing…//</p>
+
+    <p>You continued on mumbling the words, repeating them even though they had been engraved in your mind by now. These were the words you would say later. When your time came.</p>
+
+:: NameTalkInitiate
+    <hr id="talkinitiate">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Free from the male’s suffocating presence, you relished in this newfound liberation. Though it would be limited, for Kodyn’s round of the room was almost over, you were happy to have some little time where you could interact with the other initiates in the room.</p>
+
+    <p>You glanced to your right, and find your neighbour busy with Kodyn’s interrogation. The little being looked uncomfortable and trying to rush for their turn to be over. Unlucky for them, Kodyn had many questions. You were tempted to meddle with the situation, but your fear of the Organiser raining on your ceremonial parade.</p>
+
+    <p>So, you turned to the left, where you saw two initiates <<if $found.includes("IntroTalkInitiate")>>still <</if>>in deep conversation. Wanting to be part of something that was not a grilling, you tapped on the closest initiate’s back to get their attention. Unfortunately, you did not get the reaction you expected – or any reaction, for that matter. </p>
+
+    <p>Still, you did not let that shake you – believing instead that these initiates were just reacting anxiously because of what was to come, rather because they thought of you as lesser or unworthy. You tried again, with more insistence. Yet again, this was done in vain, as the duo moved further away from you.</p>

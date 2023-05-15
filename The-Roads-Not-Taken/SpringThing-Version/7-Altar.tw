@@ -1,0 +1,108 @@
+:: Altar [inside interact]
+    <div id="text"><p>As instructed, you moved ever so closer to the altar, your mind filled with questions and worries. But you could not even hear yourself talk, with your pulse beating like a drum in your ears and your breaths shortening to the point of panting. Any attempt to calm down were done in vain. And so, you fought hard against the urge to run away, which was getting stronger with every step. </p>
+
+    <p>“It is time, initiate $name,” the croaky voice startled you, “to make your choice.”</p>
+
+    <p>Your lips trembled as you took your final steps towards the <span class="hint">altar</span>. In a short moment, you would be placing your hand on the flimsy <span class="hint">paper</span> that was laying on top of the cold stone, and utter the words to seal your fate. Even if you had been looking forward to this moment for aeons, you were now dreading it. Your choice would dictate every step of your live. Until your final day on this plane.</p>
+
+    <p>“What is your choice, initiate $name?”</p>
+
+    <p>Your hands were shaking.</p>
+
+    <span id="textbox"></span>
+    </div>
+
+    <<BlockTextbox>>
+    <span id="help"></span>
+    <<set _used to [], $transcript.push("Passage: Altar", "Actions ->")>>
+
+:: AltarLookAltar [interact]
+    <hr id="altar">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Standing between the burning <span class="hint">braziers</span>, the dark pillar was the most intricate piece you had ever encountered around the Compound – having explored almost all rooms within its walls, you had seen a lot of remarkable things, thought more were unremarkable. This piece, however, was special.</p>
+
+    <p>Being fundamental to the rite of passage that was the Ritual, the altar was one of the last remnants of a past civilisation, one who succumbed in its prime to the greed and apathy of its citizens. Very few survived this lost time, clinging onto a few still-standing pieces. It was speculated that the altar was the reason the Community was still there, aeons after said civilisation fell and the world burned.</p>
+
+    <p>And so the altar stood strong, from the block of granite it burst out from. The pillar had been sculpted by careful hands, as it flaunted its elaborate figures, delicate curves, and other detailed designs. It was a beautiful piece. An important piece. And integral piece.</p>
+
+    <p>On top of which laid a simple and flimsy piece of <span class="hint">paper</span>.</p>
+
+:: AltarLookPaper
+    <hr id="paper">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>A closer glimpse was the only thing you needed to recognise the paper. For it was the <span class="hint">List</span>.</p>
+
+    <p>You had been taught about the List ahead of the Ritual. You were even given a copy of said list, supposedly to study – though you had already made up your mind by then. The List named all branches where an initiate could request to be posted, making them a productive member of the Community.</p>
+
+    <p>The list very rarely changed from aeon to aeon, as the Community’s needs usually stayed the same. And while the Elders had to power to refuse an initiate’s choice, this also happened very rarely. Most aeons, initiates would spread themselves evenly across the board, and meet those needs without having the Elders stepping in. Most initiate had an affinity for a certain branch, and those who didn’t, had families pressuring them to favour one over the other – yours had pleaded for you to choose ‘Maintenance’ above all. </p>
+
+:: AltarLookList
+    <hr id="list">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr> 
+    <p>Having read through the List hundreds of times by now, you could recite it from memory if you were asked to. The List was not lengthy to begin with…</p>
+    <center>~ Branch List ~</center>
+    <ul>
+        <li>''<span class="hint">Organisation</span>''<br>
+            You would deal with anything needing a semblance of organisation, from forecasting the Compound’s needs to scheduling the Community plannings. Organisers were needed everywhere, and ensured that everything happened as it should.</li>
+        <li>''<span class="hint">Cultivation</span>''<br>
+            A core Branch providing nutrients and materials for the Compound, which were used in meals for the Community, as well as in other non-comestible items. Cultivation was physically demanding, but only during part of each aeon: when it was time to ready the land, and during harvesting clicks.</li>
+        <li>''<span class="hint">Maintenance</span>''<br>
+            From waste management, to ensuring a hygienic environment, to general repairs, anything the Compound would need to stay in tip-top shape would be in the wheelhouse of Maintainers.</li>
+        <li>''<span class="hint">Care</span>''<br>
+            This Branch was a special one, as it had two main sub-branches: Caring and Healing. The first handled new beings brought into this world, as well as older beings leaving it. The second focused on the wide ranges of illnesses that needed relief – Healing was the most thought-after branch by initiates.</li>
+        <li>''<span class="hint">Transmission</span>''<br>
+            Whether communication was required to reach the whole Community, to send reports between branches, or just sharing personal words between beings, the Transmission facilitates any broadcasting and mailing need inside the Compound.</li>
+        <li>''<span class="hint">Education</span>''<br>
+            For the Compound to run orderly, and for the Community to understand one another, beings needed to all have a certain amount of knowledge and skills. Educators made sure that every youngins learned the base, as well as trained beings on more specialised knowledge. </li>
+        <li>''<span class="hint">Construction</span>''<br>
+            As the Community grew, so did the Compound. It required additional space, as well as things to fill in this new space. The Branch was also providing the necessary produced materials to other branches.</li>
+        <li>''<span class="hint">Safety</span>''<br>
+            It was as important to protect the Community from outside threats as it was from incidents inside the walled Compound. Accidents could always happen, and containing the scene of the unfortunate circumstances could mean life or death to the involved beings.</li>
+    </ul>
+
+    <p>While the List seemed limited, as there were only few Branches in the Compound, this choice was not meant to be a finality – not completely. Depending on their affinities or skills, beings had the possibility to specialise further in the chosen Branch further into their adulthood.</p>
+
+:: RefusedOrga
+    <hr id="orga">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>“I, initiate $name, choose Organisation.”</p>
+
+    <p>As your words echoed in the silent room, you wondered if–</p>
+
+    <p>“Denied,” an Elder responded swiftly.</p>
+
+    <p>The speed to which you received your answer ended up hurting more than the refusal itself. You were not the brightest of initiate this aeon, or the most organised, but worse beings than you had entered this Branch before. And yet, the Elders had needed very little time to make a verdict on your case. It was quite humiliating.</p>
+
+    <p>“Initiate $name,” the Elder continued, “make your decision.” </p>
+
+:: RefusedConstruct
+    <hr id="construct">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>It was a bit… of a long shot, with you being quite average. Whether in strength or general abilities, you did not shine much in the required skills needed to make things. However, beings knew you never turned down a challenge and always tried your best with each task given – that had to count for something, right?</p>
+
+    <p>“I, initiate $name,” you said with a shaky voice, “choose Construction.”</p>
+
+    <p>As was always with monumental decisions, the silence after the request was the worst. You remembered having scoffed when you had seen initiates shaking with dread when the Elders took their time. Now that you were in their shoes, you regretted having looked down on them. This was the worst thing you’d ever experienced.</p>
+
+    <p>And, then, you thought you heard a faint chuckle and a muffled laugh above the altar.</p>
+
+    <p>“Initiate $name,” an Elder finally uttered. “Please make another choice.”</p>
+
+:: RefusedSafety
+    <hr id="safety">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>“I, initiate $name, choose…” your lips were trembling, “… Safety.”</p>
+
+    <p>A gasp in the balconies up above escaped someone, before familiar voices cried out your name. You had known this choice would be controversial with your family, as Safety Officers had never been the kindest towards the Maintainers during the demonstration – a few members came back with more than bruises. It was no wonder they felt betrayed.</p>
+
+    <p>“Initiate $name,” an Elder started, “Sa–”</p>
+
+    <p>Even if their size was negligible compared to the rest of the Community in attendance, your family managed to drown the Auditorium with shouts of refusals. Not believing you could make such a choice, they pleaded with the Elders to deny your request, on the grounds of your stupidity and low reflexes. You tried to rebut their arguments, but your voice was nowhere loud enough to be heard. </p>
+
+    <p>“Settle down,” the Elder commanded the room. When silence took its rightful place, they continued: “Initiate $name, make another decision.”</p>

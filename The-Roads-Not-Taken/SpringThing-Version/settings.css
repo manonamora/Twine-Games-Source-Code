@@ -1,0 +1,45 @@
+/*Font Change*/
+.serif .passage, .serif #ui-dialog-body {
+    font-family: var(--serif);
+}
+.garamond .passage, .garamond #ui-dialog-body {
+    font-family: var(--serif2);
+}
+.sansserif .passage, .sansserif #ui-dialog-body {
+    font-family: var(--sansserif);
+}
+.monospace .passage, .monospace #ui-dialog-body {
+    font-family: var(--monospace);
+}
+.opendyslexic .passage, .opendyslexic #ui-dialog-body {
+    font-family: var(--dyslexic);
+}
+.hyperlegible .passage, .hyperlegible #ui-dialog-body {
+    font-family: var(--hyperlegible);
+}
+        /*line height change*/
+.ln75 .passage {line-height: 1.2;}
+.ln125 .passage {line-height: 2.0;}
+.ln150 .passage {line-height: 2.4;}
+        /*text align change*/
+.left .passage {text-align: left;}
+.center .passage {text-align: center;}
+.right .passage {text-align: right;}
+
+.hint-visible .hint {
+    font-weight: bold;
+}
+.hint-visible.green .hint {
+    color: #00EE37;
+}
+.hint-visible.orange .hint {
+    color: #ff4747;
+}
+.hint-visible.yellow .hint {
+    color: #ffff9b;
+}
+.hint-visible.pink .hint {
+    color: #ff61ff;
+}
+
+

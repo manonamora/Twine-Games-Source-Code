@@ -1,0 +1,67 @@
+  /* TABLET COMPATABILITY
+  ===========================*/
+@media screen and (max-width: 1024px) {
+    #container {
+        width: calc(100% - 2em);
+        padding: 3em 1em 2.5em;
+    }
+    #passages {width: 93%;}
+    #ui-dialog {
+        width: 60vw;
+    }
+}
+@media screen and (max-width: 850px) {
+    #ui-dialog {width: 70vw;}
+    #title {font-size: 7vw;}
+    #ui-dialog-title {font-size: 3.5em;}
+}
+@media screen and (max-width: 750px) {
+    #main-nav {display: none;}
+    #footer { 
+        display: flex;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 5%;
+        justify-content: space-evenly;
+        position: fixed;
+        padding-bottom: 8%;
+    }
+    #passages {
+        margin: 25px auto;
+        width: 98%;
+        max-height: calc(100% - 75px);
+    }
+}
+@media screen and (max-width: 660px) {
+    #ui-dialog-title {font-size: 3em;}
+    #title {
+        font-size: 8vw;
+        font-weight: bold;
+    }
+    h2 {font-size: 45px !important;}
+    #ui-dialog {
+        width: 80vw;
+        max-height: 85vh;
+    }
+    #ui-dialog-body {max-height: calc(85vh - 5em - .66em);}
+}
+
+@media screen and (max-width: 580px) {
+    #passages {
+        margin: 10px auto;
+        max-height: calc(100% - 40px);
+    }
+    h2 {font-size: 35px !important;}
+    #ui-dialog {
+        width: 85vw;
+        max-height: 95vh;
+    }
+    #ui-dialog-body {max-height: calc(95vh - 5em - .66em);}
+}
+@media screen and (max-width: 490px) {
+    input[type="text"] {
+        min-width: 2em;
+        width: 70%;
+    }
+}

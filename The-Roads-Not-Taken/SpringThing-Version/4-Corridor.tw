@@ -1,0 +1,128 @@
+:: Corridor [hall interact]
+    <div id="text"><p>Heels clomped against the concrete floor. Sleeves rustled as arms swung back and forth. Whispers echoed in the daedalian corridors. Marching at the rigid pace set by Kodyn, the line of initiates made their way towards the mystical dark room.</p>
+
+    <p>The air was both heavy with anxiety and electric from excitement. Before sundown, every initiate would have selected their path, and moved on to the next stage of their life. They would finally become productive members of the Community. They would have matured into adults. <span class="hint">You</span> might mature into an adult.</p>
+    
+    <span id="textbox"></span></div>
+
+    <<BlockTextbox>>
+    <<set _used to [], $transcript.push("Passage: Corridor", "Actions ->")>>
+
+:: CorridorYou
+    <hr id="you">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Though you continued to rehearse for your performance during the Ritual, still quietly repeating ‘//I choose nothing//’, you were now questioning your choice. Your family wanted you to follow in their footsteps, by joining ‘Maintenance’ – where one took care and disposed of the waste created by the Community. This branch was an integral part of the Compound, even if you often disagreed with the face. Coming back with sullied uniforms, the stench of your peers often lingered in your home as a result. And even after promising they would understand whatever path you would choose, your family continued to hammer on the safe choice that ‘Maintenance’ was.</p>
+
+    <p>As such, you did not believe they would accept this path – the ‘//I choose nothing//’ path. Nor were you certain the Elders would accept it. There were rare cases where the Elders refused an initiate. However, those were often a matter of the initiate’s well-being. It was unthinkable to accept a frail initiate into a more physically demanding branch.</p>
+
+    <p>And your choice was an odd one, after all – one you were not certain you grasped fully yourself. //I choose nothing//. You had no idea what would happen next. No one before you had said those words during the Ritual, as far as the public records were concerned.</p>
+
+:: Corridor2N
+    <hr id="twon">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Still following the scrawny being, the regimental line continued down the empty corridors. Normally bursting with life, and filled with noise, the halls were eerily quiet, and vacant of beings – save for the initiates marching towards their fate.</p>
+
+    <p>Were it any other day, you would avoid the deserted spots around the Compound, just for your safety. But this was the day of the Ritual, the long-awaited rite of passage for every initiate and their family. And you were not alone…</p>
+
+    <p>Two enormous doors were slowly appearing in your field of vision. The ones behind which dwelt the Auditorium, behind which the Community filled its dark benches, behind which adults and youngin waited to quietly cheer on the anxious initiates that would soon be passing through. The doors before which the line was starting to stop.</p>
+
+:: Corridor2Stop
+    <hr id="twostop">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Following your fellow initiates, you slowed your pace until you reached a complete halt. You were not about to make a fool out of yourself by bumping carelessly into other beings. Not today.</p>
+
+:: Corridor2N2
+    <hr id="twontwo">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Instead of slowing your pace to a complete halt, like your fellow initiates were executing without a second thought, you thoughtlessly continued on, unceremoniously bumping into the being in front of you. The force then trickled up the line, as the female ahead – Natisse, she was called – collided with the being before her, who did the same against the being above and so on and so forth… </p>
+
+    <p>You realised the mess you created when grumbling sounds and complaints erupted in the corridor. Oh, the shame you felt when Natisse turned around and furrowed her brows at you. Her face looked ready to chew you out, with her eyes piercing through your being, but her mouth stayed mum.</p>
+
+    <p>The situation, which you caused, distressed you greatly. So much so you could not move a single muscle in your body. So you stood there, as still as you could, mumbling some apologetic words to the livid initiate.</p>
+
+:: Corridor2NOther
+    <hr id="twonother">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>The corridor is much too narrow for you to step out of line in this direction.</p>
+
+:: Corridor2NS
+    <hr id="twons">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Instead of slowing down, you turn on your heels, as if you were trying to retrace your steps. Unsurprisingly, the initiate standing behind you – Zouma was his name – was not too happy to see you bump into him so thoughtlessly. Though you did not expect him to shove you back into place with a disapproving grumble – instead of hashing it out… with his fist.</p>
+
+    <p>Thankful for his peaceful conduct, which in hindsight made sense, considering the day of the aeon, you mumbled some apologetic words and tried your best to stand still.</p>
+
+:: Corridor3
+    <p>This forced stillness<<if $found.includes("Corridor2N2") or $found.includes("Corridor2S")>>, and the initiates’ frustration with you,<</if>> was short-lived however, as you soon find yourself hearing some strange noise ahead, among others you recognised Kodyn’s voice. Curious to learn about the commotion happening by the door, you worried that you were too far to see anything.</p>
+
+:: Corridor3No
+    <hr id="threeno">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>However, you brushed the feeling aside as swiftly as it arrived. As strong as your dislike for the being leading you to your fate, Kodyn was still an Organiser at the end of the day, trained to ensure everything happened the way it should. If commotion there was up ahead, then commotion was supposed to happen.</p>
+
+    <p>‘Curiosity killed the cat’, or so the ancient civilisations said. You frankly had no idea what a ‘cat’ was, but you assumed they had meant that asking too many questions would lead to troubles – you were not about to get into some today!</p>
+
+:: Corridor3See
+    <hr id="threesee">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Caring not to bother <<if $found.includes("Corridor2N2")>>Natisse<<else>>the initiate<</if>> standing before you, you <<if _cmd isnot "jump">>stepped aside<<else>>jumped with all your might<</if>>, with the hopes to catch a glimpse of movement up ahead. You are disappointed to find only exchanges between Kodyn and another adult being by the doors. The male was handing the heavy ledger to a female in ceremonial robes of sun-coloured cloth. She thanked him, knocked three times on the door, waited for it to open, and disappeared inside. The door shut close behind her, with a ominous ‘thump’.</p>
+
+:: Natisse
+    <hr id="natisse">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Though you would never admit it, Natisse was the one who got away. You had loved – and were still loving – the female with all the fibres of your being. You had even proclaimed your love to her the moment you laid your eyes on her – you knew then you were going to spend the rest of your life around her – but neither she, not the other beings present at the time, took your declaration seriously. Granted, you were only a few aeons at the time – who could take the babbling of a tiny youngin without a laugh?</p>
+
+    <p>Still, your love never wavered. You had followed her everywhere she went like a pup, done whatever she had asked of you without a second thought, and dreamt of her every single night.</p>
+
+    <p>For a while, Natisse had returned your feelings, and your world had become whole. Your then-elusive glances continued even after her eyes met yours. You held hands when you stood close to her. You sat together during meals, and promenaded during your free time. You even kissed in the dark and quiet corners of the Compound. Every day around her, you felt as if you were walking on a cloud, instead of scrambling around for kernels of affections.</p>
+
+    <p>Until last click, when everything crumbled…</p>
+
+:: Zouma
+    <hr id="zouma">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Zouma was what the Community considered an attractive male. No matter your personal view on it, he had all the features looked for. With his strong frame and cultivated muscles, the being had found the attention of many for his potential. He could carry heavy loads for long distances, was impervious to extreme weathers and conditions, and could break things with his bare hands – he was also known to talk more with his fists than his mouth.</p>
+
+    <p>While most Branches had sought his favours, only seemed to have got anything further than a grunt from the male: the Cultivators.</p>
+
+:: CorridorNatisse
+    <hr id="talknatisse">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Though the corridor had fallen silent, as initiates were waiting for Kodyn to direct them to the next step of the Ritual, you itched to talk to someone, the female standing before you specifically. You did not know what you wanted to talk about particularly, nor whether Natisse actually reciprocated your want. You only cared about passing the time doing something that was not standing in silence.</p>
+
+    <p>To get her attention, you tapped her shoulder. It should not be too surprising to find she did not react – or tried to hide it. She had been avoiding you the past days for a reason…</p>
+
+    <p>Still, the cold shoulder would not stop you from trying again. You had nothing but time, after all. Natisse only sighed, already frustrated with your antics.</p>
+
+    <p>So you tapped the female’s shoulder one last time,to which she deigned finally to give you a response. Facing you, she snapped, ordering you to cut it out with a threatening stare, before turning her back to you.</p>
+
+:: CorridorZouma
+    <hr id="talkzouma">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Even with the overwhelming quietness of the corridor, as the initiates hushedly fretted about the next stage of the Ritual, you suddenly felt the need to talk to someone – //anyone// – about something – //anything//. A distraction would surely help you forget about your own anxiety…</p>
+
+    <p>So it felt like a no-brainer to you to turn to Zouma, the male standing behind you. Unfortunately, your smiling greeting was not returned with the same friendliness. The male sent a dark glare, scary enough to send chills through your whole body. Fearing retaliation, you promptly turned back and kept mum.</p>
+
+:: CorridorHeadstand
+    <hr id="headstand">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Tough everyone in line stood as one should – with their feet grounded firmly, and their head up high – you strangely decided to take a different approach. Folding your body in half, you placed your hands on the cold cemented floor, and shifted your body weight towards your arms as you pushed your lower half towards the ceiling.</p>
+
+    <p>Even with giving it your all, it took quite a few tries to end with your feet against the wall, as you were not particularly flexible or acrobatic. Still, when you heard a //thump// from your feet planting themselves on the wall, you were pretty happy with yourself. It was, after all, quite the feat!</p>
+
+    <p>Expecting some sort of response from your fellow initiates, you were saddened to find your stunt having only garnered some grunts from Zouma, the male standing behind you in line, and rolling eyes from Natisse, the female in front of you.</p>
+
+    <p>Embarrassed, you let your feet fall back to the ground, and stood up, like everyone else.</p>

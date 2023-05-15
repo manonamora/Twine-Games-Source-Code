@@ -1,0 +1,582 @@
+:: Nothing [endings] 
+    <hr id="nothing">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr> 
+    <p>“I…” </p>
+
+    <p>You choked. Invisible hands had taken a hold of you, wrapped tightly around your throat, denying you from finishing this sentence. You felt as if your heart was bursting out of your chest, and showed no sign of stopping. Your knees wobbled.</p>
+
+    <p>Maybe… just maybe… there was a good reason for why not initiate ever chose this path…</p>
+
+    <p>“Initiate $name, what is your decision?” the voice chided.</p>
+
+:: Nothing2 [endings]
+    <p>“I…” you tried to push the syllables out of your mouth, “… initiate $name…” the task felt like a chore, but you continued, “… choose…” your jaw was shaking, “n… noth-thing.”</p>
+
+    <p>As shock had taken over the crowd, a single gasp broke the silence, soon opening the doors to outraged reactions. Cries of despair and screams of disapproval filled the once calm room. Among the uproar, you noticed the voice of your family howling, as you shattered their hearts with your words. None were accepting of your choice. You wanted to hide.</p>
+
+    <p>“Quiet!” An Elder commanded the room.</p>
+
+    <p>As quickly as noise had taken over the Auditorium, as swiftly it was replaced with silence. Though full of rage towards you, every spectator was hanging on the Elder’s lips, waiting for their verdict. There was still a chance your choice could be refused.</p>
+
+    <p>“Initiate $name,” the Elder spoke again. “Do you understand what this choice entails?”</p>
+
+    <center>
+		<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "Nothing3">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("Nothing3");
+        }
+    });
+	<</script>>
+:: Nothing3 [endings]
+    <p>Now hearing the question aloud, you wondered if you truly understood the consequences of your action. 
+    <<if !$found.includes("Natisse")>> You had thought it strange – having gone through the list of Branches during training, and scoured the archives – how limiting your options were, and how no record had shown any initiate faltering from the path. It was not as if you wanted to shake down the system, but you were only curious. Or maybe, you were just afraid of choosing.<<else>>You had been agonising ever since that last conversation with Natisse. Knowing nothing could compare to what she made you feel, you were certain you had litte left to live for. She had been the only being in the Compound to accept you fully, none of your peers’ feelings towards you had ever come close. With her gone… Nothing mattered.<</if>></p>
+
+    <p>“Y-yes,” you mumbled.</p>
+
+    <p>The Elder sighed.</p>
+
+    <p>“So it is said,” they uttered with disappointment and sadness, “so shall it be done.”</p>
+
+    <p>Far ahead, a faint light appeared, and grew. It formed an opening, from which a certain brightness escaped. Used to the darkness of the Auditorium, it blinded you. Then, two large beings entered, moving swiftly towards you. On their cardinal suit, you recognised the Branch insignia: Safety. </p>
+
+    <p>You frantically moved your eyes, looking for an escape – Safety officer never entered the Auditorium during the Ritual. Before you could take a step anywhere, they grabbed onto your arms and held you tightly. You wanted to scream. They dragged you out of the room.</p>
+
+    <p>“W-what…” you tried to say. “W-where are…”</p>
+
+    <p>“Initiate $name,” you could hear the Elder say with bitterness, “has chosen death.”</p>
+
+    <center>
+		<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "END">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("END");
+        }
+    });
+	<</script>>
+:: Cultivation [endings]
+    <p>“I, initiate $name,” you proclaimed proudly, “choose Cultivation.”</p>
+
+    <p>A deafening silence fills the room. You had been quite certain of your choice, even before you uttered the words, but this lack of response made you doubt. What if you were not strong enough for the task? What if they had no faith in you? You had heard of cases where the Elders had rejected an initiate’s choice, and even one where no option had been validated – the shame it brought on the Community.</p>
+
+    <p>You did not notice right away the braziers turning green, as a bright light up ahead distracted you. The schism on the wall grew enough to create an opening, to lead you out of the Auditorium. You tentatively took a step forward.</p>
+
+    <p>“Initiate $name, Cultivation,” the Elders confirmed. “As it is said, so shall it be.”</p>
+
+	<center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "Cultivation2">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("Cultivation2");
+        }
+    });
+	<</script>>
+:: Cultivation2 [endings]
+    <p>You wiped the sweat off your brow and rested a moment on your trusty hoe. The sun was blazing up above, tiring everyone in the Gardens. Your body was so burnt, you stood out in a crowd of your peers. There was still a long day ahead, but your joints were already aching. Day after day, it was getting harder for you to complete your tasks.</p>
+
+    <p>You glanced around the Gardens. Though the work was hard, and your pain was great, you rejoiced in the knowledge that this aeon’s harvest was plentiful. The weather had not been kind to forecast this bounty. They had even expended at least two-fold since you first showed up for training, twenty aeons ago. You shook your head. It had already been that long since that fateful day…</p>
+
+    <p>A youngin ran toward you, offering you a drink. You patted its head in thanks, and looked at it with warmth. Though you had struggled with the decision you had made that day, for the ache and the pain had not been kind to you, it had been one you never questioned.</p>
+
+    <p>As you watched the youngin walk away, you had to catch yourself. It was not going to be a youngin for much longer, for the Ritual was already around the corner. Soon, it would wear the robes you once carried, go down the corridors you once walked, enter the Auditorium you once feared, utter the words you once did. </p>
+
+    <p>Under the scorching sun, a chill took over your bones. Had your choice been worth it? </p>
+	
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "END">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("END");
+        }
+    });
+	<</script>>
+:: Maintenance [endings]
+    <p>“I, initiate $name,” you mumbled, “choose Maintenance.”</p>
+
+    <p>As if it was a response, a lonely cough awkwardly echoed from the balcony. You lowered your head in shame. You had had little expectations with your choice, as initiates taking this path rarely got a standing ovation, but still hoped for the usual congratulatory clapping. More than the disappointment of being ignored by the Community, it was also the embarrassment from your family deciding to break the silence with their proud howls.</p>
+
+    <p>“Initiate $name, Maintenance,” the Elder monotonously said. “As it is said…” and did not bother ending his sentence.</p>
+    
+    <p>You hunched awkwardly behind the altar, waiting for someone to tell you where to do or what to do, waiting for something to happen. You only wanted the humiliation of those reactions to be over as quickly as possible.</p>
+    
+    <p>So when the braziers turned green, and the wall far ahead opened up, you almost ran towards the exit. The light may have been blinding, but the shame was too grand.</p>
+	
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "Maintenance2">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("Maintenance2");
+        }
+    });
+	<</script>>
+
+:: Maintenance2 [endings]
+    <p>Your life changed very little after this fateful day. Though you moved out of the family unit, you still lived in the same sector, close enough to see them constantly. You engaged with the same beings as you always had, and faced the same problems you always did. Your environment and clothes still smelled quite putrid, and no matter how much you cleaned, it always felt like the scent never quite left. It was still enough to bother you.</p>
+
+    <p>The work you were given was hard, which you had expected after seeing your family for aeons coming home drained and in pain, and it was surely not prestigious. You had to give it your all, every single day, from sun up to sun down – and sometimes even more when issues would pop up unexpectedly. You did not get much out of it – there were very little thanks from the Community for the effort you made – but it was honest and important work to be done. Without beings like you, the whole Compound would be drowning in filth.</p>
+
+    <p>Over the aeons, the more pungent smell started to bother you less and less, until you could not smell anything anymore – a common ill for beings working in Maintenance. Yet, every time you passed by the Kitchens or the Garden in bloom, you wondered if you would have also lost this sense had you chosen a different path…</p>
+	
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "END">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("END");
+        }
+    });
+	<</script>>
+
+:: Escape [endings]
+    <p>Instead of using your words, you let your feet to the talking, and stepped away from the altar. This was far from the mandated response you had been taught to give, and left the Community bewildered. They still expected you to voice your choice, to say something. </p>
+
+    <p>You would not even give them this satisfaction, taking yet another step. And another. And another. Stunned by your bizarre act, no one – not even the Elders ! – dared doing anything to stop you. The shock was too grand!</p>
+
+    <p>It was only when you exited the Auditorium, passing by a flabbergasted Kodyn and his similarly shocked line of initiate, did the eruption of cries and shouts occurred. Having recovered their senses, the furious crowd demanded your arrest for you had made a mockery of the Ritual. You wondered if your family thought the same…</p>
+
+    <p>Through the roaring racket, the Elders struggled with controlling forming mob. Yet, none of this moved you. </p>
+
+    <p>You continued walking – almost running away, now – from the dark room, through the daedalien maze of corridors. You did not stop to take a breath or even tried to think of your action, as you had put some distance between the Auditorium and yourself, or left the building, or passed the gardens of the Compound. Even after crossing the sturdy outside wall – something no one but Safety was allowed to do – you would not stop. Even after the complex left your field of vision, you pressed forward.</p>
+
+    <p>Dawn fell, but you still walked. Through the obscure night, you still walked. When the sun rose, you still walked. You could have stopped at anytime, you knew you could, but you were afraid.</p>
+
+    <p>Afraid that when you’d stop, you would collapse and never find the strength to get up again. Afraid you would have to think about your actions and face the consequences. Afraid to realise you would never again feel safe. Afraid to admit you had done the unthinkable. Afraid to accept you were lost to the Community forever.</p>
+
+    <p>As good as dead.</p>
+
+    <p>If only you had taken another road…</p>
+	
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "END">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("END");
+        }
+    });
+	<</script>>
+
+:: Care [endings]
+    <p>Even after having made your decision, you had little faith it would be accepted. This Branch was highly sought after, and only the brightest of initiates were accepted. With your background… well, it was quite the reach.</p>
+
+    <p>“I, initiate $name,” you said tentatively, “choose Care.”</p>
+
+    <p>You jumped a little when the crowd responded so loudly to your words. You had not expected the reaction to be so violently positive, even with the Community regarding the Carer rank highly. Your ears drowned in the torrential applause falling from the balconies, but you did not want it to stop. You wanted to feel as competent and deserving as the adults cheering above thought you were.</p>
+
+    <p>“Quiet!” one Elder shouted. “We do not–”</p>
+
+    <p>But the claps continued, relentless. Not only were they interrupting the Elders’ decision on your status, they would not let them speak their mind.</p>
+
+    <p>“There are things to consider–”</p>
+
+    <p>The Elders’ reluctance towards your case was understandable, and you had had an inkling it would have been a long shot. And while you did not have ill will towards the Elders, the crowd was of another mind. Whether the Elders took too long to approve your decision, or the crowd was not of mind to listen to those concerns, the benevolent applause that showered you moments ago slowly turned to heckles towards the Elders.</p>
+
+    <p>“Initiate $name,” the Elders tried to say through the noise. “Care–”</p>
+
+    <p>With the crowd’s rowdiness, you did not manage to catch those last words. Though it looked as if the Elders had relented into accepting your choice – the return to clapping had made the feeling that much stronger – you still waited for the braziers to turn green before you shed all your doubts. </p>
+
+    <p>So when the wall opened up ahead, you strutted out of the room, full of confidence, and looked forward to your bright future.</p>
+
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "Care2">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("Care2");
+        }
+    });
+	<</script>>
+:: Care2 [endings]
+    <p>Though you and your fellow initiations were initially welcomed among the Carer ranks, your path soon diverged. Reality caught up with you and your – lack of – skills. Your worries about making this decision had been warranted: you did not belong, and everyone reminded you of that fact. </p>
+
+    <p>You had hoped this was due to your family background, whose affiliation with the Maintenance Branch was not very well looked upon – this would have been an easier cross to bear. Unfortunately, this was all because of you, and you alone. You were… not as competent as you believed.</p>
+
+    <p>So, while you would see your fellows move up to more specialised positions or be given more responsibilities, you continued to stagnate behind, as a simple carer. While they got to think on their feet during emergencies or give diagnoses, you were only barked detailed orders to follow – you were that useless. Not once were you given a choice!</p>
+
+    <p>Even then, your position inside the Care unit was uncertain. Over the aeons, you found yourself bounced around between groups. Never were you able to find your footing and grow. Nowhere did you manage to find your place. You had tried to voice those concerns, but beings either did not care, would not try to understand, or simply could not grasp the worries you felt.</p>
+
+    <p>And when you received the notice to become a glorified nurser for immobile beings, unable to even administer any care beyond wiping someone clean, you truly felt like you had reached rock bottom. You swore up and down, at yourself, for having made the idiotic decision aeons ago to take this path… </p>
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "END">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("END");
+        }
+    });
+	<</script>>
+
+:: Transmission [endings]
+    <p>“I, initiate $name, choose…” You took a deep breath, to calm yourself “… Transmission.”</p>
+
+    <p>Silence.</p>
+
+    <p>A long an unnerving silence. A silence that shook you to your core. A silence that said everything.</p>
+
+    <p>Still, you hoped someone in the crowd would do… something. You wanted to know if the Community agreed with your choice, or refused it completely – they were usually quite vocal about it and would not wait for the Elder’s decision to voice it. You would rather have something, even if it meant being embarrassed by their negative words. This silence… It was as if the crowd could feel you had not said those words with conviction, as if they knew you had chosen this Branch at random, as if they could tell you did not know what you were doing.</p>
+
+    <p>“Are you sure?” an Elder finally asked, sceptical.</p>
+
+    <p>“Y-yes,” you responded, shaking. “Why w-wouldn’t I b-be?”</p>
+
+    <p>The Elder ignored you, whispering instead to the others, and discussing your seemingly controversial choice in hushed tones. From the few broken sentences you could catch, none of the Elders seemed ecstatic about dealing with you.</p>
+
+    <p>So you glanced around the room, looking for a thread or crumble of support from the crowd seating in the balconies. As before, they stayed mum. Even your family refused to lend you their strength. You were crushed. </p>
+
+    <p>“Initiate $name,” the Elder reluctantly continued, “Transmission.”</p>
+
+    <p>Without an another word – you had expected maybe some encouragement or advice from the Elders – you had gone through the Ritual, and became an adult. Standing by the braziers, whose now emerald flames continued to crackle, you were at a loss. Then, ahead, the wall opened up, inviting you to clear the room and free the space for the next initiate. </p>
+
+    <p>Dragging your feet towards the exit, you glanced back towards the still quiet crowd. This had to be a bad omen…</p>
+
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "Transmission2">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("Transmission2");
+        }
+    });
+	<</script>>
+
+:: Transmission2 [endings]
+    <p>The Elders had been correct to be concerned, as your track record within the Transmission Branch became infamous for its mediocrity – and that would be an affront to the word. You were consistently reprimanded for making mistakes, which were abundant.</p>
+
+    <p>From pressing the wrong button to delivering a note to the wrong being, your actions had caused a great deal of harm to the Community. Due to these miscommunications, you had broken <<= random(100, 500)>> family units and increased the Compound’s loss by <<= random(5, 50)>> points. It had been a wonder nothing grave had happened to you.</p>
+
+    <p>As those mistakes continued, for the reprimands did very little to change, the Branch tried to find a better position for you, something you could handle. You were taken from the delivery schedule, from your board switch desk, from the storing room, from office duties, to simply stamping on a note. And yet, even with a simple repetitive task that required no thoughts, you managed to be a complete failure.</p>
+
+    <p>Becoming the embarrassment of the Transmission Branch, who tried to hide you and your mistakes the best they could, was one thing, but it did not stop there. As gossip spread, you were often made the butt of the Community’s jokes. </p>
+
+    <p>When you became the topic of discussion, only your choices and actions were ever mentioned. No one ever acknowledged the Elders’ part in the matter, how they still agreed for you to take on this disastrous path. No one ever questioned the system that put you on this path…</p>
+
+    <p>Every day, you wished you had said something different.</p>
+
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "END">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("END");
+        }
+    });
+	<</script>>
+
+:: IntroLeave [endings] 
+    <p>Ignoring the male standing before you, you rose from your seat and strode towards the door. There was still some time before the Ritual was set to start. You assumed no one would care if you went to get some fresh air to help your nerves – even if it meant bending the rules a little. Well, no one besides the scrawny being shouting your name, trying to get you back in line with threats. You rolled your eyes and exited the room.</p>
+
+    <p>In the corridor, free of the male who ultimately stayed behind, you relished the little freedom you awarded yourself. It was not every day you could have some time alone. There was always someone around…</p>
+
+    <p>Walking away from the room, you did not pay much attention to your surrounding. Since everyone was supposed to be busy with the Ritual, you had assumed no one would be in this part of the Compound. No one… but the two beings whose path you were crossing.</p>
+
+    <p>“Hey, you!” one of them said. “What are you doing here? Shouldn’t you be waiting with the other initiates?”</p>
+
+    <p>The sound shook you with surprise, and made you jump a little. Before lowering your head, as was custom, you caught a glimpse of your interrogator. The beings were wearing the typical cardinal suits of the Safety Branch. The insignia shone bright. You trembled in fear. </p>
+
+    <p>“Where are going, initiate?” the other officer barked.</p>
+
+    <p>“I… err… was trying to get some–”</p>
+
+    <p>“Getting some air, huh?” it interrupted, before laughing. “Getting a bit too… anxious?”</p>
+
+    <p>“Well… err… y-yes?”</p>
+
+    <p>“Not very convincing,” the officer smirked, putting their arm around your shoulders. “Don’t you think so, Aesha?”</p>
+
+    <p>“There’s always one trying to break the rules,” the first officer nodded. “Damn, Gareth… You had to be right again…” it tried to look for something. “We got one this aeon, like clockwork. Every damn time…”</p>
+
+    <p>Before you could retort, or claim innocence, you felt a push in your back. The officer named Aesha scribbled something, before grabbing your arm and pulling you further into the Compound. With every step away from the room, you resisted. You did not want to miss the Ritual!</p>
+
+    <p>Your efforts were in vain, as the officers were much stronger than you were, and continued to drag you away with little difficulty. Even shoving you in an empty room further down the road was a breeze, you fell quickly on the floor. You heard the door slamming behind you, before the locking mechanism engaged.</p>
+
+    <p>“No!”</p>
+
+    <p>You threw yourself at the door, beating it with your fists in protest. You begged the officer to let you out, to be understanding, to bring you back, to let you go through the Ritual. This was just a simple mistake!</p>
+
+    <p>“Pay up, Aesha,” you heard through the door. “A bet’s a bet.”</p>
+
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "END">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("END");
+        }
+    });
+	<</script>>
+
+:: Education [endings]
+    <p>Your limbs shook slightly, as you stood before the altar. You had dreamt about this moment for clicks, about saying those words. You had worked and studied hard up until this point… but you still worried it had not been enough. There were so many deserving initiates going through the Ritual this year, so many who could be chosen above you. Still, you were not yet ready to back down.</p>
+
+    <p>“I, initiate $name,” you uttered as clear as you could, “… choose Education.”</p>
+
+    <p>There was but just one gasp.</p>
+
+    <p>What followed was the most excruciating experience you had ever gone through. The longest silence you’d ever hear. One that crept in your thoughts and made you remember every single thing you had done or said, made you believed you had made every wrong choice, made you doubt you could even be an Educator in the first place. Who were you, child of Maintainers, to think you could achieve this feat?</p>
+
+    <p>The silence was killing you inside.</p>
+
+    <p>And then, a whisper from above the altar.</p>
+
+    <p>“Initiate $name,” the Elders announced together, an unusual event, “Education.”</p>
+
+    <p>The flames in the braziers grew two-fold, and turned green as they calmed down. Ahead, an opening separated the walls, welcoming you into this new chapter. You had passed the Ritual.</p>
+
+    <p>“Sweet youngin,” one Elder added, before you took a step. “It takes a special being to be an Educator. You have not chosen the easiest path. But, what you will be doing will make a great difference for the Community. We are certain you will achieve great things…”</p>
+
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "Education2">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("Education2");
+        }
+    });
+	<</script>>
+
+:: Education2 [endings]
+    <p>Maybe it had been the words of encouragement you received during the Ritual, or maybe it had been something in you all along, but the Elder’s words had never rung truer. Ever since the second you entered the Education room, you had been an exceptional being. </p>
+
+    <p>You were surprisingly a natural at educating, and had required very little training before the Branch gave you your first assignment. It swiftly became clear you became a favourite among youngins, especially the tiny ones. You were patient and caring with them, no matter the circumstances, and they responded with stars in their eyes when you broadcast your voice into their malleable minds.</p>
+
+    <p>However, the impact had been greater than anyone anticipated. The youngins would leave your class eager to learn more – a love which would never falter, even after they left your care. They scored higher than any generation before them – even yours! With every new aeon, with every new flock of youngins you welcomed in your classroom, both those scores and this wish to learn increased. And the whole Community was enriching thanks to you.</p>
+
+    <p>Still, many believed you played tricks on the youngins’ minds, for they had become so calm in the face of adversity, so enthusiastic about learning, so willing to better themselves. The little ones hung onto your every word, and followed you everywhere they could. Some Educators sought your advice, wanting to follow in your footsteps – for better or for worse. Others did their best to sabotage you and your work. Others tried to spy on you, hoping to find some wicked evidence of your subterfuges. The answer was but simple: you were passionate about what you were doing, what you were teaching, and the youngins picked up on it.</p>
+
+    <p>Overtime, your status changed: you were not just a successful Educator, you had achieved what was thought to be impossible. You were the Pillar of the Community. You had changed the landscape of education in the Community for ever. Beings pointed at you, starstruck. They looked at you with reverence. They created art about your achievements. Slowly, none dared to approach you. Even your family unit lost their confidence to be around you.</p>
+
+    <p>Your successes had been the greatest ever recorded in the history of the Community, but, in the process, you had lost your beingness. In this path, you walked alone.</p>
+
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "END">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("END");
+        }
+    });
+	<</script>>
+
+:: ENDComplain [endings]
+    <p>It was only after you noticed the two beings in cardinal uniforms in the room did you see the path you had taken. Your action might have felt justified, as Kodyn had been an insufferable male who prayed upon helpless being to satisfy his thirst for control, but this had neither been the time, nor the place.</p>
+
+    <p>With the scrawny male pointing in your direction, the two beings in uniform marched towards you, before grabbing you firmly by the arms. Under the embarrassed eyes of your fellow initiates, they unceremoniously dragged you out of the room. Fearing the worst, you resisted. You could not miss the Ritual because of a little mistake!</p>
+
+    <p>Your efforts were in vain, as the officers were much stronger than you were, and continued to drag you away with little difficulty. Even shoving you in an empty room further some blocks down the corridor was a breeze, you fell quickly on the floor. You heard the door slamming behind you, before the locking mechanism engaged.</p>
+
+    <p>“No!”</p>
+
+    <p>You threw yourself at the door, beating it with your fists in protest. You begged the officer to let you out, to be understanding, to bring you back, to let you go through the Ritual. This was not fair!</p>
+
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "END">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("END");
+        }
+    });
+	<</script>>
+:: ENDSitting [endings]
+    <p>The male saw red with your insubordination, but you refused to respond to his call or move a muscle. You would not subscribe, like your fellow initiates, to the disrespectful tone the male had chosen for his command. He never tried to address anyone with respect, but no one ever dared to object to his actions. Until now…</p>
+
+    <p>“Fine…” Kodyn shrugged. “If that’s how you want to play it.”</p>
+
+    <p>He reopened the large tome in his arms, clicked his tongue, and resumed the shouting of the names on his list, as if nothing had happened. As if you were still not sitting in the room. As if you never existed. </p>
+
+    <p>When the Organiser believed to be done, he looked at the organised chain of anxious youngins waiting to be churned through the Ritual and grinned. Still, he would not glance your way, unlike the other initiates who were uncomfortable with your defiance. Instead, he blew his whistle once more, and led the line out of the room.</p>
+
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "ENDSitting2">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("ENDSitting2");
+        }
+    });
+	<</script>>
+:: ENDSitting2 [endings]
+    <p>Even after the last initiate crossed the door, you would not leave your seat. You had chosen to take a stand against the male’s tyrannical rule, and you would not move until your actions had been acknowledged. Someone had to come get you, you believed. Someone had to notice you were not present in line. Someone had to realise you would not enter the dark room and go through the Ritual. Someone had to…</p>
+
+    <p>So, you stayed seated.</p>
+
+    <p>The wait, however, felt endless. Seconds turned into minutes, and yet no one appeared. The truth of the situation was staring right back at you, but you chose to ignore it. You were not too worried, not yet. There was still time before the Ritual would start. And you still believed someone would come back for you. You still hoped you had not been forgotten. </p>
+
+    <p>Nonetheless, you had been left behind. </p>
+
+    <p>As the minutes turned into hours – or so you judged from your grumbling stomach – you grew bored of waiting. Still not seeing a soul after all this time, you threw aside your principles and left your seat. Maybe the Ritual had not yet ended…</p>
+
+    <p>You made your way towards the door, wobbling on your sleepy limbs. When you reached it, you tried to push it open, but it would not give. You took a few steps back and threw yourself at the door, but it remained closed. You tried again. And again. And again. Until you were numb.</p>
+
+    <p>You fell to the ground, sobbing.</p>
+
+    <p>You had been locked inside.</p>
+
+    <center>
+    	<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "END">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("END");
+        }
+    });
+	<</script>>

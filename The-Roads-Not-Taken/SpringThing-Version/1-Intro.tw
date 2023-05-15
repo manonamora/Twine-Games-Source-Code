@@ -1,0 +1,97 @@
+:: Intro [room]
+    <div id="text"><p>“... initiate?”</p>
+
+    <span id="intro"></span></div>
+    <<BlockTextbox>>
+    <<set _used to [], $transcript.push("Passage: Intro", "Actions ->")>>
+:: IntroHelp
+    <hr>
+    <p>''Help:'' To indicate your name and move to the next screen, type in the textbox: ''name //ChosenName//'', and press Enter or click Confirm.</p>
+
+:: IntroLook [interact]
+    <hr>
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>You looked up and saw a <span class="hint">scrawny being</span> holding a large <span class="hint">ledger</span> in his flimsy arms. You did not bother hiding your displeasure of seeing him, standing before you. Any other day, you would have crossed the street or turned back, just to avoid him altogether. But today, you knew you could not run away from his presence. He was only doing his job, after all.</p>
+
+    <p>Before stopping inches away from you, the male had made his rounds around the <span class="hint">room</span>, talking to every <span class="hint">initiate</span> on his path, asking each of them the same questions, before writing their answers on the page of his heavy ledger. As you prided yourself on caring very little about anyone, you had not bothered listening to those dull enquires. Instead, you kept repeating the <span class="hint">words</span> you had memorised the night before.</p>
+
+    <span id="textbox"></span>
+
+    <p>“What is your name, initiate?” the male repeated, now becoming impatient.</p>
+
+:: IntroRoom
+    <hr id="room">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>You tried to look around the room, but the scrawny being standing before you is blocking your view. You would need to wait for him to leave.</p>
+:: IntroLedger
+    <hr id="legder">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>The male was trying to balance the seemingly heavy ledger in his arm, waiting for you to answer his question. The book was very large, with a thick pink leather cover a bit worn on the corners. A string of leather, used to wrap the ledger close, was dangling on the side. Inside its cover, the tome had too many pages to count, each being almost as thin as a hair. Because of its frailty, you remember learning that this ledger only left the Archive once an aeon.</p>
+:: IntroBeing
+    <hr id="being">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Kodyn was his name. A sad little male with little going on with him. It was impossible not to notice his presence. Even if you were blind, or deaf, or had lost all your senses, you would fell him. His aura was… suffocating.</p>
+
+    <p>Interacting with him always felt like a chore. Even looking at him made you feel depressed. You would give anything to spend as little time as possible around him. But this was not possible today. Kodyn was an Organiser. His presence was mandatory.</p>
+:: IntroInitiate
+    <hr id="initiate">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>When you entered the room earlier, you had found the space filled with other initiates. Some faces you recognised, having seen them around the Compound or interacted with them during your younger aeons; other, you could not recall ever meeting them before.</p>
+    
+    <p>Whoever they were did not matter; they all waited, like you. Waited to be registered. Waited to be let out of the room. Waited anxiously to shed their title of ‘initiate’.</p>
+:: IntroWord
+    <hr id="word">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>//I choose nothing…//<br>
+    These were the words you had been mumbling quietly until now. The words you had promised yourself you would shout when the time came. You had kept your choice secret — the others would not understand it, no matter how much you tried to explain it.</p>
+
+:: IntroTakeLedger
+    <hr id="takeledger">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>There was absolutely no reason for you to have this ledger in your possession, nor had you any need for it. Still, you eyed the object with a strange passion, wanting to have what you were not supposed to, wanting to take what was not yours. You knew you should not attempt to nick it, but you could not help yourself. Your fingers tingled with anticipation as your hand crept closer. //He// deserved it.</p>
+
+    <p>“And what do //you// think you are doing?” the annoyed being said, pulling the tome away.</p>
+
+    <p>Caught in the act, but not wanting to explain yourself, for it would not end well for you, you hid your hands behind your back and looked away, pretending as if nothing had happened. The being only humphed disapprovingly in return.</p>
+
+:: IntroTalkKodyn
+    <hr id="talkkodyn">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>For some strange reason, you felt the want of talking to the male standing in front of you. You would not quite understand why this was happening. Were it not for today’s event, you would not be caught dead talking around that being. Yet, your orifice hung open.</p>
+
+    <p>“So…,” your orifice moved. “How about that… err… weather?”</p>
+
+    <p>The being gave you a look, before returning to his ledger.</p>
+
+:: IntroTalkInitiate
+    <hr id="talkinitiate">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Rather than giving the being the requested answer, you found yourself wanting to talk to other initiates instead. You looked at your left, only to find your neighbour deep in discussion with someone else. You were tempted to tap on their back to get their attention – and maybe insert yourself into their conversation – but you decided against it. Unlike your interrogated, you did not want to appear rude.</p>
+
+    <p>So you swayed to the right, hoping your other neighbour would not be occupied. Had the male not snapped his fingers at you to get you back on track, you would probably have managed to exchange a few words. </p>
+
+:: NameBad
+    <div id="text"><p>“//Well//?” the male barked, following your lack of response.</p>
+
+    <p>You stared at the male and kept mum. You did not see the need to answer his question – his stupid and useless question. Why should you bother answering it when everyone knew everyone around here? The Compound was a tight-knit community. There was truly no need for this.</p>
+
+    <p>“Initiate,” he tried again, frustrated. “What is your name?”</p>
+
+    <p>And still, you would not utter a word. //He// clearly knew your name, as much as he pretended not to. Kodyn <<if !$found.includes("IntroBeing")>>, the being standing before you,<</if>> had spent every nightly meal at the same long table as your family for the past few aeons, much to your dismay.</p>
+
+    <p>“Still a prick, I see,” he clicked his tongue. “When will you stop messing with my job, //Adley//?”</p>
+
+    <p>You shrugged. He was the one to talk… Kodyn was as much of a prick as you were, but, unlike you, the male had long shed his initiate state.</p>
+
+    <p>“If that’s how you want to play it,” he sighed, scribbling something on the page.</p></div>
+    <<BlockTextbox>>
+    <<set _used to [], $transcript.push("Passage: NameBad", "Actions ->")>>

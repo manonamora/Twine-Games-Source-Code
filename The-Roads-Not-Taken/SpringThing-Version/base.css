@@ -1,0 +1,357 @@
+/********* SCROLLBAR *********/
+* {
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollthumb) #0a0a1b;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+#ui-dialog-body::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollthumb);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollhover);
+}
+
+/********* BODY *********/
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    width: 100vw;
+    max-width: 1400px;
+    overflow: hidden;
+    margin: auto;
+}
+/********* FOOTER *********/
+#footer {
+    display: none;
+}
+/********* HEADER *********/
+#header {
+    background-color: transparent;
+    padding-top: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    right: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#title {
+    font-family: var(--title);
+    font-size: 4em;
+    font-weight: normal;
+    color: #00c6ffa1;
+    letter-spacing: 0.1em;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#main-nav {
+    display: flex;
+    position: absolute;
+    right: 2%;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+    top: 29%;
+    right: -1%;
+}
+#main-nav span {
+    margin: auto;
+    display: flex;
+    color: #00253b;
+    flex-direction: column-reverse;
+
+}
+#main-nav a, #footer a {
+    font-size: 150%;
+    margin: 0.3em auto;
+    color: var(--icon);
+}
+#main-nav a:hover, #footer a:hover {
+    animation: glow 1s ease-in-out infinite alternate;
+    color: var(--text);
+}
+
+/********* CONTAINER *********/
+#container {
+    height: 99%;
+    width: calc(100% - 4em);
+    padding: 3em 2em 2.5em;
+    margin: auto;
+}
+/********* PASSAGES *********/
+#passages {
+    width: 90%;
+    margin: 50px auto;
+    height: 100%;
+    max-height: calc(100% - 100px);
+    letter-spacing: 0.05em;
+}
+.passage {
+    height: 100%;
+}
+.endings .passage {
+    overflow: auto;
+}
+#text {
+    height: calc(100% - 88px);
+    margin-bottom: 3%;
+    overflow: auto;
+    padding-right: 2%;
+}
+
+/********* HTML *********/
+h1 {
+    font-weight: 100;
+    font-size: 275%;
+    padding-bottom: 5px;
+    line-height: 1em;
+    cursor: default;
+    margin: 0em;
+    letter-spacing: .115em;
+    font-family: var(--title);
+}
+h2 {
+    text-align: center;
+    font-family: var(--title);
+    font-size: 50px !important;
+    font-weight: normal;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+h4 {
+    font-family: var(--title);
+}
+
+hr {
+    border-color: var(--scrollhover);
+}
+
+#intro hr {
+    margin: 0.5em 0;
+}
+  
+
+/********* BUTTON *********/
+button {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    padding: .5em;
+}
+button:not(:disabled):hover {
+    background: transparent;
+    box-shadow: 4px 4px 0 var(--textglow);
+    border-color: var(--text);
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    box-shadow: inset 0 0 1px var(--text),  0 0 1px var(--text), 0 0 2px var(--text),  0 0 6px var(--text);
+    font-style: italic;
+}
+button:disabled {
+    opacity: 0.5;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #00c6ff99;
+}
+/********* INPUT AND SELECT *********/
+input, select:not(:disabled) {
+    background-color: var(--bg);
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    color: var(--text);
+    text-transform: uppercase;
+}
+input:not(:disabled):focus, input:not(:disabled):hover, select:not(:disabled):hover, select:not(:disabled):focus {
+    background-color: rgb(14, 27, 41);
+    border: 1px solid var(--text);
+    color: var(--text);
+}
+select option {
+    background-color: #080f17 !important;
+}
+input {text-transform: none;}
+input:not(:disabled):focus, input:not(:disabled):hover {
+    background-color: rgb(2, 11, 21);
+}
+
+/********* UI DIALOG *********/
+#ui-overlay {
+    background-color: var(--bg);
+}
+#ui-dialog {
+    width: 50vw;
+    max-width: 650px;
+    max-height: 75vh;
+    overflow: hidden;
+    background: var(--bg);
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    box-shadow: inset 0 0 2px var(--iconhov), 0 0 2px var(--iconhov), 0 0 2px var(--iconhov), 0 0 8px var(--iconhov);
+    padding: .33em;
+}
+#ui-dialog-close {
+    display: none;
+}
+#ui-dialog-titlebar {
+    background: transparent;
+    color: var(--text);
+    font-family: var(--title);
+    padding: 0.5em;
+    border-bottom: 1px dotted;
+    border-radius: 10%;
+}
+#ui-dialog-title {
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    font-size: 4em;
+    padding: 0;
+}
+
+#ui-dialog-body {
+    max-height: calc(75vh - 5em - .66em);
+    border: none;
+    border-top: 3px solid black;
+    color: var(--text);
+    background: transparent;
+}
+#ui-dialog-body ul.buttons {
+    display: flex;
+    justify-content: center;
+}
+#ui-dialog-body ul.buttons li {
+    padding: 0.5em 1em;
+}
+#ui-dialog-body ul.buttons > li + li > button {
+    margin-left: 0;
+}
+
+#ui-dialog-body.settings div[id|="header-body"]:not(:first-child) {
+    border: none;
+    padding-top: 0px;
+}
+
+#ui-dialog-body.settings button[id|="setting-control"] {
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    color: var(--text);
+    text-transform: uppercase;
+}
+#ui-dialog-body.settings button[id|="setting-control"]:hover,#ui-dialog-body.settings button[id|="setting-control"].enabled:hover {
+    background-color: transparent;
+    border-color: var(--text);
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+
+}
+#ui-dialog-body.settings button[id|="setting-control"].enabled {
+    border-color: var(--text);
+    background-color: rgba(79, 157, 175, 0.16) !important;
+    color: #009fff !important;
+}
+
+#ui-dialog-body.saves .empty {
+    color: var(--iconhov);
+}
+  
+#ui-dialog-body.saves tr:not(:first-child), #ui-dialog-body.saves > :not(:first-child) {
+    border-color: var(--icon);
+}
+
+.restart p {
+    text-align: center;
+}
+button#saves-clear, button.delete:not(:disabled), button#restart-cancel, button#settings-reset {
+    background-color: #4a0c296b;
+    color: #bc266c;
+    border-color: #4a0c296b;
+}
+button#saves-clear:hover, button.delete:not(:disabled):hover, button#restart-cancel:hover, button#settings-reset:hover {
+    border: 1px dotted #4a0c296b;
+    box-shadow: inset 0 0 1px #bc266c, 0 0 1px #4a0c29, 0 0 2px #4a0c29, 0 0 6px #4a0c29;
+    animation: none;
+}
+
+#ui-dialog-body.saves button[id="saves-clear"]::before, #ui-dialog-body.saves button[id="saves-import"]::before, #ui-dialog-body.saves button[id="saves-export"]::before {
+    content: none;
+}
+  
+
+/********* TITLE PAGE *********/
+.titlepage #container {
+    display: flex;
+    align-items: center;
+}
+.titlepage #helperror {display: none;}
+  
+.titlepage #passages {height: auto;}
+#smallbar {
+    height: 30px;
+    width: 226px;
+    margin: auto;
+    border-radius: 5px;
+    outline: 1px solid #020210;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(2, 2, 16);
+    box-shadow: 0px 1px 0px rgb(18, 117, 155), 0px 2px 0px rgb(18, 117, 155), 0px 4px 0px rgb(13, 82, 109), 0px 5px 0px 1px rgb(26, 38, 62), 0px 5px 0px 2px rgb(22, 32, 52);
+    background: linear-gradient(to bottom, rgb(79, 216, 255) 0%,rgb(0, 162, 211) 95%,rgb(0, 120, 161) 100%);
+}
+.endings #spacebar {
+    opacity: 0.7;
+}
+#spacebar {
+    display: flex;
+    margin: 50px;
+    background-color: var(--iconhov);
+    width: fit-content;
+    padding: 4px 5px 10px;
+    border-radius: 7px;
+}
+#smallbar a {
+    color: #000003d9;
+    font-family: var(--monospace);
+}
+#smallbar a:hover {
+    color: #000003;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+/********* ANIMATION *********/
+@keyframes glow {
+    from {
+      text-shadow: 0 0 6.5px var(--textglow), 0 0 11.5px var(--textglow), 0 0 7.5px var(--textglow), 0 0 14px var(--textglow), 0 0 17.5px var(--textglow), 0 0 8.5px var(--textglow), 0 0 13.5px var(--textglow);
+    }
+    to {
+      text-shadow: 0 0 5px var(--textglow), 0 0 10px var(--textglow), 0 0 5px var(--textglow), 0 0 12.5px var(--textglow), 0 0 15px var(--textglow), 0 0 7.5px var(--textglow), 0 0 12.5px var(--textglow);
+    }
+  }

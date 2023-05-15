@@ -1,0 +1,73 @@
+:: Enter [inside interact]
+    <div id="text"><p>With some apprehension still, you complied with the call, and delved into the pungent darkness. The now overwhelming scent was bringing tears to your eyes.</p>
+    
+    <p>In the penumbra, you carefully put one foot in front of the other, letting your sandals scrape the floor as you dragged yourself further. You were terrified to stumble and make a fool of yourself in front of the whole Community. Though it was much too dark to see anything, even the tip of your fingers, you could tell they were all there, within these walls. You did not need any light to feel their presence in the room – every one of them had to be in attendance for this momentous occasion. The entire population of the Compound had showed up. Packed in this one room. Seated up above, in the tribunes of the Auditorium. All watching your every move.</p>
+
+    <p>You had done the same, <span class="hint">once</span>.</p>
+
+    <span id="textbox"></span>
+    </div>
+    <<BlockTextbox>>
+
+    <<set _used to [], $transcript.push("Passage: Enter", "Actions ->")>>
+
+:: EnterHelp
+    <hr>
+    <p>''Help:'' There is always something to look at..</p>
+:: EnterRecall
+    <hr id="recall">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>You recalled previous aeons, when your family brought you to the Auditorium and experience the Ritual for the balcony. From your seat, you could clearly <span class="hint">see</span> the whole set: the braziers burning bright by the altar, the Elders in those silvery robes, and the farandole of fidgeting initiates about to become integrated members of the Community. You envied them, once.</p>
+
+:: EnterLook [interact]
+    <hr id="look">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Although the Auditorium was sombre, leaving you little to gaze upon, your eyes were attracted to the only source of light ahead: two massive <span class="hint">braziers</span>, burning with sapphire flames. Between them, barely visible in the dim cerulean glow, stood an <span class="hint">altar</span>. The ceremonial altar. Your hands shoot a little.</p>
+
+    <p>Though you could not see the figures clearly, you believe to have caught a hazy glimpse of the Elders perched in a box somewhere above the altar. As they had done with previous <span class="hint">initiates</span>, and the cohorts before yours, they stood ready to add your name and choice in their heavy ledger. A drop of sweat ran down your neck. Ultimately, they help your future in their hands.</p>
+
+    <p>Your heart pounding like crazy, you tried to look elsewhere, towards the tribunes and balconies, where the rest of the Community was seated. Your eyes shifted from one side of the room to the other, frantically searching for your family, and hoping that spotting their faces in the darkness would help you calm down.</p>
+
+    <p>…in vain.</p>
+
+:: EnterAltar
+    <hr id="altar">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Even when squinting, the altar is much too far to see anything more than a block of dark stone. Your memory is strangely too hazy to recall more than what you can see. You would need to get closer to fawn over its details.</p>
+
+:: EnterBrasiers
+    <hr id="braziers">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Surrounding the altar stood two braziers, burning blue. Though there was not much to see with the distance separating yourself from them, you felt as if their cold and mysterious flames were pulling you in. Cerulean dancing sparks took your attention, making it quite hard for you to take back control of your eyes.</p>
+
+:: EnterInitiate [interact]
+    <hr id="initiate">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Though you entered the room shortly after <span class="hint">Natisse</span>, the female standing in line before you, you found it strange not to feel her presence here. The Auditorium was the biggest room in the Compound, so large that it would have been unlikely – impossible almost – for someone to cross it all in the little time between her entrance and yours. And this was without accounting for the time required to interact with the Elders either.</p>
+
+    <p>Come to think of it, you had not heard her voice either, nor the reaction of the crowd to her decision. From having been a spectator to those events, you could clearly recall the whistles, and the claps, and the roaring cheers following the Elders’ acceptance. Yet, the Auditorium was eerily silent.</p>
+
+:: Enter2 [interact]
+    <hr id="entertwo">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>You continued forward, trying to breathe deeply, in hopes it would calm your nerves. But inhaling the fumes of the lingering incense that intensely only had the reverse effect. You became more anxious with every new step.</p>
+
+    <p>As the peppery air grated on the inside of your throat, and you tried your best to swallow the oncoming fits, you worried about finally going through the Ritual. About moving on to the next stage of your life. About being stuck in the wrong path. About making the wrong choice. About making a <span class="hint">choice</span>.</p>
+
+    <p>“Initiate $name,” a croaky voice declared. “Come closer.”</p>
+
+    <p>Your throat tightened.</p>
+
+:: EnterChoice
+    <hr id="choice">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Even though you were worried about making the correct choice, you could not back out of the agreement you had made with yourself the night before. I choose nothing. You knew what you would say to the Elders, even if you weren’t quite certain where this would take you.</p>
+
+    <p>You worried it would not take you anywhere. You worried the Elders would refuse your words right away. You worried your family would not understand. Still, you knew, deep in the fibre of your being, this was the correct choice. The only choice. Your choice.</p>

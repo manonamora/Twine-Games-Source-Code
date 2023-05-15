@@ -1,0 +1,95 @@
+:: Whistle [room interact]
+    <div id="text"><p>And then…</p>
+        <p>A high-pitched sound scrapped the inside of your ears. Groaning, you, and every other initiate in the room, turned toward the origin of the sound, only to find <span class="hint">Kodyn</span><<if !$found.includes("IntroBeing")>>, the male who asked for your name earlier,<</if>> with a whistle falling from his lips. Out of all the ways to seek your attention, the being had found the most horrid one.</p>
+
+        <p>With his screeching voice, he shouted every name he had added in the ledger. As previously instructed during the many – many – presentations, the summoned initiates were coming forward and were forming a line before the male. It was obvious they were swallowing the complaints they had about him and his poor manners – voicing those dissatisfactions were not worth getting in trouble. Not today.</p>
+
+        <p>“$name!”</p>
+        
+        <span id="textbox"></span>
+        </div>
+    <<BlockTextbox>>
+    <<set _used to [], $transcript.push("Passage: Whistle", "Actions ->")>>
+
+:: WhistleHelp
+    <hr>
+    <p>''Help:'' To leave your seat, enter any compass direction or ‘up’.</p>
+
+:: WhistleComplain
+    <hr id="complain">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>You were certain the male had opted for the whistle and the screeching tone for his voice to mess with your hearing. He had to have something against you! His actions had made it all the more clear. In that moment, his position as an Organiser did not matter, nor was yours as a simple initiate; his manners were too abject to be tolerated. And since you were still bitter from your previous interaction with the male, you could not hold your tongue any longer!</p>
+
+    <p>Under the horrified eyes of your peers, you laid out all your repressed feelings, right there and then. All the little things over the aeons that irked you, all his rude stares and comments, all the disgust you had toward the male, all the resentment from his actions (or lack thereof)… nothing was too low or too much for you. You did not care about hurt feelings or lousy conduct. You had had enough with this being!</p>
+
+:: WhistleSit
+    <hr id="sit">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>The male had called your name, yet you stayed seated. Because of weak knees or hurt feelings, you could not say, but the reason did not matter. Not to you, not to Kodyn, not to the other initiates. There was no excuse for your behaviour. You were not just rudely delaying the ceremony with your act – or, more accurately, lack thereof, you were also gambling with the future of your fellow initiates. </p>
+
+    <p>“$name!” Kodyn repeated. “Get in line. Now!”</p>
+
+:: WhistleSit2
+    <hr id="sittwo">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>While your nerves could have excused your flakiness when your name was first called, your choice to avoid it a second time was becoming an issue. Delaying unnecessarily and unreasonably the Ritual, risking the wrath of the Elders, and your fellow initiates, having an insolent behaviour towards an adult… you kept raking up maluses for no good reason. It was not surprising to see every being in the room seething and grumbling their frustration with you – the most vocal ones were the anxious initiates, who had followed the instructions and got in line when told, even as their nerves were failing them…</p>
+    
+    <p>“$name!” Kodyn screamed. “This is your last warning!”</p>
+
+:: WhistleUp
+    <hr id="upidiup">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Following the other initiates before you, you left your seat and found your place at the back of the line. Kodyn clicked his tongue and continued down his list, barking the name of the beings still sitting.</p>
+
+    <p>When the male was done, and content with the organised chain of anxious youngin waiting to be churned through the Ritual, he blew his whistle once more, and led the line out of the room.</p>
+
+:: WhistleKodyn
+    <hr id="kodyn">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <<if !$found.includes("NameBeingVar") or !$found.includes("IntroBeing")>><p>Kodyn was a scrawny little male, with little going on with him. It was not because the being was a bore that you disliked him, but his whole being was to blame. From his dreadful appearance, to his suffocating presence, or even his abhorrent manners, you could not stand being in such close proximity to him. You could not understand why //he// had been the Organiser chosen for today…</p><</if>>
+
+    <p>Yet again, you found yourself looking towards Kodyn, whose insufferable and impatient face was staring at you, waiting for you to take your place at the back of the line.</p>
+:: WhistleLedger
+    <hr id="ledger">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>The heavy ledger was still in the male’s grasp, though now closed and tucked in under his limb. 
+    <<if !$found.includes("IntroLedger")>>The tome was very large, with a thick pink leather cover a bit worn on the corners. A string of leather was wrapped around the ledger to hold it close. Though you could not see it as well anymore, it held many thin pages – too many to count. You also recollect learning that this ledger only left the Archive once an aeon.
+    <<else>>Instead of dangling on the side, the string of leather was now wrapped around the tome, to hold it close. As it rarely left the Archive, you found yourself fascinated by the sight.<</if>></p>
+
+:: WhistleTakeLedger
+    <hr id="takeledger">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p><<if $found.includes("IntroTakeLedger")>>Having tried once already to put your hands on the ledger – and failing miserably – you wondered if you would get lucky this time around. The tome might not be close to your extremities, considering the half-room between Kodyn and yourself, nor was it out in the open, instead tucked under its carer’s limb.<<else>>There was much to consider before you could jump into the action and put your hands on the coveted ledger. There was a full half-room between Kodyn and yourself to cross. And the tome was tucked under its carer’s limb, making it difficult to remove.<</if>></p>
+
+    <p>And yet, you brushed these issues away with quite the ease. It was not some minor setbacks that could deter you from your goal. You would get your hands on that tome no matter what!</p>
+    
+    <p>“Hey, $name!” an initiate in line uttered, seeing you moving towards the door. “What do you think you’re doing here?”</p>
+
+    <p>You stopped and looked at him, confused by his intervention. </p>
+
+    <p>“You were only called now… Don’t try to cut the line!” </p>
+
+    <p>Unbothered, you took another step towards Kodyn. Or, you tried to, as your denigrator pulled your arm back.</p>
+
+    <p>“Back of the line, $name. Don’t be rude!”</p>
+
+    <p>You grimaced at your nagger, ready to spew out some harsh words in return. But the frustrated face of the other initiates around you forced your psyche to abandon your plan. Taking that ledger was not worth getting on the bad side of your cohort. So you jerked your limb free and found your place at the back of the line. Kodyn clicked his tongue, unbothered, and continued down his list, barking the name of the beings still sitting.</p>
+
+    <p>When the male was done, and content with the organised chain of anxious youngins waiting to be churned through the Ritual, he blew his whistle once more, and led the line out of the room.</p>
+
+:: WhistleTalkInitiate
+    <hr id="talkinitiate">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Instead of following the command, you found yourself wanting to spark a conversation with your fellow initiates. There was still some time before the Ritual was supposed to start, anyway.</p>
+
+    <p>You glanced at the beings still waiting to be called, hoping to find a friendly face, but only encountered anxious initiates uncomfortable with your actions. Your waving and greetings did nothing to warm them up, nor did your tries to exchange a few words, which ended up being pretty one-sided. And turning to the standing beings did not lead to different results. All kept mum and avoided your gaze.</p>
+    
+    <p>Among the silence, one initiate ended up pleading with you to get in line, as no one wanted to be involved with your shenanigans.</p>

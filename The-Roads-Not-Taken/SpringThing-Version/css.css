@@ -1,0 +1,15 @@
+  /* STYLED DROPDOWN MENUS 
+  select#setting-control-fontfamily option[value="0"] {
+    background-color: var(--bg) !important;
+    font-family: var(--defaultfont), monospace !important;
+    text-transform: none !important;
+    font-weight: var(--fontweight);
+  }
+  select#setting-control-fontfamily option[value="1"] {
+    background-color: var(--bg) !important;
+    font-family: var(--opendyslexic), cursive !important;
+    font-size: 90% !important;
+    text-transform: none !important;
+    font-weight: var(--fontweight);
+  }
+*/

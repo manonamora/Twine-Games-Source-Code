@@ -1,0 +1,190 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+
+
+@font-face {
+    font-family: "RalewayDots";
+    src: url(extras/RalewayDots-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+/***Hyperlegible***/
+@font-face {
+    font-family: "Hyperlegible";
+    src: url(extras/Atkinson-Hyperlegible-Regular-102.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Hyperlegible";
+    src: url(extras/Atkinson-Hyperlegible-Italic-102.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Hyperlegible";
+    src: url(extras/Atkinson-Hyperlegible-BoldItalic-102.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face {
+     font-family: "Hyperlegible";
+     src: url(extras/Atkinson-Hyperlegible-Bold-102.ttf) format("truetype");
+     font-style: normal;
+     font-weight: 700;
+}
+/***OpenDyslexic***/
+@font-face {
+    font-family: "Open Dyslexic";
+    src: url(extras/OpenDyslexic-Regular.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Open Dyslexic";
+    src: url(extras/OpenDyslexic-Italic.otf) format("opentype");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Open Dyslexic";
+    src: url(extras/OpenDyslexic-BoldItalic.otf) format("opentype");
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Open Dyslexic";
+    src: url(extras/OpenDyslexic-Bold.otf) format("opentype");
+    font-style: normal;
+    font-weight: 700;
+}
+/***Montserrat***/
+@font-face {
+    font-family: "Montserrat";
+    src: url(extras/Montserrat-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(extras/Montserrat-Italic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(extras/Montserrat-BoldItalic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face {
+     font-family: "Montserrat";
+     src: url(extras/Montserrat-Bold.ttf) format("truetype");
+     font-style: normal;
+     font-weight: 700;
+}
+/***Garamond***/
+@font-face {
+    font-family: "Garamond";
+    src: url(extras/CormorantGaramond-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Garamond";
+    src: url(extras/CormorantGaramond-Italic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Garamond";
+    src: url(extras/CormorantGaramond-BoldItalic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Garamond";
+    src: url(extras/CormorantGaramond-Bold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+/***PTSerif***/
+@font-face {
+    font-family: "PTSerif";
+    src: url(extras/PTSerif-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "PTSerif";
+    src: url(extras/PTSerif-Italic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "PTSerif";
+    src: url(extras/PTSerif-BoldItalic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face {
+     font-family: "PTSerif";
+     src: url(extras/PTSerif-Bold.ttf) format("truetype");
+     font-style: normal;
+     font-weight: 700;
+}
+/***MonoSpace***/
+@font-face {
+    font-family: "SpaceMono";
+    src: url(extras/SpaceMono-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "SpaceMono";
+    src: url(extras/SpaceMono-Italic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "SpaceMono";
+    src: url(extras/SpaceMono-BoldItalic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "SpaceMono";
+    src: url(extras/SpaceMono-Bold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+:root {
+    --serif: "PT Serif", serif;
+    --serif2: "Garamond", serif;
+    --sansserif: "Montserrat", sans-serif;
+    --dyslexic: "Open Dyslexic", sans-serif;
+    --monospace: "SpaceMono", monospace;
+    --hyperlegible: "Hyperlegible", sans-serif;
+    --title: "RalewayDots", cursive;
+    --icon: "Font Awesome 6 Free";
+        /* --bg: #021007; */
+    --menu: #021E0C;
+    --textglow: rgba(79, 157, 175, 0.175);
+    --accent: #1F5C2D;
+    --icon: #115168;
+    --iconhov: #207e99;
+    --kor: #83d1c2;
+    --korglow: rgba(227, 199, 61, 0.175);
+    --disabled: #3B463A;
+
+    /* --text: #4FAF6A; */
+    /* --icon: #1F5C2D; */
+    /* --iconhov: #4FAF6A; */
+    --bg: #020210;
+    --text: #00c6ff;
+    --icon: #1a263e;
+    --iconhov: #12759b;
+    --scrollthumb: #05232e;
+    --scrollhover: #172d37;
+      /*#83d1c2 #207e99 #115168  */
+}

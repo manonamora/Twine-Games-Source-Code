@@ -1,0 +1,34 @@
+:: Player
+    <hr id="player">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <<if tags().includes("room")>>
+        <p>Thought there might not be any available mirror in the room to look at yourself, you have gazed upon your reflection many times before – the last one being shortly before you entered this room, even – enough to be able to describe yourself from memory alone.</p>
+    <<elseif tags().includes("hall")>>
+        <p>There was definitely no mirror in the corridor of you to look at your reflection, even the polished wall panels or the spotless windows were not up to par. But you had done so enough in the past to know the look of your husk.</p>
+    <<elseif tags().includes("inside")>>
+        <p>There was no point in trying to find a reflective surface to look at yourself. It was much too dark for that – you could barely see the tip of your extremities as it was. Instead, you recalled this morning, where you stood before the mirror in your room, adjusting your ceremonial robes.</p>
+    <</if>>
+    <<if !$found.includes("Player")>>
+        <p>You were a being with features, of a certain height and build, and with the ‘normal’ amount of limbs, and orifices, and dangling bits, and uprights gams. There was nothing out of the ordinary about you. Quite the contrary, you were plain and average in any way. It was really far-fetched to think you could be some sort of ‘chosen one’ – no, if there were one in the Community, that would be Jaelah. You, frankly, were pretty unremarkable.</p>
+
+        <p>As for your attire – since it was considered quite rude to amble around the Compound in the nude – you were fitted with a long, glistening, aquamarine robe with a hood, made from a fabric you found very itchy. There was also a stole you were instructed to wear on top of the robe. Its colour changed every aeon, yours had been dyed in a dark night shade. The outfit was finished with some sandals to protect your soles from the cold and grainy floor.</p>
+    <<else>>
+        <p>You had not changed since the last time you thought about your appearance. You were still an ordinary being with features, of an average height and build, and with the required amount of bits and pieces. An unremarkable youngin in an aquamarine and dark night ceremonial robe.</p>
+    <</if>>
+
+:: Compoud
+    <hr id="compound">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>In the middle of a green plain, the Compound stood as a large and tall complex of buildings connected by skyways and tunnels. These buildings surrounded a green pathway, which surrounded a smaller building. That last structure welcomed beings in the Auditorium, the Food Hall, the Education rooms, or other hangout spaces.</p>
+    
+    <p>The other buildings, each an intricate piece of architecture, both outside and in, with rooms connected to maze-like corridors, served multiple purposes. They each housed family units – you lived in the building X*R0DJ5 with yours – as well as part of a Branch or two. While some beings were lucky to find their housing in the same building as their place of work, most had to cross the Compound to contribute to the Community.</p>
+
+    <p>Outside of the Compound buildings was a ring of greenery, which included the Gardens of the Cultivation Branch, and a thick and sturdy wall, enclosing the all. You never ventured behind it. Nobody really had.</p>
+
+:: Inventory
+    <hr id="inve">
+    <i class="fa-solid fa-chevron-right"></i> ''_cmd''
+    <hr>
+    <p>Your ceremonial outfit has no pockets. You carry nothing but yourself.</p>
