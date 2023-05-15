@@ -1,0 +1,151 @@
+:: StoryTitle
+The Roads Not Taken
+
+:: StoryData
+{
+	"ifid": "968CF0C2-76D7-4867-9E29-D7B20265A1B3", 
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "Start"
+}
+
+:: StoryInit
+	<<set 
+		$turns to 0,
+		$transcript to [],
+		$found to []
+	>>
+	<<on 'keydown'>>
+		<<which 27>><<trigger 'click' '#ui-dialog-close'>>
+	<</on>>
+:: StoryInterface {"position":"25,25","size":"100,100"}
+	<div id="header">
+		<div id="title" data-passage="title"></div>
+		<div id="main-nav" data-passage="nav"></div>
+	</div>
+	<div id="container">
+		<div id="passages"></div>
+	</div>
+	<div id="footer" data-passage="nav-mobile"></div>
+
+:: Start [noreturn titlepage]
+	<center>
+		<h1>The Roads Not Taken</h1>
+		<p>Press [Space] to play.</p>
+		<div id="spacebar">
+			<div id="smallbar">
+				<<link "SPACE" "Explanation">>
+					<<run $(document).off('keyup.mystory')>>
+				<</link>>
+			</div>
+		</div>
+	</center>
+	
+	<<script>>
+    $(document).on('keyup.mystory', function (ev) {
+        if (ev.which == 32) {
+            $(document).off('keyup.mystory');
+            Engine.play("Explanation");
+        }
+    });
+	<</script>>
+
+:: Explanation [noreturn]
+	<div id="text"><center><h3>This game is meant to be played with a keyboard.</h3></center>
+
+	<p>Enter a command in the textbox and press Enter (or click the Confirm button) to activate it.</p>
+
+	<p>To see the list of game controls, type in //'Key'//.</p>
+
+	<p>Every screen has things to interact with, which can be made more <span class="hint">obvious</span> by toggling the hint setting. Though most interactions will accept a traditional //'verb+noun'// command, it is not always required to work.</p>
+
+	<p>When in doubt, type in //'C'// or //'Continue'// to move on to the next screen.</p>
+
+	<p>A transcript of the commands used through a playthrough is recorded automatically. Type //'transcript'// to export it.</p>
+
+	<p>Press Tab or Shift+Tab to enter/exit the text box.</p>
+	
+	<p>If too much text is loaded on the screen, you may need to scroll down. You can type //'scroll down'// to reach the bottom of the page, and //'scroll up'// to reach the top</p></div>
+
+	<<BlockTextbox>>
+
+:: title
+	<<if passage() isnot "Start">>The Roads Not Taken<</if>>
+
+:: nav
+	<<liveblock>><<if $menu>>
+	<<link '<i class="fa-solid fa-question"></i>'>><<popup 'Rules' 'Rules'>><</link>>
+	<<link '<i class="fa-solid fa-rectangle-list"></i>'>><<popup 'Credits' 'Credits'>><</link>>
+	<<link '<i class="fa-solid fa-power-off"></i>'>><<script>>UI.restart();<</script>><</link>>
+	<<link '<i class="fa-solid fa-bookmark"></i>'>><<script>>UI.saves();<</script>><</link>>
+	<<link '<i class="fa-solid fa-gears"></i>'>><<script>>UI.settings();<</script>><</link>>
+	<</if>><</liveblock>>
+	<<link '<i class="fa-solid fa-bars"></i>'>><<set $menu = !$menu>><<update>><</link>>
+
+:: nav-mobile
+	<<link '<i class="fa-solid fa-question"></i>'>><<popup 'Rules' 'Rules'>><</link>>
+	<<link '<i class="fa-solid fa-rectangle-list"></i>'>><<popup 'Credits' 'Credits'>><</link>>
+	<<link '<i class="fa-solid fa-power-off"></i>'>><<script>>UI.restart();<</script>><</link>>
+	<<link '<i class="fa-solid fa-bookmark"></i>'>><<script>>UI.saves();<</script>><</link>>
+	<<link '<i class="fa-solid fa-gears"></i>'>><<script>>UI.settings();<</script>><</link>>
+
+:: Credits
+	<h4>THE ROADS NOT TAKEN</h4>
+	<p>This game was made possible thanks to resources below:</p>
+	<ul>
+		<li>[[Chapel's Macros|https://github.com/ChapelR]]</li>
+		<li>[[Maliface's Macros|https://github.com/MalifaciousGames]]</li>
+		<li>[[Sjoerd's Macros|https://github.com/SjoerdHekking]]</li>
+	</ul>
+	<p>Special Thanks to Jinx, Groggydog and TRBRY for testing and giving their advices for this game, Arlo, the Campfire Chat and the Gonch Gals for their support.</p>
+
+:: Rules
+	<center><h3>This game is meant to be played with a keyboard.</h3></center>
+
+	<p>Enter a command in the textbox and press Enter (or click the Confirm button) to activate it.</p>
+
+	<p>To see the list of game controls, type in //'Key'//.</p>
+
+	<p>Every screen has things to interact with, which can be made more <span class="hint">obvious</span> by toggling the hint setting. Though most interactions will accept a traditional //'verb+noun'// command, it is not always required to work.</p>
+
+	<p>When in doubt, type in //'C'// or //'Continue'// to move on to the next screen.</p>
+
+	<p>A transcript of the commands used through a playthrough is recorded automatically. Type //'transcript'// to export it.</p>
+
+	<p>Press Tab or Shift+Tab to enter/exit the text box.</p>
+
+:: PassageDone 
+	<<run $("#textbox input").prop("placeholder", "Enter command here")>>
+
+:: Keys
+	<h3>Controls</h3>
+	<ul>
+		<li>//Settings//: to open the settings dialog box.</li>
+		<li>//Saves//: to open the save dialog box.</li>
+		<li>//Restart//: to restart the game (unsaved playthrough will be lost)</li>
+		<li>//Back//: to cancel all actions and return to the previous screen.</li>
+		<li>//Forward//: to redo all actions and move to the next screen (must have gone back first).</li>
+		<li>//Transcript//: to download your current transcript.</li>
+	</ul>
+	<h3>Other</h3>
+	<ul>
+		<li>//Help// (not available everywhere)</li>
+		<li>//Hint//: to get a list of possible action on this screen.</li>
+		<li>//Rules//: to review the instruction page.</li>
+	</ul>
+
+:: Hints
+	<center>Are you stuck?</center>
+	<p>> Toggle the hint setting to enable the visual effect!<p>
+	<p>Try a cardinal direction.<p>
+	<p>Try the following verbs in combination with the bolded/coloured words:<p>
+	<p>think, listen, remember, smell, jump, stop, talk, look, take, sit, get up, move...</p>
+
+:: END
+	<center><h1>E N D ?</h1></center>
+	<p>You have reached the end of this path, but there are many other paths you have yet to take...<p>
+	<center>Start Again?</center>
+	<<BlockTextbox>>
+	<h4>Thank you for playing!</h4>
+	<h5>You can save your transcript by typing //transcript// in the textbox above, and send it to manonamora.games@gmail.com.</h5>
+	<p>Score: $turns.</p>
