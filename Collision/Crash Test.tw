@@ -1,0 +1,73 @@
+:: StoryTitle
+  COLLISION
+
+:: StoryData
+  {
+    "ifid": "7825D16E-D51C-4611-A824-06BF305A38B3",
+    "format": "SugarCube",
+    "format-version": "2.36.1",
+    "start": "Start",
+    "tag-colors": {
+      "widget": "red",
+      "nobr": "orange"
+    },
+    "zoom": 1
+  }
+
+:: StoryInit {"position":"475,300","size":"100,100"}
+  <<set $number to random(458, 20398)>>
+  <<set $actions to {}>>
+  <<set $turn to 0>>
+  <<set $crash to 0>>
+  <<cacheaudio "crash" "crash-audio.wav">>
+
+:: StoryInterface {"position":"850,300","size":"100,100"}
+    <div id="container">
+        <div id="passages"></div>
+        <div id="menu" data-passage="menu"></div>
+    </div>
+:: Start [starting]
+:: Widget [widget nobr] {"position":"600,300","size":"100,100"}
+  <<widget "Actions">>
+      <ul>
+          <<if !$actions.movehands>><li> <<link '<<if settings.lang is "English">>Move Hands<<else>>Bouger les Mains<</if>>' "MoveHands">><<set $actions.movehands to true, $turn ++>><</link>></li><</if>>
+          
+          <<if !$actions.lookself>><li> <<link '<<if settings.lang is "English">>Look Self<<else>>Se Regarder<</if>>' "LookSelf">><<set $actions.lookself to true, $turn ++>><</link>></li><</if>>
+          <<if ($actions.lookaround or $actions.lookup) and $actions.lookself and !$actions.lookselfagain>><li> <<link '<<if settings.lang is "English">>Look Self Again<<else>>Se Regarder de Nouveau<</if>>' "LookSelfAgain">><<set $actions.lookselfagain to true, $turn ++>><</link>></li><</if>>
+          <<if $actions.lookselfagain and !$actions.ownseatbelt>><li> <<link '<<if settings.lang is "English">>Pull Own Seat Belt<<else>>Tirer Ceinture de Sécurité<</if>>' "PullOwnSeatBelt">><<set $actions.ownseatbelt to true, $turn ++>><</link>></li><</if>>
+          
+          <<if !$actions.lookaround>><li> <<link '<<if settings.lang is "English">>Look Around<<else>>Regarder Autour<</if>>' "LookAround">><<set $actions.lookaround to true, $turn ++>><</link>></li><</if>>
+          <<if $actions.lookaround and !$actions.talkpassenger>><li> <<link '<<if settings.lang is "English">>Talk Passenger<<else>>Parler au Passager<</if>>' "TalkPassenger">><<set $actions.talkpassenger to true, $turn ++>><</link>></li><</if>>
+
+          
+          <<if !$actions.lookup>><li> <<link '<<if settings.lang is "English">>Look Up<<else>>Regarder en Haut<</if>>' "LookUp">><<set $actions.lookup to true, $turn ++>><</link>></li><</if>>
+          <<if $actions.lookup and !$actions.orderchild>><li> <<link '<<if settings.lang is "English">>Order Child<<else>>Commander Enfant<</if>>' "OrderChild">><<set $actions.orderchild to true, $turn ++>><</link>></li><</if>>
+          
+          <<if !$actions.lookahead>><li> <<link '<<if settings.lang is "English">>Look Ahead<<else>>Regarder Devant<</if>>' "LookAhead">><<set $actions.lookahead to true, $turn ++>><</link>></li><</if>>
+          <<if $actions.lookahead and !$actions.examcar>><li> <<link '<<if settings.lang is "English">>Examine Car<<else>>Examiner Voiture<</if>>' "ExamineCar">><<set $actions.examcar to true, $turn ++>><</link>></li><</if>>
+          <<if $actions.lookahead and !$actions.examvehicle>><li> <<link '<<if settings.lang is "English">>Examine Vehicle<<else>>Examiner Véhicule<</if>>' "ExamineVehicle">><<set $actions.examvehicle to true, $turn ++>><</link>></li><</if>>
+          
+          <<if !$actions.think and $turn > 3>><li> <<link '<<if settings.lang is "English">>Think<<else>>Réfléchir<</if>>' "Think">><<set $actions.think to true, $turn ++>><</link>></li><</if>>
+          <<if !$actions.scream and $turn > 3>><li> <<link '<<if settings.lang is "English">>Scream<<else>>Hurler<</if>>' "Scream">><<set $actions.scream to true, $turn ++>><</link>></li><</if>>
+          
+          <<if $turn gt 4>><li> <<link '<<if settings.lang is "English">>Open Door<<else>>Ouvrir la Porte<</if>>' "MoveEnd">><</link>></li><</if>>
+          <<if $turn gt 4>><li> <<link '<<if settings.lang is "English">>Turn Wheel<<else>>Tourner le Volant<</if>>' "MoveEnd">><</link>></li><</if>>
+          <<if $turn gt 4>><li> <<link '<<if settings.lang is "English">>Escape<<else>>Fuire<</if>>' "MoveEnd">><</link>></li><</if>>
+      </ul>
+  <</widget>>
+
+  <<widget "Car">>
+    <<switch $turn>>
+        <<case 1>><span class="rise-shake"><<if settings.lang is "English">>Clanking noise<<else>>Bruit de cliquetis<</if>>.</span>
+          <<case 2>><span class="constant-tilt-shaking"><<if settings.lang is "English">>Incoherent mumbles<<else>>Marmonnements incohérents<</if>>.</span>
+          <<case 3>><span class="skew-shake-x"><<if settings.lang is "English">>Roaring engine<<else>>Moteur rugissant<</if>>.</span>
+          <<case 4>><<if settings.lang is "English">>Rolling tires<<else>>Pneus roulants<</if>>.
+          <<case 5>><<if settings.lang is "English">>Blinding lights<<else>>Voyants aveuglants<</if>>.
+      <</switch>>
+  <</widget>>
+
+:: menu [nobr] {"position":"1075,300","size":"100,100"}
+  <<if !["Title", "Start"].contains(passage())>>
+    <<link '<<switch settings.lang>><<case "English">>Settings<<case "Français">>Paramètres<</switch>>'>><<script>>UI.settings()<</script>><</link>>
+    <<link '<<switch settings.lang>><<case "English">>Credits<<case "Français">>Crédits<</switch>>'>><<switch settings.lang>><<case "English">><<popup 'Credits_en' "Credits">><<case "Français">><<popup 'Credits_fr' "Crédits">><</switch>><</link>>
+  <</if>>

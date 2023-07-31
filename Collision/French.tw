@@ -1,0 +1,199 @@
+
+:: AE1_fr [francais]
+    <<timed 1s t8n>>Bleu, rouge, sans chemise. 
+    <<next>>Pile de corps immobiles. 
+    <<next>>Motifs à damier noirs et jaunes. 
+    <<next>>Yeux vides. 
+    <<next>>Câbles emmêlés endommagés. 
+    <<next>>Mannequins jetés…
+    <<next>>
+    <<next>>[[L’un d’eux ?|END]]<</timed>>
+
+:: ActualEnd_fr [francais]
+    [[Ourvrir les Yeux|AE1]]
+    <<unset $crash>>
+
+:: Crash_fr [francais]
+    <<audio "crash" play>>
+    <<timed 3s>><<set $turn to 0>><<goto "TryAgain">><</timed>>
+
+:: Credits_fr [francais]
+    <center><h3>COLLISION</h3>\
+    Un court jeu créé par [[manonamora|https://manonamora.itch.io/]] pour la Neo Twiny Jam.
+    <hr>
+    <h4>Ressources</h4>\
+    Animation Texte: [[Unused CSS|https://unused-css.com/blog/css-shake-animation/]]
+    Dialog API: [[Chapel|https://github.com/ChapelR/custom-macros-for-sugarcube-2]]
+    SFX: [[Eponn|https://freesound.org/people/Eponn/]]
+    <hr>
+    Retrouvez mes autres jeux sur [[itch|https://manonamora.itch.io/]] or suivez mon [[blog dev|https://manonamora-if.tumblr.com]].
+    </center>
+
+:: END_fr [francais]
+    <div id="title">COLLISION</div>
+    <div id="start"><<link "Recommencer ?">><<script>>Engine.restart()<</script>><</link>></div>
+
+:: ExamineCar_fr [francais]
+    <<timed 1s t8n>>Cadre argenté dépouillé.
+    <<next>>Pare-brise manquant.
+    <<next>>Rétroviseurs arrière et latéraux.
+    <<next>>Volant à damier.
+    <<next>>Deux passagers.
+    <<next>>Câbles partout.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: ExamineVehicle_fr [francais] 
+    <<timed 1s t8n>>Lumière vive.
+    <<next>>Lignes floues.
+    <<next>>Masse approchant.
+    <<next>>Moteur rugissant.
+    <<next>>Membres immobiles.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: LookAhead_fr [francais]
+    <<timed 1s t8n>>Cadre argenté dépouillé.
+    <<next>>Pare-brise manquant.
+    <<next>>Lumière vive.
+    <<next>>Véhicule vide en mouvement.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: LookAround_fr [francais]
+    <<timed 1s t8n>>Cou coincé.
+    <<next>>Passager.
+    <<next>>Chauve.
+    <<next>>Chemise rouge.
+    <<next>>Pantalon beige.
+    <<next>>Lignes à damier.
+    <<next>>Ceinture de sécurité.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: LookSelf_fr [francais]
+    <<timed 1s t8n>>Cou coincé.
+    <<next>>Maillot bleue.
+    <<next>>Sans pantalon.
+    <<next>>Points jaunes et noirs sur les bras.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: LookSelfAgain_fr [francais]
+    <<timed 1s t8n>>Cou coincé.
+    <<next>>Maillot bleue.
+    <<next>>Sans pantalon.
+    <<next>>Points jaunes et noirs sur les bras.
+    <<next>>Ceinture de sécurité manquante.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: LookUp_fr [francais]
+    <<timed 1s t8n>>Cou coincé.
+    <<next>>Coup d’œil dans le miroir.
+    <<next>>Enfant assis.
+    <<next>>Combinaison grise.
+    <<next>>Cercles jaunes et noirs sur les joues.
+    <<next>>Ceinture de sécurité manquante.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: MoveHands_fr [francais]
+    <<timed 1s t8n>>Volant à damier.
+    <<next>>Doigts attachés.
+    <<next>>Membres immobiles.
+    <<next>>Silence.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: MoveEnd_fr [francais]
+    <<timed 0.5s t8n>>Membres immobiles.
+    <<next>>Évasion impossible.<</timed>>
+
+    <<timed 2.5s>><<goto "Crash">><</timed>>
+
+:: OpenEyes_fr [francais]
+    <<timed 1s t8n>>Volant à damier.
+    <<next>>Doigts attachés.
+    <<next>>Membres immobiles.
+    <<next>>Silence.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: OrderChild_fr [francais]
+    <<timed 1s t8n>>Aucun mot.
+    <<next>>Pas de voix.
+    <<next>>Pas de son.
+    <<next>>Enfant immobile.
+    <<next>>Yeux vide.
+    <<next>>Inquiétudes.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: Pull Own Seat Belt_fr [francais]
+    <<timed 1s t8n>>Membres immobiles.
+    <<next>>Cou coincé.
+    <<next>>Inquiétudes.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: Scream_fr [francais]
+    <<timed 1s t8n>>Aucun mot.
+    <<next>>Pas de voix.
+    <<next>>Pas de son.
+    <<next>>Pas de souffle.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: First_fr [francais]
+    [[Ourvrir les Yeux|OpenEyes][$turn ++]]
+
+:: TalkPassenger_fr [francais]
+    <<timed 1s t8n>>Aucun mot.
+    <<next>>Pas de voix.
+    <<next>>Pas de son.
+    <<next>>Pas de mouvement.
+    <<next>>Passager immobile.
+    <<next>>Cou coincé.
+    <<next>>Inquiétudes.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: Think_fr [francais]
+    <<timed 1s t8n>>Pensées incohérentes.
+    <<next>>Incompréhension.
+    <<next>>Préoccupations.
+    <<next>>Confusion.
+    <<next>>Peur ?
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: Title_fr [francais]
+    <div id="title">COLLISION</div>
+    <div id="start">[[Commencer|First]]</div>
+    <span id="underhr"><hr>
+    Avertissement : texte animé, bruit fort.
+    <<link "Paramètres">><<script>>UI.settings()<</script>><</link>>
+    <<link "Crédits">><<popup 'Credits_fr' "Crédits">><</link>>
+    </span>
+
+:: TryAgain_fr [francais]
+    <<timed 0.1s t8n>><center>Essai $number</center><div id="start" class="start">ÉCHEC</div>
+    <div class="circle">[[De Nouveau ?|First][$turn to 0, $actions to {}, $number ++, $crash ++]]</div><</timed>>
+
+:: Start_fr
+<<link "English" "Title">><<set settings.lang to "English">><<run Setting.save();>><</link>> | <<link "Français" "Title">><<set settings.lang to "Français">><<run Setting.save();>><</link>>
