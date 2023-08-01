@@ -1,0 +1,199 @@
+:: StoryTitle
+Clarence Street, 14.
+
+:: StoryData
+{
+	"ifid": "BE8A9B87-E8C6-4B35-A288-2070B8E225DA",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "Start"
+}
+
+:: StoryInterface
+<div id="passages"></div>
+
+:: Start [title]
+
+:: Start_fr 
+<h1>Clarence Street, 14.</h1>\
+<<link "English" "First">><<set settings.lang to "English">><<run Setting.save();>><</link>> | <<link "Français" "First">><<set settings.lang to "Français">><<run Setting.save();>><</link>>
+<<if hasVisited("Seventh")>><<link "Crédits">><<popup 'Credits_fr' "Crédits">><</link>><</if>>
+
+:: Start_en
+<h1>Clarence Street, 14.</h1>\
+<<link "English" "First">><<set settings.lang to "English">><<run Setting.save();>><</link>> | <<link "Français" "First">><<set settings.lang to "Français">><<run Setting.save();>><</link>>
+<<if hasVisited("Seventh")>><<link "Credits">><<popup 'Credits_en' "Credits">><</link>><</if>>
+
+:: First
+
+:: First_fr
+Leya regarda furtivement autour d’elle, tandis qu’elle remontait son col, espérant que personne ne la reconnaîtrait. <<link "//Si quelqu’un savait que j’allais venir ici…//">><<dialog>>La honte, la honte absolue ! Et ceci se propagerait comme un feu de forêt pendant un jour d’été bien sec. Tout le monde la regarderait avec pitié, mais ne lèverait pas même leur petit doigt pour l’aider.<</dialog>><</link>>
+
+Si cela avait été tout autre moment, personne ne l’aurait trouvée traîner dans ce coin de la ville. Ces gens… ils n’étaient pas <<link "des siens">><<dialog>>Ils n’étaient pas violents, pas vraiment. Juste… trop peu sophistiqués.<</dialog>><</link>>, et elle se respectait bien trop pour se mêler à cette foule de son gré.
+
+Mais aujourd’hui n’était pas n’importe quel moment. Elle n’avait pas d’autre choix. Il lui a même fallu beaucoup d’efforts pour venir ici en premier lieu. //Mon dernier recours…//
+
+Mécaniquement, Leya sortit son téléphone et pressa sur l’icône son application bancaire. Elle n’avait pas besoin de regarder l’écran pour savoir ce qu’il indiquait. Le montant dangereusement bas n’avait pas changé depuis qu’elle l’avait vérifié cinq minutes plus tôt. Et it ne changerait pas pour <<link "une autre semaine encore">><<dialog>>Le moment où sa paie était censé atterrir dans son compte. Si une erreur n’était pas encore commise…<</dialog>><</link>>. //À moins qu’ils ne me débitent pour…// 
+
+[[→|Second]] 
+
+:: First_en 
+Leya looked furtively around her, as she propped up her collar, hoping no one would recognise her. <<link "//If anyone knew I was coming here…//">><<dialog>>The shame, the absolute shame it would be. It would spread like wildfire on a dry summer day. Everyone would look at her with pity, but do absolutely nothing.<</dialog>><</link>>
+
+Had it been any other time, she wouldn’t be caught dead walking in this part of town. These were not <<link "her kind">><<dialog>>They were not violent or anything. Just… unsophisticated.<</dialog>><</link>>, and she had too much respect for herself to mingle with this crowd.
+
+But this was not any other time. She was left with no other choice. It even took a lot from her to come here in the first place. //My last resort…//
+
+Mechanically, Leya took out her phone and opened her bank app. She didn’t need to look at the screen to know what it would show. The dangerously low number had not changed since she checked it five minutes ago, not would it for <<link "another week">><<dialog>>This would be when her payslip would be supposed to land in her account. If they did not mess up again…<</dialog>><</link>>. //Unless they charge me for… //
+
+[[→|Second]] 
+
+:: Second [thought]
+
+:: Second_fr
+//<<timed 1s t8n>>N’y pense pas. 
+<<next 2s>>Pas <<next 1s>>maintenant…<</timed>>//
+
+<<timed 6s t8n>>[[→|Third]]<</timed>>
+
+:: Second_en
+//<<timed 1s t8n>>Don’t think about this. 
+<<next 2s>>Not <<next 1s>>now…<</timed>>//
+
+<<timed 6s t8n>>[[→|Third]]<</timed>>
+
+:: Third
+
+:: Third_fr 
+Leya soupira. 
+
+Elle ne pouvait vraiment rien faire à ce sujet. Pas avant que ce problème soit résolu. Sa main se serra autour de son téléphone, tremblante.
+
+Elle se mordit la lèvre. //Ce devrait être <<link "ici">><<dialog>>« Clarence Street, numéro 14. Frappe trois fois. Demande la Sœur Norma. » Les instructions lui avaient été murmurées. « Mais arrive avant 19h. »<</dialog>><</link>>, n’est-ce pas ? //
+
+Elle ne voulait pas s’attarder plus longtemps que nécessaire. Elle ne voulait même pas être ici, au départ. Sauf qu’elle avait épuisé toutes ses autres options – et ce n’était pas comme si elle en avait eu <<link "beaucoup">><<dialog>>Elle avait caché sa situation à beaucoup de personnes autour d’elle, craignant que ce petit accroc les fasse fuir. La communauté n’appréciait peu les gens qui s’égaraient du chemin, même si quelqu’un les avait poussés sur ce chemin en premier lieu.<</dialog>><</link>> depuis que ses problèmes avaient commencé.
+
+[[→|Fourth]] 
+
+:: Third_en
+Leya sighed. 
+
+There was nothing she could do about that. Not until she resolved this. Her hand tightened around her phone, shaking a little.
+
+She bit her lip. //It should be around <<link "here">><<dialog>>“Clarence Street, Number 14. Knock 3 times. Ask for Sister Norma.” The instructions had been hushed to her. “Come before 7pm.”<</dialog>><</link>>, shouldn’t it?//
+
+She did not want to be here longer than she needed to. She did not want to be here, period. But she had exhausted every other option – <<link "not like there were many to begin with">><<dialog>>She hid her situation from many around her, afraid this little hitch would get her shunned. The community didn’t take kindly to folks straying from the path, even if someone pushed them into this path in the first place.<</dialog>><</link>>.
+
+[[→|Fourth]] 
+
+:: Fourth [thought]
+
+:: Fourth_fr
+//<<timed 1s t8n>>Tu aurais dû t’en rendre compte plus tôt.
+<<next 2s>>Toutes frivolités…<</timed>>//
+
+<<timed 4.5s t8n>>[[→|Fifth]]<</timed>>
+
+:: Fourth_en
+//<<timed 1s t8n>>You should have known better.
+<<next 2s>> Those frivolities…<</timed>>//
+
+<<timed 4.5s t8n>>[[→|Fifth]]<</timed>>
+
+:: Fifth
+
+:: Fifth_fr 
+Leya retint son souffle au passage piéton, attendant que le feu passe au vert. D’ici, elle pouvait maintenant apercevoir la maison. Seulement <<link "quelques pas de plus">><<dialog>>Il y avait encore un peu de temps pour faire demi-tour. Pour éviter d’accepter son destin. Même si cela ne l’aidait pas, elle n’aurait pas à avaler sa fierté.<</dialog>><</link>>, et elle ferait face aux conséquences de ses actions. //Peut-être que c’est pour le mieux… //
+
+//Ding-ding-ding-ding-ding-ding…//
+
+Ses pieds restaient fermement en place, ne la laissant pas bouger d’un pouce.
+
+Elle vérifia de nouveau son téléphone.
+
+Sept heure approchait rapidement.
+
+[[→|Sixth]]
+
+:: Fifth_en 
+Leya held her breath at the crossing, waiting for the light to turn green. She could see the house now, from here. Only a <<link "few more steps">><<dialog>>There was still time to turn back. To avoid accepting her fate. Even if it would not help her, she would not have to swallow her pride for this.<</dialog>><</link>> and she would face the consequences of her actions. //Maybe that’s for the better…//
+
+//Ding-ding-ding-ding-ding…//
+
+Her feet stayed firmly in place. They would not let her move another inch.
+
+She checked her phone.
+
+Seven was fast approaching.
+
+[[→|Sixth]]
+
+:: Sixth [thought]
+
+:: Sixth_fr
+//<<timed 1s t8n>>Il n’y a pas d’autre moyen… 
+<<next 2.5s>>À moins que tu ne souhaites accepter son… 
+<<next 1s>>NON !<</timed>>//
+
+<<timed 7s t8n>>[[→|Seventh]]<</timed>>
+
+:: Sixth_en
+//<<timed 1s t8n>>There is no other way… 
+<<next 2.5s>>Unless you want to accept his… 
+<<next 1s>>NO!<</timed>>//
+
+<<timed 7s t8n>>[[→|Seventh]]<</timed>>
+
+:: Seventh
+
+:: Seventh_fr 
+Sa main planait près de la porte, incapable de toquer. 
+
+//Je ne peux pas… //
+
+Ses yeux fixaient le <<link "dépliant">><<dialog>>Soupe Populaire. 1er vendredi du mois. 9 h à 19 h. Zéro question.<</dialog>><</link>> cloué au mur.
+
+//Je n’aurais jamais dû… //
+
+La porte s’ouvrit en grinçant, révélant une femme large et voilée, avec un gentil sourire.
+
+« Entre, ma petite. N’aie pas peur. Nous sommes là pour t’aider. »
+
+[[→|Start]]
+
+:: Seventh_en 
+Her hand hovered by the door, unable to knock. 
+
+//I can’t… //
+
+Her eyes fixed on the nailed <<link "flyer">><<dialog>>Food Pantry. 1st Friday of the Month. 9am-7pm. No Questions Asked.<</dialog>><</link>>.
+
+//I should never have…//
+
+The door creaked open, revealing a large veiled woman, with a kind smile.
+
+“Come on in, love. Don’t be afraid. We’re here to help.”
+
+[[→|Start]]
+
+:: Credits
+
+:: Credits_fr
+    <div class="credit"><h3>Clarence Street, 14.</h3>\
+    Un court jeu créé par [[manonamora|https://manonamora.itch.io/]] pour la Neo Twiny Jam.
+    <hr>
+    <h4>Ressources</h4>\
+    Dialog API: [[Chapel|https://github.com/ChapelR/custom-macros-for-sugarcube-2]]
+    <hr>
+    Retrouvez mes autres jeux sur [[itch|https://manonamora.itch.io/]] or suivez mon [[blog dev|https://manonamora-if.tumblr.com]].
+    </div>
+
+:: Credits_en
+    <div class="credit"><h3>Clarence Street, 14.</h3>\
+    A short game created by [[manonamora|https://manonamora.itch.io/]] for the Neo Twiny Jam.
+    <hr>
+    <h4>Assets</h4>\
+    Dialog API: [[Chapel|https://github.com/ChapelR/custom-macros-for-sugarcube-2]]
+    <hr>
+    Find my other games on [[itch|https://manonamora.itch.io/]] or follow my [[dev blog|https://manonamora-if.tumblr.com]].
+    </div>

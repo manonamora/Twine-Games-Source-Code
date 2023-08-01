@@ -1,0 +1,141 @@
+
+* {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #0009 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background-color: #0009; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(65, 65, 65, 0.6); 
+}
+
+
+body {
+  background-color: #000;
+  font-family: Geneva, "Helvetica Neue", Helvetica, sans-serif;
+  color:#000;
+  text-align:left;
+  margin: 10% 0 0 0;
+  height: 90vh;
+}
+
+body::before {
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAEAQMAAACTPww9AAAABGdBTUEAALGPC/xhBQAAAAZQTFRFAAAA////pdmf3QAAAA5JREFUeF5jOACEBgwGAAnIAeGomjuiAAAAAElFTkSuQmCC);
+  background-size: 16px;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  opacity: 30%;
+}
+
+#passages {
+  border-radius: 0.2em;
+  width: 60%;
+  margin: auto;
+  padding: 2em;
+  font-size: 1.5rem;
+  background-color:#a5a5a5;
+  border: solid #000 0.05em;
+  box-shadow: #000 0.5em 0.5em 0;
+  position:relative;
+  max-height: 50vh;
+}
+
+.passage {
+  font-size: 1.1em;
+  line-height: 175%;
+  margin-bottom: 1em;
+  text-align: left;
+}
+a {
+  color: #3F1380;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.09em;
+}
+a:hover {
+  color: #2B3459;
+  text-decoration: none;
+}
+
+a[role="link"] {
+  font-size: 150%;
+}
+
+h1 {
+  overflow: unset;
+}
+
+
+#ui-dialog {
+  position: absolute;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto;
+  height: fit-content;
+}
+
+#ui-dialog-titlebar {
+  display: none;
+}
+
+#ui-dialog-body {
+  font-size: 2.5em;
+  background: #a5a5a5;
+  box-shadow: #000 0.5em 0.5em 0;
+  margin: 1em;
+  height: fit-content;
+}
+
+[data-tags~="title"] #passages {
+  max-width: 539px;
+}
+[data-tags~="title"] .passage {
+  text-align: center;
+}
+
+
+[data-tags~="thought"] body::before {
+  display: none;
+}
+
+[data-tags~="thought"] #passages {
+  background: transparent;
+  color: white;
+}
+
+[data-tags~="thought"] .passage a {
+  color: wheat;
+}
+
+[data-tags~="thought"] .passage {
+  text-align: center;
+}
+
+.credit {
+  font-size: 0.6em;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  #passages {
+    min-height: 1%;
+    max-height: 85%;
+  }
+}
+
+
