@@ -1,0 +1,1604 @@
+:: StoryTitle
+Goncharov Escapes!
+
+
+:: StoryData
+{
+  "ifid": "6E3F500F-9EE3-4070-AF13-233C5F1FA615",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: A [story] {"position":"225,225","size":"100,100"}
+<p>Stepping hard on the pedal, the Maserati’s tires screeched on the stones, still wet from the morning’s storm. //Blyad!// It was a day that kept on giving… First the Don’s ‘invitation’ to have a talk about his business, then this. The bells in the clock tower echoed in his mind. //Katya was right…// </p>
+
+    <p>Goncharov took a glance at the mirror and… //Blyad!// … spotted a couple of black cars catching up to the duo. He shot a dark glare at the passenger seat. </p>
+
+    <div class="talk"><p>“Are you //kidding// me?” Andrej voiced his frustration. “I said I was sorry!”</p>
+    <p>“Not the time, Andrej!” Goncharov barked, throwing him his gun. “And be useful… for once.”</p>
+    <p>“Don’t give me that spiel, Gonch! I’m not the one who mess with–”</p></div>
+
+    <p>A bullet hit the side mirror.</p>
+
+    <div class="talk"><p>“For fuck’s sake, Andrej!”</p>
+    <p>“//Fine!//”</p></div>
+
+    <p>The man aimed towards the back and–</p>
+
+    <div class="talk"><p>“//Not through the fucking window, Andrej!//”</p>
+    <p>“Right…”</p></div>
+
+    <p>Turning the other way, he put his head out the passenger window and fired back at the chasers. As the gun emptied, Goncharov soon regretted his decision to take the wheel. Andrej was worse a shot than he was a driver. <<linkappend '//And he’s already a really–//'>><<run setup.scrollToBottom("passages")>>
+
+    <p>Another bullet hit the rear window, shattering it. </p>
+
+    <div class="talk"><p>“Andrej!”</p>
+    <p>“I hit a wheel, Gonch. And– ''//WATCH OUT!//''”</p></div>
+
+    <center>[[Swerve|D]]</center>
+    <<timerbar>>
+    <<timed 5s>><<goto "C">><</timed>><</linkappend>></p>
+
+
+:: B [end] {"position":"350,225","size":"100,100"}
+<div class="talk"><p>“What the fuck are you doing, man?” Andrej asks, whispering. “We have to–”</p>
+    <p>“''CUT!''” a voice is broadcasted through a megaphone.</p>
+    <p>“Fuck, Robert,” Harvey continues, breaking out of character. “Pressing a pedal is not that complicated…”</p>
+    <p>“''RESETTING!''” the voice yells again. “Come on, people! We don’t have all day.”</p>
+    <p>“Don’t fuck it up next time, Robert,” Harvey says as he opens the door. “I don’t want to be stuck reshooting a scene over and over. AGAIN!”</p></div>
+
+    <center>[[Restart the Scene|Intro]]</center>
+
+
+:: C [end] {"position":"475,225","size":"100,100"}
+<p>The car hits the haystacks pile head on, cutting the chase short. A shower of straw soon covers the pine Maserati.</p>
+
+    <div class="talk"><p>“Ow!” Andrej grouches. “Fucking hell, Robert!”</p>
+    <p>“I–”</p>
+    <p>“We practiced this scene a hundred fucking time!” Harvey continues, wiping his brow and checking for blood. “How hard is it to turn the car?”</p>
+    <p>“The ti–”</p>
+    <p>“Don’t fucking start on the timing, Robert! You better pray I didn’t get a concussion from your fucking mistake!” </p></div>
+
+    <p>The door being stuck, Harvey extracts himself out of the car through the window, fuming, swearing, and spitting out the loose straws still falling. Someone knocks on the driver’s window.</p>
+
+    <p>“Do you know how much props drain the budget, Robert?” Director JWHJ0715 coldly says through the glass. “Fuck up again and I’ll make sure Martin won’t ever cast you in his film.”</p>
+
+    <center>[[Restart the Scene|Intro]]</center>
+
+
+:: Credits [Credits] {"position":"350,475","size":"100,100"}
+''Goncharov Escapes'' was created, written and built by ''manonamora'' with Tweego/Sugarcube.
+	<h5>This story is based on the made-up movie //Goncharov//, through the Tumblr Meme Goncharov Craze of November 2022, during which a fake Martin Scorsese movie from the 70s was promoted.</h5>
+	<ul><li> <i class="fa-brands fa-tumblr"></i> [[@manonamora-if|https://manonamora-if.tumblr.com/]]</li>
+	<li> <i class="fa-brands fa-itch-io"></i> [[@manonamora|https://manonamora.itch.io/]]</li>
+	<li> <i class="fa-solid fa-mug-saucer"></i> [[@manonamora|https://ko-fi.com/manonamora]]</li></ul>
+	<h5>[[Last patch notes|https://manonamora.itch.io/exquisite-cadaver/devlog]]<br>
+	[[Find the template of this game here|https://manonamora.itch.io/twine-sugarcube-templates]]</h5>
+''Assets:''
+<ul><li> [[Chapel|https://twinelab.net/custom-macros-for-sugarcube-2/demo/]]</li>
+	<li> [[HiEv|https://qjzhvmqlzvoo5lqnrvuhmg-on.drv.tw/UInv/Sample_Code.html]]</li>
+	<li>[[SjoerdHekking|https://www.writtenhorror.com/]]</li>
+	<li> [[GoogleFonts|https://fonts.google.com]]</li>
+	<li> [[OpenDyslexic|https://opendyslexic.org]] </li></ul>
+''Other:''
+<ul><li> [[Sugarcube 2 Documentation|https://www.motoslave.net/sugarcube/2/docs/]]
+<li> [[Twinery.org|https://twinery.org/]]</li>
+<li> [[W3 School|https://www.w3schools.com/]] </li></ul>
+
+
+:: D [story] {"position":"600,225","size":"100,100"}
+<p>The car swerved just in time to miss the pile of haystack blocking the road. //Blyat!// Goncharov kept swearing under his breath. His heart was bursting in his chest. //That was too close…// Behind, the mobster’s cars continued to pursue the duo, shooting – well, trying to – at the Maserati.</p>
+
+    <p>“Where is Katya’s purse when you need it, huh?” Andrej chuckled nervously, as he frantically searched the glove compartment. “Shit, shit, shit, shit,” he continued, trying to reload the gun.</p>
+
+    <p>Andrej turned back and shot again.</p>
+
+    <div class="talk"><p>“We have to lose them, Gonch,” he screamed. “I can’t keep shooting at them.”</p>
+    <p>“Easier said than done…” Goncharov frowned, scanning the street for an opening.</p>
+    <p>“Take //that// left?” Andrej points at <<linkappend "the short opening ahead.">><<run setup.scrollToBottom("passages")>> “Do something!”
+
+    <p>//Could we even make it?// Goncharov thought, spotting the street with a blue sign just before.</p>
+
+    <center>[[Turn Left|E]]</center>
+    <<timerbar>>
+    <<timed 5s>><<goto "F">><</timed>><</linkappend>></p></div>
+
+
+:: E [end] {"position":"725,225","size":"100,100"}
+<p>At its current speed and the tight width of the alley, the car scrapes the wall, and finishes its course crashing against the wall. The airbags pushed the passengers harshly against their seat. //Ow!//</p>
+
+    <p>Soon, the eerie silence, especially for the time of day, becomes oppressing. //Am I…// Even your thoughts do not linger.</p>
+
+    <p>“Get them out!” a faint voice shouts far away. “No, I don’t give a shit about the car. Saw it open for all I care. You have no idea in how much shit we will be if they have any scratches on their face!”</p>
+    
+    <p>A wet cough is muffled on the passenger side, followed by a grunt.</p>
+
+    <div class="talk"><p>“Robert?”</p>
+    <p>“Y-yeah…”</p>
+    <p>“If I don’t make it out–”</p>
+    <p>“Don’t say that Harvey.”</p>
+    <p>“IF I DON’T MAKE IT OUT ALIVE,” he continues. “Just know this. Ha! //I fucked your w–//”</p>
+    <p>“THEY ARE ALIVE,” a man with a thick Italian accent screams.</p>
+    <p>“Get them out, already!” the voice, now closer, orders. “Has someone called an ambulance yet already?” Then, after some mumbling: “Well, of course we are done for today! You //really// thought we would restart the scene? The car is totalled! And //they// won’t be in shape to run again either!”</p></div>
+
+    <<link 'GAME OVER'>><<script>>UI.restart();<</script>><</link>>
+
+
+:: F [story] {"position":"850,225","size":"100,100"}
+<p>Goncharov peeked at the small street and sighed, relieved he had not followed Andrej’s idea. //That idiot…// The alley was a dead-end, so small and short that the car would have crashed almost immediately. //Could never read a sign, could he?//</p>
+
+    <div class="talk"><p>“What are you doing, Gonch? The street–”</p>
+    <p>“Were you trying to do //their// job and kill us?”</p>
+    <p>“Obv–” Andrej rolled his eyes.</p>
+    <p>“Then stop giving shitty directions!”</p></div>
+
+    <p>Another bullet flew close to Goncharov. It whistled in his ear. Though this was not his first time in this kind of situation, it still froze his blood every time. //Think, dammit!// </p>
+
+    <div class="talk"><p>“Gonch?” Andrej asked, scarred.</p>
+    <p>“What?”</p>
+    <p>“You have a plan… right?”</p></div>
+
+    <p>Goncharov did not have a plan. He never needed one. He wished he had now…</p>
+
+    <p><<linkappend '“//Right?//”'>><<run setup.scrollToBottom("passages")>> Andrej asked again, almost shaking.
+
+    <p>Up ahead, the road forked. Going right would need Goncharov to make a sharp turn //now//, keeping left… would mean continuing on the same road.</p>
+
+    <center>[[Right|I]]</center>
+    <<timerbar>>
+    <<timed 5s>><<goto "G">><</timed>><</linkappend>></p>
+
+
+:: G [story] {"position":"975,225","size":"100,100"}
+<p>The car kept to the left, continuing down the same road.</p>
+
+    <p>“Wha–” Andrej looked back, confused. “They’re still here, Gonch!” He ducked. “We were supposed to lose them! Not–”</p>
+
+    <p>Another bullet flew inside the car, from the front this time, as one of the chasing cars overtook the Maserati, and Andrej screamed. </p>
+
+    <p>“Pizdets! Got me in my fucking arm!” </p>
+
+    <p>Goncharov expected the man to slump further down his seat and hold his arm in pain, but he caught something in his eyes. //Rage…// No something more than rage. Having only gotten a glimpse, Goncharov feared for his partner. </p>
+
+    <p>Andrej raised his gun and aimed through the windshield. He tried to take a deep breath, as his shirt turned crimson. Idiot! Goncharov knew if the man did not take action, and quickly, this would not end well. <<linkappend '//For his arm… or Katya’s car!//'>><<run setup.scrollToBottom("passages")>>
+
+    <center>[[Swerve|J]]</center>
+    <<timerbar>>
+    <<timed 5s>><<goto "H">><</timed>><</linkappend>></p>
+
+
+:: H [end] {"position":"1100,225","size":"100,100"}
+<p>The bullet goes through the windshield. As it shatters the glass into millions of pieces, the noise deafens the Maserati’s passengers. Glass fragments cuts the men’s hands and faces. Andrej winces, just a little bit.</p>
+
+    <p>Up front, the car slows down, soon stopping to a halt. The men inside rush out, screaming for help. Through the back window, a man in tears taps on an unresponsive other’s white cheeks.</p>
+
+    <p>“I…” Harvey, breaking character, pale a bed sheet. “Did I…” He turns, his eyes filled with horror. “Robert, please… Tell me I didn’t… I couldn’t have… Say something!”</p>
+
+    <p>In the other car, the man in tears wails at the loss of his friend. A crowd has formed around the vehicle, but no one dares moving closer. Aside the director shakes his head in disbelief.</p>
+
+    <p>“How… I couldn’t have…” Harvey stops, his face turning to stone. “There were not bullets in there… Do you hear me, Robert?” He grabs you by the collar. “I did not put bullets in this gun. Robert?”</p>
+
+    <p>//I should have stopped him… I should have swerved and stopped him…//</p>
+
+    <<link 'GAME OVER'>><<script>>UI.restart();<</script>><</link>>
+
+
+:: Help {"position":"1100,100","size":"100,100"}
+''Navigation''
+		<<nobr>><table>
+			<tr><th>S</th><td>Saves Slots</td></tr>
+			<tr><th>R</th><td>Restart</td></tr>
+			<tr><th>Q</th><td>Settings</td></tr>
+			<tr><th>C</th><td>Credits</td></tr>
+			<tr><th>ESC</th><td>Close Dialog Box</td></tr>
+			<tr><th>SPACE or 1 </th><td>Advance Story</td></tr>
+		</table><</nobr>>
+
+	<p>''Trigger warnings''</p>
+	<p>Mention of: blood, death, car wreck, guns, people killing, injuries, mafia...</p>
+
+
+:: I [story] {"position":"1225,225","size":"100,100"}
+<p>Goncharov turned the wheel abruptly, forcing Andrej to hold on for dear life to the door. He glanced at the rear-view mirror, and snickered at the couple of cars speeding down the other street.</p>
+
+    <p>“HA! You dumbass mustachios!”</p>
+
+    <p>Goncharov smirked. He could never be immune to Andrej’s enthusiastic but childish insults.</p>
+
+    <p>“You absolute baboons!” Andrej continued, proud of himself. “Thought you could outsmart Goncharov… Ha!”</p>
+
+    <p>Andrej looked at the driver, unusually silent.</p>
+
+    <div class="talk"><p>“Why aren’t you saying anything?” he asks. “We should be celebrating! We got those asswipes off our… well… asses!”</p>
+    <p>“Always counting your chickens too early,” Goncharov sighed. “A single turn is not going make us to lose them. Not after what you’ve done!”</p>
+    <p>“Are you //still// angry about //that//?”</p>
+    <p>“They will fucking hunt us down, Andrej! They won’t stop until we are six feet under or deep– //Blyat!//”</p></div>
+
+    <p>Goncharov caught a glimpse in the mirrors. He had expected it. Those mafioso were not as dumb as they looked. They were bound to catch up with the duo at some point. He had just hoped he would have a bit <<linkappend "more time.">><<run setup.scrollToBottom("passages")>>
+
+    <p>As the street widened, it allowed the chasing cars to creep closer and closer. Soon, they encircled the Maserati, leaving it no space to move. Getting closer, Goncharov could feel them scratching Katya’s prized possession. He swore again.</p>
+
+    <div class="talk"><p>“Just…” Andrej pretended to turn a wheel to the left.</p>
+    <p>“I won’t–”</p></div>
+
+    <center>[[Push the left car|M]]</center>
+    <<timerbar>>
+    <<timed 5s>><<goto "L">><</timed>><</linkappend>></p>
+
+
+:: Intro [story] {"position":"100,225","size":"100,100"}
+<p>“What the–”</p>
+
+    <p>Bullets are flying around the two men, as they try to reach the car. It was already bad enough the negotiations ran to a screeching halt because Andrej had to say something. Goncharov was fuming. //That little twerp! Couldn’t shut his mouth, could he?// </p>
+
+    <p>The tall man looked at his partner, returning fires while they ran. This was not the time to hash things out. //Or they will be hashing us out! //</p>
+
+    <p>Andrej was the first one to enter the forest green Maserati Merak – or more like dived into the car. //Katya is going to kill me if there are any holes…//</p>
+
+    <p>“Get the fuck inside, //kozol//!”</p>
+
+    <p>Goncharov dived, missing another bullet by a hair. //Pizdets!// The man swore some more as he got inside, <<linkappend "taking control of the wheel.">><<run setup.scrollToBottom("passages")>> He could never trust Andrej with driving. //Not after…//
+
+    <p>“We have to go, Goncharov!”</p>
+
+    <center>[[Step on the pedal|A]]</center>
+    <<timerbar>>
+    <<timed 5s>>
+      <<goto "B">>
+    <</timed>><</linkappend>></p>
+
+
+:: J [story] {"position":"100,350","size":"100,100"}
+<p>Goncharov swerved harshly, making Andrej lose his balance.</p>
+
+    <div class="talk"><p>“What the–” he said before being centrifuged to the side, his gun falling out of his hand. “//GONCHAROV! Why did you do that for?// I had them!”</p>
+    <p>“You were going to shoot through the windshield!”</p>
+    <p>“And?” Andrej looked at the driver, still not getting it.</p>
+    <p>“Katya would have killed me!” Goncharov replied. “And you!”</p>
+    <p>“//Oh…//”</p>
+    <p>“Oh? //Oh?!?// That’s all you have to say?!”</p>
+    <p>“Sorry?”</p>
+    <p>“Unbelievable,” the driver sighed.</p></div>
+
+    <p>Andrej sat up, his gun back in his hand. His eyes were still burning with rage. He scanned around for the shooter, and when found the target in the car up front, raised his arm, ready to shoot.</p>
+
+    <div class="talk"><p>“//Andrej!//”</p>
+    <p>“I //won’t// fire inside…” Seeing the look on Goncharov’s face, he continued: “I promise!”</p>
+    <p>“Maybe avoid shooting in front of //us// as well?”</p>
+    <p>“Don’t you want–”</p>
+    <p>“//Andrej…//” Goncharov sighed. “What do you think will happen if you shoot the tire?”</p>
+    <p>“They will stop,” he answered as-a-matter-of-factly.</p>
+    <p>“And what’s going to happen to us at that speed?”</p>
+    <p>“Well… we’ll… //oh!//” Andrej winces.</p></div>
+
+    <p>//Idiot…//</p>
+
+    <div class="talk"><p>“Gonch?”</p>
+    <p>“Yes?” the driver said, exasperated.</p>
+    <p>“Uhm… The <<linkappend "car’s gone…”">><<run setup.scrollToBottom("passages")>>
+
+    <p>//Strange…// With the path now clear, Goncharov could speed down the street and put more space between the Maserati and its chasers. //What if…//</p>
+
+    <p>//There! On the right…//</p>
+
+    <center>[[Turn Right|I]]</center>
+    <<timerbar>>
+    <<timed 5s>><<goto "K">><</timed>><</linkappend>></p></div>
+
+
+:: K [end] {"position":"225,350","size":"100,100"}
+</p>With the accelerator pushed to the floor, the Maserati’s engine roars, propelling the car down the street.</p>
+
+    <div class="talk"><p>“Wo-woah,” Andrej says, holding himself to the door. He looks back and asks: “Err… Robert?”</p>
+    <p>“What are you doing?” you whisper. “We’re still rolling!”</p>
+    <p>“I don’t think we are, Robert,” Harvey continues, not even bothering with the accent anymore. “No one is following us either.”</p></div>
+    
+    <p>You glance at the rear-view mirror and find nothing but a clear road. But only for a short moment. Soon, sirens blast all around, and you are now chased by white and blue Alfa Romeos, with blinking blue light above the roof. Besides, Harvey swears like a drunkard.</p>
+
+    <p>“For fuck’s sake, Robert!”</p>
+
+    <p>Still, you continue to look behind. You see someone put their head out and says something through a megaphone, waving his hand to the side.</p>
+
+    <div class="talk"><p>“Robert?” Harvey shouts. “Are you going to pull over?”</p>
+    <p>“But the–”</p>
+    <p>“Who fucking cares about the movie, Robert! It’s the fucking police.”</p>
+    <p>“Did Matteo change the script? Why didn’t he tell us?”</p>
+    <p>“It’s not the fake kind, you simpleton!” Robert says, exasperated. “Just fucking pull over and pray they won’t try to throw us in a cell.”</p></div>
+
+    <p>You do as ordered, but reluctantly. You still believe Director JWHJ0715 would pull a stunt like this. He has done so before, especially on this shoot. In the cacophony of the sirens, you hear Harvey sighing, relieved.</p>
+
+    <p>“God… At least Matteo followed right behind…” He looks at you, anger shaking his voice. “You are in so much shit, Robert!”</p>
+
+    [[Restart the Scene|Intro]]
+
+
+:: L [story] {"position":"350,350","size":"100,100"}
+<p>Andrej shot the driver an incredulous look.</p>
+
+    <div class="talk"><p>“Why didn’t–”</p>
+    <p>“I won’t dent //her// car, Andrej,” Goncharov tried to say again.</p>
+    <p>“So you’d rather they–” the man twitched, hearing fired rounds behind the car.</p>
+    <p>“Better //them// than //her//!”</p>
+    <p>“Come–” Andrej paused. “You might be right…” He cocked his gun. “But there’s still– Down!”</p></div>
+
+    <p>Andrej pushed Goncharov’s head onto the wheel, as the driver’s window shattered. //Holy…// Even his thoughts drowned in the following cacophony of guns shooting all around. As Goncharov tried his best to keep the cap with the bullets flying all around, he did something he had not done in year. He whispered prayers after prayers. For Andrej to hit his targets. For the bullets to miss the duo. And for Katya to be understanding… if he managed to get back to her in one piece.</p>
+
+    <p>“HAHAHA! FUCKERS!” screamed a maniacal Andrej.</p>
+
+    <p>Goncharov looked around and saw both cars slowing down. //How…// With his legendary aim, Andrej did not even touch any passenger in either car. But the smoke coming from their engines showed he had hit //something//. Goncharov glanced at his partner.</p>
+
+    <div class="talk"><p>“A-Andrej…” his lip quivered.</p>
+    <p>“Did you see, Gonch? I got them! I got them good!”</p>
+    <p>“Your…” Goncharov’s hand raised to his face, shaking. “Your…”</p>
+    <p>“My what?” </p></div>
+
+    <p>Andrej raised his hand, mirroring the movement of the driver. He touched his cheek and paled when his fingers grazed the viscous crimson liquid dripping down.</p>
+
+    <div class="talk"><p>“Oh… that’s why it started to… be blurry… I… I’m sure… it’s fine… right, Gonch?”</p>
+    <p>“Andrej…”</p>
+    <p>“It’s not like it hurts.”</p></div>
+
+    <p>The passenger started convulsing, more and more violently, until his remaining eye rolled back. Then, he went stiff. And cold.</p>
+
+    <p>“No! No, no, no! Andrej,” Goncharov shook his partner. “Don’t… Stay awake!”</p>
+
+    <p>//So, so very cold.// Behind, more cars tried to catch up with the battered pine Maserati. //Don’t… don’t fall asleep.// Goncharov didn’t need to look at the mirror to know how close they were. //Stay awake… Please!// He looked to his right, and saw the pale limp body. //I can’t lose you…//</p>
+
+    <center>[[Press the Accelerator|O2]]</center>
+
+
+:: M [story] {"position":"475,350","size":"100,100"}
+<p>Goncharov’s hesitation to add onto the damage already done to Katya’s car was short lived when he saw the assailants’ guns raised in the duo’s direction. The black cars had started to crush the Maserati and leave it stuck, so they could turn it, and its passengers, into Swiss cheese.</p>
+
+    <p>The driver yanked the wheel to the left and pressed hard on the accelerator. The car on his left hit the wall, and sparks flew as it scraped the bricks. Though the chasers tried to counter the move, by pushing back the Maserati on the left and crushing it further on the right, Goncharov maintained the cap and turned the wheel further left.</p>
+
+    <p>Then… a light… and a deafening sound…</p>
+
+    <p>Goncharov looked to the left and found the car having disappeared. He glanced back and snickered, happy. It was not much his actions that stopped it, but a sturdy iron lamppost. //One down…//</p>
+
+    <p>He glanced to the other side, and his grin faded in an instant.</p>
+
+    <div class="talk"><p>“Gonch?” Andrej said, his voice shaking. “Err… I…”</p>
+    <p>“A-Andrej…”</p>
+    <p>“I think something’s wrong.” He kept touching the viscous crimson liquid dripping down his cheek. “I… I can’t feel…”</p></div>
+
+    <p>Goncharov felt frozen, unable to help his friend as he convulsed on the passenger’s seat. His eyes distractedly steered further behind for a short second. //Not again…// The other car, on the right of the Maserati was still there, <<linkappend "ready to charge.">><<run setup.scrollToBottom("passages")>> //Not now!//
+
+    <p>Goncharov looked at his friend, then at the car. Ramming into it would not help his condition. Not doing anything…</p>
+
+    <center>[[Push the right car|O1]]</center>
+    <<timerbar>>
+    <<timed 5s>><<goto "N">><</timed>><</linkappend>></p>
+
+
+:: N [end] {"position":"600,350","size":"100,100"}
+<p>You blank, at a loss of a decision, before being thrust onto the driver’s door at full force, as the assailant’s car rams into the Maserati. The pine vehicle makes strident noises against the wall, scratching not only the paint but denting the frame as well. With the car continuing its maddened course between the bricks and the other automobile, the windows fail to the increasing pressure and shatter all around the passengers.</p>
+
+    <div class="talk"><p>“Joseph, Mary, Jesus,” Andrej perks up and screams, without a hint of an accent. “Are you trying to kill us, Robert?”</p>
+    <p>“Wha-a…”</p>
+    <p>“Hit the fucking breaks before we hit a lamppost, you brainless hack!”</p>
+    <p>“But Andrej… your ear.”</p>
+    <p>“Drop the act, Robert,” Harvey says, ripping the prosthetic to reveal his actual ear. “And stop the car!”</p></div>
+
+    <p>While you do as told, Harvey yells at the other car to move away and to get the director. When the Maserati comes to a full stop, he gets out and, inspecting the damage, sighs loudly.</p>
+
+    <p>“Another one for the scrapyard… What a shame.” He looks up the street, as a white car with a camera mounted on the roof gets closer. “There is no way Matteo will restart the scene now… You fucking useless shit.”</p>
+
+    <p>Harvey spits in your face.</p>
+
+    <<link 'GAME OVER'>><<script>>UI.restart();<</script>><</link>>
+
+
+:: O [story] {"position":"975,350","size":"100,100"}
+<p>Andrej made a grunting sound, scarring Goncharov in the process. He still didn’t move, but this was enough for the driver to allow him to breathe again. //There… there is still time…//</p>
+
+    <div class="talk"><p>“Gonch?” the man said weakly.</p>
+    <p>“Yeah?”</p>
+    <p>“Tell Katya it was my fault, alright?”</p>
+    <p>“You can tell her yourself, Andrej. You //will// tell–”</p>
+    <p>“Gonch–” He coughed. “Stop looking at me.”</p>
+    <p>“I’m no–”</p>
+    <p>“You //are//…” He coughed again, spitting blood thing time. “Don’t worry about me, Gonch.”</p>
+    <p>“But–”</p>
+    <p><<linkappend "“Keep your eyes on the road!”">><<run setup.scrollToBottom("passages")>>
+
+    <p>As if Andrej knew before passing out again, another black car – one you had lost before, //blyat!// – drove straight towards Goncharov, its engine roaring. //How did…//</p>
+
+    <center>[[Swerve|Q]]</center>
+    <<timerbar>>
+    <<timed 5s>><<goto "P1">><</timed>><</linkappend>></p></div>
+
+
+:: O1 [story] {"position":"725,350","size":"100,100"}
+<p>Livid, Goncharov yanked the wheel to the right and pushed back the last car. //You won’t get away with this!// The driver kept glancing at his friend, out cold on the passenger’s seat. //I will make you pay!//</p>
+
+    <p>Goncharov pushed even harder, fuelled by nothing but anger and thirst for revenge. He did not care whether the Maserati would be totalled at this point, or that Katya would certainly kill him when he would return to her. Andrej laid there, unresponsive to his cries. //Fuck, fuck, fuck…//</p>
+
+    <p>And again… another deafening sound… and rain…</p>
+
+    <p>Goncharov yanked back the wheel, not wishing to crash into the wall after the black car hit a fire hydrant. As the pressured water gushed forth above the car, the driver looked back and sighed, relieved. The crash must have knocked out their chasers, as none tried to exit the vehicle or shoot them. <<linkappend '//The way’s clear…//'>><<run setup.scrollToBottom("passages")>><<include "O">><</linkappend>></p>
+
+
+:: O2 [story] {"position":"850,350","size":"100,100"}
+<p>Goncharov stepped on the accelerator, and the pine Maserati whizzed down the paved street. //Those fuckers will pay!// With the speed increasing on the dashboard, the buildings around blurred. //Blyat!// The driver swerved a few time, barely missing a handful of pedestrians or street stalls. </p>
+
+    <p>He glanced at Andrej, still unconscious on the passenger’s seat. //They won’t get away with it!// Goncharov poked him to get a reaction, without success. </p>
+
+    <p>“He didn’t deserve this… Why did he say something?” Goncharov mumbled. “Why did he even come?”</p>
+
+    <p>Meeting with the Don was not Andrej’s affairs, only Goncharov’s. //He// was the one on his radar. //He// was the one who thought he could do as he pleased with no consequences. //He// was the one who tried to start his life anew here. In Naples of all places. <<linkappend '//Why did he tag along…//'>><<run setup.scrollToBottom("passages")>><<include "O">><</linkappend>></p>
+
+
+:: P [story] {"position":"225,475","size":"100,100"}
+<p>“Ugh…” </p>
+
+    <p>Goncharov grunted, and looked around. The black car had stopped <<if passage() is "P2">>centimetres in front of<<else>>impaled by<</if>> the Maserati. Shivering from the high of the chase coming down, he thanked his lucky star he was still… fine. </p>
+
+    <p>“Andrej,” he cried out.</p>
+
+    <p>The man glanced at his partner, who coughed some blood beside him. Goncharov thought he heard some mumbling from his friend, but could not quite make out what he tried to say. He shook him gently.</p>
+
+    <p>“Andrej… Don’t… Stay with me… Please…”</p>
+
+    <p>Goncharov heard a car door creaking outside and anger boiled inside of him. //Andrej…// He grabbed the gun. //I promise…// The man pried open his door with difficulty and pulled himself out of the Maserati. //I will make them pay!// He limped towards the black car and saw a man with a ruined suit coming out of it.</p>
+
+    <p>“Hey!” Goncharov shouted. “Looking for me?”</p>
+
+    <p>The suited man grinned and raised <<linkappend "his machine gun.">><<run setup.scrollToBottom("passages")>>
+
+    <p>“Ha!” Goncharov snickered. “You think //that// scares me?”</p>
+
+    <center>[[Shoot the man|R]]</center>
+    <<timerbar>>
+    <<timed 5s>><<goto "S">><</timed>><</linkappend>></p>
+
+
+:: P1 [story] {"position":"1100,350","size":"100,100"}
+<p>Goncharov didn’t just let the black car continue its path towards him, he pushed the accelerator and drove full speed to meet it half-way. <<link '//If that’s how it ends…//' "Pwhite">><</link>></p>
+
+
+:: P2 [story] {"position":"1225,350","size":"100,100"}
+Goncharov grabbed the gun from Andrej’s lap, said a short prayer, and raised it. //Moment of truth…// He unloaded the last bullets towards the black car, aiming as best he could at its wheels. <<link '//I hope this works…//' "Pwhite">><</link>>
+
+
+:: Pwhite [white] {"position":"100,475","size":"100,100"}
+<<timed 5s>><<goto "P">><</timed>>
+
+
+:: Q [story] {"position":"350,475","size":"100,100"}
+<p>At the last possible second, Goncharov evaded the car’s path, though barely.</p>
+
+    <p>“//Blyat!//” he screamed, his heart pounding in his chest. “That was close.”</p>
+
+    <p>Goncharov looked at his friend, not reacting to his words, and frowned with worries. //Please… If there is a god out there… Don’t–//</p>
+
+    <p>His thoughts were disturbed by the screeching of wheels behind the Maserati. Looking at the rear-view mirror, Goncharov saw the charging vehicle doing a complete 180 in the tight street and catching up with him. He stepped on the accelerator, but the other car was still faster than his.</p>
+
+    <p>“Think, dammit!”</p>
+
+    <p>The Maserati’s engine coughed, and black smoke rose from the hood.</p>
+
+    <p>“Fuck! Not now!”</p>
+
+    <p>The other car took advantage of Goncharov loosing speed to pass it. It drove off, confusing the driver for a short moment. It returned quickly, facing again the pine Maserati. <<linkappend '//NOT AGAIN!//'>>
+
+    <p>Goncharov looked at the gun on Andrej’s lap. Then he looked at the car. He knew he could make the shot and avoid getting whiplash, if the car didn’t crash into him first.</p>
+
+    <center>[[Shoot the car|P2]]</center>
+    <<timerbar>>
+    <<timed 5s>><<goto "P1">><</timed>><</linkappend>></p>
+
+
+:: R [story] {"position":"475,475","size":"100,100"}
+<p>Goncharov did not let the man get first shot, as he unloaded the gun into his torso. He kept firing long after its magazine was empty, long after it jammed. A tear dripped down his cheek.</p>
+
+    <p>“Ah…” He looked back at the Maserati. “Andrej would have said something before shooting…”</p>
+
+    <p>He picked up the machine gun, aimed it at the black car, where other unconscious men started to wake up.</p>
+
+    <p>“For you, my friend…”</p>
+
+    <p>Goncharov took a deep breath.</p>
+
+    <p>“Looks like it’s the end of the road for you, comrades.”</p>
+
+    <center>[[THE end|T]]</center>
+
+
+:: S [end] {"position":"600,475","size":"100,100"}
+<p>“CUT!” a voice screams through a megaphone. “CUT, CUT, CUT!”</p>
+
+    <p>You look aside and see Director JWHJ0715 throwing his hat on the ground, stomping on it. Swearing to all around him, he orders the crew to reset the scene. Through the Maserati’s window, Harvey snickers.</p>
+
+    <div class="talk"><p>“Ha! You incompetent buffoon! I swear, Robert… had I known you’d be //this// bad at remembering your lines, I would have begged Scorsese not to take you on… I really don’t know what he sees in //you//…”</p>
+    <p>“I… Err…”</p>
+    <p>“How //hard// is it to–”</p>
+    <p>“When you two are quite done…” the director comes up to the two of you, followed by a small army of make-up artists. “Get your faces in order. We’ll start from the top of the page.”</p>
+    <p>“The top–” you try to ask, confused.</p>
+    <p>“//You//,” the director pushes your shoulder, “are lucky to have fucked up here, and not…” He points at the street you were driving on. “Alright, people!” He screams again in the microphone. “Places!” He walks away, mumbling: “Oh, those fucking method actors…”</p></div>
+
+    <center>[[Restart the Scene|P]]</center>
+
+
+:: Start [noreturn front end] {"position":"500,300","size":"100,100"}
+<h1>Goncharov Escapes!</h1>
+<p><<if Save.autosave.ok() and Save.autosave.has()>><<link "Resume Game">><<script>>Save.autosave.load()<</script>><</link>><</if>>
+<<link "New Game" "Tutorial">><</link>><br>
+<<if Save.slots.count()>><<link "Load Game">><<run UI.saves()>><</link>><br><</if>>
+<<link "Settings">><<run UI.settings()>><</link>><br>
+<<link "Help and Warnings">><<popup 'Help' "Help Menu">><</link>></p>
+
+
+:: StoryDisplayTitle [EDIT] {"position":"225,225","size":"100,100"}
+<div class="title">Goncharov Escapes!</div>
+
+
+:: StoryInit {"position":"350,100","size":"100,100"}
+<<on 'keyup'>>
+		<<which 72>>/*H to get the Key Help Menu*/
+			<<popup 'Help' "Help Menu">>
+		<<which 83>> /% the s key %/
+			<<script>>UI.saves();<</script>>
+		<<which 81>> /*Q for settings */
+			<<script>>UI.settings();<</script>>
+		<<which 82>>
+			<<script>>UI.restart();<</script>>
+		<<which 67>> /% the c key %/
+			<<popup 'Credits' 'Credits'>>
+	<</on>>
+	<<on 'keydown'>>
+		<<which 27>><<trigger 'click' '#ui-dialog-close'>>
+	<</on>>
+
+
+:: StoryInterface [AVOID-EDIT] {"position":"100,100","size":"100,100"}
+<div class="parent">
+<div id="passages"></div>
+<div class="menu" data-passage="menu"><!--Side menu, editable in the sidemenu passage--></div>
+</div>
+<script>function myFunction() {
+            document.getElementById("myMenu").classList.toggle("show");
+          }
+          
+          // Close the dropdown menu if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropup-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+</script>
+
+
+:: T [end front noreturn] {"position":"725,475","size":"100,100"}
+<p>THANK YOU FOR PLAYING </p>
+    <center><<link 'RESTART'>><<script>>UI.restart();<</script>><</link>></center>
+
+
+:: Tutorial [end] {"position":"1225,100","size":"100,100"}
+<h1>Welcome to the Goncharov Universe!</h1>
+    <p>Help Goncharov escape his chasers and reach the end! </p>
+    <p>Play the action or let the timer run out.</p>
+
+    <p>Note: you can click on the link with a mouse or press the SPACE bar on your keyboard to play the action or show the next part of the text.</p>
+    <center>[[Start|Intro]]</center>
+
+
+:: Widgets [widget nobr] {"position":"100,600","size":"100,100"}
+<<widget "timerbar">>
+	<div class="round-time-bar" data-style="smooth" style="--duration: 5;">
+  <div></div>
+</div>
+<</widget>>
+
+
+:: menu [SOME] {"position":"225,350","size":"100,100"}
+<<include "StoryDisplayTitle">>
+<<include "sidemenu">>
+
+
+:: sidemenu [SOME nobr] {"position":"100,350","size":"100,100"}
+<div class="dropdown">
+  <a onclick="myFunction()" class="dropbtn">MENU</a>
+  <div id="myMenu" class="dropup-content">
+  	<<link 'HELP'>><<script>>
+		Dialog.setup("Help");
+		Dialog.wiki(Story.get("Help").processText());
+		Dialog.open();
+	<</script>><</link>>
+	<<link 'CREDITS'>><<script>>
+		Dialog.setup("Credits");
+		Dialog.wiki(Story.get("Credits").processText());
+		Dialog.open();
+	<</script>><</link>>
+    <<link 'SAVES'>><<script>>UI.saves();<</script>><</link>>
+	<<link 'SETTINGS'>><<script>>UI.settings();<</script>><</link>>
+	<<link 'RESTART'>><<script>>UI.restart();<</script>><</link>>
+  </div>
+</div>
+
+
+:: StoryScript [script]
+/* twine-user-script #1: "java.js" */
+//--------TABLE OF CONTENTS--------
+    //----UI BASE----
+        //--Destroy UI Bar
+        //--Reset Passage on top
+    //----SETTINGS----
+        //--Font Size
+        //--Font Type
+        //--Autosave
+        //--Naming Saves
+        //--Notifications
+        //--Theme Change
+
+//--------UI BASE--------
+UIBar.destroy()
+
+$(document).on(":passagedisplay", function() {
+	$("#passages").scrollTop(0);
+});
+
+Config.passages.nobr = true;
+
+Config.saves.slots = 3;
+
+//--------SETTINGS--------
+
+
+Setting.addHeader("Font Settings");
+
+    //--FONT SIZE--
+var settingFontSize = ["100%", "130%", "150%"];
+var resizeFont = function() {
+    var size = document.getElementById("passages");
+    switch (settings.fontSize) {
+        case "100%":
+            size.style.fontSize = "100%";
+            break;
+        case "130%":
+            size.style.fontSize = "130%";
+            break;
+        case "150%":
+            size.style.fontSize = "150%";
+            break;
+    }
+};
+Setting.addList("fontSize", {
+    label		: "Change font size.",
+    list		: settingFontSize,
+    default     : "100%",
+    onInit		: resizeFont,
+    onChange	: resizeFont
+});
+
+    //--FONT TYPE--
+var settingFontFamily = ["Serif", "Sans Serif", "OpenDyslexic"];
+var fontFamily = function() {
+    var $html = $("html");
+        $html.removeClass("sansserif serif opendyslexic");
+    switch (settings.fontFamily) {
+        case "Serif":
+            $html.addClass("serif");
+            break;
+        case "Sans Serif":
+            $html.addClass("sansserif");
+            break;
+        case "OpenDyslexic":
+            $html.addClass("opendyslexic");
+            break;
+    }
+};
+Setting.addList("fontFamily", {
+    label		: "Change font style.",
+    list		: settingFontFamily,
+    default     : "Sans Serif",
+    onInit		: fontFamily,
+    onChange	: fontFamily
+});
+
+        //--LINE HEIGHT--
+var settingLineHeightNames = ["75%","100%", "125%", "150%"];
+var settingLineHeightHandler = function () {
+	var $html = $("html");
+	$html.removeClass("ln75 ln125 ln150");
+	switch (settings.lineheight) {
+	case "75%":
+		$html.addClass("ln75");
+		break;	
+	case "125%":
+		$html.addClass("ln125");
+		break;	
+	case "150%":
+		$html.addClass("ln150");
+		break;	
+}};
+Setting.addList("lineheight", {
+	label    : "<b>Change Line Height.</b>",
+	default  :	"100%",
+	list     : settingLineHeightNames,
+	onInit   : settingLineHeightHandler,
+	onChange : settingLineHeightHandler
+});
+    //--TEXT ALIGNMENT--
+var settingAlignNames = ["Left","Center","Right", "Justified"];
+var settingAlignHandler = function () {
+	var $html = $("html");
+	$html.removeClass("left center right");
+	switch (settings.textalign) {
+	case "Justified":
+		$html.addClass("left");
+		break;	
+	case "Center":
+		$html.addClass("center");
+		break;	
+	case "Right":
+		$html.addClass("right");
+		break;	
+	}	
+};
+Setting.addList("textalign", {
+	label    : "<b>Change Text Alignment</b>",
+	default  :	"Left",
+	list     : settingAlignNames,
+	onInit   : settingAlignHandler,
+	onChange : settingAlignHandler
+});
+
+Setting.addHeader("Save Settings");
+    //--AUTOSAVE--
+config.saves.isAllowed = function () {
+    if (tags().includes('noreturn')) {
+        return false;
+    }
+        return true;
+};
+
+Config.saves.autosave = function () {
+    if (settings.autosave) {
+        return true
+    }
+};
+
+Setting.addToggle("autosave", {
+    label : "<b>Autosaves</b>",
+    default  : false,
+}); 
+    //--NAMING SAVES--
+Config.saves.onSave = function (save, details) {
+    if (settings.autoname) {
+        save.title = passage();
+    } else if (details.type == "autosave") {
+        save.title = "Autosave " + passage();
+    } else {
+        save.title = prompt("Enter Save Name:", save.title);
+    }
+}
+Setting.addToggle("autoname", {
+    label : "<b>Autoname</b><br>If enabled the saves will be named after the current passage.",
+    default  : false,
+}); 
+
+Setting.addHeader("Other Settings");
+    //--THEME CHANGE--
+var settingThemeNames = ["Goncharov", "Light", "Dark"];
+var settingThemeHandler = function () {
+    var $html = $("html");
+    $html.removeClass("gc sp dk");
+    switch (settings.theme) {
+        case "Goncharov":
+            $html.addClass("gc");
+            break;
+        case "Dark":
+            $html.addClass("sp");
+            break;
+        case "Light":
+            $html.addClass("dk");
+            break;
+    }
+};
+Setting.addList("theme", {
+    label    : "<b>Switch display mode</b>",
+    list     : settingThemeNames,
+    default	 : "Goncharov",
+    onInit   : settingThemeHandler,
+    onChange : settingThemeHandler
+});
+
+
+        
+/* twine-user-script #2: "macro.js" */
+/* Sjoerdsies scrolly scroll */
+setup.scrollToBottom = (id) => {
+    const element = $(`#${id}`);
+    setTimeout(function() { 
+        element.animate({
+            scrollTop: element.prop("scrollHeight")
+        }, 500);
+    }, 200);
+}
+
+//--KEY BINDING 1--
+var KBIntervalID = 0;
+$(document).on(":passagerender", function (ev) {
+	clearInterval(KBIntervalID);
+	UpdateLinks(ev.content);
+	KBIntervalID = setInterval(UpdateLinks, 300);
+});
+function UpdateLinks(Container) {
+	// Enables keyboard shortcuts on passages that do not have the "DisableKeyLinks" tag
+	if (!tags().includes("DisableKeyLinks")) {
+		var Links, i;
+		if (typeof Container === "undefined") {
+			Container = document;
+			Links = $("#passages a").toArray();
+		} else {
+			Links = $(Container).find("a").toArray();
+		}
+		if (Links.length > 0) {
+			for (i = Links.length - 1; i >= 0; i--) {
+				if ($(Links[i]).data("nokeys") || $(Links[i]).parent().data("nokeys")) {
+					Links.deleteAt(i);
+				}
+			}
+		}
+		if (Links.length === 1) {
+			if (!Links[0].id.includes("Link")) {
+				Links[0].id = "NextLink";
+			}
+		} else if (Links.length >= 1 && Links.length <= 10) {
+			var n = 1;
+			for (i = 0; i < Links.length; i++) {
+				if (!Links[i].id.includes("Link")) {
+					while ($(Container).find("#Link" + n).length) {
+						++n;
+						if (n > 10) {
+							break;
+						}
+					}
+                        if (n < 10) {
+					    	//$(" <sup>[" + n + "]</sup>").appendTo(Links[i]);
+						    Links[i].id = "Link" + n;
+    					} else if (n === 10) {
+	    					//$(" <sup>[0]</sup>").appendTo(Links[i]);
+    						Links[i].id = "Link0";
+	    					break;
+		    			} else {
+			    			break;
+				    	}
+                }    
+			}
+		}
+	}
+}
+$(document).on("keyup", function (e) {
+	// Enables keyboard shortcuts on passages that do not have the "DisableKeyLinks" tag
+	if (!tags().includes("DisableKeyLinks") && ($("input:focus").length === 0)) {
+		// Trigger next link click on right arrow key or "1" (normal and numpad)
+		if (((e.key == "1") || (e.keyCode === 97) || (e.keyCode === 32)) && ($("#NextLink").length > 0)) {
+			if (!(tags().includes("IgnoreArrowKeys") && (e.key == "ArrowRight"))) {
+				e.preventDefault();
+				$("#NextLink").click();
+				return false;
+			}
+		} else {
+			// Trigger link click on keys "0" through "9"
+			if ((e.keyCode > 47) && (e.keyCode < 58)) {
+				if ($("#Link" + (e.keyCode - 48)).length) {
+					e.preventDefault();
+					$("#Link" + (e.keyCode - 48)).click();
+					return false;
+				}
+			}
+			// Trigger link click on numpad keys "0" through "9"
+			if ((e.keyCode > 95) && (e.keyCode < 106)) {
+				if ($("#Link" + (e.keyCode - 96)).length) {
+					e.preventDefault();
+					$("#Link" + (e.keyCode - 96)).click();
+					return false;
+				}
+			}
+		}
+		// Trigger back click on left arrow key or backquote
+		if ((e.key == "ArrowLeft")) {
+			if ((!tags().includes("IgnoreArrowKeys")) || (e.key != "ArrowLeft")) {
+				e.preventDefault();
+				Engine.backward();
+				return false;
+			}
+		}
+        if ((e.key == "ArrowRight")) {
+			if ((!tags().includes("IgnoreArrowKeys")) || (e.key != "ArrowRight")) {
+				e.preventDefault();
+				Engine.forward();
+				return false;
+			}
+		}
+	}
+});
+    //--KEY BINDING 2--
+(function () {
+    setup.eventMacroNamespace = 'macro-event';
+
+    // the <<trigger>> macro
+    Macro.add('trigger', {
+        handler : function () {
+            
+            // declare vars
+            var evt, $el;
+            
+            // check for errors
+            if (this.args.length > 2 || this.args.length === 0) {
+                return this.error('incorrect number of arguments');
+            }
+            if (typeof this.args[0] != 'string') {
+                return this.error('first argument should be a string and a valid event type');
+            }
+            
+            // some setup
+            evt = this.args[0];
+            $el = (this.args.length === 1 ||
+                (this.args[1] && typeof this.args[1] === 'string' &&
+                this.args[1].toLowerCase().trim() === 'document')) ?
+                $(document) : $(this.args[1]);
+            
+            // fire the event
+            $el.trigger(evt);
+            
+        }
+    });
+
+    // the <<event>> macro: <<event type [selector] [once]>>
+    Macro.add(['event', 'on', 'one'], {
+           tags : ['which'],
+        handler : function () {
+            
+            var payload = this.payload;
+            var method = 'on';
+            var evt, sel = '', code = '', i;
+            
+            if (this.args.length > 3 || this.args.length === 0) {
+                return this.error('incorrect number of arguments');
+            }
+            if (typeof this.args[0] != 'string') {
+                return this.error('first argument should be a string and a valid event type');
+            }
+            if (this.args.length === 2 && typeof this.args[1] == 'string' && this.args[1] !== 'once') {
+                sel = this.args[1];
+            }
+            
+            if (this.args.includes('once') || this.name === 'one') {
+                method = 'one';
+            }
+
+            evt = this.args[0];
+            
+            $(document)[method](evt + '.' + setup.eventMacroNamespace, sel, this.createShadowWrapper(function (e) {
+                if (!tags().includes("DisableKeyLinks") && ($("input:focus").length === 0)) {
+                code = payload[0].contents;
+                if (payload.length > 1) {
+                    for (i = 1; i < payload.length; i++) {
+                        if (payload[i].args.includes(e.which)) {
+                            code = code + payload[i].contents;
+                        }
+                    }
+                }
+                new Wikifier(null, code);
+            }
+            }));
+            
+        }
+    });
+
+    Macro.add('off', {
+        handler : function () {
+            
+            // declare vars
+            var evt, $el;
+            
+            // check for errors
+            if (this.args.length > 2 || this.args.length === 0) {
+                return this.error('incorrect number of arguments');
+            }
+            if (typeof this.args[0] != 'string') {
+                return this.error('first argument should be a string and a valid event type or namespace');
+            }
+            
+            // some setup
+            evt = this.args[0];
+            $el = (this.args.length === 1 ||
+                (this.args[1] && typeof this.args[1] === 'string' &&
+                this.args[1].toLowerCase().trim() === 'document')) ?
+                $(document) : $(this.args[1]);
+            
+            // fire the event
+            $el.off(evt);
+            
+        }
+    });
+
+}());
+
+//--DIALOG/POPUP
+Macro.add('dialog', {
+    tags : ['onopen', 'onclose'],
+ handler : function () {
+     
+     // handle args (if any)
+     var errors = [];
+     var content = '', onOpen = null, onClose = null;
+     var title = (this.args.length > 0) ? this.args[0] : '';
+     var classes = (this.args.length > 1) ? this.args.slice(1).flatten() : [];
+
+     this.payload.forEach( function (pl, idx) {
+         if (idx === 0) {
+             content = pl.contents;
+         } else {
+             if (pl.name === 'onopen') {
+                 onOpen = onOpen ? onOpen + pl.contents : pl.contents;
+             } else {
+                 onClose = onClose ? onClose + pl.contents : pl.contents;
+             }
+         }
+     });
+     
+     // add the macro- class
+     classes.push('macro-' + this.name);
+     
+     // dialog box
+     Dialog.setup(title, classes.join(' '));
+     Dialog.wiki(content);
+
+     // should these be shadowWrapper-aware?
+     if (onOpen && typeof onOpen === 'string' && onOpen.trim()) {
+         $(document).one(':dialogopened', function () {
+             $.wiki(onOpen);
+         });
+     }
+
+     if (onClose && typeof onClose === 'string' && onClose.trim()) {
+         $(document).one(':dialogclosed', function () {
+             $.wiki(onClose);
+         });
+     }
+
+     Dialog.open();
+     
+ }
+
+});
+Macro.add('popup', {
+ handler : function () {
+     
+     // errors
+     if (this.args.length < 1) {
+         return this.error('need at least one argument; the passage to display');
+     }
+     if (!Story.has(this.args[0])) {
+         return this.error('the passage ' + this.args[0] + 'does not exist');
+     }
+     
+     // passage name and title
+     var psg   = this.args[0];
+     var title = (this.args.length > 1) ? this.args[1] : '';
+     var classes = (this.args.length > 2) ? this.args.slice(2).flatten() : [];
+     
+     // add the macro- class
+     classes.push('macro-' + this.name);
+     
+     // dialog box
+     Dialog.setup(title, classes.join(' '));
+     Dialog.wiki(Story.get(psg).processText());
+     Dialog.open();
+     
+ }
+
+});
+Macro.add('dialogclose', { 
+ skipArgs : true, 
+ handler : function () {
+     Dialog.close();
+ } 
+});
+
+:: StoryStylesheet [stylesheet]
+/*-------------- TABLE OF CONTENTS --------------
+    I-      Import Fonts
+        a- Google Fonts
+        b- Local Fonts
+    II-     Root Variables
+    III-    Base CSS
+        a- Body
+        b- Base
+        c- Parts
+        d- Scrollbar
+        e- Font Change
+    IV-     HTML CSS
+        a- Headers (h1, h2, etc...)
+        b- <label>
+        c- <hr>
+        d- Tables
+        e- Lists
+        f- <a>/Links
+            + Regular
+            + Choice Div
+    V-      Macros
+        a- Textbox, Textarea, Select
+        b- Buttons
+    VI-     UI Dialog
+        a- Base CSS
+        b- Settins Dialog
+        c- Saves Dialog
+    VII-    Menu
+    VIII-   Mobile
+
+    Notes:            
+        CTRL/Cmd+F the Title to jump
+        Theme changes are located below each category affected (ex: .dm body{} will be below body{})
+        Don't like/care about the themes? you can delete any line with either .gn or .or below! (and the Theme Setting in the Javascript)
+*/
+
+/*--------------IMPORT FONTS--------------*/
+    /*Text Fonts: Google*/
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css');
+    @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        /* Text Fonts: Local*/
+    @font-face {
+        font-family: "Dyslexic";
+        src: url(fonts/OpenDyslexic-Regular.otf) format("opentype");
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Dyslexic";
+        src: url(fonts/OpenDyslexic-Italic.otf) format("opentype");
+        font-style: italic;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Dyslexic";
+        src: url(fonts/OpenDyslexic-BoldItalic.otf) format("opentype");
+        font-style: italic;
+        font-weight: 700;
+    }
+    @font-face {
+        font-family: "Dyslexic";
+        src: url(fonts/OpenDyslexic-Bold.otf) format("opentype");
+        font-style: normal;
+        font-weight: 700;
+    }
+    /*--------------ROOT VARIABLES--------------*/
+    :root {
+        --dk-mainbg: #F3C33C;
+        --dk-white: #f6d084;
+        --dk-black: #112617;
+        --dk-shadow: hsla(0, 0%, 0%, 0.25);
+        --dk-grey: #4F6059;
+        --dk-button: #3C646C;
+        --sp-mainbg: #0D0300;
+        --sp-white: #260801;
+        --sp-black: #BFA26B;
+        --sp-shadow: hsla(0, 0%, 100%, 0.25);
+        --sp-grey: #594225;
+        --sp-button: grey;
+        --cursive: 'Dancing Script', cursive;
+        --sansserif: 'Montserrat', sans-serif;
+        --opendyslexic: "Dyslexic", serif;
+        --serif: 'Tinos', serif; 
+    }
+    /*--------------BASE CSS--------------*/
+        /* Body */
+    body {font-size: 18px;}
+    .dk body, .gc body.end {background-color: var(--dk-mainbg);}
+    .sp body, .gc body.story {background-color: var(--sp-mainbg);}
+        /*Base*/
+    .parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40em;
+        height: 100vh;
+        max-height: calc(100vh - 6em);
+        max-width: calc(100vw - 2em);
+        line-height: 150%;
+        margin: 1em auto;
+        padding: 2em 4em;
+    }
+    .dk .parent, .gc .end .parent {
+        background: var(--dk-white);
+        color: var(--dk-black);
+        box-shadow: 0 4px 8px var(--dk-shadow);
+    }
+    .sp .parent, .gc .story .parent {
+        background: var(--sp-white);
+        color: var(--sp-black);
+        box-shadow: 0 4px 8px var(--sp-shadow);
+    }
+        /*Parts*/
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5em 0 0;
+    }
+    .dk .menu, .gc .end .menu {border-top: 1px solid var(--dk-black);}
+    .sp .menu, .gc .story .menu {border-top: 1px solid var(--sp-black);}
+    .white .menu {
+        display: none;
+    }
+    .title {
+        font-style: italic;
+        font-family: 'Alice', serif;
+    }
+    #passages {
+        overflow: auto;
+        height: calc(100vh - 9em);
+        padding: 0 1em 0 0;
+        scrollbar-width: thin;
+        scrollbar-color: inherit inherit;
+    }
+    .passage {
+        line-height: 1.6;
+        text-align: left;
+    }
+    /*<p>*/
+    .talk p {
+        margin:0;
+        text-indent: 1.5em;
+    }
+    .talk p:first-child {
+        margin-top: 1em;
+    }
+      
+    .talk p:last-child {
+        margin-bottom: 1em;
+    }
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-track {background: inherit; }
+    ::-webkit-scrollbar-thumb {background: inherit; }
+    ::-webkit-scrollbar-thumb:hover {background: inherit; }
+        /* Font change */
+    .sansserif body {font-family: var(--sansserif);}
+    .opendyslexic body {font-family: var(--opendyslexic);}
+    .serif body {font-family: var(--serif);}
+      /*line height*/
+    html.ln75 .passage {line-height: 1.2;}
+    html.ln125 .passage {line-height: 2.0;}
+    html.ln150 .passage {line-height: 2.4;}
+    /*text alignment*/
+    html.left .passage {text-align: justify;}
+    html.center .passage {text-align: center;}
+    html.right .passage {text-align: right;}
+    /*--------------HTML CSS--------------*/
+        /* Headers */
+    h1, h2, h3, h4, h5, h6 {font-family: 'Alice', serif;}
+    h1 {
+        text-align: center;
+        font-size: 200%;
+        text-transform: uppercase;
+    }
+    h2 {
+        text-align: right;
+        font-size: 150%;
+    }
+    h3 {
+        font-size: 125%;
+        font-weight: normal;
+        text-decoration: underline overline dotted 1px;
+        margin-left: 3em;
+    }
+    h4 {
+        text-decoration: underline;
+        font-weight: normal;
+        margin-left: 2em;
+    }
+    h5 {
+        font-size: 90%;
+        text-transform: lowercase;
+        margin-left: 1em;
+    }
+        /* <label> */
+    label {
+        font-weight: bold;
+    }
+        /* <hr>*/
+    .dk hr, .gc .end hr {border-top: 5px double var(--dk-black);}
+    .sp hr, .gc .story hr {border-top: 5px double var(--sp-black);}
+        /* Lists */
+    .passage ul {
+        list-style: none;
+        padding-left: 2em;
+        margin: auto;
+        text-align: left;
+    }
+    .passage ul li::before {
+        content: "∼ ";
+        font-weight: bold;
+    }
+    .passage ul li a::before {content: none;}
+      /* <a>/Links */
+            /* Regular */
+    .passage a {font-weight: bold;}  
+    .dk .passage a, .gc .end .passage a {color: var(--dk-black);}
+    .sp .passage a, .gc .story .passage a {color: var(--sp-black);}
+    .passage a::before {content: "∼ ";}
+    .passage a::after {content: " ∽";}  
+    .dk .passage a:hover, .dk .passage a:focus, .gc .end .passage a:hover, .gc .end .passage a:focus {color: var(--dk-grey);}
+    .sp .passage a:hover, .sp .passage a:focus, .gc .story .passage a:hover, .gc .story .passage a:focus  {color: var(--sp-grey);}
+
+    /*--------------MACROS--------------*/
+        /* Textbox, Textarea, Select */
+            /*Note: input = textbox/numerbox, select = listbox*/
+    select {
+        border-style: dashed;
+    }
+    .dk select, .gc .end select {
+        background-color: var(--dk-mainbg);
+        color: var(--dk-black);
+        border: 1px var(--dk-black);
+    }
+    .sp select, .gc .story select {
+        background-color: var(--sp-mainbg);
+        color: var(--sp-black);
+        border: 1px var(--sp-black);
+    }
+    .dk select:hover, .dk select:focus, .gc .end select:hover, .gc .end select:focus  {
+        background: var(--dk-white) !important;
+        border: 1px solid var(--dk-black) !important;
+    }
+    .sp select:hover, .sp select:focus, .gc .story select:hover, .gc .story select:focus  {
+        background: var(--sp-white) !important;
+        border: 1px solid var(--sp-black) !important;
+    }
+            /* Buttons */
+    button {
+        font-weight: bold;
+    }
+    .dk button, .gc .end button {
+        color: var(--dk-black);
+        background-color: var(--dk-mainbg);
+        border: 1px solid var(--dk-black);
+        box-shadow: 1px 1px 1px var(--dk-black);
+    }  
+    .sp button, .gc .story button {
+        color: var(--sp-black);
+        background-color: var(--sp-mainbg);
+        border: 1px solid var(--sp-black);
+        box-shadow: 1px 1px 1px var(--sp-black);
+    } 
+    .dk button:hover, .gc .end button:hover {
+        background-color: var(--dk-white);
+        border-color: var(--dk-grey);
+        box-shadow: none;
+    }
+    .sp button:hover, .gc .story button:hover {
+        background-color: var(--sp-white);
+        border-color: var(--sp-grey);
+        box-shadow: none;
+    }
+    /*--------------UI DIALOG--------------*/
+            /* Base CSS */
+    #ui-dialog {
+        min-width: 30em;
+        margin-top: 10vh;
+        max-height: 75vh;
+    }
+    #ui-dialog-titlebar {
+        display: flex;
+    }
+    .dk #ui-dialog-titlebar, .gc .end #ui-dialog-titlebar {
+        background-color: var(--dk-mainbg);
+        color: var(--dk-black);
+    }
+    .sp #ui-dialog-titlebar, .gc .story #ui-dialog-titlebar {
+        background-color: var(--sp-mainbg);
+        color: var(--sp-black);
+    }
+    #ui-dialog-title {
+        font-size: 200%;
+        padding: 1% 0;
+        margin: auto;
+    }
+    #ui-dialog-body {
+        max-height: calc(75vh - 5em);
+        scrollbar-width: thin;
+        scrollbar-color: inherit inherit;
+    }
+    .dk #ui-dialog-body, .gc .end #ui-dialog-body {
+        background-color: var(--dk-white);
+        color: var(--dk-black);
+    }
+    .sp #ui-dialog-body, .gc .story #ui-dialog-body {
+        background-color: var(--sp-white);
+        color: var(--sp-black);
+    }
+    #ui-dialog-close {
+        box-shadow: none;
+        height: 100%;
+    }
+    #ui-dialog-close:hover {color: var(--white);}
+            /* Settings Dialog */
+    #ui-dialog h2 {
+        text-align: center;
+    }
+    .dk #ui-dialog-body.settings div[id|="header-body"]:not(:first-child), .gc .end #ui-dialog-body.settings div[id|="header-body"]:not(:first-child) {border-top: 3px double var(--dk-black);}
+    .sp #ui-dialog-body.settings div[id|="header-body"]:not(:first-child), .gc .story #ui-dialog-body.settings div[id|="header-body"]:not(:first-child) {border-top: 3px double var(--sp-black);}
+    .dk #ui-dialog-body.settings button[id|="setting-control"], .gc .end #ui-dialog-body.settings button[id|="setting-control"] {
+        color: var(--dk-black);
+        background-color: var(--dk-white);
+        box-shadow: none;
+    }
+    .sp #ui-dialog-body.settings button[id|="setting-control"], .gc .story #ui-dialog-body.settings button[id|="setting-control"] {
+        color: var(--sp-black);
+        background-color: var(--sp-white);
+        box-shadow: none;
+    }  
+    .dk #ui-dialog-body.settings button[id|="setting-control"]:hover, .gc .end #ui-dialog-body.settings button[id|="setting-control"]:hover {
+        background-color: var(--dk-white);
+        border-color: var(--dk-grey);
+        box-shadow: 1px 1px 1px var(--dk-black);
+    }  
+    .sp #ui-dialog-body.settings button[id|="setting-control"]:hover, .gc .story #ui-dialog-body.settings button[id|="setting-control"]:hover {
+        background-color: var(--sp-white);
+        border-color: var(--sp-grey);
+        box-shadow: 1px 1px 1px var(--sp-black);
+    } 
+    .dk #ui-dialog-body.settings button[id|="setting-control"].enabled, .gc .end #ui-dialog-body.settings button[id|="setting-control"].enabled {
+        background-color: var(--dk-white);
+        border-color: var(--dk-grey);
+        box-shadow: 1px 1px 1px var(--dk-black);
+    }  
+    .sp #ui-dialog-body.settings button[id|="setting-control"].enabled, .gc .story #ui-dialog-body.settings button[id|="setting-control"].enabled {
+        background-color: var(--sp-white);
+        border-color: var(--sp-grey);
+        box-shadow: 1px 1px 1px var(--sp-black);
+    } 
+    .dk #ui-dialog-body.settings button[id|="setting-control"].enabled:hover, .gc .end #ui-dialog-body.settings button[id|="setting-control"].enabled:hover {
+        background-color: var(--dk-mainbg);
+        border-color: var(--dk-black);
+        box-shadow: none;
+    }
+    .sp #ui-dialog-body.settings button[id|="setting-control"].enabled:hover, .gc .story #ui-dialog-body.settings button[id|="setting-control"].enabled:hover {
+        background-color: var(--sp-mainbg);
+        border-color: var(--sp-black);
+        box-shadow: none;
+    }
+            /* Saves Dialog */
+    .dk #ui-dialog-body button:disabled, .gc .end #ui-dialog-body button:disabled {
+        background-color: var(--dk-white);
+        border: 1px solid var(--dk-grey);
+        color: var(--dk-grey);
+    }
+    .sp #ui-dialog-body button:disabled, .gc .story #ui-dialog-body button:disabled {
+        background-color: var(--sp-white);
+        border: 1px solid var(--sp-grey);
+        color: var(--sp-grey);
+    }
+    /*--------------MENU CSS--------------*/
+            /* Dropdown Button */
+    .dropbtn {
+        border: none;
+        cursor: pointer;
+    }
+    .dk .dropbtn, .gc .end .dropbtn {color: var(--dk-black);}
+    .sp .dropbtn, .gc .story .dropbtn {color: var(--sp-black);}
+      /* Dropdown button on hover & focus */
+    .dropbtn:hover, .dropbtn:focus {
+        text-decoration: none;
+    }
+    .dk .dropbtn:hover, .dk .dropbtn:focus, .gc .end .dropbtn:hover, .gc .end .dropbtn:focus {color: var(--dk-grey);} 
+    .sp .dropbtn:hover, .sp .dropbtn:focus, .gc .story .dropbtn:hover, .gc .story .dropbtn:focus {color: var(--sp-grey);} 
+      /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+      /* Dropdown Content (Hidden by Default) */
+    .dropup-content {
+        display: none;
+        position: absolute;
+        bottom: 2em;
+        right: 0px;
+        text-align: right;
+        z-index: 1;
+    }
+    .dk .dropup-content, .gc .end .dropup-content {background-color: var(--dk-white); }
+    .sp .dropup-content, .gc .story .dropup-content {background-color: var(--sp-white); }
+      /* Links inside the dropdown */
+    .dropup-content a {
+        padding: 0.3em 0 0.3em 1.5em;
+        text-decoration: none;
+        display: block;
+    }
+    .dk .dropup-content a, .gc .end .dropup-content a {color: var(--dk-black);}
+    .sp .dropup-content a, .gc .story .dropup-content a {color: var(--sp-black);}
+    .dk .dropup-content a:not(:last-child), .gc .end .dropup-content a:not(:last-child) {border-bottom: 1px dotted var(--dk-black);}
+    .sp .dropup-content a:not(:last-child), .gc .story .dropup-content a:not(:last-child) {border-bottom: 1px dotted var(--sp-black);}
+      /* Change color of dropdown links on hover */
+    .dk .dropup-content a:hover, .gc .end .dropup-content a:hover {
+        background-color: var(--dk-button);
+        color: var(--dk-white);
+    }
+    .sp .dropup-content a:hover, .gc .story .dropup-content a:hover {
+        background-color: var(--sp-button);
+        color: var(--sp-white);
+    }
+    .show {display:block;}
+      
+    .round-time-bar {
+        margin: 1rem;
+        overflow: hidden;
+    }
+    .round-time-bar div {
+        height: 5px;
+        animation: roundtime calc(var(--duration) * 1s) steps(var(--duration)) forwards;
+        transform-origin: left center;
+        background: linear-gradient(to bottom, red, #900);
+    }
+      
+    .round-time-bar[data-style="smooth"] div {
+        animation: roundtime calc(var(--duration) * 1s) linear forwards;
+    }
+      
+    .round-time-bar[data-style="fixed"] div {
+        width: calc(var(--duration) * 5%);
+    }
+      
+    @keyframes roundtime {
+        to {
+          /* More performant than `width` */
+          transform: scaleX(0);
+        }
+    }
+    .sp .white, .dk .white, .white, .white .parent {
+        background: white;
+        box-shadow: none;
+    }
+    .front .parent {
+		height: fit-content;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	.front .menu {display: none}
+	.front #passages {
+		height: auto;
+		padding: 0;
+		margin: auto;
+		text-transform:uppercase;
+	}
+	.front .passage { text-align: center;}
+	.front h1 {font-size: 250%;}
+    /*--------------MOBILE CSS--------------*/
+    @media screen and (max-width: 768px) {
+        .parent {
+            margin: 1em 0;
+            padding: 2em 1em;
+        }
+        #ui-dialog {
+            min-width: 92vw;
+        }
+    }
+
+      
+      
+            
