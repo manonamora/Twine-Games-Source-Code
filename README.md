@@ -5,8 +5,12 @@ This repository is meant as an archive for older version of my Twine games. It w
 You can play those games and more on [Itch.io](https://manonamora.itch.io/). You can also find some of them on the [Interactive Fiction DataBase](https://ifdb.org/search?searchfor=authorid:r8zj2ybma6r0emy4).
 
 ### List of Source Codes:
+- Clarence Street, 14
+- Collision
 - Exquisite Cadaver
+- Goncharov
 - Meeting the Parents
+- SPS Iron Hammer
 - The Roads Not Taken
 
 ### Coming Soon:
