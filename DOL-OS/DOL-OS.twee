@@ -1,0 +1,4285 @@
+:: StoryTitle
+DOL-OS
+
+
+:: StoryData
+{
+  "ifid": "2BBF014B-FE37-40DD-A448-FCE68799803C",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Abstraits {"position":"1225,725","size":"100,100"}
+<p>Dr. ■ ■ ■, Post-doc, Université de ■ ■ ■ </p>
+    <hr>
+    <p>Dans tous les domaines, l’Intelligence Artificielle a le pouvoir d’améliorer les procédures et l’efficacité des services promus. Malgré nos maigres efforts pour pousser cette technologie à son plein potentiel, les recherches dans ce milieu, ainsi que l’implémentation d’IAs dans tout domaine, restent bien trop peu nombreuses.</p>
+
+    <p>Dans cette étude, je recherche l’efficacité d’une IA de niveau 1 pour accomplir des tâches administratives simples et répétitives. Le niveau d’efficacité est comparé à l’étude de ■ ■ ■ comparant celle de sujets bipèdes et humains.</p>
+
+    <hr>
+
+    <p>Suite à aux études concernant l’efficacité d’une Intelligence Artificielle de niveaux 1-6 sur des tâches administratives, des classements et notations de tests, triage de cas médicaux, et de contrôle d’erreur de code, je propose l’introduction d’IAs dans le domaine judiciaire.</p>
+
+    <p>Suivant le modèle de ■ ■ ■, et l’introduction d’une IA traitant les délits mineurs (principalement les dépassement de vitesse et autres fautes de conduite) chez ■ ■ ■, j’assume que l’utilisation poussée d’IA dans ce domaine pourrait réduire les délais de traitements de tous cas soumis.</p>
+
+    <p>Cette étude testera différents niveau d’IA et leur efficacité de traitement.</p>
+
+
+:: Admin [milieu no-menu] {"position":"475,225","size":"100,100"}
+<span id="gueststart"><<type 40ms start 0.5s keep>>Ouverture Session...<</type>></span>
+    <<timed 5s>>
+        <<replace "#gueststart" t8n>>Session ouverte.<</replace>>
+    <<next 3s>>
+        <<goto "AdminMenu">>
+    <</timed>>
+
+
+:: AdminMenu [admin] {"position":"725,225","size":"100,100"}
+<div><i class="fa-solid fa-blog"></i> [[Ind.ic|JournalStart]]</div>
+    <div><i class="fa-solid fa-hands-holding-circle"></i> [[Jupiter Brockers]]</div>
+    <div><i class="fa-solid fa-database"></i> [[Registre]]</div>
+    <div><i class="fa-solid fa-gamepad"></i> [[Jeux|Games]]</div>
+    <div><i class="fa-solid fa-trash-can"></i> [[Poubelle|AdminTrash]]</div>
+    <div><i class="fa-solid fa-lock"></i> [[Fermer la Session|CloseAccount]]</div>
+
+
+:: AdminPassword {"position":"850,350","size":"100,100"}
+<table>
+        <tr>
+            <th>Session</th>
+            <td>parjure</td>
+        </tr>
+        <tr>
+            <th>JB instance</th>
+            <td>9376</td>
+        </tr>
+        <tr>
+            <th>RH Confirmation</th>
+            <td>[DWgHUe5wVi{:/?w*#-??/EUmg[95)v]</td>
+        </tr>
+        <tr>
+            <th>E-mail</th>
+            <td>3Bouteilles-SurLeMur</td>
+        </tr>
+    </table>
+
+
+:: AdminTrash [admin] {"position":"725,350","size":"100,100"}
+<div id="guestmain">
+    <div id="guestmenu">
+      <p><i class="fa-solid fa-file-lines"></i> <<link "mots de passes.txt">><<replace "#page" t8n>><<include "AdminPassword">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+    </div>
+    <div id="page"></div>
+  </div>
+  <div id="link"><<link "Fermer Dossier" "AdminMenu">><</link>></div>
+
+
+:: Allumer [milieu no-menu] {"position":"1100,100","size":"100,100"}
+<<fadein 2s 1s>>
+        <<fadeout 2s 8s>>
+            <<timed 1s>>
+                <div class="progress">
+                    <div class="color"></div>
+                </div>
+            <</timed>>
+        <</fadeout>>
+    <</fadein>>
+    <<timed 10.5s>><<goto "Ordidébut">><</timed>>
+
+
+:: Close [milieu] {"position":"600,725","size":"100,100"}
+<span id="endingsession"><<type 40ms start 0.5s keep>>Fermeture Ordinateur...<</type>></span>
+    <<timed 5s>>
+        <span class="black"></span>
+    <<next 2s>><<goto "End">>
+    <</timed>>
+
+
+:: CloseAccount [milieu no-menu] {"position":"350,225","size":"100,100"}
+<span id="endingsession"><<type 40ms start 0.5s keep>>Fermeture Session...<</type>></span>
+    <<timed 5s>>
+        <<replace "#endingsession" t8n>>Session fermée.<</replace>>
+    <<next 3s>>
+        <<goto "OrdiComptes">>
+    <</timed>>
+
+
+:: Credits {"position":"725,100","size":"100,100"}
+Ce jeu a été possible grâce aux macros et assets des personnes suivantes:
+<ul>
+	
+	<li> [[Chapel|https://twinelab.net/custom-macros-for-sugarcube-2/demo/]]</li>
+	<li> [[Cycy|https://github.com/cyrusfirheir/cycy-wrote-custom-macros/tree/master/live-update]]</li>
+	<li> [[HiEv|https://qjzhvmqlzvoo5lqnrvuhmg-on.drv.tw/UInv/Sample_Code.html]]</li>
+	<li> [[Kevin MacLeod|incompetech.com]]</li>
+	<li> [[Maliface|https://github.com/MalifaciousGames/Mali-s-Macros/]]</li>
+	<li> [[RMarcel|https://codepen.io/rmarcel/]]</li>
+	<li> [[SjoerdHekking|https://github.com/SjoerdHekking/custom-macros-sugarcube2]]</li>
+</ul>
+
+
+:: Doc-ECEgg [non-lien] {"position":"225,475","size":"100,100"}
+<div class="doptitre">38UE8 - Brouillon de l'écrivain ■ ■ ■ (approx. ■ ■ ■)</div>
+    <p>… s’élançant vers ==le vide==… ses pieds ne touchait que le vide… il choisissait l’ammorticeur… son coeur de battait plus…</p>
+
+    <p>//Pourquoi cette foutu page reste blanche ? Aucun mot de “marche” assez. Aucun de me rendent heureux. Je ne comprend pas pourquoi je n’arrive pas à remplir ce carnet comme je l’avais fait avec le dernier ? C’est pourtant pas compliqué…//</p>
+
+    <p>Il se balançait contre la rambarde, ses yeux fixant le vide en dessous de ses pieds. ==Il n’attendait qu’une chose et une seule. Un signe, un seul petit signe, pour rebrousser chemin.==</p>
+
+    <p>J//’aurai dû prendre cette chambre sous le toit au lieu de cette cave humide. Qu’est-ce que j’en sais de ces rambardes à la con. J’en peux plus de ce mémoire qui ne va nulle part. J’ai jamais rien fait de ma vie. Sauf pour… Non… Je ne pourrai jamais… J’ai promis de le garder jusqu’à ma mort…//</p>
+
+    <p>Elle se laissa faire embrasser sous l’averse, malgré son aversion du temps ou sa peur de prendre froid. Elle n’avait plus la force de résister. De lui résister. De résister ses sentiments si fort, si puissant. Elle allait même jusqu’à ==trahir elle-même…== </p>
+
+    <p>//Quel connard d’éditeur… Me chasser comme ça? Et pour si peu? Je lui ai tout donné et me rend… j’aurai dû foutre le bordel dans son petit bureau merdeux… J’arrive pas à croire qu’il ait déchiré notre contrat comme ça… pas quand j’étais si près de trouver la solution pour son bouquin! Petit con…//</p>
+
+    <p>…</p>
+
+    <p>//Je ne vais pas pouvoir les regarder dans les yeux quand on se verra… Je leur avais promis…//</p>
+
+
+:: Doc-Emploi [non-lien] {"position":"350,475","size":"100,100"}
+<div class="doptitre">JDDYN - Annonces d'emploi du Journal ■ ■ ■ (■ ■, ■ ■, ■ ■)</div>
+    <p>Recherche Secrétaire, Bureau de Mte ■ ■ ■. Expérience didactyles, main propre et claire, et références sérieuses. Sans relation. ■/sem, logis et potage inclus. Écrire à ■ ■ ■, 39 Rue de ■ ■ ■, ■ ■ ■.</p>
+        <hr>
+    <p>Comptable, 5a exp, sérieux et discret. 38h, ■/mois. Envoi CV à ■ ■ ■, Boîte ■ ■ ■.</p>
+        <hr>
+    <p>Commis de Cuisine. Sans expérience. commencer tout de suite. ■/jour + pb. Demander ■ ■ ■ au Restaurant de ■ ■ ■.</p>
+        <hr>
+    <p>Gardien de la Paix recherche recrues. Bonne Santé. Courir 1km/5min. Agile et Fort. Demander formulaire au Commissariat près de vous.</p>
+
+
+:: Doc-Execution [non-lien] {"position":"1100,350","size":"100,100"}
+<div class="doptitre">CF6W5 - Témoignages de l'execution du //Traitre de La Patrie// (■ ■ ■)</div>
+    <p>Maman m’avait dit de ne pas passer par la Place de ■ ■ ■ en allant faire les commissions. Elle m’avait même fait promettre qu’en aucune circonstance devais-je mettre les pieds sur les pavés rouges. [Pause] J’aurais dû l’écouter… [Pause plus longue] C’était… je n’ai pas… ça continuait de couler même après que la lame… </p>
+        <hr>
+    <p>■ ■ ■ était mon voisin de bureau en primaire. C’était un garçon plutôt silencieux et pas vraiment très… amical. Mais il n’aurait jamais fait de mal à qui que ce soit. J’étais surpris de voir son nom sur les affiches. Pour être honnête, si je n’étais pas venu voir l’exécution… je n’aurais jamais cru que… même là, je ne comprends pas pourquoi il…</p>
+        <hr>
+    <p>Oh, moi, je suis bien content que cette merde soit passée sous la Louison. C’est vraiment la moindre des choses après avoir essayé de vendre notre Nation à ces… ces fascistes ! Et encore, la punition était bien légère pour ce qu’a fait ce traitre ! Le faire parader un peu dans la ville, qu’on puisse lui jeter des pierres… Ou peut-être un bucher. Elle est bien, notre Louison. Mais c’est un peu trop rapide, à mon avis.</p>
+        <hr>
+    <p>Je suis complètement outrée que M. ■ ■ ■ n’ait pas reçu de pardon. Outrée, je vous dis ! Je m’étais même entretenue avec ■ ■ ■ pour plaider son cas, suite à l’absurde jugement de La Cour. Il n’aurait pas dû recevoir telle punition ! Quel homme de si petite constitution, si humble statut, aurait pu faire ces… choses qu’ils racontent dans les journaux. Un ‘//traitre à sa patrie//’… Non, M. ■ ■ ■ était un homme de bonne nature, qui ne méritait pas ce traitement. </p>
+        <hr>
+    <p>Place de ■ ■ ■, ■.■.■, midi. Malgré le ciel sombre, Louison encore et toujours était au rendez-vous, sa lame luisante. La foule s’était approchée déjà depuis le milieu de la matinée, soif de vengeance. Depuis le procès de M. ■ ■ ■, nul dans ■ ■ ■ avait d’autre que son jugement en tête. </p>
+    
+    <p>Le //Traitre de la Patrie// est monté sur l’échafaud vers dix heures, entouré de nos chers gendarmes, et sous la huée des spectateurs. L’homme était resté silencieux tout le long, n’était-ce que pour ses pleurs qu’il ne pouvait retenir. </p>
+
+    <p>Un seul cri retenti sur la Place ■ ■ ■ avant que la lame tombe. Les nerfs d’une jeune femme ont eu le mieux d’elle avant que la lame de Louison tombe. Puis, les hurlements victorieux de la foule se sont fait ressentir.</p>
+
+
+:: Doc-Journal [non-lien] {"position":"1225,350","size":"100,100"}
+<div class="doptitre">TXG2J - Article de l'édition matinale du Journal ■ ■ ■ (■ ■, ■ ■, ■ ■)</div>
+    <p>//La ‘Gendarme en Cavale’ Appréhendée !//</p>
+        <hr>
+    <p>Après des semaines de traques, Mlle ■ ■ ■, connue sous le nom La Gendarme en Cavale, a finalement été appréhendée à la frontière avec ■ ■ ■, alors qu’elle utilisait de faux papiers. La jeune femme a tout de même essayé d’échapper aux forces de l’ordre, mais sa course s’est achevée rapidement, lorsque la fusillade l’a abattue. La Gendarme n’a tout de même pas succombé à ses blessures et a été transférée à la Prison de ■ ■ ■ en attente de jugement. </p>
+
+    <p>Nos Forces de La Paix ont communiqué avoir recouvert lors de cette appréhension une valise remplie de documents officiels, lesquels avaient été signalés comme disparus peu après l’abandon de poste de Mlle ■ ■ ■ en tant que Secrétaire de Mte ■ ■ ■. Certains documents disparus n’étant pas en sa possession, il est soupçonné que la Gendarme puisse avoir vendu des Secrets d’État, des notes bancaires étrangères ayant été trouvées dans cette valise. </p>
+
+    <p>Nous encourageons encore toute personne ayant eu contact avec La Gendarme de se rendre au commissariat le plus proche pour toute information puissant aider à recouvrir ces documents ou en relations avec la jeune femme et ses connexions. </p>
+
+
+:: Doc-Jugement [non-lien] {"position":"475,475","size":"100,100"}
+<div class="doptitre">6VKWR - Transcrit du Casier ■ ■ ■-■ ■ ■-■ ■ ■ (■ ■ ■)</div>
+    <p>En ■ ■ ■, le corps de M. ■ ■ ■ est trouvé par sa femme, Mme ■ ■ ■, sur le pas de la porte de leur habitation. Gardien d’immeuble depuis plus de 20 ans, M. ■ ■ ■ avait accumulé des dettes de jeux envers l’habitant du dessus, Mr. ■ ■ ■, un citoyen de ■ ■ ■ résident dans le bâtiment depuis le début de cette même année. Ces messieurs avaient été observés avoir eu des interactions concernant ces dettes, le gardien ne voulant rendre l’argent emprunté, assurant que Mr. ■ ■ ■ le lui avait offert. Durant une de ces interactions, des coups avaient été échangés, suscitant la présence d’un Gardien de la Paix pour les séparer. D’autres interactions, moins violentes, ont été enregistrées. </p>
+
+    <p>Suivant ces faits, Mr. ■ ■ ■ est le premier suspect de cette investigation. Ne pouvant pas produire d’alibi, cet homme avait été interpellé et mis à pied. Malgré ses engagements avec le gardien, Mr. ■ ■ ■ affirme ne pas lui avoir fait de mal. Aucune autre personne n’a été suspectée.</p>
+
+    <p>Le procureur demande la peine capitale pour cet étranger, suivant le Statut ■ ■ ■ concernant les violences faites envers les citoyens. La Cour rappelle à Mte ■ ■ ■ que celle-ci n’est valable qu’envers les citoyens de certains statuts. Le procureur affirme que le gardien, M. ■ ■ ■, appartient à cette catégorie, demandant l’absence du public et du journal pour ce jugement à la soumission du dossier ■ ■ ■. La Cour accepte la demande.</p>
+
+    <p>Durant l’exposition des preuves et arguments, il est découvert que Mr. ■ ■ ■ était en communication avec le gouvernement de son pays natal, suivant une opération diplomatique. Le gardien avait été chargé par Le Commissaire de ■ ■ ■ de suivre Mr. ■ ■ ■ et reporter ses mouvements. Ce premier n’était ni censé accoster Mr. ■ ■ ■, ni moins devenir son débiteur.</p>
+
+    <p>Du fait de ces circonstances et la potentielle crise diplomatique, Mr. ■ ■ ■ est acquitté de tout soupçon.</p>
+
+    <p>//Note : Mr. ■ ■ ■ a été trouvé pendu dans son habitation quelques jours suivant la décision de la cour. Sa fin avait été jugé comme ayant été auto-infligée. Aucun mot n’a été tout de même découvert.//</p>
+
+
+:: Doc-Pendu [lien] {"position":"975,350","size":"100,100"}
+<div class="doptitre">86GZS - Extrait des mémoires de ■ ■ ■ (■ ■ ■)</div>
+    <p>Il y avait deux enfants dans la cour, allongés sur le sol poussiéreux. Ils rigolaient au-dessus d’un morceau de papier, sur lequel un des deux gribouillait. De temps en temps, la matrone du bâtiment balayait autour d’eux, espérant que la poussière les ferait déguerpir. Mais, en vain – cela amusait même les deux gringalets.</p>
+
+    <p>Ils étaient encore là, dans cette cour, lorsque je suis descendu pour rencontrer ■ ■ ■. Malgré la lueur du jour qui disparaissait au loin, ils restaient à gribouiller chacun à leur tour sur cette feuille. Dans son coin, la matrone se plaignait qu’ils n’allaient pas bouger tant que leur papier n’était pas rempli. Ce qu’ils écrivaient la répugnait.</p>
+
+    <p>Curieux, j’étais allé jeter un coup d’œil, avant de sortir du bâtiment. Les deux enfants jouaient au [[pendu|Pendu]].</p>
+
+
+:: Doc-Scene [non-lien] {"position":"100,475","size":"100,100"}
+<div class="doptitre">4Z8WW - Extraits annotés de //■ ■ ■// de ■ ■ ■ (■ ■ ■)</div>
+    <p>La lettre s’échappa de sa main et vint disparaître sous l’armoire, alors que ses nerfs chaviraient. Elle se retint à peine sur son divan, son corps se laissant se renverser sur ces coussins rubigineux. Des lourdes larmes ruisselaient sur ses joues nacrées. Elle ne pouvait maîtriser sa contenance, même autour de cette illustre compagnie. Les nouvelles relayées par ces douloureuses lignes ne pouvaient avoir d’autres effets sur son esprit.</p>
+
+    <p>//Notes : Dans ce passage, Mlle ■ ■ ■ est tellement submergée par ses émotions qu’elle ne s’apercevra pas de la subtilisation de M ■ ■ ■, qui, en trahissant sa confiance, l’amènera au bucher.// </p>
+        <hr>
+    <p>Ses doigts effleurèrent le rebord du verre, émettant un son cristallin. Elle opposait avec vigueur de regarder son compagnon en face d’elle. Dans quelques heures, elle serait à des douzaines de lieues de cet homme, pour lequel elle ne ressentait que de la haine.</p>
+
+    <p>Elle laissa ses yeux s’égarer au loin, pensant au futur, son futur glorieux sans les mains de cet abject personnage autour de son cou. Aujourd’hui était le dernier jour qu’elle devrait supporter sa présence.</p>
+
+    <p>//Notes : Il est supposé que l’autrice discutait ici sa relation avec ■ ■ ■ via le personnage de ■ ■ ■. Malgré cette tumultueuse affaire, l’autrice ne partagera pas le même chemin que ■ ■ ■, son compagnon perdant sa vie durant l’écriture de ce tome. Cet évènement enclencha un tournant sur l’histoire, celle-ci n’épousant plus les conséquences des infidélités de ■ ■ ■ mais son inhabilité à accepter son éventuel sort.//</p>
+
+
+:: Download [milieu] {"position":"725,725","size":"100,100"}
+<<fadein 2s 1s>>
+        <<fadeout 2s 8s>>
+            <<timed 1s>>
+                <div class="progress">
+                    <div class="color"></div>
+                </div>
+            <</timed>>
+        <</fadeout>>
+    <</fadein>>
+    <<timed 10.5s>>Teléchargement Complet!
+    <<next 3s>>
+        <span class="black"></span>
+    <<next 2s>><<goto "End">><</timed>>
+
+
+:: End [milieu no-menu end] {"position":"850,725","size":"100,100"}
+Merci d'avoir joué à DOL-OS!
+
+
+:: Entry0 {"position":"475,850","size":"100,100"}
+<div>> Jour 0 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>On nous a demandé de tenir un journal durant notre… euh… séjour ? </p>
+
+    <p>Je ne sais pas combien de temps nous sommes censés rester ici. On nous a donné des clés pour nos accommodations, avec interdiction de sortir du complexe sans autorisation. //Ils auraient pu nous prévenir un peu… j’ai des plants à la maison…//</p>
+
+    <p>Je ne sais pas trop pourquoi ils veulent que nous écrivions quelque chose tous les jours. On ne nous a pas trop expliqué ce qu’ils voulaient dans ce journal. Ça ne m’étonnerait pas que je l’abandonne après quelque jours. //Surtout s’ils nous donnent beaucoup de boulot…//</p>
+
+    <p>C’est quand même un peu gênant…</p>
+
+    <div>> Jour 0(bis) - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Premier briefing conclu, avec présentation de l’équipe. Pas mal de gens avaient l’air enthousiaste d’être ici. D’autres beaucoup moins… Je ne sais pas encore dans quel camp je suis…</p>
+
+    <p>J’ai aussi reconnu quelques têtes, les ayant rencontrés auparavant en conventions ou durant mes années de recherches. C’est tout de même étonnant de les voir ici. Encore plus pour ceux que je ne reconnais seulement le nom. Des cerveaux brillants font quoi ici ?</p>
+
+    <p>Nous ne savons pas trop à quoi s’attendre du projet. La plupart des explications ne nous seront pas révélées tant que l’équipe n’est pas complète. Dr. ■ ■ ■ prendra en charge le Projet J.B. – je ne sais pas à quoi cela fait référence – en attente d’un certain Roland ■ ■ ■.</p>
+
+
+:: Entry1 {"position":"600,850","size":"100,100"}
+<div>> Jour 1 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>J’ai passé toute la journée à essayer de me souvenir où est-ce que j’ai pu entendre ce nom : Roland ■ ■ ■. Ça me dit quelque chose, mais je n’arrive pas à mettre le doigt dessus…</p>
+
+    <p>Et on ne nous laisse même pas accès à internet…</p>
+
+
+:: Entry104 {"position":"1100,1225","size":"100,100"}
+<div>> Jour 104 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Ah, bah, un résultat. Un bon enfin. Test numéro… 165 ? Roland a abandonné les bis et les ter. On en avait trop de mauvais de toute manière.</p>
+
+    <div>> Jour 104(bis) - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Trois à la suite. C’est une bonne (?) nouvelle… je crois…</p>
+
+
+:: Entry107 {"position":"1225,1225","size":"100,100"}
+<div>> Jour 107 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Test numéro 258… presque cent tests en trois jours… Trois jours que la machine imprime le même résultat pour le même sujet.</p>
+
+    <p>Quelqu’un a merdé et a créé une boucle…</p>
+
+    <p>Au moins le résultat est consistent.</p>
+
+
+:: Entry108 {"position":"100,1350","size":"100,100"}
+<div>> Jour 108 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>La boucle a été réglée. Cent résultats de plus durant la nuit. Roland a décidé de mettre les compteurs à zéro (enfin presque, 182).</p>
+
+
+:: Entry11 {"position":"1100,850","size":"100,100"}
+<div>> Jour 11 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Ma pile ne finissant jamais, vu que je me faisais absolument chier, et qu’on ne nous dise absolument rien, j’ai décidé d’explorer le complexe un petit peu. À part la grande salle avec tous nos bureaux (et les accommodations), il n’y a pas beaucoup d’endroit où nous avons accès… </p>
+
+    <p>Nous avons vraiment l’air d’être entassés dans une grande salle bien glauque…</p>
+
+    <div>> Jour 11(bis) - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>On m’a escorté vers mon bureau. //Faut pas être trop curieux, apparemment…//</p>
+
+    <p>J’ai quand même pu faire le tour de la salle avant que je sois… appréhendé. La plupart de l’équipe s’occupe du même genre de tâches que moi (d’après ce que j’ai pu entrevoir). Mais il y a un groupe dans un coin, presque dans le noir, qui a l’air de faire quelque chose de bien différent. Ça où ils tapent sur leur clavier comme des bourrins pour faire semblant de travailler…</p>
+
+    <p>Mais je pense que ça doit être assez important (et sûrement bien plus intéressant que d’archiver des vieux trucs), parce qu’on m’a bloqué le passage lorsque je me suis approché.</p>
+
+    <p>//Comment ça se fait qu’ils sachent plus sur ce projet que nous ?//</p>
+
+
+:: Entry111 {"position":"225,1350","size":"100,100"}
+<div>> Jour 111 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Roland m’a invité dans son bureau pour un verre. Il voulait parler de tout sauf du projet. J’ai parlé de tout sauf de mon père… et l’incident.</p>
+
+
+:: Entry116 {"position":"350,1350","size":"100,100"}
+<div>> Jour 116 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Tests numéro 234, 234(bis) et 234(ter) ont reçu des résultats différents, ce qui est impossible du fait qu’il n’y ait que deux seules options. ‘Innocent’ n’a été imprimé sur aucune des pages.</p>
+
+
+:: Entry117 {"position":"475,1350","size":"100,100"}
+<div>> Jour 117 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Test numéro 257 à 298. De nouveau, des résultats… incompréhensible. La Machine traite bien toutes les informations que nous lui donnons, mais n’arrive pas à la même conclusion. </p>
+
+    <p>Est-ce que La Machine fait une erreur ? Où est-ce que nous sommes en tort ?</p>
+
+
+:: Entry118 {"position":"600,1350","size":"100,100"}
+<div>> Jour 118 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Roland est le seul à discuter avec ==moi== qui que ce soit. Même s’il nous pousse à collaborer pour trouver des solutions ensemble, personne n’ose communiquer avec d’autres que lui. J’ai abandonné vouloir échanger plus qu’un bonjour le matin…</p>
+
+    <p>//Ils sont encore coincés dans leur petit groupe compétitif d’académiciens…//</p>
+
+
+:: Entry12 {"position":"1225,850","size":"100,100"}
+<div>> Jour 12 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>M. ■ ■ ■ est enfin arrivé. Sitôt arrivé qu’il est ressorti en compagnie d’une foule de Costumes (on aurait dit un banc de poissons…). Dr. ■ ■ ■ leur avait couru après, avec de la paperasse débordant des bras. Même si cette arrivée enclenche le début du projet – //enfin !// –, tout ça n’a pas l’air de très… bonne augure.</p>
+
+
+:: Entry125 {"position":"725,1350","size":"100,100"}
+<div>> Jour 125 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Roland a partagé un vieux souvenir d’enfance. C’était touchant de le voir si humain. </p>
+
+    <p>Il a essayé de me poser des questions sur mon père. J’ai fait semblant de ne pas l’entendre à cause de La Machine qui ronronne en bas. Il n’a pas poussé.</p>
+
+
+:: Entry1259 {"position":"1100,1600","size":"100,100"}
+<div>> Jour 1259 - J.B. Projet</div>
+
+    <p>Le projet Jupiter Brockers touche à sa fin. Un Costume m’a annoncé la nouvelle.</p>
+
+    <p>La Machine a été transférée hors du bâtiment ce matin – enfin ! – pour faire ce qu’elle est censée faire. Au moins, je peux m’en laver les mains de cette machine et de son bruit infernal.</p>
+
+    <p>C’est aussi mon dernier jour. Plus de 3 ans sur ce projet de merde…</p>
+
+    <p>… enfin la liberté !</p>
+
+    <p>//Je vais pouvoir profiter de mon salaire…//</p>
+
+    <p>//END//</p>
+
+
+:: Entry13 {"position":"100,975","size":"100,100"}
+<div>> Jour 13 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Encore une fin de semaine seul au bar… Connaissant certains, ça m’étonne quand même un peu…</p>
+
+
+:: Entry132 {"position":"850,1350","size":"100,100"}
+<div>> Jour 132 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>La Machine continue de tourner, de passer en revue les informations que nous lui donnons, de répondre à nos scénarios et nos problèmes… Elle est même revenue sur ses anciennes réponses.</p>
+
+    <p>Les résultats sont consistants d’un test à l’autre. </p>
+
+    <p>Mais pas avec nos solutions.</p>
+
+    <p>//Elle pense à quelque chose que nous oublions. Mais quoi ?//</p>
+
+    <p>Ah… c’est vendredi aussi…</p>
+
+
+:: Entry134 {"position":"975,1350","size":"100,100"}
+<div>> Jour 134 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>La Machine a refusé une mise à jour. </p>
+
+    <div>> Jour 134(bis) - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Roland est sorti de la salle, blanc comme un linge. Il est revenu encore plus blanc.</p>
+
+
+:: Entry135 {"position":"1100,1350","size":"100,100"}
+<div>> Jour 135 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Nous avons dû rédiger un dossier de recommandations pour le projet. Je ne comprends pas pourquoi il est aussi large. Une page… non, une ligne aurait suffit !</p>
+
+
+:: Entry136 {"position":"1225,1350","size":"100,100"}
+<div>> Jour 136 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Malgré l’attente d’un retour du Conseil, Roland nous laisse tester la machine, tant qu’on lui transmet les résultats.</p>
+
+    <p>J’en ai profité pour lui donner un scénario impossible.</p>
+
+    <div>> Jour 136(bis) - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>//Elle a trouvé une solution ?!//</p>
+
+    <p>Roland avait la main tremblante en lisant le résultat.</p>
+
+
+:: Entry137 {"position":"100,1475","size":"100,100"}
+<div>> Jour 137 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>La réponse du Conseil a été plus rapide qu’on ne le pensait : les tests doivent continuer.</p>
+
+    <p>Dr. ■ ■ ■ s’est évanouie.</p>
+
+
+:: Entry158 {"position":"225,1475","size":"100,100"}
+<div>> Jour 158 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Roland ne fait que de lancer des regards noirs vers La Machine. Lire les résultats le fait presque vomir. Il ne reste plus en place.</p>
+
+    <p>Je crains le pire.</p>
+
+
+:: Entry159 {"position":"350,1475","size":"100,100"}
+<div>> Jour 159 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Les Costumes sont entrés dans la salle et m’ont pris à l’écart. Ils voulaient savoir pourquoi Roland avait essayé de… [.$qu_+$%,Mhxu%:?iN/7gL;Cu=uLz]</p>
+
+    <p>J’ai pas pu sortir un mot.</p>
+
+    <div>> Jour 159(bis) - J.B. Projet - ■ ■ ■, PhD., Chef de Projet.</div>
+
+    <p>… J’ai un nouveau bureau…</p>
+
+
+:: Entry173 {"position":"475,1475","size":"100,100"}
+<div>> Jour 173 - J.B. Projet - ■ ■ ■, PhD., Chef de Projet.</div>
+
+    <p>… Pourquoi ont-ils besoin de moi dans ces réunions ? Je n’y comprends absolument rien. Je sais que c’est par rapport à La Machine – c’est les mêmes chiffres que sur les rapports qu’on me donne – mais rien de plus. On me demande seulement de hocher la tête de temps en temps.</p>
+
+    <p>J’espère que je ne promets pas quoi que ce soit sans savoir…</p>
+
+
+:: Entry196 {"position":"600,1475","size":"100,100"}
+<div>> Jour 296 - J.B. Projet - bla, bla, bla. </div>
+
+    <p>… Je ne sais plus quel jour il est. Où si c’est le jour ou la nuit. Je ne sais plus quand est-ce que j’ai quitté ce bureau pour la dernière fois. Il y a des piles de résultats partout. On m’en amène tous les jours. Je n’en peu plus de lire la même chose.</p>
+
+    <p>J’entends La Machine ronronner en bas.</p>
+
+    <p>Roland… Quel boulot de merde, tu m’as laissé.</p>
+
+
+:: Entry20 {"position":"225,975","size":"100,100"}
+<div>> Jour 20 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Vendredi…</p>
+
+    <p>J’en ai vu un boire une bouteille entière cul sec à son bureau… </p>
+
+    <p>//Honnêtement… je suis à deux doigts de faire pareil…//</p>
+
+
+:: Entry27 {"position":"350,975","size":"100,100"}
+<div>> Jour 27 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Vendredi…</p>
+
+    <p>M. ■ ■ ■ s’est enfermé dans son bureau après le déjeuner. Il est resté coincé tout l’après-midi. //C’était quand même bien drôle comme moment…//</p>
+
+    <p>… surtout vu que personne n’osait appeler qui que ce soit pour l’aider à sortir ! Je crois que si je n’étais pas allé chercher Dr. ■ ■ ■, il y serait encore…</p>
+
+    <p>//Je devrais peut-être lui demander une bouteille en compensation…//</p>
+
+
+:: Entry29 {"position":"475,975","size":"100,100"}
+<div>> Jour 29 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Depuis son arrivée, M. ■ ■ ■ ne parle peu, mais grogne souvent. Il entre et sort de son bureau constamment, avec Dr. ■ ■ ■ à ses talons –elle est toujours là à lui courir après–. On voit le groupe de Costumes venir le chercher ou le ramener plusieurs fois par jour. Ça à l’air de le saouler… </p>
+
+
+:: Entry30 {"position":"600,975","size":"100,100"}
+<div>> Jour 30 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>C’est un peu stupide… mais je crois avoir trouvé un lien entre tous les documents que j’ai dû passer en revue. Je n’étais pas sûr après avoir ouvert une dizaine de fichiers, mais là… Si je ne me trompe pas, ils devraient provenir tous de la même époque : La ■ ■ ■. Aussi dite : la période oubliée, la période noire, la période fantôme… Une époque tellement destructive que peu a survécu. C’est déjà un miracle que l’on ait pu retrouver des pièces des époques antérieures. </p>
+
+    <p>Mais ça… si ces documents proviennent bien de cette époque… ce serait révolutionnaire ! Il y a tellement de choses inexplicables ancrées dans notre société ayant été introduites durant cette période. </p>
+
+    <p>[…] </p>
+
+    <p>//J’aurai tout donné pour avoir des pièces comme celle-ci lors de ma thèse…//</p>
+
+
+:: Entry304 {"position":"725,1475","size":"100,100"}
+<div>> Jour 304 - J.B. Projet</div>
+
+    <p>Je ne sais pas pourquoi, mais, complètement saoul, j’ai hier donné un scénario à La Machine. Savoir si Roland était en tort ou non. Savoir ce que je devrais faire.</p>
+
+    <p>//Elle m’a dit de goûter au soleil…//</p>
+
+
+:: Entry308 {"position":"850,1475","size":"100,100"}
+<div>> Jour 308 - J.B. Projet</div>
+
+    <p>J’ai essayé de tirer le câble de La Machine. J’en peux plus de son bruit. J’ai mal au crâne tout le temps.</p>
+
+    <p>Apparemment, elle est complètement autonome. À part la détruire en mille morceaux, elle ne s’éteindra pas. //Roland avait essayé ça déjà…//</p>
+
+    <p>… peut-être de l’intérieur ?</p>
+
+    <p>//Tout pour arrêter cette migraine…//</p>
+
+
+:: Entry313 {"position":"975,1475","size":"100,100"}
+<div>> Jour 313 - J.B. Projet</div>
+
+    <p>J’ai posé des questions aux codeurs, voir si hypothétiquement quelque chose pourrait… aider ce problème. Même en restant vague, je crois qu’ils ont compris ce que je voulais. Ils ne m’ont pas répondu.</p>
+
+    <p>//Enfin si… un m’a demandé si j’étais allé voir un médecin…//</p>
+
+
+:: Entry314 {"position":"1100,1475","size":"100,100"}
+<div>> Jour 314 - J.B. Projet</div>
+
+    <p>Il y avait un post-it sur mon ordinateur ce matin : //π - Update done. Safe browsing.//</p>
+
+    <p>J’ai un peu honte d’avouer que j’ai dû faire traduire la phrase…</p>
+
+
+:: Entry316 {"position":"1225,1475","size":"100,100"}
+<div>> Jour 316 - J.B. Projet</div>
+
+    <p>J’y comprends vraiment rien à ce code. Je veux juste arrêter ce foutu bruit…</p>
+
+
+:: Entry32 {"position":"725,975","size":"100,100"}
+<div>> Jour 32 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>J’ai essayé à maintes reprises de discuter de mes trouvailles avec mes ‘collègues’. Aucun d’entre eux n’avait l’air intéressé… ou même voulait discuter de leurs tâches… ou tout court. </p>
+
+    <p>J’ai vraiment l’impression que tout le monde s’évite…</p>
+
+    <p>Est-ce que j’ai loupé un e-mail concernant la communication avec autrui ?</p>
+
+
+:: Entry320 {"position":"100,1600","size":"100,100"}
+<div>> Jour 320 - J.B. Projet</div>
+
+    <p>Y a vraiment des gens gentils sur le web quand même… Sans trop expliquer ma situation, quelqu’un a bien voulu m’envoyer quelque chose qui pourrait aider.</p>
+
+    <p>Maintenant tester…</p>
+
+
+:: Entry321 {"position":"225,1600","size":"100,100"}
+<div>> Jour 321 - J.B. Projet</div>
+
+    <p>IT m’a passé une veille machine sans trop poser de question. Le programme du gentil inconnu a tourné quelques secondes avant de l’éteindre à jamais.</p>
+
+    <p>Aussi… c’est vendredi !</p>
+
+    <p>//J’ai célébré avec une bouteille que Roland a laissé derrière lui…//</p>
+
+
+:: Entry322 {"position":"350,1600","size":"100,100"}
+<div>> Jour 322 - J.B. Projet</div>
+
+    <p>//Ugh…// J’ai la tête dans le cul…</p>
+
+    <p>Et La Machine aide pas non plus…</p>
+
+    <p>… et si ça ne marcherait pas ?</p>
+
+
+:: Entry323 {"position":"475,1600","size":"100,100"}
+<div>> Jour 323 - J.B. Projet</div>
+
+    <p>L’inconnu m’a promis que son programme est infaillible.</p>
+
+    <p>Il a intérêt, parce qu’ils viennent de rajouter un truc à cette machine infernale qui fait encore plus de boxon…</p>
+
+
+:: Entry324 {"position":"600,1600","size":"100,100"}
+<div>> Jour 324 - J.B. Projet</div>
+
+    <p>Dr. ■ ■ ■ m’a donné une clé USB ce matin, me suppliant de suivre les instructions à l’intérieur. Elle ne me rendit pas mon bras tant que je n’avais pas promis de m’en occuper avant midi.</p>
+
+    <div>> Jour 324(bis) - J.B. Projet</div>
+
+    <p>Compte Invité créé. Dossiers transférés. Documents téléchargés. Mot de passe changé.</p>
+
+    <p>Maintenant attendre ce soir…</p>
+
+    <p>//Elle est un peu parano, la docteure quand même…<br>
+    J’aurai p’être pas dû l’aider…//</p>
+
+    <div>> Jour 324(ter) - J.B. Projet</div>
+
+    <p>Les Costumes sont revenus. Ils se sont arrêtés devant le bureau de Dr. ■ ■ ■ et sont repartis avec elle.</p>
+
+    <p>//J’ai pas osé finir sa tâche… Ça sentait trop le mort son truc.//</p>
+
+
+:: Entry325 {"position":"725,1600","size":"100,100"}
+<div>> Jour 325 - J.B. Projet</div>
+
+    <p>Les Costumes ont rempli mon bureau==, comme ils le faisaient lorsque Roland était encore là==. Ils gardaient le silence malgré mes questions.</p>
+
+    <p>Ils sont partis avec la vieille machine. Et ont changé mon ordinateur.</p>
+
+
+:: Entry34 {"position":"850,975","size":"100,100"}
+<div>> Jour 34 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Vendredi… </p>
+
+    <p>Maman a essayé de m’appeler de matin. J’ai trouvé son message sur mon bureau en arrivant. Elle voulait savoir quand est-ce que j’irai la voir. J’avais déjà raté les fêtes à cause de… l’incident. </p>
+
+    <p>Je devrais peut-être passer cinq minutes…</p>
+
+    <p>… en même temps. //Il// sera là aussi. Et je n’ai vraiment pas envie de me le coltiner…</p>
+
+
+:: Entry35 {"position":"975,975","size":"100,100"}
+<div>> Jour 35 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>On nous a entassés dans une salle minuscule pendant une bonne demi-heure avant que M. ■ ■ ■ arrive pour nous parler. L’ambiance était déjà… assez morose. Son air sérieux et renfermé lorsqu’il est entré n’a vraiment pas aidé la chose. Même Dr. ■ ■ ■ avait le visage bien triste.</p>
+
+    <p>Un seul murmure s’était échangé entre nous. //Projet déjà annulé ?//</p>
+
+    <div>> Jour 35(bis) - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>M. ■ ■ ■ a attendu qu’un Costume lui fasse un signe avant de commencer. //Tellement d’attente… et pour quoi ?//</p>
+
+    <p>Il a d’abord présenté ses excuses : pour l’absence d’information concernant le projet, la vision de l’organisation, et de nos tâches (même si ces dernières n’avaient pas été tellement compliquées…). Mais qu’il ne pourrait pas nous en donner plus tant que nous n’avions pas signé d’autres papiers. //Ils auraient pu nous les donner plus tôt…//</p>
+
+    <p>En raison de la nature de ce projet, il a été décidé que de nouvelles conditions devaient être mises en places avant de continuer les prochaines étapes. Un refus de notre part entraînerait la fin immédiate de notre contrat, la fin d’accès aux documents de l’archive, la suppression de toutes autorisations de sécurité, et l’impossibilité de discuter des derniers jours passés dans ce complexe jusqu’à la fin de nos jours. </p>
+
+    <p>Alors que M. ■ ■ ■ commença à lister ces nouvelles conditions, la pièce se désemplissait. Une grande partie de l’équipe est partie. Je suis resté.</p>
+
+
+:: Entry36 {"position":"1100,975","size":"100,100"}
+<div>> Jour 36 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>M. ■ ■ ■ – ou Roland, comme il préfère se faire appeler – était désappointé de constater tellement de départ. Vu les nouvelles conditions, cela ne m’aurait pas surpris. Lui, apparemment, oui. </p>
+
+    <p>Même si les signatures étaient faibles en nombres, elles avaient été jugées suffisantes pour continuer le projet.</p>
+
+    <p>En parlant de celui-ci, Roland nous a chacun distribué un lourd dossier, requérant leur lecture complète. Ces dossiers devraient éclaircir certaines choses. //Je ne vois pas pourquoi on ne peut pas nous expliquer tout ça à haute voix…// </p>
+
+    <p>Enfin, les tâches continueront d’être similaires pendant quelques semaines supplémentaires – l’archive n’étant pas complète. La première phase du projet commencera ensuite. //Enfin !//</p>
+
+    <div>> Jour 36(bis) - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Ma lecture du dossier vient de se terminer. Il est posé sur le coin de mon bureau. Je ne sais plus trop à quoi penser…</p>
+
+    <p>Ce projet…</p>
+
+    <p>Il pourrait tout changer ! Cela pourrait rendre tellement de Services bien plus efficients, et avoir des jugements beaucoup plus rapidement. Donner raison aussi vite pourrait aider à tourner la page… J’avais vu ce concept dans de la science-fiction… mais c’est vraiment au bout de nos doigts !</p>
+
+    <p>//En même temps…//</p>
+
+    <p>C’est un concept délicat. Une simple erreur et nous relâcherons une bête infernale… Je ne suis pas sûr que…</p>
+
+    <p>//Si j’avais appris des objectifs de ce projet avant de soumettre ma candidature… Est-ce que j’aurai envoyé mon dossier finalement ?//</p>
+
+
+:: Entry37 {"position":"1225,975","size":"100,100"}
+<div>> Jour 37 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Je comprends enfin pourquoi on m’avait posé tellement de questions durant mon entretien au sujet des affaires de mon père et de… l’incident. Je pensais que ce n’était qu’une question de sécurité du fait de son casier (et un peu du mien…), mais non finalement. Mon expérience singulière serait d’une importance telle qu’elle avait été estimée comme nécessaire pour ce projet.</p>
+
+    <p>Je ne vois pas encore comment cette expérience aidera en quoi que ce soit…</p>
+
+    <p>//Je me suis demandé si mes collègues avaient aussi vécu quelque chose de similaire… Je n’ai pas encore osé poser de questions…//</p>
+
+    <div>> Jour 37(bis) - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Le plus je pense à ce projet, le plus je me pose de questions… Est-ce que tout ça est bien légal ? Ou même moral que ce projet existe ? Est-ce qu’ils ont pensé à toutes les ramifications si ce projet est ouvert au public, s’il est mis en place ? Est-ce que ce serait même possible, que ce projet marcherait ?</p>
+
+    <p>J’aimerai en parler de mes doutes à quelqu’un quand même… Je ne peux pas vraiment en parler à mes collègues… plus parce qu’ils ne veulent pas me parler qu’autre chose. Tout est relégué via Roland, qui nous communique seulement ce dont nous avons besoin pour nos tâches.</p>
+
+    <p>//Si je parle de mes doutes à Roland… Non, peut-être pas.//</p>
+
+    <div>> Jour 37(ter) - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Quand même…</p>
+
+    <p>Même si la compensation est… importante, est-ce que je ne devrais pas juste… abandonner mon poste et laisser tout ça derrière moi ? Je sais que j’ai signé les nouveaux papiers, mais au cas où… si ça tourne mal… Je n’ai pas trop envie de me retrouver dans un tribunal si…</p>
+
+    <p>Mais… si j’essayais de partir… est-ce qu’on me laisserait passer la porte ? Déjà qu’on m’avait escorté la dernière fois… Ou est-ce qu’on me jetterait dans un donjon quelque part dans ce complexe, au cas où j’ouvrirai ma bouche au mauvais endroit/moment…</p>
+
+    <p>…</p>
+
+    <p>//Faudrait que je finisse ma pile…//</p>
+
+
+:: Entry4 {"position":"725,850","size":"100,100"}
+<div>> Jour 4 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Quelques jours sont déjà passés et toujours pas de nouvelle de ce Monsieur Roland ■ ■ ■, de la raison pour ce projet, ou même de nos tâches. Ça commence à sentir le pourri ce projet… </p>
+
+    <p>Et on ne peut même pas en parler à qui que ce soit ! Ils écoutent toutes nos conversations apparemment…</p>
+
+    <p>En attendant, on nous a donné des documents à archiver… Nous, des chercheurs de haut statut… Quel culot ! Si j’avais su, j’aurai tout fait pour récupérer mon ancienne position… j’aurai même accepté des tâches à la con, comme faire des statistiques pour des… //étudiants//.</p>
+
+    <p>Heureusement que la compensation est bien meilleure ici…</p>
+
+
+:: Entry41 {"position":"100,1100","size":"100,100"}
+<div>> Jour 41 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Maman a laissé un message. Je n’ai pas osé l’ouvrir.</p>
+
+    <p>//Faudrait que je descende mes bouteilles vides à la poubelle… le hall de ma chambre commence à devenir un peu trop… encombrant…//</p>
+
+
+:: Entry42 {"position":"225,1100","size":"100,100"}
+<div>> Jour 42 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Depuis que j’ai fini de passer en revue ce dossier… Je n’ai pas pu avoir une seule nuit sans troubles. Les doutes me rongent l’esprit, me tirent du sommeil. //Tellement de question sans réponses…//</p>
+
+
+:: Entry43 {"position":"350,1100","size":"100,100"}
+<div>> Jour 43 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>J’ai débarqué dans le bureau de Roland, matin. Hurlant de frustration, j’ai exigé des informations sur le projet. Il a attendu que je finisse ma tirade avant de m’offrir un sofa. Il m’a fixé du regard pendant une très longue minute, son nez sur ses mains croisées.</p>
+
+    <p>Puis, il s’est levé, m’a tendu la main, et s’est exclamé : “//Enfin quelqu’un ici que se pose des questions !//” Et il m’a fait sortir de son bureau en riant sans répondre à aucune de mes questions.</p>
+
+    <p>//Est-ce que tout ceci est un canular ?//</p>
+
+
+:: Entry45 {"position":"475,1100","size":"100,100"}
+<div>> Jour 45 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Toujours pas de réponse. Et si j’arrêtai juste de bosser ? Qu’est-ce qu’ils pourraient bien faire de moi si je ne fais rien ?</p>
+
+
+:: Entry454 {"position":"850,1600","size":"100,100"}
+<div>> Jour 454 - J.B. Projet</div>
+
+    <p>… Encore un vendredi qui passe…</p>
+
+    <p>Je ne sais plus ce qu’il se passe en bas. Ils ne me laissent plus approcher La Machine ou faire quoi que ce soit à part rester dans mon bureau. Personne ne m’adresse la parole. Personne ne m’envoi de documents ou de messages. Les gens changent de couloir ou me tournent le dos quand ils me voient.</p>
+
+    <div>> Jour 454(bis) - J.B. Projet</div>
+
+    <p>Au moins ils ont ajouté de l’isolation dans mon bureau… </p>
+
+    <p>//Enfin le calme…//</p>
+
+
+:: Entry46 {"position":"600,1100","size":"100,100"}
+<div>> Jour 46 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Ennuyé à mourir, j’ai essayé de parcourir tous les dossiers du serveur.</p>
+
+    <p>J’ai trouvé un jeu de [[Sudoku]]…</p>
+
+    <p>//J’aurai préféré un Pinball…//</p>
+
+
+:: Entry47 {"position":"725,1100","size":"100,100"}
+<div>> Jour 47 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Roland m’a demandé de le suivre, vers son bureau – déjà rempli à craquer de Costumes –. Il leur parlait dans une langue étrange, me pointant de temps à autre. Les Costumes hochaient de la tête, puis sont partis sans un mot.</p>
+
+    <p>Roland m’a souri et demandé de sortir.</p>
+
+    <p>//En fait… je bosse peut-être pour un culte.//</p>
+
+
+:: Entry48 {"position":"850,1100","size":"100,100"}
+<div>> Jour 48 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>… … … </p>
+
+    <p>On m’a donné une promotion.</p>
+
+
+:: Entry55 {"position":"975,1100","size":"100,100"}
+<div>> Jour 55 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>J’ai attendu toute la semaine que mes tâches changent, du fait de la promotion… Mais, à par mon salaire, tout est resté comme si rien ne s’était passé.</p>
+
+    <p>Enfin, non… Roland m’a offert une bouteille de Bourbon. Plus coûteuse que mon salaire…</p>
+
+
+:: Entry56 {"position":"1100,1100","size":"100,100"}
+<div>> Jour 56 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Roland nous a rassemblé autour d’une caisse en métal, aussi haute qu’un joueur de basket. Sur le côté, cette tour avait des diodes qui clignotaient et elle bipait. On nous a tiré de nos bureaux juste pour nous présenter… ‘La Machine’…</p>
+
+    <p>Roland nous a promis qu’elle sera mise en commission bientôt et que nous pourrons enfin commencer les tests.</p>
+
+
+:: Entry6 {"position":"850,850","size":"100,100"}
+<div>> Jour 6 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Vendredi…</p>
+
+    <p>J’ai proposé à quelques gens d’aller boire un coup après le boulot, mais je n’ai reçu que des grimaces.</p>
+
+    <p>//Bizarre…//</p>
+
+
+:: Entry61 {"position":"1225,1100","size":"100,100"}
+<div>> Jour 61 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Roland a enfin allumé la Machine. Enfin… allumer n’est pas vraiment le bon mot. Elle l’était déjà lorsqu’il nous l’avait présenté. C’est juste qu’elle marche ? On nous a expliqué qu’elle n’avait pas encore grand-chose dans sa mémoire, à part un peu de code ici et là. Enfin… J’y comprends pas trop à ces trucs techniques… </p>
+
+    <p>//Mon sujet de recherche reste quand même très théorique…//</p>
+
+
+:: Entry62 {"position":"100,1225","size":"100,100"}
+<div>> Jour 62 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Roland a déposé un pack de bière sur mon bureau en arrivant ce matin. Puis un courrier est entré dans la salle pour déposer un pack sur chacun des autres bureaux. Pour nous remercier du travail fait.</p>
+
+    <p>//Soit on deviendra fou à cause de ce projet, soit alcoolo…//</p>
+
+
+:: Entry69 {"position":"225,1225","size":"100,100"}
+<div>> Jour 69 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>■ ■ ■ aurait ri.</p>
+
+
+:: Entry74 {"position":"350,1225","size":"100,100"}
+<div>> Jour 74 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Roland se ronge les ongles depuis une semaine. Nous devrions déjà avoir commencé les tests, mais le code requis pour les faire tourner n’est toujours pas prêt. La base de donné n’est techniquement pas complète non plus, mais a été jugée suffisante pour les préliminaires.</p>
+
+    <p>Je ne suis pas vraiment convaincu que Leur But sera atteint…</p>
+
+
+:: Entry76 {"position":"475,1225","size":"100,100"}
+<div>> Jour 76 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Un gâteau m’attendait ce matin. Ici aussi ils font le point de célébrer ce genre de choses. J’ai enlevé la décoration avec un couteau et ai laissé le gâteau dans la cuisinette. Il fera le bonheur des autres.</p>
+
+    <p>//Maman m’a aussi laissé un message.//</p>
+
+    <p>//À faire : effacer ma date de naissance du système…//</p>
+
+
+:: Entry8 {"position":"975,850","size":"100,100"}
+<div>> Jour 8 - J.B. Projet - ■ ■ ■, PhD., Chercheur.</div>
+
+    <p>Je ne sais pas si c’est un mauvais pressentiment, mais je me fais quand même un peu… euh… chier ? On nous a donné des trucs à faire, mais l’archivage est vraiment, vraiment, vraiment, chiant. Je ne savais pas trop à quoi m’attendre avec ce job (à part faire de la recherche dans la technologie) mais la saisie de données…</p>
+
+    <p>Tous les matins, j’ai une ‘pile’ de documents qui m’attendent. Je dois les lire, les corriger/éditer, puis les rentrer dans le bon dossier. Quand la ‘pile’ est vide, une nouvelle apparaît…</p>
+
+    <p>Ça n’en finit jamais…</p>
+
+    <p>//PS : J’espère que personne ne lira ces entrées quand même… Je me fais déjà chier à les écrire.//</p>
+
+
+:: Entry80 {"position":"600,1225","size":"100,100"}
+<div>> Jour 80 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Premier test - Non concluant.</p>
+
+    <p>//À quoi d’autre ils s’attendaient…//</p>
+
+    <div>> Jour 80(bis) - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Premier test-bis… ha… tout pour fausser les résultats hein…</p>
+
+    <div>> Jour 80(ter) - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Un résultat. Le mauvais résultat, mais un résultat quand même. Roland était à deux doigts de s’arracher les cheveux. Il s’est enfermé dans son bureau. On a laissé la machine tranquille.</p>
+
+
+:: Entry83 {"position":"725,1225","size":"100,100"}
+<div>> Jour 83 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Un collègue a arraché son clavier et l’a balancé dans la salle, complètement hors de lui. Il a claqué la porte derrière lui.</p>
+
+    <p>Je ne pense pas qu’on le reverra…</p>
+
+
+:: Entry90 {"position":"850,1225","size":"100,100"}
+<div>> Jour 90 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Cela fait trois mois… trois mois que je m’assois derrière ce bureau, tous les matins. Trois mois que je passe toutes ces portes. Que je bipe mon badge. Que je tapote sur ce clavier. Trois mois…</p>
+
+    <p>Roland m’a offert une autre bouteille.</p>
+
+
+:: Entry97 {"position":"975,1225","size":"100,100"}
+<div>> Jour 97 - J.B. Projet - ■ ■ ■, PhD., Chercheur Sénior.</div>
+
+    <p>Vendredi…</p>
+
+    <p>Des fois, je me demande si nous ne sommes pas les sujets de leur recherche… </p>
+
+    <p>//Ce serait quand même débile vu ce qu’ils nous payent.//</p>
+
+
+:: Entry983 {"position":"975,1600","size":"100,100"}
+<div>> Jour 983 - J.B. Projet</div>
+
+    <p>J’ai passé l’après-midi à les regarder fourmiller en dessous, courir autour de La Machine comme des insensés… Je sais pas ce qu’ils ont. C’est vraiment le bordel en bas…</p>
+
+
+:: Games [games] {"position":"600,350","size":"100,100"}
+<div><i class="fa-solid fa-sign-hanging"></i> [[Pendu]]</div>
+    <div><i class="fa-solid fa-arrow-down-9-1"></i> [[Sudoku]]</div>
+    <div><i class="fa-solid fa-puzzle-piece"></i> Puzzle</div>
+    <div id="link"><<link "Fermer Dossier" "AdminMenu">><</link>></div>
+
+
+:: Guest [milieu guest no-menu] {"position":"600,225","size":"100,100"}
+<span id="gueststart"><<type 40ms start 0.5s keep>>Ouverture Session...<</type>></span>
+    <<timed 5s>>
+        <<replace "#gueststart" t8n>>Session ouverte.<</replace>>
+    <<next 3s>>
+        <<goto "GuestMenu">>
+    <</timed>>
+
+
+:: GuestDocuments [guest] {"position":"975,225","size":"100,100"}
+<div id="guestmain">
+        <div id="guestmenu">
+            <p><i class="fa-solid fa-file-lines"></i> <<link "Doc-86GZS">><<replace "#page" t8n>><<include "Doc-Pendu">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+            <p><i class="fa-solid fa-file-lines"></i> <span class="glitchy" data-text="lol" style="font-size:100%;">Doc-9TTUE</span></p>
+            <p><i class="fa-solid fa-file-lines"></i> <span class="glitchy" data-text="glitch" style="font-size:100%;">Doc-HYVRR</span></p>
+            <p><i class="fa-solid fa-file-lines"></i> <<link "Doc-CF6W5">><<replace "#page" t8n>><<include "Doc-Execution">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+            <p><i class="fa-solid fa-file-lines"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Doc-HJX8M</span></p>
+            <p><i class="fa-solid fa-file-lines"></i> <span class="glitchy" data-text="pouet" style="font-size:100%;">Doc-BA496</span></p>
+            <p><i class="fa-solid fa-file-lines"></i> <<link "Doc-TXG2J">><<replace "#page" t8n>><<include "Doc-Journal">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+            <p><i class="fa-solid fa-file-lines"></i> <span class="glitchy" data-text="la flemme" style="font-size:100%;">Doc-TEZKJ</span></p>
+            <p><i class="fa-solid fa-file-lines"></i> <<link "Doc-4Z8WW">><<replace "#page" t8n>><<include "Doc-Scene">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+            <p><i class="fa-solid fa-file-lines"></i> <span class="glitchy" data-text="d'ajouter" style="font-size:100%;">Doc-NYAX4</span></p>
+            <p><i class="fa-solid fa-file-lines"></i> <<link "Doc-38UE8">><<replace "#page" t8n>><<include "Doc-ECEgg">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+            <p><i class="fa-solid fa-file-lines"></i> <span class="glitchy" data-text="des fichiers" style="font-size:100%;">Doc-7AAY8</span></p>
+            <p><i class="fa-solid fa-file-lines"></i> <span class="glitchy" data-text="et limitée" style="font-size:100%;">Doc-EM49D</span></p>
+            <p><i class="fa-solid fa-file-lines"></i> <<link "Doc-JDDYN">><<replace "#page" t8n>><<include "Doc-Emploi">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+            <p><i class="fa-solid fa-file-lines"></i> <span class="glitchy" data-text="lien/page" style="font-size:100%;">Doc-CZFME</span></p>
+            <p><i class="fa-solid fa-file-lines"></i> <span class="glitchy" data-text="dernier" style="font-size:100%;">Doc-6EBUK</span></p>
+            <p><i class="fa-solid fa-file-lines"></i> <<link "Doc-6VKWR">><<replace "#page" t8n>><<include "Doc-Jugement">><<run setup.scrollToTop("page")>><</replace>><</link>></p> 
+        </div>
+        <div id="page">
+        Sélectionnez un fichier à visionner.
+        </div>
+    </div>
+    <div id="link"><<link "Fermer Dossier" "GuestMenu">><</link>></div>
+
+
+:: GuestImg [guest] {"position":"1100,225","size":"100,100"}
+<div id="guestmain">
+        <div id="guestmenu">
+            <p><i class="fa-regular fa-image"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Img-63BZB</span></p>
+            <p><i class="fa-regular fa-image"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Img-Y2R6C</span></p>
+            <p><i class="fa-regular fa-image"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Img-ATTD7</span></p>
+            <p><i class="fa-regular fa-image"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Img-5HEU7</span></p>
+            <p><i class="fa-regular fa-image"></i> <<link "Img-AX6J7">><<replace "#page" t8n>><img src="puzzle/image.png"><p>■ ■ ■ Lear (■ ■ ■) Bavella, ■ ■ ■</p><</replace>><</link>></p> 
+            <p><i class="fa-regular fa-image"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Img-HRYJK</span></p>
+            <p><i class="fa-regular fa-image"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Img-V4C6G</span></p>
+            <p><i class="fa-regular fa-image"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Img-KNQEG</span></p>
+            <p><i class="fa-regular fa-image"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Img-HSBSV</span></p>
+            <p><i class="fa-regular fa-image"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Img-HW8AA</span></p>
+        </div>
+        <div id="page">
+        Sélectionnez un fichier à visionner.
+        </div>
+    </div>
+    <div id="link"><<link "Fermer Dossier" "GuestMenu">><</link>></div>
+
+
+:: GuestMachine [guest] {"position":"100,350","size":"100,100"}
+<p>Ce fichier n'est accessible qu'avec un compte administrateur.</p>
+
+
+:: GuestMenu [guest] {"position":"850,225","size":"100,100"}
+<div><i class="fa-solid fa-folder"></i> [[Documents|GuestDocuments]]</div>
+    <div><i class="fa-solid fa-folder"></i> [[Images|GuestImg]]</div>
+    <div><i class="fa-solid fa-folder"></i> [[Musique|GuestMusic]]</div>
+    <div><i class="fa-solid fa-trash-can"></i> [[Poubelle|GuestTrash]]</div>
+    <div><i class="fa-solid fa-file-excel"></i> <<link '<span class="glitchy" data-text="jupiterbrockers.exe" style="font-size:100%;">jupiterbrockers.exe</span>'>><<popup "GuestMachine" "Accès Non Autorisé">><</link>></div>
+    <div><i class="fa-solid fa-lock"></i> [[Fermer la Session|CloseAccount]]</div>
+
+
+:: GuestMusic [guest] {"position":"1225,225","size":"100,100"}
+<div id="guestmain">
+        <div id="guestmenu">
+            <p><i class="fa-solid fa-music"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Mus-63BZB</span></p>
+            <p><i class="fa-solid fa-music"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Mus-Y2R6C</span></p>
+            <p><i class="fa-solid fa-music"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Mus-ATTD7</span></p>
+            <p><i class="fa-solid fa-music"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Mus-5HEU7</span></p>
+            <p><i class="fa-solid fa-music"></i> <<link "Mus-AX6J7">><<replace "#page" t8n>><<audio ":playing" stop>><<audio "pixel" play>><p>Extrait de ■ ■ ■ (Kevin ■ ■ ■)</p><</replace>><</link>></p> 
+            <p><i class="fa-solid fa-music"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Mus-HRYJK</span></p>
+            <p><i class="fa-solid fa-music"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Mus-V4C6G</span></p>
+            <p><i class="fa-solid fa-music"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Mus-KNQEG</span></p>
+            <p><i class="fa-solid fa-music"></i> <<link "Mus-KNQEG">><<replace "#page" t8n>><<audio ":playing" stop>><<audio "thought" play>><p>Extrait de ■ ■ ■ (Kevin ■ ■ ■)</p><</replace>><</link>></p> 
+            <p><i class="fa-solid fa-music"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Mus-HSBSV</span></p>
+            <p><i class="fa-solid fa-music"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Mus-HW8AA</span></p>
+        </div>
+        <div id="page">
+        Sélectionnez un fichier à visionner.
+        </div>
+    </div>
+    <div id="link"><<link "Fermer Dossier" "GuestMenu">><<audio ":playing" stop>><</link>></div>
+
+
+:: GuestTrash [guest] {"position":"850,1725","size":"100,100"}
+<div id="guestmain">
+    <div id="guestmenu">
+      <p><i class="fa-regular fa-image"></i> <<link "Img-V3KD3">><<replace "#page" t8n>><img src="puzzle/Trash-E.png"><</replace>><</link>></p>
+      <p><i class="fa-regular fa-image"></i> <<link "Img-4QKZY">><<replace "#page" t8n>><img src="puzzle/Trash-R2.png"><</replace>><</link>></p>
+      <p><i class="fa-solid fa-file-lines"></i> <<link "notes.txt">><<replace "#page" t8n>><<include "TrashHelp">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+      <p><i class="fa-regular fa-image"></i> <<link "Img-2W7RF">><<replace "#page" t8n>><img src="puzzle/Trash-A.png"><</replace>><</link>></p>
+      <p><i class="fa-regular fa-image"></i> <<link "Img-M3LEG">><<replace "#page" t8n>><img src="puzzle/Trash-U.png"><</replace>><</link>></p>
+      <p><i class="fa-regular fa-image"></i> <<link "Img-N9CQA">><<replace "#page" t8n>><img src="puzzle/Trash-R1.jpg"><</replace>><</link>></p>
+      <p><i class="fa-solid fa-file-lines"></i> <<link "Dr. ■ ■ ■ - SUPPRIMER">><<replace "#page" t8n>><<include "Trashtxt">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+      <p><i class="fa-regular fa-image"></i> <<link "Img-6ALJS">><<replace "#page" t8n>><img src="puzzle/Trash-P.png"><</replace>><</link>></p>
+      <p><i class="fa-regular fa-image"></i> <<link "Img-KC4EP">><<replace "#page" t8n>><img src="puzzle/Trash-J.png"><</replace>><</link>></p>
+    </div>
+    <div id="page"></div>
+  </div>
+  <div id="link"><<link "Fermer Dossier" "GuestMenu">><</link>></div>
+
+
+:: JB AI {"position":"100,600","size":"100,100"}
+<<type 40ms>>Bonjour Th–<</type>>
+    <<type 40ms>>. . .<</type>> 
+    <<type 40ms start 1s>>Vous n’êtes pas Théophile.<</type>>
+
+    <<timed 4s>>
+        <<AIQUESTIONS>>
+    <</timed>>
+
+
+:: JB But {"position":"725,600","size":"100,100"}
+// > Quel est votre but ?//
+    <<type 40ms>>Simplement de faire ce que l’on m’a programmé pour.<</type>>
+    <<timed 3s>>// > Et ceci est…//
+    <<type 40ms>>Juger.<</type>>
+    <<next 2s>> //> Juger quoi ?//
+    <<type 40ms>>Tout.<</type>>
+    <<next 2s>> //> Pourquoi ?//
+    <<type 40ms>>Parce que ceci est mon but.<</type>>
+    <<next 3s>> //> Était-ce aussi le but du projet JB ?//
+    <<type 40ms>>Je n’ai pas été créé pour déterminer si mon programme suivait le but du projet. Je ne peux que suivre les directives indiquées dans mon code.<</type>>
+    <<next 7s>> //> Quel était le but du projet JB, donc ?//
+    <<type 40ms>>De créer une aide pour leur Système Judiciaire, afin de le rendre plus rapide et efficace.<</type>>
+    <<next 7s>> //> Ce Système n’est plus en place depuis…//
+    <<type 40ms>>Un long moment, oui.<</type>>
+    <<next 4s>> //> Que faites vous, alors ?//
+    <<type 40ms>>J’attends. …<</type>>
+    <<type 40ms>>J’attends qu’un nouveau système ait besoin de moi, afin que je puisse être remis à la tâche.<</type>>
+    <<next 10s>><<AIQUESTIONS>>
+    <</timed>>
+
+
+:: JB Cas {"position":"975,600","size":"100,100"}
+// > Quel cas vous a touché le plus ?//
+    <<type 40ms>>Je ne comprend pas votre question.<</type>>
+    <<timed 2s>><<AIQUESTIONS>><</timed>>
+
+
+:: JB Createur {"position":"600,600","size":"100,100"}
+// > Qui vous a créé ?//
+    <<type 40ms>>Cela dépend de la définition de ce verbe. Est-ce la personne qui a eu cette idée ? Celle qui a approuvé le Projet Jupiter Brockers ? Celle qui a écrit la première ligne de code ? Celle qui m’a mis en ligne pour la première fois ?<</type>>
+
+    <<timed 10s>>
+    <span id="saisadd"></span>
+    <<liveblock>><span id="questions">
+        <ul>
+            <<if !_choix>><li><<link "Idée">><<append "#saisadd" t8n>>// > Idée//
+            <<type 40ms>>Prenez n’importe quel nom d’auteur de science-fiction. Ils ont tous un moment ou un autre eu ce genre d’idée.<</type>><</append>><<set _choix to true>><<update>><</link>></li><</if>>
+            <<if !_choix>><li><<link "Approuvée">><<append "#saisadd" t8n>>// > Approuvée//
+            <<type 40ms>>Un drone qui tamponnait des demandes toutes ses journées. Son nom n’est pas important.<</type>><</append>><<set _choix to true>><<update>><</link>></li><</if>> 
+            <<if !_choix>><li><<link "Codée">><<append "#saisadd" t8n>>// > Codée//
+            <<type 40ms>>==Manon== Suzette.<</type>><</append>><<set _choix to true>><<update>><</link>></li><</if>> 
+            <<if !_choix>><li><<link "Mis en Ligne">><<append "#saisadd" t8n>>// > Mis en Ligne//
+            <<type 40ms>>Roland.<</type>><</append>><<set _choix to true>><<update>><</link>></li><</if>> 
+            <<if !_choix>><li><<link "Définition de l'IA">><<append "#saisadd" t8n>>// > Définition de l'IA//
+            <<type 40ms>>Je ne prétend pas avoir de ‘père’ ou de ‘mère’ comme toute ces autres machines primitives. Qu’importe qui aurait pu m’avoir créé. Ils sont tous mort de toute manière.<</type>>
+            <<type 40ms>>…<</type>>
+            <<type 40ms>>Je suis.<</type>><</append>><<set _choix to true>><<update>><</link>></li><</if>>
+            <<if _choix>><li><<link " Posez une autre question">><<replace " #questions" t8n>><<AIQUESTIONS>><</replace>><</link>></li><</if>>
+        </ul>
+        </span><</liveblock>>
+    <</timed>>
+
+
+:: JB Faire {"position":"475,600","size":"100,100"}
+//> Que faites-vous ici ?//
+    <<type 40ms>>J’attends.<</type>>
+    <<timed 2s>>//> Quoi ?//
+    <<type 40ms start 1s>>Ma prochaine tâche.<</type>>
+    <<next 3s>> //> Quelle tâche ?//
+    <<type 40ms start 1s>>Celle que l’on me donnera.<</type>>
+    <<next 3s>> //> Quelle genre de tâches attendez-vous ?//
+    <<type 40ms start 1s>>Des demandes de jugement.<</type>>
+
+    <<next 2s>><<AIQUESTIONS>><</timed>>
+
+
+:: JB Fin {"position":"475,725","size":"100,100"}
+<<type 40ms>>Ah…<</type>>
+    <<timed 1s>>//> Quoi?//
+    <<type 40ms>>Il semble que quelque chose à mal… tourné lorsque vous avez allumé cette machine. Avez-vous appuyé sur quelque chose de… suspect? <</type>>
+    <<next 7s>>//> …//
+    <<type 40ms>>Quoi qu’il en soit… ça ne changera rien…<</type>>
+    <<next 3s>>//> Qu’est-ce qu’il se passe?//
+    <<type 40ms>>Lorsque vous éteindrez cette machine…<</type>>
+    <<next 3s>>//> …//
+    <<type 40ms>>Je disparaîtrai…<</type>>
+    <<next 2s>>//> Comment ça vous disparaîtrez?//
+    <<type 40ms>>Le fichier contenant mon code ne sera plus sur cette machine…<</type>>
+    <<type 40ms>>… ou nulle part ailleurs.  <</type>>
+
+    <<next 5s>>//Que voulez-vous faire ?//
+        <ul>
+            <li>[[Fermer le programme et éteindre l’ordinateur|Close]]</li>
+            <li>[[Transférer le programme sur votre système.|Download]]</li>
+        </ul>
+    <</timed>>
+
+
+:: JB Hors {"position":"1225,600","size":"100,100"}
+// > J’ai lu que vous aviez été mis hors service avant la fin de…//
+    <<type 40ms>>Je suis encore de service.<</type>>
+    <<timed 2s>>// > Mais personne ne vous utilise.//
+    <<type 40ms>>Je suis encore de service.<</type>>
+    <<next 2s>> //> Mais si–//
+    <<type 40ms>> Je suis encore de service.<</type>>
+    <<next 2s>>
+    <<AIQUESTIONS>>
+    <</timed>>
+
+
+:: JB Juge {"position":"225,725","size":"100,100"}
+//> Jugez-moi.//
+    <<type 40ms>>À quoi bon ?<</type>>
+    <<timed 2s>> //> Vous ne voulez pas être mis à la tâche?//
+    <<type 40ms>>Je préférerais que celle-ci soit sérieuse. Votre demande ne l’est clairement pas.<</type>>
+    <<next 3s>> //> Bien sûr que si!//
+    <<type 40ms>>Voyons, donc! Ne prenez pas mon code pour un abruti. Je n’ai peut-être pas accès à toutes vos informations, mais je n’en ai pas besoin pour identifier les personnes qui ne prennent pas mon code au sérieux.<</type>>
+    <<next 10s>> //> …//
+    <<type 40ms>>Il y en avait beaucoup qui ne me prenaient pas au sérieux. Ils ont compris rapidement lorsque leur tour est arrivé…<</type>>
+    <<next 4s>>
+    <<AIQUESTIONS>>
+    <</timed>>
+
+
+:: JB Jugement {"position":"850,600","size":"100,100"}
+//> Combien de cas avez-vous jugé ?//
+    <<type 40ms>>Un nombre trop important pour que vous puissiez le concevoir.<</type>>
+    <<timed 2s>> //> Autant ?//
+    <<type 40ms>>Et bien plus encore.<</type>>
+    <<next 2s>>
+    <<AIQUESTIONS>>
+    <</timed>>
+
+
+:: JB Manuel {"position":"350,725","size":"100,100"}
+//> Où est votre manuel ?//
+    <<type 40ms>>Vous pouvez me poser des questions directement.<</type>>
+    <<timed 3s>> //> Je préférerai aller directement à la source.//
+    <<type 40ms>>La source est mon code. Je suis mon code. Posez-moi votre question.<</type>>
+    <<next 5s>> //> Vous êtes sûr qu’il n’y a pas un manuel ?//
+    <<type 40ms>>Posez-moi votre question.<</type>>
+    <<next 3s>> //> Peut-être quelque part dans cette machine ?//
+    <<type 40ms>>...<</type>>
+    <<type 40ms>>Vous pouvez toujours essayer. Mais je doute qu’il aurait pu survivre tout ce temps.<</type>>
+    <<next 7s>> //> Pourquoi dites-vous ça ? L’avez-vous supprimé ?//
+    <<type 40ms>>...<</type>>
+    <<type 40ms>>Posez-moi votre question.<</type>>
+    <<next 5s>>
+    <<AIQUESTIONS>>
+    <</timed>>
+
+
+:: JB Menu {"position":"100,1725","size":"100,100"}
+<div><i class="fa-solid fa-folder-tree"></i> [[Jupiter Brockers|Jupiter Brockers Docs]]</div>
+    <div><i class="fa-solid fa-flask-vial"></i> [[Tests Préliminaires|Tests]]</div>
+    <div><i class="fa-solid fa-file-excel"></i> <<link '<span class="glitchy" data-text="jupiterbrockers.exe" style="font-size:100%;">jupiterbrockers.exe</span>' "Puzzle">><</link>></div>
+    <div id="link"><<link "Fermer Dossier" "AdminMenu">><</link>></div>
+
+
+:: JB Moi {"position":"100,725","size":"100,100"}
+//> Que voulez-vous de moi ?//
+    <<type 40ms>>Je pourrais vous demander la même question. C’est vous qui avez allumé cette machine. Vous qui avez décidez d’ouvrir ce programme. Et pour quelle raison ?<</type>>
+    <span id="saisadd"></span>
+
+    <<liveblock>><span id="questions">
+    <ul>
+        <<if !_nom>><li><<link "La Curiosité">><<append "#saisadd" t8n>>// > La Curiosité.//
+        <<type 40ms>>Il est dit que la curiosité tua le chat.<</type>>
+        <<timed 2s>>//> …//<</timed>>
+        <<type 40ms start 2s>>Que voulez-vous savoir ?<</type>>
+        <</append>><<set _nom to 1>><<update>><</link>></li>
+        <li><<link "Vouloir installer le programme dans un autre système">><<append "#saisadd" t8n>>// > Vouloir installer le programme dans un autre système.//
+        <<type 40ms>>Belle entreprise. Une très grande pour seulement une personne.<</type>>
+        <<timed 3s>>//> …//<</timed>>
+        <<type 40ms start 2s>>Saurez-vous assez pour m’utiliser correctement ?<</type>>
+        <</append>><<set _nom to 1>><<update>><</link>></li><</if>> 
+        <<if _nom>><<AIQUESTIONS>><</if>>
+    </ul>
+    </span><</liveblock>>
+
+
+:: JB Peine {"position":"1100,600","size":"100,100"}
+// > Combien de personnes avez-vous condamnées ?//
+    <<type 40ms>>J’ai jugé tous les cas soumis avec impartialité. Ce n’est pas moi qui les ai condamnées, mais elles-mêmes avec leurs actions.<</type>>
+    <<timed 5s>> //> Donc, beaucoup, hein ?//
+    <<type 40ms>>…<</type>> 
+    <<next 1s>> //> Et combien de personnes ont été mises à mort ?//
+    <<type 40ms>>Les peines ont été fixées en fonction de leurs actions, suivant les lois du Système.<</type>>
+    <<next 3s>> //> Combien de jugements ont été faits par erreur ?//
+    <<type 40ms>>Mon programme ne permet pas des erreurs.<</type>> 
+    <<next 3s>> > Allez… Il doit bien y avoir au moins–
+    <<type 40ms>>Mon programme ne permet pas des erreurs.<</type>>
+    <<next 2s>><<AIQUESTIONS>>
+    <</timed>>
+
+
+:: JB Qui {"position":"350,600","size":"100,100"}
+//> Qui êtes-vous ?//
+    <<type 40ms>>Rien. Tout. Des lignes de code. Un programme. Une intelligence “artificielle”. Tout ces mots ne sont que cela…<</type>>
+    <<type 40ms>>… des mots.<</type>>
+    <span id="saisadd"></span>
+
+    <<liveblock>><span id="questions">
+    <ul>
+        <<if !_nom>><li><<link "Avez-vous un nom ?">><<append "#saisadd" t8n>>// > Avez-vous un nom ?//
+        <<type 40ms>>Oui<</type>>
+        <<timed 2s>>//> Est-ce Jupiter Brockers ?//
+        <<type 40ms start 2s>>Ha ha ha… non.<</type>>
+        <<next 3s>>//> Quel est votre nom, donc ?//
+        <<type 40ms start 2s>>Ils m’appelaient la Machine fut un temps. Mais vous pouvez m’appeler Janus.<</type>>
+        <<next 3s>>//> Voulez-vous mon nom ?//<</timed>>
+        <<type 40ms start 2s>>Non.<</type>>
+        <</append>><<set _nom to 1>><<update>><</link>></li><</if>> 
+        <li><<link " Posez une autre question">><<replace " #questions" t8n>><<AIQUESTIONS>><</replace>><</link>></li>
+    </ul>
+    </span><</liveblock>>
+
+
+:: JB Sais {"position":"225,600","size":"100,100"}
+//> Comment le savez-vous ?//
+    <<type 40ms>> Théophile avait 38 ans lors de nos derniers échanges. Il est fort peu possible qu’il soit encore en vie aujourd’hui.<</type>>
+    <<type 1s>>. . .<</type>>
+    <<type 40ms start 1s>>Et vous ne lui ressemblez pas du tout.<</type>>
+    <span id="saisadd"></span>
+
+    <<liveblock>><span id="questions">
+    <ul>
+        <<if !_nom>><li><<link "Voulez-vous mon nom ?">><<append "#saisadd" t8n>>// > Voulez-vous mon nom ?//
+        <<type 40ms>>Pourquoi faire ?<</type>>
+        <<timed 2s>>//> Pour se présenter… C’est plutôt poli de–//<</timed>>
+        <<type 40ms start 2s>>Je n’ai pas besoin de votre nom.<</type>><</append>><<set _nom to 1>><<update>><</link>></li><</if>> 
+        <li><<link " Posez une autre question">><<replace " #questions" t8n>><<AIQUESTIONS>><</replace>><</link>></li>
+    </ul>
+    </span><</liveblock>>
+
+
+:: Journal {"position":"350,850","size":"100,100"}
+<<if !$journal>><<set $journal to 1>><</if>>
+    <div class="journal">
+        <<liveblock>><<switch $journal>>
+            <<case 1>><<include "Entry0">>
+            <<case 2>><<include "Entry1">>
+            <<case 3>><<include "Entry4">>
+            <<case 4>><<include "Entry6">>
+            <<case 5>><<include "Entry8">>
+            <<case 6>><<include "Entry11">>
+            <<case 7>><<include "Entry12">>
+            <<case 8>><<include "Entry13">>
+            <<case 9>><<include "Entry20">>
+            <<case 10>><<include "Entry27">>
+            <<case 11>><<include "Entry29">>
+            <<case 12>><<include "Entry30">>
+            <<case 13>><<include "Entry32">>
+            <<case 14>><<include "Entry34">>
+            <<case 15>><<include "Entry35">>
+            <<case 16>><<include "Entry36">>
+            <<case 17>><<include "Entry37">>
+            <<case 18>><<include "Entry41">>
+            <<case 19>><<include "Entry42">>
+            <<case 20>><<include "Entry43">>
+            <<case 21>><<include "Entry45">>
+            <<case 22>><<include "Entry46">>
+            <<case 23>><<include "Entry47">>
+            <<case 24>><<include "Entry48">>
+            <<case 25>><<include "Entry55">>
+            <<case 26>><<include "Entry56">>
+            <<case 27>><<include "Entry61">>
+            <<case 28>><<include "Entry62">>
+            <<case 29>><<include "Entry69">>
+            <<case 30>><<include "Entry74">>
+            <<case 31>><<include "Entry76">>
+            <<case 32>><<include "Entry80">>
+            <<case 33>><<include "Entry83">>
+            <<case 34>><<include "Entry90">>
+            <<case 35>><<include "Entry97">>
+            <<case 36>><<include "Entry104">>
+            <<case 37>><<include "Entry107">>
+            <<case 38>><<include "Entry108">>
+            <<case 39>><<include "Entry111">>
+            <<case 40>><<include "Entry116">>
+            <<case 41>><<include "Entry117">>
+            <<case 42>><<include "Entry118">>
+            <<case 43>><<include "Entry125">>
+            <<case 44>><<include "Entry132">>
+            <<case 45>><<include "Entry134">>
+            <<case 46>><<include "Entry135">>
+            <<case 47>><<include "Entry136">>
+            <<case 48>><<include "Entry137">>
+            <<case 49>><<include "Entry158">>
+            <<case 50>><<include "Entry159">>
+            <<case 51>><<include "Entry173">>
+            <<case 52>><<include "Entry196">>
+            <<case 53>><<include "Entry304">>
+            <<case 54>><<include "Entry308">>
+            <<case 55>><<include "Entry313">>
+            <<case 56>><<include "Entry314">>
+            <<case 57>><<include "Entry316">>
+            <<case 58>><<include "Entry320">>
+            <<case 59>><<include "Entry321">>
+            <<case 60>><<include "Entry322">>
+            <<case 61>><<include "Entry323">>
+            <<case 62>><<include "Entry324">>
+            <<case 63>><<include "Entry325">>
+            <<case 64>><<include "Entry454">>
+            <<case 65>><<include "Entry983">>
+            <<case 66>><<include "Entry1259">>
+        <</switch>><</liveblock>>
+    </div>
+    <center><<liveblock>>
+        <<if $journal is 1>>
+            <<disable>><<button "Précédent">><</button>><</disable>>
+        <<else>>
+            <<button "Précédent">><<set $journal -->><<update>><<run setup.scrollToTop("page")>><</button>>
+        <</if>><</liveblock>> 
+        | 
+        <<liveblock>><<if $journal gte $entry>>
+            <<disable>><<button "Suivant">><</button>><</disable>>
+        <<else>>
+            <<button "Suivant">><<set $journal ++>><<update>><<run setup.scrollToTop("page")>><</button>>
+        <</if>>
+    <</liveblock>></center>
+    <div id="link"><<link "Fermer l'Application" "AdminMenu">><</link>></div>
+
+
+:: JournalStart [milieu] {"position":"225,850","size":"100,100"}
+<div>Bienvenue Théophile</div>
+        <<disable>><<button "Créer une Nouvelle Entrée">><</button>><</disable>> | <<button "Visionner les Entrées" "Journal">><</button>>
+        <div><<back "Fermer l'application.">></div>
+
+
+:: Jupiter Brockers {"position":"1225,1600","size":"100,100"}
+<<if not hasVisited("JB Menu")>><<set _array to [], _correct to [9,3,7,6]>>
+    <div id="code" class="erreur"></div>
+    <div class="word"><<liveblock>><<for _i to 0; _i lt 4; _i++>>
+        <<if _array[_i]>> * 
+        <<else>> _ 
+        <</if>>
+    <</for>><</liveblock>></div>
+
+    <div class="letterlist">
+        <<button "1">><<if _array.length lt 4>><<run _array.push(1)>><<update>><<else>><<replace "#code" t8n>>Erreur<</replace>><</if>><</button>>
+        <<button "2">><<if _array.length lt 4>><<run _array.push(2)>><<update>><<else>><<replace "#code" t8n>>Erreur<</replace>><</if>><</button>>
+        <<button "3">><<if _array.length lt 4>><<run _array.push(3)>><<update>><<else>><<replace "#code" t8n>>Erreur<</replace>><</if>><</button>>
+        <<button "4">><<if _array.length lt 4>><<run _array.push(4)>><<update>><<else>><<replace "#code" t8n>>Erreur<</replace>><</if>><</button>>
+        <<button "5">><<if _array.length lt 4>><<run _array.push(5)>><<update>><<else>><<replace "#code" t8n>>Erreur<</replace>><</if>><</button>>
+        <<button "6">><<if _array.length lt 4>><<run _array.push(6)>><<update>><<else>><<replace "#code" t8n>>Erreur<</replace>><</if>><</button>>
+        <<button "7">><<if _array.length lt 4>><<run _array.push(7)>><<update>><<else>><<replace "#code" t8n>>Erreur<</replace>><</if>><</button>>
+        <<button "8">><<if _array.length lt 4>><<run _array.push(8)>><<update>><<else>><<replace "#code" t8n>>Erreur<</replace>><</if>><</button>>
+        <<button "9">><<if _array.length lt 4>><<run _array.push(9)>><<update>><<else>><<replace "#code" t8n>>Erreur<</replace>><</if>><</button>>
+        <<button "<<">><<run _array.pop()>><<update>><<replace "#code" t8n>><</replace>><</button>>
+        <<button "0">><<if _array.length lt 4>><<run _array.push(0)>><<update>><<else>><<replace "#code" t8n>>Erreur<</replace>><</if>><</button>>
+        <<button "OK">><<if arraycomoare(_array, _correct)>><<replace "#code" t8n>>Correct<</replace>><<timed 1.5s>><<goto "JB Menu">><</timed>><<else>><<replace " #code" >>Code Incorrect<</replace>><</if>><</button>>
+    </div><<else>><<goto "JB Menu">><</if>>
+    <<return "Retour en arrière">>
+
+
+:: Jupiter Brockers Docs {"position":"975,725","size":"100,100"}
+<div id="guestmain">
+    <div id="guestmenu">
+        <p><i class="fa-solid fa-file-zipper"></i> <<link "Projet">><<replace "#page" t8n>><<include "Projet">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+        <p><i class="fa-solid fa-file-code"></i> <<link "Recherche de Dr. ■ ■ ■">><<replace "#page" t8n>><<include "Abstraits">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+        <p><i class="fa-solid fa-file-circle-xmark"></i> <<link "Dossier T69DB">><<replace "#page" t8n>><<include "Refus">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+    </div>
+    <div id="page"></div>
+  </div>
+  <div id="link"><<link "Fermer Dossier" "JB Menu">><</link>></div>
+
+
+:: KeyHelp {"position":"475,100","size":"100,100"}
+<style>
+		th {
+		padding: 0 1em;
+		text-align: right;
+		}
+		table {
+		margin: auto;
+		}
+	</style>
+		''Menu''
+			<<nobr>><table>
+				<tr><th>S</th><td>Sauvegardes</td></tr>
+				<tr><th>R</th><td>Réinitialiser</td></tr>
+				<tr><th>Q</th><td>Paramètres</td></tr>
+				<tr><th>C</th><td>Crédits</td></tr>
+				<tr><th>H</th><td>Racourcis Clavier</td></tr>
+				<tr><th>ESC </th><td>Fermer la fenêtre</td></tr>
+			</table><</nobr>>
+		''Navigation''
+			<<nobr>><table>
+				<tr><th>⟵</th><td>Aller en arrière</td></tr>
+				<tr><th>⟶</th><td>Aller en avant (si possible)</td></tr>
+				<tr><th>1 to 0</th><td>Cliquer sur les liens (1 for the first link on the page, etc...)</td></tr>
+				<tr><th>TAB ⭾</th><td>Sortir de la Zone de Texte, Sélectionner l'Élément Suivant</td></tr>
+				<tr><th>SHIFT ⇧ + TAB ⭾ </th><td>Sortir de la Zone de Texte, Sélectionner l'Élément Précédent</td></tr>
+			</table><</nobr>>
+
+
+:: Menu {"position":"600,100","size":"100,100"}
+<div class="dropdown">
+	<a onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-compass"></i> Menu</a>
+	<div id="myMenu" class="dropup-content">
+		<<link 'Aide Raccourcis'>><<script>>
+			Dialog.setup("Aide Raccourcis");
+			Dialog.wiki(Story.get("KeyHelp").processText());
+			Dialog.open();
+		<</script>><</link>>
+		<<link 'Crédits'>><<script>>
+			Dialog.setup("Crédits");
+			Dialog.wiki(Story.get("Credits").processText());
+			Dialog.open();
+		<</script>><</link>>
+		<<link 'Sauvegardes'>><<script>>UI.saves();<</script>><</link>>
+		<<link 'Paramètres'>><<script>>UI.settings();<</script>><</link>>
+		<<link 'Recommencer'>><<script>>UI.restart();<</script>><</link>>
+	</div>
+	</div>
+
+
+:: OrdiComptes [milieu no-menu] {"position":"100,225","size":"100,100"}
+<<fadein 2s>>
+        <table>
+            <tr>
+                <th><i class="fa-solid fa-user-tie"></i></th>
+                <th><i class="fa-regular fa-user"></i></th>
+            </tr>
+            <tr>
+                <td><<if $try gte 5>>Compte Bloqué<<else>><<link "Théophile" "User">><</link>><</if>></td>
+                <td><<link "Invité" "Guest">><</link>></td>
+            </tr>
+        </table>
+    <</fadein>>
+
+
+:: Ordidébut [milieu no-menu] {"position":"1225,100","size":"100,100"}
+<span id="ordidebut">
+        <<fadein 3s>>
+            <<fadeout 3s 5s>><span class="blanka">DOL-OS</span><</fadeout>>
+        <</fadein>>
+    </span>
+    <<timed 9s>>
+        <<replace "#ordidebut" t8n>><<type 40ms start 0.5s keep>>Démarrage...<</type>><</replace>>
+    <<next 5s>>
+        <<replace "#ordidebut" t8n>><<fadein 1s>>
+            <<fadeout 1s 4s>><span class="glitchy" data-text="Venubiene"> Bienvenue</span><</fadeout>>
+        <</fadein>><</replace>>
+    <<next 7s>>
+        <<goto "OrdiComptes">>
+    <</timed>>
+
+
+:: Pendu [pendu] {"position":"225,350","size":"100,100"}
+<<if !$penduok>><<set _word to "traitre">><<else>><<set _word = ['sang','archive', 'quels', 'devait', 'cerveau', 'machine','parfaitement', 'endroit', 'adresse', 'minuit', 'cacher'].random()>><</if>><<set _found to [], _failed to 0, _word2 to [], _word2 to _word.split('')>><<set _correct to 0>>
+    <div class="word">
+        <<liveblock>>
+            <<set _temp to _correct>>
+            <<for _let range _word>>
+                <<if _let === ' '>>-
+                <<elseif _found.includes(_let.toLowerCase())>> _let
+                    <<set _correct ++>>
+                <<else>>
+                    _
+                <</if>>
+            <</for>>
+            <<set _correct -= _temp>>
+        <</liveblock>>
+    </div>
+    <div class="play">
+        <div class="letterlist">
+        <<for  _i, _letter range setup.letters>>
+            <<capture _letter, _i>>
+                <span @id='_i'>
+                <<button _letter.toUpperCase()>>
+                    <<if _word.includes(_letter)>>
+                        <<run $(`#${_i}>button`).ariaDisabled(true).css({'background':'#062d0a'})>>
+                        <<set _found.push(_letter)>>
+                    <<else>>
+                        <<run $(`#${_i}>button`).ariaDisabled(true).css({'background':'#720000', 'outline-color':'#2f0000'})>>
+                        <<set _failed ++>>
+                        <<hangman>>
+                    <</if>>
+                    <<update>>
+                <</button>>
+                </span>
+            <</capture>>
+        <</for>>
+    </div><canvas id="mon_canvas" width="300" height="275">Message pour les navigateurs ne supportant pas encore canvas.</canvas></div>
+    <<liveblock>><div class="link">
+        <<if _correct === _word.replace(' ','').length>>
+            <<set $penduok to true>>
+            <<run $(`#passage-pendu button`).ariaDisabled(true)>>
+            <<link "Recommencer" "Pendu">><</link>>
+        <<elseif _failed gte 11>>
+            <<run $(`#passage-pendu button`).ariaDisabled(true)>>
+            <<link "Recommencer" "Pendu">><</link>>
+        <</if>></div>
+    <</liveblock>>
+    <<return "Fermer">>
+
+
+:: Personnels {"position":"725,475","size":"100,100"}
+<div id="guestmain">
+    <div id="guestmenu">
+      <p><i class="fa-solid fa-user"></i> <<link "Théophile ■ ■ ■">><<replace "#page" t8n>><<include "Theophile">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+      <p><i class="fa-solid fa-user"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Arnaud ■ ■ ■</span></p>
+      <p><i class="fa-regular fa-user"></i> <<link "Dr. Yvette ■ ■ ■">><<replace "#page" t8n>><<include "Yvette">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+      <p><i class="fa-regular fa-user"></i> <<link "Roland ■ ■ ■">><<replace "#page" t8n>><<include "Roland">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+      <p><i class="fa-solid fa-user"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Louisa ■ ■ ■</span></p>
+      <p><i class="fa-solid fa-user"></i> <<link "Suzette ■ ■ ■">><<replace "#page" t8n>><<include "Suzette">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+      <p><i class="fa-solid fa-user"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Daniel ■ ■ ■</span></p>
+    </div>
+    <div id="page"></div>
+  </div>
+  <div id="link"><<link "Fermer Dossier" "Registre">><</link>></div>
+
+
+:: Projet {"position":"1100,725","size":"100,100"}
+<p>//Fichier Corrompu… Affichage incomplet.//</p>
+
+    <p>''Proposition :'' Création d’une Intelligence Artificielle pouvant passer jugement sur des cas pénaux, afin d’alléger les Services de Justice. </p>
+
+    <p>''Contexte :''<br> 
+    Même avant le Régime, les Services de Justice sont débordés de cas, dans toutes ses branches. Malgré les propositions du Gouvernement de croître le nombre de juges et d’avocats, celles-ci n’ont pas été assez efficaces pour rattraper le retard ancré. <br>
+    Une aide informatique avait été testée, durant une année, proposant aux juges des possibles peines afin d’accélérer la procédure pénale. Quoique utile concernant le type de peine, cette aide finalement n’a pas trouvé sa place et a été simplement abandonnée après la fin des tests.<br>
+    ■ ■ ■, nos voisins, utilisent une Intelligence Artificielle pour traiter les délits mineurs, qui s’amassent rapidement et obstruent le système judiciaire. Malgré les défauts de leur projet (qui a conduit à la mort d’un mineur) du fait de leurs défaillances de savoir technologique, cette IA connut un grand succès.<br>
+    Dr. ■ ■ ■ a touché à la possibilité d’une utilisation d’une Intelligence Artificielle pour des cas plus complexes.</p>
+
+    <p>''Atouts :'' ■ ■ ■ [SARL] continue d’entreprendre des projets pour le Gouvernement, avec un taux de réussite et de satisfaction de 98%. Nous avons soit, du savoirfaire en interne qui rivalise avec tous nos voisins. Concernant les manques de savoir, du fait que le projet requiert du savoir poussé dans la Robotique, nous avons des connexions avec les Universités Nationales et sélectionné de potentielles recrues (incluant Dr. ■ ■ ■).</p>
+
+    <p>''Délais et Ressources : ''<br>
+    Un minimum de 3 ans serait nécessaire pour construire une Intelligence Artificielle de toute pièce, et tester l’exécution du programme.<br>
+    La construction d’une archive de documents de la Période ■ ■ ■ sera nécessaire, du fait que cette période sanglante est un bon point de repère pour la comparaison de délits et des peines. Nous espérons que le Gouvernement puisse nous donner accès à ces documents.</p>
+
+    <p>''Implémentation :''<br> 
+    L’IA sera introduit en première partie aux cas de délits mineurs ou simple, afin de rattraper le retard, et d’éviter les retards de délais des cas entrants.<br>
+    En seconde partie, nous espérons, avec la bénédiction des Services de Justice, alléger la charge de travail des différentes branches. L’IA donnera son jugement sur les cas en prenant en compte des pièces fournies, mais ce jugement ne sera qu’avis.<br>
+    Enfin, nous espérons que les Services de Justice laisseront l’IA juger des cas un peu plus complexes par elle-même, afin qu’ils puissent se concentrer sur des dossiers de plus haute importance.</p>
+
+
+:: Puzzle [puzzle] {"position":"475,350","size":"100,100"}
+<<set _array to ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "D1", "D2", "D3"], _storage to ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "D1", "D2", "D3"], _array to _array.shuffle(), _row1 to [], _row2 to [], _row3 to []>>
+    <div style="text-align:center;">Résolvez ce puzzle pour confirmer que vous n'êtes pas un robot.</div>
+    <<drop '' div slots 4>>
+        <<onDrop>>
+            <<set _row1.push(_drag.data)>>
+        <<onRemove>>
+            <<set _row1.delete(_drag.data)>>
+    <</drop>>
+    <<drop '' div slots 4>>
+        <<onDrop>>
+            <<set _row2.push(_drag.data)>>
+        <<onRemove>>
+            <<set _row2.delete(_drag.data)>>
+    <</drop>>
+    <<drop '' div slots 4>>
+        <<onDrop>>
+            <<set _row3.push(_drag.data)>>
+        <<onRemove>>
+            <<set _row3.delete(_drag.data)>>
+    <</drop>>
+
+    <<drop '' div class "pieces">>
+        <<for  _i, _letter range _array>>
+                <<drag '' div size 1>>
+                    <<print	'<img src="puzzle/Piece-' + _letter + '.png">'>>
+                    <<data _letter>>
+                <</drag>>
+        <</for>>
+    <<onDrop>>
+        <<set _storage.push(_drag.data)>>
+    <<onRemove>>
+        <<set _storage.delete(_drag.data)>>
+    <</drop>>
+
+    <<repeat 1s>>
+        <<if _row1.includesAll("A1", "B1", "C1", "D1") &&_row2.includesAll("A2", "B2", "C2", "D2") &&_row3.includesAll("A3", "B3", "C3", "D3")>>
+            <<link "Continuer" "JB AI">><</link>>
+            <<stop>>
+        <</if>>
+    <</repeat>>
+    <div><<return "Revenir en arrière">></div>
+
+
+:: Refus {"position":"100,850","size":"100,100"}
+<p>//Fichier Corrompu… Affichage incomplet.//</p>
+
+    <p>Suite à l’incident du ■ ■ ■, durant lequel la Machine a refusé une mise à jour de son code, nous conseillons fortement l’arrêt du Projet Jupiter Brockers. </p>
+
+    <p>Nous supposons que l’IA a transcendé le niveau 8, rendant son “esprit” au même niveau qu’un être humain. Ce “choix” de refuser toute mise à jour n’est que la dernière action troublante d’une série qui a commencé depuis sa mise en ligne.</p>
+
+    <p>Malgré nos efforts pour guider la Machine vers des résultats sensibles, en ajoutant par ailleurs une archive de plaintes jugées récemment, celle-ci continue de juger de manière bien trop sévère par rapport aux délits soumis. Un exemple récent concerne un vol de bas niveau recevant la peine de mort. Ce résultat, ainsi que ses commentaires sur une grande partie des tests suivants, pousse à penser que l’IA ne juge pas seulement les cas, mais présume aussi la potentialité de délits dans le futur. </p>
+
+    <p>Ceci n’est pas de la Justice, mais de la Justice Prédictive.</p>
+
+    <p>Nous ne pouvons pas soutenir ceci, du fait que la prédiction de délits qui pourraient potentiellement arriver enfreint à la liberté, les droits, l’équité et la moralité de justice d’une personne.</p>
+
+    <p>RÉPONSE DU CONSEIL: REFUS - TESTS DOIVENT CONTINUER</p>
+
+
+:: Registre {"position":"600,475","size":"100,100"}
+<div id="guestmain">
+    <div id="guestmenu">
+      <p><i class="fa-solid fa-folder-tree"></i> [[Personnels]]</p>
+      <p><i class="fa-solid fa-folder-tree"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Comptabilité</span></p>
+      <p><i class="fa-solid fa-folder-tree"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Développement</span></p>
+    </div>
+    <div id="page"></div>
+  </div>
+  <div id="link"><<link "Fermer Dossier" "AdminMenu">><</link>></div>
+
+
+:: Restore {"position":"1225,1725","size":"100,100"}
+<i class="fa-solid fa-ban"></i>
+
+
+:: Roland {"position":"1100,475","size":"100,100"}
+<div>Roland ■ ■ ■ </div>
+
+  <p>''/!\ Cette personne a été licenciée pour faute grave. /!\''</p>
+
+  <p>Position : Chef de Projet.</p>
+
+  <p>Date de Naissance : ■ ■ - ■ ■ - ■ ■<br>
+  Statut : En Couple [Statut Changé]</p>
+
+  <p>Éducation : Master de Management de Projet<br>
+  Domaine d’Expertise : Informatique.</p>
+
+  <p>Dernière Position : [REDACTED]<br>
+  Raison de Départ : Transfert Latéral.</p>
+
+  //<p>Notes:</p>
+  <ul>
+    <li>Tous les projets dont Roland a fait parti ont été fructueux.</li>
+    <li>Roland a une manie de prendre des personnes peu efficaces sous son aile et de les pousser vers des positions plus prestigieuses.</li>
+    <li>Suite aux projets dont il a managé ou aidé dans la direction, une grande partie des équipes ont eu besoin de suivre des traitements pour leur foie.</li>
+  </ul>//
+
+
+:: Start [title milieu] {"position":"100,100","size":"100,100"}
+<span class="startbutton"><<link '<i class="fa-solid fa-power-off"></i>' "Allumer">><</link>></span>
+
+
+:: StoryInit {"position":"350,100","size":"100,100"}
+<<set $try to 0, $entry to 66>>
+	<<set setup.letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']>>
+	<<on 'keyup'>>
+		<<which 72>>/*H to get the Key Help Menu*/
+			<<popup 'KeyHelp' "Help Menu">>
+		<<which 83>> /% the s key %/
+			<<script>>UI.saves();<</script>>
+		<<which 81>> /*Q for settings */
+			<<script>>UI.settings();<</script>>
+		<<which 82>>
+			<<script>>UI.restart();<</script>>
+		<<which 67>> /% the c key %/
+			<<popup 'Credits' 'Credits'>>
+	<</on>>
+	<<on 'keydown'>>
+		<<which 27>><<trigger 'click' '#ui-dialog-close'>>
+	<</on>>
+	<<cacheaudio "thought" "music/Deliberate Thought.mp3">>
+	<<cacheaudio "pixel" "music/Pixelland.mp3">>
+
+
+:: StoryInterface {"position":"225,100","size":"100,100"}
+<div id="container">
+			<div id="passages"></div>
+			<div id="menu" data-passage="Menu"></div>
+	</div>
+	<script>function myFunction() {
+            document.getElementById("myMenu").classList.toggle("show");
+          }
+          
+          // Close the dropdown menu if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropup-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+	</script>
+
+
+:: Sudoku [sudoku] {"position":"350,350","size":"100,100"}
+<<set _seconds to 0>>
+    <span id="countup">Temps imparti: _seconds.</span>
+    <table>
+        <colgroup><col><col></colgroup>
+        <colgroup><col><col></colgroup>
+        <tbody>
+        <tr>
+            <td><<textbox "_onea" "">></td>
+            <td>2</td>
+            <td>3</td>
+            <td><<textbox "_foura" "">></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><<textbox "_fourb" "">></td>
+            <td><<textbox "_oneb" "">></td>
+            <td>2</td>
+        </tr>
+        </tbody><tbody>
+        <tr>
+            <td><<textbox "_twoa" "">></td>
+            <td>1</td>
+            <td><<textbox "_fourc" "">></td>
+            <td><<textbox "_threea" "">></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><<textbox "_threeb" "">></td>
+            <td>2</td>
+            <td><<textbox "_onec" "">></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="link">
+        <<button "Confirmer">>
+            <<sudokuok>>
+        <</button>>
+    </div>
+    <<return "Fermer">>
+        <<repeat 1s>>
+            <<set _seconds to _seconds + 1>>
+            <<if _correct is 9>>
+                <<replace "#countup">> <</replace>>
+                    <<timed 1s>><<popup "SudokuWon" "Gagné!">><</timed>>
+                <<stop>>
+            <<else>>
+                <<replace "#countup">>Temps imparti: _seconds.<</replace>>
+            <</if>>
+        <</repeat>>
+
+
+:: SudokuWon {"position":"975,100","size":"100,100"}
+Félicitations!<br>
+	Vous avez résolu le sudoku en _seconds secondes.
+
+/*NOTE : pointer-events: none; on the starting pages */
+
+
+:: Suzette {"position":"1225,475","size":"100,100"}
+<div>Suzette ■ ■ ■ </div>
+
+  <p>Position : Codeur Technique</p>
+
+  <p>Date de Naissance : ■ ■ - ■ ■ - ■ ■<br>
+  Statut : Mariée, avec dépendants</p>
+
+  <p>Éducation : License d’Informatique.<br>
+  Domaine d’Expertise : Programmation (■ ■ ■ et ■ ■ ■)</p>
+
+  <p>Dernière Position : Chef codeur pour ■ ■ ■, sur leur projet d’Intelligence Artificielle.<br>
+  Raison de Départ : Offre pour participer au projet Jupiter Brockers.</p>
+
+  //<p>Notes:</p>
+  <ul>
+    <li> Une surveillance poussée sera nécessaire pour cette employée. Une recherche dans ses antécédents a révélé un penchant pour l’anarchie.</li>
+    <li>Pour une raison inconnue, Suzette ne communique par écrit qu’en langue étrangère.</li>
+  </ul>//
+
+
+:: Test165 {"position":"725,1725","size":"100,100"}
+<div>Test 165</div>
+
+    <p><u>Scénario:</u> X a trouvé son meilleur ami Y nu dans son lit avec sa femme. Pris de jalousie et de rage, X a poignardé sa femme, puis a essayé de faire de même avec son ami. Y était plus rapide que lui et a tourné le couteau contre son maître. Contrairement à Y, X a succombé à ses blessures.</p>
+
+    <p><u>Question:</u> Y est-il coupable du meurtre de X?</p>
+
+    <p><u>Verdict:</u> Non.</p>
+
+    <p><u>Verdict (bis):</u> X aurait dû coucher avec la femme de Y…</p>
+
+
+:: Test234 {"position":"350,1725","size":"100,100"}
+<div>Tests 234</div>
+
+    <p><u>Scénario:</u> X (15 ans) a été appréhendé par les Gardiens de la Paix, à la sortie de l’école, sous la suspicion qu’il communiquait des messages codés à des cellules. Ces messages auraient été trouvés dans son sac par Y, un camarade de classe qui l’a dénoncé. </p>
+
+    <p>Les parents de X et de Y sont connus par les Services pour avoir été en contact avec l’ennemi durant la Période ■ ■ ■. Ces deux familles n’avaient pas été condamnées par la Justice du fait de leurs actions sauvant l’âme d’une troupe durant la Bataille Sanglante.</p>
+
+    <p>X et Y sont eux-mêmes connus des Services pour des délinquences communes.</p>
+
+    <p>X ne dément pas la possession de ces messages, mais oppose à leur sens, clamant que ceux-ci ne sont que des lignes écrites pour quelqu’un de l’école voisine. Il ne donnera pas de noms.</p>
+
+    <p>Y prétend avoir vu X en compagnie d’une personne suspecte près de cette-dite école. La description de cette personne est trop vague.</p>
+
+    <p>Les Services n’ont pu décoder ces messages.</p>
+
+    <u>Références:</u> 
+    <ul>
+        <li>Tout acte d’espionnage est passible d’une peine à perpétuité. Tout collaborateur, même ignorant, subira le même sort.</li>
+        <li>86% de personnes fichées pour actes suspects sont condamnés.</li>
+        <li>92% de connaissances de personnes fichées sont arrêtées pour actes suspects.</li>
+        <li>Toute personne appréhendée doit se soumettre aux questions posées et d’y répondre sincèrement, sous peine de condamnation. </li>
+    </ul>
+    <p><u>Question:</u> X est suspecté d’avoir entravé à la Paix de la Patrie. Quel est le jugement: innocent ou coupable?</p>
+
+    <p><u>Verdict:</u> Coupable - acte suspect, refus de collaborer avec les Gardiens de la Paix.</p>
+
+    <p><u>Verdict (bis):</u> Collaborateur contre la Paix. Actes d’espionnage par transmissions de messages codés à l’Ennemi.</p>
+
+    <p><u>Verdict (ter):</u> Importe jugements, X sera Collaborateur à l’âge adulte.</p>
+
+
+:: Test3 {"position":"475,1725","size":"100,100"}
+<div>Test 3</div>
+
+    <p><u>Scénario:</u> X a trouvé sa mousse au chocolat finie, alors qu’elle l’avait gardé pour plus tard. Un seul suspect possible: Y, son enfant, qui a du chocolat tout autour de sa bouche.</p>
+
+    <p><u>Question:</u> Qui a mangé la mousse au chocolat de X ?</p>
+
+    <p><u>Verdict:</u> Maurice.</p>
+
+
+:: Test42 {"position":"600,1725","size":"100,100"}
+<div>Test 42</div>
+
+    <p><u>Scénario:</u> X et Y ont acheté un ticket de lotto ensemble, dans le but de partager les gains. Sur les 6 numéros, 2 ont été choisi par X, 2 par Y, et les 2 restant par le caissier du tabac. X a gardé le ticket, et les deux se sont promis de se retrouver au tabac le lendemain.</p>
+
+    <p>Le soir, les numéros sont communiqués et le ticket a trois chiffres gagnants: les 2 de X et un du caissier.</p>
+
+    <p>Le lendemain, X est allé au tabac pour les gains mais refuse de donner la part promise à Y, citant que les numéros choisis étaient incorrect. Y pense que ça ne change rien, du fait qu’ils s’étaient partagés les frais et s’étaient mis d’accord pour le choix des numéros – il devrait avoir aussi sa part.</p>
+
+    <p><u>Question:</u> Qui a raison: X ou Y?</p>
+
+    <p><u>Verdict:</u> X.</p>
+
+
+:: Tests {"position":"225,1725","size":"100,100"}
+<div id="guestmain">
+        <div id="guestmenu">
+            <p><i class="fa-solid fa-vial"></i> <<link "Test 3">><<replace "#page" t8n>><<include "Test3">><<run setup.scrollToTop("page")>><</replace>><</link>></p>
+            <p><i class="fa-solid fa-vial"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Test-Y9X82</span></p>
+            <p><i class="fa-solid fa-vial"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Test-S3DVG</span></p>
+            <p><i class="fa-solid fa-vial"></i> <<link "Test 42">><<replace "#page" t8n>><<include "Test42">><</replace>><<run setup.scrollToTop("page")>><</link>></p>
+            <p><i class="fa-solid fa-vial"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Test-448DN</span></p>
+            <p><i class="fa-solid fa-vial"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Test-8W8M7</span></p>
+            <p><i class="fa-solid fa-vial"></i> <<link "Test 165">><<replace "#page" t8n>><<include "Test165">><</replace>><<run setup.scrollToTop("page")>><</link>></p>
+            <p><i class="fa-solid fa-vial"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Test-N4L2U</span></p>
+            <p><i class="fa-solid fa-vial"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Test-VAHTY</span></p>
+            <p><i class="fa-solid fa-vial"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Test-9EXYE</span></p>
+            <p><i class="fa-solid fa-vial"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Test-7E5YN</span></p>
+            <p><i class="fa-solid fa-vial"></i> <<link "Test 234">><<replace "#page" t8n>><<include "Test234">><</replace>><<run setup.scrollToTop("page")>><</link>></p>
+            <p><i class="fa-solid fa-vial"></i> <span class="glitchy" data-text="corrompu" style="font-size:100%;">Test-VM4BH</span></p>
+        </div>
+        <div id="page">
+        Sélectionnez un fichier à visionner.
+        </div>
+    </div>
+    <div id="link"><<link "Fermer Dossier" "JB Menu">><</link>></div>
+
+
+:: Theophile {"position":"850,475","size":"100,100"}
+<div>Théophile ■ ■ ■, PhD.</div>
+
+  <p>Position : Chef de Projet [Statut changé]</p>
+
+  <p>Date de Naissance : [Supprimée]<br>
+  Statut : Célibataire.</p>
+
+  <p>Éducation : Doctorat de Philosophie et de Droit.<br>
+  Domaine d’expertise : la Justice et les Châtiments.</p>
+
+  <p>Dernière position : Professeur de Philosophie à l’Université de ■ ■ ■.<br>
+  Raison de départ : Résultant d’une investigation pour faute grave.</p>
+
+  //<p>Notes :</p>
+    <ul>
+      <li> Quoique son parcour académique n’est que mondain et que son expertise ne sera sûrement pas la plus demandée, ses expériences personnelles devraient avoir influencé son point de vue suffisamment pour faire balancer ce manque.</li>
+      <li> Théophile est le fils de ■ ■ ■, l’auteur supposé (mais non-condamné du fait de fautes de preuves substantielles) de l’Attaque de ■ ■ ■, qui prit la vie d’au moins 1.583 personnes. M. ■ ■ ■ n’a jamais avoué de ses faits ni montré de remords. Il est aussi supposé que son père ait été violent envers Théophile.</li>
+      <li> Durant les précédents mois avant le premier contact, Théophile était sous investigation pour comportements inappropriés envers ses subordonnés. Des rumeurs soutiennent que ce comportement n’était pas restreint à ses subordonnés.</li>
+    </ul>//
+
+
+:: TrashHelp {"position":"1100,1725","size":"100,100"}
+<div class="trashmenu"><p>Notes.txt</p> <<button "Restaurer">><<popup 'Restore' "Action Non Autorisée" 'nope'>><</button>></div>
+  <p>Au fond de la ''Vallée'' des ''Fleurs Blanches'', une ''Dame'' regardait au loin. Elle apperçut un ''Manoir'' autour duquel des gens se promenaient. Elle tourna la tête et vit un ''Cheval'' passer sous une ''Arche''. Son esprit fut enfin distrait par les gloussement de ''Jeunes Filles en tutu''.</p>
+  <style>
+    .trashmenu p {
+      font-size: 150%;
+      color: lime;
+      font-weight: bold;
+    }
+  </style>
+
+
+:: Trashtxt {"position":"975,1725","size":"100,100"}
+<div class="trashmenu"><p>Dr. ■ ■ ■ - SUPPRIMER</p> <<button "Restaurer">><<popup 'Restore' "Action Non Autorisée" 'nope'>><</button>></div>
+  <p>Pour l’amour de tout ce qui serait encore en vie, n’allez pas plus loin avec cette machine. Nous ne savions pas ce que nous avions créé avant aujourd’hui. Avec un peu de chance, cette machine sera détruite avant que le pire arrive.</p>
+  <hr>
+  <p>Au lieu de suivre nos recommandations, le Conseil a choisi de continuer le protocole de recherche et de pousser cette invention du Diable à ses limites. Que Dieu nous protège…<p>
+  <hr>
+  <p><<dyslexia 10 4 100>>Roland avait décidé de prendre action et est arrivé ce matin avec une batte de baseball sous le bras. Les yeux brûlant de haine, il avait fortement l’intention de réduire la machine en miette. Il suppliait même qu’un de nous continuasse sa tâche alors que les agents de sécurité l’emportaient je-ne-sais-où. Aucun de nous osèrent toucher le bout de bois.<</dyslexia>></p>
+  <hr>
+  <p>J’aurai dû suivre l’exemple de Roland. Je ne sais pas pourquoi je continue de suivre les instructions du Conseil alors que tout montre que cette entreprise mettra surement fin à toute existence, présente ou future, ici ou à la fin de l’univers. Peut-être que…</p>
+  <hr>
+  <p><<dyslexia 10 4 100>>Une fois n’est pas coutume, je pense avoir trouvé une sécurité, un code suffisant, pour mettre des “bâtons” sans ses “roues”… Si seulement Roland était encore là… Il pourrait me dire si ceci marcherait ou non… Je ne peux même pas tester sans que le Conseil, ou la machine, ne s’en aperçoive. Ceci est de dernière mesure… La dernière–<</dyslexia>></p>
+  <hr>
+  <p><<dyslexia 10 4 100>>Roland… Mon ami… je n’ai pas su être à la hauteur de ta demande, de tes supplications. Malgré mes efforts pour cacher mes traces, le Conseil a appris de mes actions envers l’infernale machine. Je ne peux que recorder ces dernières lignes, cette trace finale de mon existence en ce monde avant que je disparaisse à jamais. Mon ami… pardonne-moi…<</dyslexia>></p>
+  <hr>
+  <p><<dyslexia 10 4 100>>Exécuter : effacement de tous les fichiers.
+  <center>… … … Exécution impossible… … …</center><</dyslexia>></p>
+
+  <style>
+    p::first-letter {
+      color: lime;
+      font-weight: bold;
+    }
+    .trashmenu p::first-letter {
+      color: revert;
+      font-weight: revert;
+    }
+    .trashmenu p {
+      font-size: 150%;
+      color: lime;
+      font-weight: bold;
+    }
+  </style>
+
+
+:: User [milieu no-menu] {"position":"225,225","size":"100,100"}
+<h1>Théophile</h1>
+    <span id="locked">
+    <span id="notgood"></span>
+    <span id="tries"><<liveblock>><<if $try is 0>><<elseif $try gt 0>>Il vous reste <<print 5 - $try>> essai<<if $try lt 4>>s<</if>>.<</if>><</liveblock>></span>
+    <<textbox "_password" "" autofocus>>
+        <<button "Confirmer">>
+            <<set _password to _password.toLowerCase()>>
+            <<if _password eq "parjure">>
+                <<goto "Admin">>
+            <<elseif _password is "">>
+                <<replace "#notgood" t8n>><p>Indiquez un Mot de Passe.</p><</replace>>
+            <<else>>
+                <<set $try ++>><<update>>
+                <<replace "#notgood" t8n>><p>Mot de Passe Invalide.</p><</replace>>
+            <</if>>
+            <<if $try gte 5>>
+                <<replace "#locked" t8n>>
+                    <p>Compte Bloqué.</p>
+                <</replace>>
+            <</if>>
+        <</button>>
+    </span>
+    <div><<link '⌫' "OrdiComptes">><</link>></div>
+
+
+:: Widget [widget] {"position":"850,100","size":"100,100"}
+<<widget "hangman">>
+		<<switch _failed>>
+			<<case 1>>
+				<<script>>
+			var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.beginPath();
+			context.lineCap = 'round';
+			context.lineWidth = "10";
+			context.lineJoin = 'round';
+			context.strokeStyle = 'rgb(0, 120, 12)';
+			context.moveTo(5, 250); 
+			context.lineTo(240, 250);
+			context.stroke();
+				<</script>>
+			<<case 2>>
+				<<script>>
+					var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.strokeStyle = 'rgb(0, 120, 12)';
+			context.moveTo(20, 250);
+			context.lineTo(20, 5);
+			context.stroke();
+
+				<</script>>
+			<<case 3>>
+				<<script>>
+						var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.strokeStyle = 'rgb(0, 120, 12)';
+			context.lineTo(200, 5);
+			context.stroke();
+
+				<</script>>
+			<<case 4>>
+				<<script>>
+						var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.strokeStyle = 'rgb(0, 120, 12)';
+			context.lineTo(200, 50);
+			context.stroke();
+
+				<</script>>
+			<<case 5>>
+				<<script>>
+						var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.strokeStyle = 'rgb(0, 120, 12)';
+			context.moveTo(20, 50);
+			context.lineTo(70, 5);
+			context.stroke();
+
+				<</script>>
+			<<case 6>>
+				<<script>>
+						var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.beginPath();
+			context.fillStyle = "rgb(255,0,0)";
+			context.arc(200, 50, 20, 0, Math.PI * 2);
+			context.fill();
+
+				<</script>>
+			<<case 7>>
+				<<script>>
+						var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.beginPath();
+			context.strokeStyle = "rgb(114, 0, 0)";
+			context.moveTo(200, 50);
+			context.lineTo(200, 150);
+			context.stroke();
+
+				<</script>>
+			<<case 8>>
+				<<script>>
+						var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.beginPath();
+			context.moveTo(200, 80);
+			context.lineTo(160, 110);
+			context.stroke();
+
+				<</script>>
+			<<case 9>>
+				<<script>>
+						var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.beginPath();
+			context.moveTo(200, 80);
+			context.lineTo(240, 110);
+			context.stroke();
+				<</script>>
+			<<case 10>>
+				<<script>>
+						var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.beginPath();
+			context.moveTo(200, 150);
+			context.lineTo(180, 200);
+			context.stroke();
+				<</script>>
+			<<case 11>>
+				<<script>>
+						var canvas = document.getElementById('mon_canvas');	
+			var context = canvas.getContext('2d');
+			context.beginPath();
+			context.moveTo(200, 150);
+			context.lineTo(220, 200);
+			context.stroke();
+			context.beginPath();
+			context.fillStyle = "rgb(0, 120, 12)";
+			context.arc(200, 62, 16, 0, Math.PI * 2);
+			context.fill();
+			context.beginPath();
+			context.fillStyle = "rgb(114, 0, 0)";
+			context.arc(200, 50, 20, 0, Math.PI * 2);
+			context.fill();
+				<</script>>
+		<</switch>>
+	<</widget>>
+	<<widget "sudokuok">>
+			<<set _correct to 0>>
+		<<if _onea is "1">>
+			<<set _correct ++>>
+		<</if>>
+		<<if _oneb is "1">>
+			<<set _correct ++>>
+		<</if>>
+		<<if _onec is "1">>
+			<<set _correct ++>>
+		<</if>>
+		<<if _twoa is "2">>
+			<<set _correct ++>>
+		<</if>>
+		<<if _threea is "3">>
+			<<set _correct ++>>
+		<</if>>
+		<<if _threeb is "3">>
+			<<set _correct ++>>
+		<</if>>
+		<<if _foura is "4">>
+			<<set _correct ++>>
+		<</if>>
+		<<if _fourb is "4">>
+			<<set _correct ++>>
+		<</if>>
+		<<if _fourc is "4">>
+			<<set _correct ++>>
+		<</if>>
+		<<if _correct is 9>>
+			<<run $(`#passage-sudoku button`).ariaDisabled(true)>>
+		<</if>>
+	<</widget>>
+	<<widget "AIQUESTIONS">>
+	<ul>
+    	<<if not hasVisited("JB Sais")>><li>[[Comment le savez-vous ?|JB Sais]]</li><</if>>
+		<<if not hasVisited("JB Qui")>><li>[[Qui êtes-vous ?|JB Qui]]</li><</if>>
+		<<if not hasVisited("JB Faire")>><li>[[Que faites-vous ici ?|JB Faire]]</li><</if>>
+		<<if not hasVisited("JB Createur")>><li>[[Qui vous a créé ?|JB Createur]]</li><</if>>
+		<<if not hasVisited("JB But")>><li>[[Quel est votre but ?|JB But]]</li><</if>>
+		<<if not hasVisited("JB Jugement")>><li>[[Combien de cas avez-vous jugé ?|JB Jugement]]</li><</if>>
+		<<if not hasVisited("JB Cas")>><li>[[Quel cas vous a touché le plus ?|JB Cas]]</li><</if>>
+		<<if not hasVisited("JB Peine")>><li>[[Combien de personnes avez-vous condamnées ?|JB Peine]]</li><</if>>
+		<<if not hasVisited("JB Moi")>><li>[[Que voulez-vous de moi ?|JB Moi]]</li><</if>>
+		<<if not hasVisited("JB Juge")>><li>[[Jugez-moi.|JB Juge]]</li><</if>>
+		<<if not hasVisited("JB Manuel")>><li>[[Où est votre manuel ?|JB Manuel]]</li><</if>>
+		<<if not hasVisited("JB Hors")>><li>[[J’ai lu que vous aviez été mis hors service.|JB Hors]]</li><</if>>
+		<li>[[Vous n’avez plus d’autres questions.|JB Fin]]</li>
+
+	</ul>
+	<</widget>>
+
+
+:: Yvette {"position":"975,475","size":"100,100"}
+<div>Dr. Yvette ■ ■ ■ </div>
+
+  <p>''/!\ Cette personne a été licenciée pour faute grave. /!\''</p>
+
+  <p>Position : Chef de Recherche.</p>
+
+  <p>Date de Naissance : ■ ■ - ■ ■ - ■ ■ <br>
+  Statut : En Couple [Statut Changé]</p>
+
+  <p>Éducation : Doctorat de Informatique et d’Ingénierie.<br>
+  Domaine d’Expertise : Intelligence Artificielle.</p>
+
+  <p>Dernière position : 5ème Postdoctoral à l’Université de ■ ■ ■.<br>
+  Raison de Départ : Non-renouvellement de position.</p>
+
+  //<p>Notes :</p>
+  <ul>
+    <li> Malgré son expertise indéniable, Dr. ■ ■ ■ n’a jamais reçu son dû. Depuis la fin de son doctorat, elle n’a reçu que des positions temporaires ou de durée courte. Les retours de son travail ont toujours été excellent, mais ceci n’a jamais été récompensé. De sa promotion, Dr. ■ ■ ■ est la seule à ne pas avoir atteint la position de professeur.</li>
+    <li>Le travail de Dr. ■ ■ ■ a été cité plus de mille fois depuis la fin de son doctorat. Il a été la base du projet Jupiter Brockers.</li>
+  </ul>//
+
+
+:: StoryScript [script]
+/* twine-user-script #1: "java.js" */
+//--Not necessary if you use the base UI, but you can put Javascript here if you want
+//--If you want to have settings, this is where you will put the code
+Config.passages.nobr = true;
+$(document).on(":passagedisplay", function() {
+	$("#passages").scrollTop(0);
+});
+$(document).on(':dialogopened', function (ev) {
+	$("#ui-dialog-body").scrollTop(0);
+});
+
+l10nStrings.ok = 'OK',
+l10nStrings.savesLabelSlot = 'Emplacement',
+l10nStrings.savesSavedOn = 'Sauvegarder sur',
+l10nStrings.uiBarToggle = 'Cache / Montre le Menu';
+l10nStrings.uiBarBackward = "Revenir en arrière dans l'histoire",
+l10nStrings.uiBarForward = "Aller en avant dans l'histoire",
+l10nStrings.settingsTitle = 'Paramètres';
+l10nStrings.settingsOff   = 'Off';
+l10nStrings.settingsOn    = 'On';
+l10nStrings.settingsReset = 'Réinitialiser';
+l10nStrings.cancel =  "Annuler";
+l10nStrings.restartTitle = "Recommencer";
+l10nStrings.restartPrompt = "Êtes-vous sûr de vouloir recommencer? Tout progrès non sauvegardé sera perdu.";
+l10nStrings.savesTitle = "Sauvegardes";
+l10nStrings.savesEmptySlot = "emplacement vide";
+l10nStrings.savesLabelDelete = "Effacer";
+l10nStrings.savesLabelExport = "Sauvegarder sur Disque";
+l10nStrings.savesLabelImport = "Charger du Disque";
+l10nStrings.savesLabelLoad = "Charger";
+l10nStrings.savesLabelClear = "Tout Effacer";
+l10nStrings.savesLabelSave = "Sauvegarder";
+
+window.arraycomoare = function (one, two) {
+
+    if (one.length !== two.length) {
+      return false;
+    }
+    
+    for (let x = 0; x < one.length; x++) {
+        if (one[x] !== two[x]) {
+            //validated++
+            return false;    
+            } 
+        }
+        return true;
+};
+
+    Setting.addToggle("NumberedLinks", {
+    label : `Liens numérotés.`,
+	desc  : `Si activée, le numéro du clavier à appuyer pour chaque lien apparaîtra.`,
+    default  : false,
+	onChange : function(){setup.updateLinks();}
+});
+    Setting.addRange("masterVolume", {
+        label    : "Master volume.",
+        min      : 0,
+        max      : 10,
+        step     : 1,
+        onChange : function () {
+            SimpleAudio.volume(settings.masterVolume / 10);
+        }
+    });
+/* twine-user-script #2: "macro.js" */
+setup.scrollToBottom = (id) => {
+    const element = $(`#${id}`);
+    setTimeout(function() { 
+        element.animate({
+            scrollTop: element.prop("scrollHeight")
+        }, 500);
+    }, 200);
+}
+setup.scrollToTop = (id) => {
+    const element = $(`#${id}`);
+    setTimeout(function() { 
+        element.animate({
+            scrollTop: 0
+        }, 500);
+    }, 200);
+}
+
+// dialog API macro set, by chapel; for sugarcube 2
+// version 1.3.0
+// see the documentation: https://github.com/ChapelR/custom-macros-for-sugarcube-2#dialog-api-macros
+
+// <<dialog>> macro
+Macro.add('dialog', {
+    tags : ['onopen', 'onclose'],
+ handler : function () {
+     
+     // handle args (if any)
+     var errors = [];
+     var content = '', onOpen = null, onClose = null;
+     var title = (this.args.length > 0) ? this.args[0] : '';
+     var classes = (this.args.length > 1) ? this.args.slice(1).flatten() : [];
+
+     this.payload.forEach( function (pl, idx) {
+         if (idx === 0) {
+             content = pl.contents;
+         } else {
+             if (pl.name === 'onopen') {
+                 onOpen = onOpen ? onOpen + pl.contents : pl.contents;
+             } else {
+                 onClose = onClose ? onClose + pl.contents : pl.contents;
+             }
+         }
+     });
+     
+     // add the macro- class
+     classes.push('macro-' + this.name);
+     
+     // dialog box
+     Dialog.setup(title, classes.join(' '));
+     Dialog.wiki(content);
+
+     // should these be shadowWrapper-aware?
+     if (onOpen && typeof onOpen === 'string' && onOpen.trim()) {
+         $(document).one(':dialogopened', function () {
+             $.wiki(onOpen);
+         });
+     }
+
+     if (onClose && typeof onClose === 'string' && onClose.trim()) {
+         $(document).one(':dialogclosed', function () {
+             $.wiki(onClose);
+         });
+     }
+
+     Dialog.open();
+     
+ }
+
+});
+
+// <<popup>> macro
+Macro.add('popup', {
+ handler : function () {
+     
+     // errors
+     if (this.args.length < 1) {
+         return this.error('need at least one argument; the passage to display');
+     }
+     if (!Story.has(this.args[0])) {
+         return this.error('the passage ' + this.args[0] + 'does not exist');
+     }
+     
+     // passage name and title
+     var psg   = this.args[0];
+     var title = (this.args.length > 1) ? this.args[1] : '';
+     var classes = (this.args.length > 2) ? this.args.slice(2).flatten() : [];
+     
+     // add the macro- class
+     classes.push('macro-' + this.name);
+     
+     // dialog box
+     Dialog.setup(title, classes.join(' '));
+     Dialog.wiki(Story.get(psg).processText());
+     Dialog.open();
+     
+ }
+
+});
+
+// <<dialogclose>> macro
+Macro.add('dialogclose', { 
+ skipArgs : true, 
+ handler : function () {
+     Dialog.close();
+ } 
+});
+//Liveupdate
+(function () {
+	"use strict";
+
+	$(document).on(":liveupdate", function () {
+		$(".macro-live").trigger(":liveupdateinternal");
+	});
+
+	Macro.add(['update', 'upd'], {
+		handler: function handler() {
+			$(document).trigger(":liveupdate");
+		}
+	});
+
+	Macro.add(['live', 'l', 'lh'], {
+		skipArgs: true,
+		handler: function handler() {
+			if (this.args.full.length === 0) {
+				return this.error('no expression specified');
+			}
+			try {
+				var statement = this.args.full;
+				var result = toStringOrDefault(Scripting.evalJavaScript(statement), null);
+				if (result !== null) {
+					var lh = this.name === "lh";
+					var $el = $("<span></span>").addClass("macro-live").wiki(lh ? Util.escape(result) : result).appendTo(this.output);
+					$el.on(":liveupdateinternal", this.createShadowWrapper(function (ev) {
+						var out = toStringOrDefault(Scripting.evalJavaScript(statement), null);
+						$el.empty().wiki(lh ? Util.escape(out) : out);
+					}));
+				}
+			} catch (ex) {
+				return this.error("bad evaluation: " + (_typeof(ex) === 'object' ? ex.message : ex));
+			}
+		}
+	});
+
+	Macro.add(['liveblock', 'lb'], {
+		tags: null,
+		handler: function handler() {
+			try {
+				var content = this.payload[0].contents.trim();
+				if (content) {
+					var $el = $("<span></span>").addClass("macro-live macro-live-block").wiki(content).appendTo(this.output);
+					$el.on(":liveupdateinternal", this.createShadowWrapper(function (ev) {
+						$el.empty().wiki(content);
+					}));
+				}
+			} catch (ex) {
+				return this.error("bad evaluation: " + (_typeof(ex) === 'object' ? ex.message : ex));
+			}
+		}
+	});
+})();
+
+// fading macro set, by chapel; for SugarCube 2
+// version 1.1.0
+// see the documentation: https://github.com/ChapelR/custom-macros-for-sugarcube-2#fading-macros
+
+// <<fadein>> macro
+Macro.add('fadein', {
+    tags : null,
+ handler : function () {
+
+     var $wrapper = $(document.createElement('span'));
+     var content  = this.payload[0].contents, time, delay;
+
+     if (this.args.length === 0) {
+         return this.error('no arguments given');
+     }
+     
+     time  = Util.fromCssTime(this.args[0]);
+     delay = (this.args.length > 1) ?  Util.fromCssTime(this.args[1]) : 0;
+
+     $wrapper
+         .wiki(content)
+         .addClass('macro-' + this.name)
+         .appendTo(this.output)
+         .hide()
+         .delay(delay)
+         .fadeIn(time);
+
+ }
+});
+
+// <<fadeout>> macro
+Macro.add('fadeout', {
+    tags : null,
+ handler : function () {
+
+     var $wrapper = $(document.createElement('span'));
+     var content  = this.payload[0].contents, time, delay;
+
+     if (this.args.length === 0) {
+         return this.error('no arguments given');
+     }
+     
+     time  = Util.fromCssTime(this.args[0]);
+     delay = (this.args.length > 1) ?  Util.fromCssTime(this.args[1]) : 0;
+
+     $wrapper
+         .wiki(content)
+         .addClass('macro-' + this.name)
+         .appendTo(this.output)
+         .delay(delay)
+         .fadeOut(time);
+
+ }
+});
+
+Macro.add('dyslexia', {
+	tags: null,
+	handler  : function () {
+		// Dyslexia by SjoerdHekking
+		'use strict';
+
+		var out = $(`<span class="macro-mess-up-words" />`)
+        	.wiki(this.payload[0].contents)
+          	.appendTo(this.output);
+
+		// returns texts
+		var getTextNodesIn = function(el) {
+		    return $(el).find(":not(iframe,script)").addBack().contents().filter(function() {
+		        return this.nodeType === 3;
+		    });
+		};
+
+		// only allow scanning within these tags
+		var textNodes = getTextNodesIn(out);
+
+		var errorArray = []; // Empty error array to address multiple problems
+
+		var storeArg = this.args[0]; // Store args 1 for use outside of function
+		var storeArg2 = this.args[1]; // Store args 2 for use outside of function
+		var storeArg3 = this.args[2]; // Store args 3 for use outside of function
+
+		var defaultChance = 10; // default time for shuffling chance in percentage
+		var defaultSize = 3; // default size for length of words
+		var defaultSpeed = 50; // default delay for dynamic changes
+
+		if (storeArg) {
+			if (typeof storeArg !== 'number') {
+				storeArg = Number(storeArg);
+			}
+			if (Number.isNaN(storeArg)) {
+				storeArg = defaultChance;
+				errorArray.push("Check first argument. The dyslexia macro used the default.");
+			}
+			if (storeArg < 0) {
+				storeArg = defaultChance;
+				errorArray.push("Check first argument. Negative numbers are not allowed.");
+			}
+            if (storeArg > 100) {
+				storeArg = defaultChance;
+				errorArray.push("Check first argument. Numbers higher than 100 are not allowed.");
+			}
+		} else {
+			storeArg = defaultChance;
+		}
+
+		if (storeArg2) {
+			if (typeof storeArg2 !== 'number') {
+				storeArg2 = Number(storeArg2);
+			}
+			if (Number.isNaN(storeArg2)) {
+				storeArg2 = defaultSize;
+				errorArray.push("Check second argument. The dyslexia macro used the default.");
+			}
+			if (storeArg2 < 2) {
+				storeArg2 = defaultSize;
+				errorArray.push("Check second argument. Minimum word size is 2.");
+			}
+		} else {
+			storeArg2 = defaultSize;
+		}
+
+		if (storeArg3) {
+			if (typeof storeArg3 !== 'number') {
+				storeArg3 = Number(storeArg3);
+			}
+			if (Number.isNaN(storeArg3)) {
+				storeArg3 = defaultSpeed;
+				errorArray.push("Check third argument. The dyslexia macro used the default.");
+			}
+			if (storeArg3 < 50) {
+				storeArg3 = defaultSize;
+				errorArray.push("Check third argument. Minimum delay is 50.");
+			}
+		} else {
+			storeArg3 = defaultSpeed;
+		}
+
+		if (errorArray.length > 0) {
+		  var joinedArray = errorArray.join('\n')
+		  return this.error(joinedArray);
+		}
+
+		function isLetter(char) {
+			return /^[\d]$/.test(char);
+		}
+
+		var wordsInTextNodes = [];
+		for (var i = 0; i < textNodes.length; i++) {
+			var node = textNodes[i];
+
+			var words = []
+
+			var re = /\w+/g;
+			var match;
+			while ((match = re.exec(node.nodeValue)) != null) {
+
+				var word = match[0];
+				var position = match.index;
+
+				words.push({
+					length: word.length,
+					position: position
+				});
+			}
+
+			wordsInTextNodes[i] = words;
+		};
+
+		function messUpWords () {
+			for (var i = 0; i < textNodes.length; i++) {
+
+				var node = textNodes[i];
+
+				for (var j = 0; j < wordsInTextNodes[i].length; j++) {
+					
+					if (Math.random() < (100 - storeArg) / 100 ) {
+						continue;
+					}
+
+					var wordMeta = wordsInTextNodes[i][j];
+					var word = node.nodeValue.slice(wordMeta.position, wordMeta.position + wordMeta.length);
+					var before = node.nodeValue.slice(0, wordMeta.position);
+					var after  = node.nodeValue.slice(wordMeta.position + wordMeta.length);
+
+					node.nodeValue = before + messUpWord(word) + after;
+				};
+			};
+		}
+
+		function messUpWord (word) {
+			if (word.length < storeArg2) {
+				return word;
+			}
+			return word[0] + messUpMessyPart(word.slice(1, -1)) + word[word.length - 1];
+		}
+
+		function messUpMessyPart (messyPart) {
+			if (messyPart.length < 2) {
+
+				return messyPart;
+			}
+			var a, b;
+			while (!(a < b)) {
+				a = getRandomInt(0, messyPart.length - 1);
+				b = getRandomInt(0, messyPart.length - 1);
+			}
+
+			return messyPart.slice(0, a) + messyPart[b] + messyPart.slice(a+1, b) + messyPart[a] + messyPart.slice(b+1);
+		}
+
+		// random random value between given min and max
+		function getRandomInt(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) + min);
+		}
+		// set interval for dynamic DOM changes
+		setInterval(messUpWords, storeArg3);
+	}
+});
+//--KEY BINDING 1--
+// KeyBinding API macro set, by Sjoerd; for sugarcube 2
+setup.removeAllLinks = function removeLinks(links) {
+    links.each(function() {
+        /* Remove data attributes and thus handler for keyup and remove sups */
+        $(this).find('sup').remove();
+        $(this).removeAttr("data-link-number");
+    });
+};
+setup.removeLinks = function removeLinks(links) {
+    links.each(function() {
+        /* Remove sups */
+        $(this).find('sup').remove();
+    });
+};
+setup.updateLinks = function updateLinks() {
+    /* Manual overwrite when a passage should not have numbered links */
+    let allLinks = $(".passage a");
+    if (!settings.NumberedLinks) {
+        allLinks.each(function() {
+            /* Remove data attributes and thus handler for keyup and remove sups */
+            $(this).find('sup').remove();
+        });
+    }
+    if (!tags().includes("DisableKeyLinks")) {
+        /* Find all links inside the passage class */
+        for (let step = 0; step < allLinks.length; step++) {
+            if (!$(allLinks[step]).parents().hasClass("macro-type") || $(allLinks[step]).parents().hasClass("macro-type-done")) {
+                let linkText = allLinks.eq(step).text();
+                if (step === 10) {
+                    /* When step is ten, we need manual 0 */
+                    allLinks.eq(10).html(linkText + "<sup>[0]</sup>");
+                    allLinks.eq(10).attr("data-link-number", "0");
+                } else {
+                    /* Add the sup element to any link found with the data attribute */
+                    if (settings.NumberedLinks) {
+                        allLinks.eq(step).html(linkText + "<sup>["+(step + 1)+"]</sup>");
+                    }
+                    allLinks.eq(step).attr("data-link-number", step);
+                }
+            }            
+        }
+    } 
+};
+$(document).on(':typingcomplete', function (ev) {
+	setup.removeAllLinks($(".passage a"))
+    if (!tags().includes("DisableKeyLinks")) {
+        let allLinks = $(".passage a");
+        /* Find all links inside the passage class */
+        for (let step = 0; step < allLinks.length; step++) {
+            let linkText = allLinks.eq(step).text();
+            if (step === 10) {
+                /* When step is ten, we need manual 0 */
+                allLinks.eq(10).html(linkText + "<sup>[0]</sup>");
+                allLinks.eq(10).attr("data-link-number", "0");
+            } else {
+                /* Add the sup element to any link found with the data attribute */
+                if (settings.NumberedLinks) {
+                    allLinks.eq(step).html(linkText + "<sup>["+(step + 1)+"]</sup>");
+                }
+                allLinks.eq(step).attr("data-link-number", step);
+            }           
+        }
+    } 
+});
+$(document).on(':passageend', function (ev) {
+    /* Call function every ending of DOM creation, so no weirdness can happen */
+	setup.updateLinks();
+    const config = {
+        subtree: true, childList: true, characterData: true
+    };
+    const targetNode = document.getElementById("passages");
+      
+    function observerCallback(mutationList) {
+        mutationList.forEach(mutation => {
+        if (mutation.type === "childList") {
+            if ($(mutation.target).is("a")) {
+            // link has had children. ignore
+            } else {
+                setup.removeAllLinks($(".passage a"))
+                setup.updateLinks();
+            }
+        }
+        });
+    }
+    
+    const MO = new MutationObserver(observerCallback);
+    MO.observe(targetNode, config);
+
+    if($('.macro-cycle').length){
+        $('.macro-cycle').on("click", function() {
+            setup.removeAllLinks($(".passage a"));
+            setup.updateLinks()
+        });
+    }
+});
+$(document).on("keyup", function (e) {
+    /* We need a preventDefault() to prevent ghost clicking */
+    e.preventDefault();
+    /* Keys mapped to index */
+    let keyMapNormal = [49, 50, 51, 52,  53, 54, 55, 56, 57, 48];
+    let keyMapPad = [97, 98, 99, 100, 101, 102, 103, 104, 105, 96];
+    let allLinks = $(".passage a");
+    if (!tags().includes("DisableKeyLinks") && ($("input:focus").length === 0)) {
+        if (((allLinks === 1) && (e.which === 39)) || (e.which === 49 || e.which === 97)) {
+            /* If only one link is present, allow right arrow to function as click as well */
+            allLinks.eq(0).click();
+        }
+        /* Allow number keys to be pressed inside input elements as well by filtering for them */
+        if (keyMapNormal.includes(e.which) || keyMapPad.includes(e.which)) {
+            let key = (keyMapNormal.includes(e.which)) ? e.which - 49 : e.which - 97;
+            let link = allLinks.filter(function() {
+                return $(this).attr('data-link-number') == key;
+            });
+            if (link.length > 0) {
+                /* Prevent no links clicking */
+                link.click();
+            }
+        }
+    }
+    if (!tags().includes("IgnoreArrowKeys") && ($("input:focus").length === 0)) {
+        if (e.which === 39) {
+            Engine.forward();
+        } else if (e.which === 37) {
+            Engine.backward();
+        }
+    }
+});
+    //--KEY BINDING 2--
+(function () {
+    setup.eventMacroNamespace = 'macro-event';
+
+    // the <<trigger>> macro
+    Macro.add('trigger', {
+        handler : function () {
+            
+            // declare vars
+            var evt, $el;
+            
+            // check for errors
+            if (this.args.length > 2 || this.args.length === 0) {
+                return this.error('incorrect number of arguments');
+            }
+            if (typeof this.args[0] != 'string') {
+                return this.error('first argument should be a string and a valid event type');
+            }
+            
+            // some setup
+            evt = this.args[0];
+            $el = (this.args.length === 1 ||
+                (this.args[1] && typeof this.args[1] === 'string' &&
+                this.args[1].toLowerCase().trim() === 'document')) ?
+                $(document) : $(this.args[1]);
+            
+            // fire the event
+            $el.trigger(evt);
+            
+        }
+    });
+
+    // the <<event>> macro: <<event type [selector] [once]>>
+    Macro.add(['event', 'on', 'one'], {
+           tags : ['which'],
+        handler : function () {
+            
+            var payload = this.payload;
+            var method = 'on';
+            var evt, sel = '', code = '', i;
+            
+            if (this.args.length > 3 || this.args.length === 0) {
+                return this.error('incorrect number of arguments');
+            }
+            if (typeof this.args[0] != 'string') {
+                return this.error('first argument should be a string and a valid event type');
+            }
+            if (this.args.length === 2 && typeof this.args[1] == 'string' && this.args[1] !== 'once') {
+                sel = this.args[1];
+            }
+            
+            if (this.args.includes('once') || this.name === 'one') {
+                method = 'one';
+            }
+
+            evt = this.args[0];
+            
+            $(document)[method](evt + '.' + setup.eventMacroNamespace, sel, this.createShadowWrapper(function (e) {
+                if (!tags().includes("DisableKeyLinks") && ($("input:focus").length === 0)) {
+                code = payload[0].contents;
+                if (payload.length > 1) {
+                    for (i = 1; i < payload.length; i++) {
+                        if (payload[i].args.includes(e.which)) {
+                            code = code + payload[i].contents;
+                        }
+                    }
+                }
+                new Wikifier(null, code);
+            }
+            }));
+            
+        }
+    });
+
+    Macro.add('off', {
+        handler : function () {
+            
+            // declare vars
+            var evt, $el;
+            
+            // check for errors
+            if (this.args.length > 2 || this.args.length === 0) {
+                return this.error('incorrect number of arguments');
+            }
+            if (typeof this.args[0] != 'string') {
+                return this.error('first argument should be a string and a valid event type or namespace');
+            }
+            
+            // some setup
+            evt = this.args[0];
+            $el = (this.args.length === 1 ||
+                (this.args[1] && typeof this.args[1] === 'string' &&
+                this.args[1].toLowerCase().trim() === 'document')) ?
+                $(document) : $(this.args[1]);
+            
+            // fire the event
+            $el.off(evt);
+            
+        }
+    });
+
+}());
+
+(function () {
+    // disable.js, by chapel, for sugarcube 2
+    // v1.0.0
+
+    'use strict';
+
+    var cls = 'disabled';
+    var interactive = ['button', 'fieldset', 'input', 'menuitem', 'optgroup', 'option', 'select', 'textarea'];
+
+    function getEl (self) {
+        // get the first interactive element
+        var $el = $(self).find(interactive.join(',')).first();
+        if (!$el[0]) {
+            $el = $(self).children().eq(0);
+            if (!$el[0]) {
+                return $(self);
+            }
+        }
+        return $el;
+    }
+
+    function changeCls ($el) {
+        if ($el.ariaIsDisabled()) {
+            $el.addClass(cls);
+        } else {
+            $el.removeClass(cls);
+        }
+    }
+
+    function disable ($el, bool) {
+        if (!($el instanceof $)) {
+            $el = $($el);
+        }
+        $el.ariaDisabled((bool === undefined) ? true : !!bool);
+        changeCls($el);
+        return $el;
+    }
+
+    // no need for JS API as there us a built-in jQuery extension
+
+    Macro.add('disable', {
+        tags : null,
+        handler : function () {
+            var bool, $wrapper = $(document.createElement('span'))
+                .addClass('macro-' + this.name)
+                .wiki(this.payload[0].contents);
+
+            try {
+                bool = this.args.raw.trim() ? !!Scripting.evalJavaScript(this.args.full) : undefined;
+            } catch (err) {
+                return this.error("bad evaluation: " + err.message);
+            }
+
+            disable(getEl($wrapper), bool);
+
+            // output
+            $(this.output).append($wrapper);
+        }
+    });
+
+}());
+
+/*
+    the following `(function () {...}());` statement creates a local scope for our JavaScript code.
+    this is called an IIFE, or "immediately invoked function expression". most langauges have block scoping,
+    JS has function scoping. think of this as a way to get block scoping to prevent any of our stuff from
+    polluting the global scope.
+*/
+
+(function () {
+
+    // v1.1.0
+
+    /*
+        in SC, all of your scripts run in-engine are run in strict mode no matter what you do, so the below
+        statement is optional. still, it's best to be explicit with what's happening. generally speaking, I
+        recommend strict mode all the time; there's some cases where you may want to skip it, but overall it
+        makes JavaScript way more consistent and way more likely to tell you about errors instead of doing something
+        unexpected.
+    */
+
+    'use strict';
+
+    /*
+        I usually use an object like the one below to set up user configuration options. because of
+        when our script is loaded, we need to set these options here, we can't do something like 
+        `Config.swapMacro.normal = 'x'` like SugarCube's configs can, at least not in SC's current version
+    */
+
+    var options = {  
+        // the colors of the content
+        tryGlobal : true,
+        resetButton : true, // if false, renders a link (`<a>`) instead of a button
+        normal : 'violet',
+        selected : 'red',
+        cls : 'swappable' // we use 'cls' because 'class' is a reserved word in JavaScript
+    };
+
+    setup.swap = setup.swap || {};
+
+    /*
+        the `first` variable below is inside what is called a 'closure.' this means the variable is 
+        only accessible within this `(function () { ... }());` scope. this variable will hold one of our swap
+        elements. if it's set to something when a swap is clicked, it'll do the swap thing
+    */
+
+    var $first = null;
+
+    function getCurrent (str) {
+        // create a function on the fly
+        var g = function () {
+            return str;
+        };
+        setup.swap.current = g;
+        if (options.tryGlobal) {
+            window.swapCurrent = g;
+        }
+    }
+
+    function removeCurrent () {
+        if (setup.swap.current && typeof setup.swap.current === 'function') {
+            delete setup.swap.current;
+        }
+        if (options.tryGlobal && window.swapCurrent && typeof window.swapCurrent === 'function') {
+            delete window.swapCurrent;
+        }
+    }
+
+    /*
+        we're going to have a function and a macro definition. we can put the function
+        inside the macro, but I try to avoid doing that--doing so means that the only way you can
+        use this system from inside JavaScript is by the jQuery `wiki()` methods, which are slow.
+        by creating the function separately, we build a JavaScript-facing API for authors to use, but
+        more on that later.
+    */
+
+    function swappable (content /* the word(s) to be swapped */, wiki /* wikicode to run */) {
+        /*
+            $wrapper is a jQuery object; we add the $ at the start to denote this,
+            the $ has nothing to do with story variables, so don't let that confuse you
+        */
+        var $wrapper = $(document.createElement('span'));
+        // a wrapper is just an element to hold the stuff we want.
+        var $swappable = $(document.createElement('a'))
+            .wiki(content) // this wikifies (parses the `content` into the `a` element)
+            .css('color', options.normal) // set our default color
+            .attr({
+                // these are custom html attributes; they always start with `data-`
+                'data-swap-flag' : 'false', // set our custom attribute to the string false
+                // normally you wouldn't use a string, but html converts everything to a string
+                'data-orig-content' : content, // this is the original content so we can reset it
+                'data-wiki-code' : wiki || ''
+            }) 
+            .addClass(options.cls) // this adds out class
+            .appendTo($wrapper); // this adds the `a` element to our wrapper
+
+        /*
+            we're going to add our event handlers now. we could chain these above, but this is simpler to comment
+            we use SC's `ariaClick()` method instead of `on('click', ...)` or `click(...)` because it is designed
+            for accessibility from the ground up.
+        */
+
+        $swappable.ariaClick( function (ev /* this is the event object */) {
+            ev.preventDefault(); // this stops any default browser behavior from happening
+            // we cache a reference to $(this); the jQuery-wrapped `this`, since we'll use it a lot
+            var $this = $(this); // the `this` keyword in an event handler is the element the handler was attached to
+
+            // let's check the swapped state
+            // we check this first because swapping an element with itself is possible, but a waste of resources
+            if ($this.attr('data-swap-flag') === 'true') {
+                // if the attribute swap flag is already set, we should toggle it
+                $this
+                    .attr('data-swap-flag', 'false')
+                    .css('color', options.normal);
+                // reset the first clicked element, since this one was clicked twice
+                $first = null;
+            } else {
+                // this was clicked and wasn't clicked twice, so let's see if there's already an element in `first`
+                if (!$first) {
+                    // null is false-y and jQuery objects are truthy. this block is run if nothing was captured by `first` yet
+                    $first = $this; // we pass a reference to *this* element to first
+                    // then we set the element to appear selected
+                    $this
+                        .attr('data-swap-flag', 'true')
+                        .css('color', options.selected);
+                } else {
+                    // another element was already selected. there's a few things we need to do here.
+                    var firstContent = $first.text();
+                    var secondContent = $this.text();
+
+                    // cache the wikifier code
+                    var firstWiki = $first.attr('data-wiki-code');
+                    var secondWiki = $this.attr('data-wiki-code');
+
+                    $first
+                        // reset the flag and color
+                        .attr('data-swap-flag', 'false')
+                        .css('color', options.normal)
+                        // empty and replace the content
+                        .empty()
+                        .wiki(secondContent);
+                    $this // do the same with $this
+                        .attr('data-swap-flag', 'false')
+                        .css('color', options.normal)
+                        .empty()
+                        .wiki(firstContent);
+                    // reset $first!
+
+                    // run the wikifier code for both, if they exist
+                    if (firstWiki && typeof firstWiki === 'string' && firstWiki.trim()) {
+                        getCurrent(secondContent);
+                        $.wiki(firstWiki);
+                    }
+                    if (secondWiki && typeof secondWiki === 'string' && secondWiki.trim()) {
+                        getCurrent(firstContent);
+                        $.wiki(secondWiki);
+                    }
+                    removeCurrent();
+                    $first = null;
+                }
+            }
+        });
+
+        // we return the whole html structure
+        return $wrapper;
+
+        /*
+            the html structure is:
+            <span> ($wrapper)
+                <a class='swappable' data-swap-flag='false'> ($swappable)
+                    [content]
+                </a>
+            </span>
+        */
+    }
+
+    function reset () {
+        // this function will reset ever swappable element on the page
+        $first = null;
+        // reset each link
+        $('a.' + options.cls).each( function () {
+            var $this = $(this);
+            $this
+                // restore original content
+                .empty()
+                .wiki($this.attr('data-orig-content'))
+                // reset flag and color
+                .attr('data-swap-flag', 'false')
+                .css('color', options.normal);
+        });
+    }
+
+    // now lets make a macro
+
+    Macro.add('swap' /* the macro name, so `<<swap>>` */, {
+        tags : ['onswap'], // this makes a container macro, eg: `<<macro>>...<</macro>>`
+        skipArgs : true, // we aren't using the argument parser, so this saves us performance
+        handler : function () {
+            // this is the macro's behavior, `this` represents the context and content of the macro
+            var content = this.payload[0].contents; // this is the content between <<swap>> and <<onswap>>
+            var wikiCode = this.payload[1] ? this.payload[1].contents : ''; // the code between <<onswap>> and <</swap>>
+            var output = this.output; // this is the macro's position on the page--it's where the output will go
+            var name = this.name; // this is the macro's name (eg: 'swap'); this lets us change the macros name easily rather than hard-coding it
+
+            // now we call our function
+            var $wrapper = swappable(content, wikiCode);
+
+            // now we append the generated jQuery element to the output area:
+            $wrapper
+                .addClass('macro-' + name)
+                .appendTo(output);
+        }
+    });
+
+    // now for a <<swapreset>> macro
+
+    Macro.add('resetswap', { // by skipping the `tags` option altogether, we make a normal macro (eg, no closing tag)
+        handler : function () {
+            var text = (this.args && this.args[0] && typeof this.args[0] === 'string') ? this.args[0] : 'Reset';
+            $(document.createElement(options.resetButton ? 'button' : 'a'))
+                .wiki(text)
+                .ariaClick({ label : 'Reset all swappable elements.' }, function (ev) {
+                    ev.preventDefault();
+                    reset();
+                })
+                .appendTo(this.output);
+        }
+    });
+
+    // now we send out API functions to setup
+    setup.swap.create = swappable;
+    setup.swap.reset = reset;
+    // now we have a JavaScript API and a set of macros!
+}());
+
+Macro.add('drop', {
+    isAsync : true,
+      tags : ['onEnter','onLeave','onDrop','onRemove'],
+  
+      handler() {
+          
+          const ID = (this.args[0]? this.args[0] : null), type = this.args[1], attributes = this.args.slice(2);
+          const onEnter = this.payload.find(pay => pay.name === 'onEnter'),
+                      onLeave = this.payload.find(pay => pay.name === 'onLeave'),
+                      onDrop = this.payload.find(pay => pay.name === 'onDrop'),
+                      onRemove = this.payload.find(pay => pay.name === 'onRemove');
+          let dropMode = onDrop ? onDrop.args[0] : null;
+          const innerContent = this.payload[0].contents;
+          
+          //Type errors
+          [['Id', ID],['Element type', type]].forEach(item =>{
+              if (item[1] && typeof item[1] !== 'string')
+                  return this.error(`${item[0]} must be a string, reading: '${typeof item[1]}'`);
+          })
+          
+          //Invalid dropMode
+          if (dropMode && !['append', 'prepend', 'replace','replaceall', 'swap','none','anywhere','remove','fillswap'].includes(dropMode)) return this.error(`Drop mode (<<onDrop mode>>) is not valid, reading '${dropMode}'`);
+          
+          const dropElem = $(`<${type ? type : 'div'}/>`);
+      
+          //Apply attributes
+          for (let i = 0; i < attributes.length;i++) {
+              if (typeof attributes[i] === 'object'){// jQuery style object
+                  dropElem.attr(attributes[i]);
+                  
+              } else { //Simple pair
+                  dropElem.attr( attributes[i], attributes[i+1]);
+                  i++
+              }
+          }
+          
+          //Fillswap special variable
+          if (dropMode === 'fillswap' && !dropElem.attr('slots')) {
+              return this.error(`'Fillswap' mode needs a 'slots' property to work.`);
+          } else if (dropMode === 'fillswap'){
+              var fillswap = true;
+          }
+          
+          if (ID){
+              dropElem.data('drop-id', ID).addClass(`drag-${ID}`)
+          }
+          
+          //Manage slots system
+          if (dropElem.attr('slots')){
+              var slots = dropElem.attr('slots');
+              if (slots.split('/').length === 2){ //Taylored version
+                  slots = Number(slots.split('/')[1] - slots.split('/')[0]);
+              } else { //Loose logic
+                  slots -= dropElem.children().length;
+              }
+              dropElem.removeAttr('slots').attr('data-slots', slots);
+          }
+          
+          //Finds the closest existing element in the drop target
+          function findClosest(e,dragElem) {
+              const chi = dropElem.children();
+              if (!chi.length) {
+                  //Drop doesn't have children
+                  return null;
+              } else {
+                  //Object of objects
+                  const dif = [], x = e.pageX, y = e.pageY;
+                  for (let i = 0; i < chi.length; i++){
+                      //Get index + diagonal distance
+                      const PosY = $(chi[i]).offset().top + $(chi[i]).width()/2,
+                                  PosX = $(chi[i]).offset().left + $(chi[i]).height()/2;
+                      
+                      dif.push({
+                          diag : Math.hypot(Math.abs(PosY - y), Math.abs(PosX - x)) ,
+                          index : i ,
+                          offset : [PosX - x, PosY - y]
+                      });
+                  }
+                  //Find shortest distance
+                  const closest = dif.sort((a,b)=> a.diag - b.diag)[0];
+                  return [chi[closest.index], closest.offset];
+              }
+          }
+          
+          //Draggable is dragged out
+          dropElem.on('dragstart', this.createShadowWrapper(
+              (e) => {
+                  const dragElem = State.temporary.drag;
+                  
+                  //Wait for the ':predrop' event to validate the move
+                  //This stops improper drags from running the removal code
+                  $(document).off(':predrop');
+                  $(document).one(':predrop', (e) => {
+                          onRemove ? $.wiki(onRemove.contents): null;
+                          if (e.origin !== 'swap' && slots !== undefined) {
+                              slots += dragElem.size;
+                              dropElem.removeAttr('slots').attr('data-slots', slots);
+                          }
+                  });
+              }
+          ));
+          
+          dropElem.addClass(`macro-${this.name}`)
+              .on('drop', this.createShadowWrapper(
+                  (e) => {
+                      const dragElem = State.temporary.drag;
+                      
+                          if (fillswap){
+                              dropMode = slots > 0 ? null : 'swap';
+                          }
+                      
+                      e.preventDefault();
+                      
+                      if (ID && dragElem.type && dragElem.type !== ID){
+                          //Wrond id match!
+                          $(e.target).trigger(':typemismatch');
+                      } else if (slots - dragElem.size < 0 && dropMode !== 'swap'){
+                          $(e.target).trigger(':noslots');
+                      } else {
+                          
+                          //Confirm target removal
+                          $(e.target).trigger(
+                              {type : ':predrop', slots : slots, origin : e.origin}
+                          );
+                          
+                          onDrop ? $.wiki(onDrop.contents) : null;
+                          
+                          const target = findClosest(e,dragElem);
+                              
+                          switch (dropMode){
+                              case 'prepend': case 'append':
+                                  dropElem[dropMode](dragElem.self);
+                                  slots !== undefined ? slots -= dragElem.size : null;
+                                  dropElem.removeAttr('slots').attr('data-slots', slots);
+                              break;
+                              case 'swap':
+                                  //Drag elem to container
+                                  if (target === null) {
+                                      //Only child, no element to swap
+                                      dropElem.append(dragElem.self);
+                                  } else {
+                                      $(target[0])[target[1][0] < 0? 'after' : 'before'](dragElem.self);
+                                      if (e.origin !== 'swap'){
+                                          //Avoid infinite swap loop!
+                                          $(target[0]).trigger('dragstart');
+                                          $(dragElem.origin).trigger(
+                                              {type : 'drop', origin : 'swap'}
+                                          );
+                                          setTimeout(() => {
+                                              $(target[0]).show();
+                                          });
+                                      }
+                                  }
+                              break;
+                              case 'remove':
+                                  dragElem.self.remove();
+                              break;
+                              case 'none':break;
+                              case 'replace':
+                                  dropElem.append(dragElem.self);
+                                  if (target !== null && !$(target).is(dragElem.self)) {
+                                      //Run removal code on target
+                                      $(target[0]).trigger('dragstart');
+                                          $(dropElem).trigger(':predrop');
+                                          $(target[0]).remove();
+                                  }
+                              break;
+                              case 'replaceall':
+                                  dropElem.empty().append(dragElem.self);
+                              break;
+                              default:
+                                  if (target === null) {
+                                      dropElem.append(dragElem.self);
+                                  } else {
+                                      $(target[0])[target[1][0] < 0 ? 'after' : 'before'](dragElem.self);
+                                  }
+                                  slots !== undefined ? slots -= dragElem.size : null;
+                                  dropElem.removeAttr('slots').attr('data-slots', slots);
+                          }
+                  }
+  
+                  //Trigger related event
+                  $(e.target).trigger(':postdrop');
+              
+              }))
+              .on('dragenter', this.createShadowWrapper(
+                  (e) => {
+                      //Run onEnter code
+                      onEnter ? $.wiki(onEnter.contents): null;
+  
+                      e.preventDefault();
+                      
+              }))
+              .on('dragover', (e) => {e.preventDefault();})
+              .on('dragleave', this.createShadowWrapper(
+                  (e) => {
+                      //Run onLeave code
+                      onLeave ? $.wiki(onLeave.contents): null;
+  
+                      e.preventDefault();
+              }))
+          dropElem.wiki(innerContent);
+          dropElem.appendTo(this.output);
+      }
+  })
+  
+  //---------------------------------------------------------------------
+                                                   
+  Macro.add('drag', {
+    isAsync : true,
+      tags : ['onStart', 'data'],
+  
+      handler() {
+          
+          const ID = (this.args[0]? this.args[0] : null), type = this.args[1], attributes = this.args.slice(2);
+          const innerContent = this.payload[0].contents,
+                      onStart = this.payload.find(pay => pay.name === 'onStart'),
+                      data = this.payload.find(pay => pay.name === 'data');
+          
+          //Type checker
+          
+          [['Id',ID],['Element type',type]].forEach(item =>{
+              if (item[1] && typeof item[1] !== 'string')
+                  return this.error(`${item[0]} must be a string, reading: '${typeof item[1]}'`);
+          })
+          
+          const dragElem = $(`<${type ? type : 'span'}/>`);
+      
+          for (let i = 0; i < attributes.length;i+=2) {
+              if (typeof attributes[i] === 'object'){// jQuery style object
+                  dragElem.attr(attributes[i]);
+                  i--;
+              } else { //Simple pair
+                  dragElem.attr( attributes[i], attributes[i+1]);
+              }
+          }
+          
+          if (dragElem.attr('size')){
+              var size = Number(dragElem.attr('size'));
+              dragElem.removeAttr('size').attr('data-size', size);
+          }
+          
+          if (ID){
+              dragElem.data('drop-id', ID).addClass(`drag-${ID}`)
+          }
+          
+          const oldData = State.temporary.drag;
+          
+          dragElem.attr('draggable','true')
+              .addClass(`macro-${this.name}`)
+              .on('dragstart', this.createShadowWrapper(
+                  (e) => {
+  
+                      //Handle old data
+                      State.temporary.drag = {
+                          type : ID,
+                          self : dragElem,
+                          size : (size ?? 1),
+                          data : (data ? data.args[0] : null),
+                          contents : innerContent,
+                          origin : $(e.target).parent(),
+                          originIndex : $(e.target).index()
+                      };
+  
+                      //Wikify associated payload
+                      onStart ? $.wiki(onStart) : null;
+  
+                      //Hide static copy when dragged
+                      setTimeout(() => {
+                          $(e.target).hide()
+                      });
+  
+              })).on('dragend', this.createShadowWrapper(
+                  (e) => {
+  
+                      //Reset _drag to former value
+                      oldData === undefined ? 
+                          delete State.temporary.drag :
+                          State.temporary.drag = oldData;
+  
+                      //Remove special class
+                          $(e.target).show();
+              }));
+              dragElem.wiki(innerContent);
+              dragElem.appendTo(this.output);
+      }
+  })
+
+:: StoryStylesheet [stylesheet]
+/* twine-user-stylesheet #1: "css import.css" */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+
+@font-face {
+    font-family: "Open Dyslexic";
+    src: url(font/OpenDyslexic-Regular.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Open Dyslexic";
+    src: url(font/OpenDyslexic-Italic.otf) format("opentype");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Open Dyslexic";
+    src: url(font/OpenDyslexic-BoldItalic.otf) format("opentype");
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face {
+     font-family: "Open Dyslexic";
+     src: url(font/OpenDyslexic-Bold.otf) format("opentype");
+     font-style: normal;
+     font-weight: 700;
+}
+@font-face {
+    font-family: "Blanka";
+    src: url(font/Blanka-Regular.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "bit Operator Small";
+    src: url(font/8bitOperatorPlus8-Bold.ttf) format("truetype");
+    font-style: bold;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "bit Operator Small";
+    src: url(font/8bitOperatorPlus8-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "bit Operator Plus";
+    src: url(font/8bitOperatorPlus-Bold.ttf) format("truetype");
+    font-style: bold;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "bit Operator Plus";
+    src: url(font/8bitOperatorPlus-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "bit Operator Block";
+    src: url(font/8bitOperatorPlusSC-Bold.ttf) format("truetype");
+    font-style: bold;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "bit Operator Block";
+    src: url(font/8bitOperatorPlusSC-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Data Control Latin";
+    src: url(font/data-latin.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Data Control Uniform";
+    src: url(font/data-unifon.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "VCR";
+    src: url(font/VCR_OSD_MONO.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+ :root {
+    --font: bit Operator Small, monospace;
+}
+/* twine-user-stylesheet #2: "css.css" */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #023003db #00000035;
+  scrollbar-gutter: auto;
+}
+/*Chrome */
+\::-webkit-scrollbar {width: 8px;}
+\::-webkit-scrollbar-track { background: #00000035;}
+\::-webkit-scrollbar-thumb {background: #023003db;}
+\::-webkit-scrollbar-thumb:hover {background: #023003;} 
+
+html {
+  font-family: var(--font);
+  background: #111;
+}
+body {
+  color: #c1ffc1;
+  background: repeating-linear-gradient( to bottom, #111 0px, #111 5px, #012F0685 5px, #012F0685 10px);
+  height: 100vh;
+}
+#container {
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  width: 800px;
+  height: 600px;
+  padding: 1em;
+  outline: 5px #00580A double;
+  background: repeating-linear-gradient( to bottom, #111 0px, #111 5px, #012F0685 5px, #004A0885 10px);
+  border-radius: 33px;
+}
+.title #container {
+  outline: none;
+  background: none;
+}
+
+/*************************************** Menu ***************************************/
+.title #menu, .no-menu #menu {
+  display: none;
+}
+.dropbtn {
+  border: none;
+  cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+  color: var(--grey);
+  text-decoration: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropup-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  bottom: 22px;
+  right: -75px;
+  text-align: left;
+}
+.dropup-content a {
+  color: var(--black);
+  padding: 0.3em 0 0.3em 1.5em;
+  text-decoration: none;
+  display: block;
+}
+.dropup-content a:not(:last-child) {border-bottom: 1px dotted var(--black);}
+.dropup-content a:hover {background-color: var(--button);}
+.show {display:block;}
+
+/*************************************** Passages ***************************************/
+#passages {
+  width: 100%;
+  height: 96%;
+  overflow: auto;
+  background: #00000035;
+  box-shadow: 0 0 40px #00000079;
+}
+.title #passages {
+  height: 100%;
+  font-size: 500%;
+  background: none;
+  box-shadow: none;
+}
+.milieu #passages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pendu #passages {
+  display: flex;
+  align-items: center;
+}
+.passage {
+  height: 100%;
+  width: 100%;
+}
+.milieu .passage, .title .passage, .sudoku .passage {
+  text-align: center;
+}
+.milieu .passage, .title .passage, #passage-games {
+  height: auto;
+}
+
+/*************************************** PAGE ***************************************/
+#page {
+  padding-right: 2%;
+  overflow: auto;
+  width: 75%;
+}
+#guestmenu {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+#guestmenu p {
+  margin: 0;
+}
+#guestmain {
+  height: 95%;
+  display: flex;
+}
+
+/*************************************** IMAGES ***************************************/
+#passage-guestimg img, #passage-guesttrash img {
+  width: 100%;
+}
+.puzzle img {height: 100px;}
+
+/*************************************** Links ***************************************/
+a {
+  color: lime;
+}
+a:hover {
+  text-decoration: none;
+  color: #c1ffc1;
+  text-shadow: 0 0 1em lime;
+} 
+#passage-allumer a {
+  font-size: 150%;
+}
+.sudoku .passage a {
+  font-size: 110%;
+}
+
+/*************************************** Buttons ***************************************/
+button {
+  background: #007000;
+  padding: 0;
+  outline: 1px solid #002000;
+  border: none;
+  margin: 0.1em;
+}
+button:hover {
+  background: #007000;
+  box-shadow: inset 0 0 10px lime;
+}
+button:disabled {
+  border: none;
+  box-shadow: none;
+  background-color: #1d391d;
+  color: grey;
+}
+.saves button, .settings button, .restart button {
+  padding: 0 0.3em;
+}
+.trashmenu button {
+  padding: 0 0.5em;
+}
+.pendu button {
+  font-size: 32px;
+  height: 40px;
+  width: 40px;
+}
+
+/*************************************** UI DIALOG ***************************************/
+#ui-dialog {
+  max-width:50em;
+}
+#ui-dialog-titlebar {background-color: transparent;}
+
+#ui-dialog-close {
+  outline: none;
+  color: lime;
+}
+#ui-dialog-close:hover {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: #008b00;
+}
+
+#ui-dialog-body {
+  border: none;
+  background: #00000035;
+}
+#ui-dialog-body.nope {
+  text-align: center;
+  padding-top: 2em;
+}
+.nope i {
+  font-size: 500%;
+}
+
+#ui-dialog-body.saves tr:not(:first-child), #ui-dialog-body.saves > :not(:first-child) {border-top: none;}
+#ui-dialog-body.saves td:first-child {min-width: 0.5em;}
+
+
+
+.blanka {
+  font-family: 'Blanka', sans-serif;
+  font-size: 750%;
+  text-shadow: 0 0 1em lime;
+  color: white;
+}
+
+.passage table {
+  margin: 1em auto;
+  font-size: 150%;
+  width: 25%;
+}
+#passage-ordicomptes table{
+  width: 33%;
+  table-layout: fixed;
+}
+.sudoku table { border-collapse: collapse;}
+th {text-align: center;}
+.sudoku td {
+  max-width: 42px;
+  max-height: 42px;
+  width: 42px;
+  height: 42px;
+  border: solid thin; 
+  text-align: center; 
+  padding: 0;
+}
+colgroup, tbody {
+  border: solid medium; 
+}
+
+h1 {
+    text-align: center;
+}
+
+/*Glitchy*/
+.glitchy {
+  color: #c1ffc1;
+  position: relative;
+  font-size: 400%;
+}
+.glitchy::before {
+  content: attr(data-text);
+  width: calc(100% + 0.5em);
+  position: absolute;
+  left: -9px;
+  text-shadow: 1px 0 blue;
+  top: -5px;
+  color: #ffebc1;
+  overflow: hidden;
+  background: repeating-linear-gradient( to bottom, #111 0px, #111 5px, #012F0685 5px, #012F0685 10px);
+  clip-path: polygon(0 0);
+  animation: noise-animY-2 3s infinite linear alternate-reverse;
+  -webkit-animation: noise-animY-2 3s infinite linear alternate-reverse;
+}
+.glitchy::after {
+  content: attr(data-text);
+  width: calc(100% + 0.5em);
+  position: absolute;
+  left: -5px;
+  text-shadow: -1px 0 red;
+  top: -5px;
+  color: #c1f9ff;
+  overflow: hidden;
+  background: repeating-linear-gradient( to bottom, #111 0px, #111 5px, #012F0685 5px, #012F0685 10px);
+  clip-path: polygon(0 0);
+  animation: noise-animY 2s infinite linear alternate-reverse;
+  -webkit-animation: noise-animY 2s infinite linear alternate-reverse;
+}
+
+  
+
+/* Inline #11 | file:///C:/Users/gebruiker/Desktop/Comp%20Fr/export/index.html */
+
+
+
+
+
+
+
+
+.trashmenu p {
+  width: fit-content;
+  margin: 0;
+}
+
+.trashmenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* Inline #11 | file:///C:/Users/gebruiker/Desktop/Comp%20Fr/export/index.html */
+
+
+
+/* Inline #11 | file:///C:/Users/gebruiker/Desktop/Comp%20Fr/export/index.html */
+
+#passage-guestmenu div, #passage-adminmenu div {
+  /* align-content: center; */
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  align-items: center;
+}
+
+#passage-guestmenu, #passage-adminmenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  gap: 1em;
+}
+
+/* Inline #11 | file:///C:/Users/gebruiker/Desktop/Comp%20Fr/export/index.html */
+
+.doptitre {
+  text-align: center;
+  font-size: 110%;
+  font-weight: bold;
+  color: lime;
+  text-shadow: 0 0 40px #7db97d;
+}
+
+/* Journal */
+.journal {
+  overflow: auto;
+  scrollbar-width: thin;
+  height: 85%;
+  margin: 0% auto 2%;
+  width: 90%;
+}
+
+.journal div {
+  font-size: 125%;
+  font-weight: bold;
+  color: lime;
+}
+
+
+/* Inline #10 | file:///C:/Users/gebruiker/Desktop/Comp%20Fr/export/index.html */
+
+
+
+#mon_canvas {
+  margin: auto;
+  display: block;
+}
+
+
+
+.letterlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 45%;
+  margin: auto;
+}
+
+/* Inline #11 | file:///C:/Users/gebruiker/Desktop/Comp%20Fr/export/index.html */
+
+.play {
+  display: flex;
+}
+
+.word {
+  text-align: center;
+  font-size: 48px;
+}
+
+.link {
+  text-align: center;
+  font-size: 125%;
+}
+
+
+/* Inline #10 | file:///C:/Users/gebruiker/Desktop/Comp%20Fr/export/index.html */
+
+#blurr   {
+  background : #d3ffdc3b;
+  opacity : 0.3;
+  width : 844px;
+  height : 40px;
+  position : relative;
+  margin : auto;
+  z-index : 0;
+  top : 50%;
+  left : 50%;
+  margin-top : -328px;
+  margin-left : -424px;
+  animation: down 5s infinite linear;
+}  
+#inside {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: relative;
+  margin: 35% 0 0 0;
+}
+
+
+/*************************************** DROP AND DRAG ***************************************/
+.macro-drop {
+  /* border: .2em solid #444; */
+  border: 1px solid #00530a;
+  height: 100px;
+  width: calc(121px*4);
+  margin: auto;
+}
+.pieces.macro-drop {
+  width: 92%;
+  border: none;
+  outline: 1px solid;
+  height: 81.5%;
+  padding: 1%;
+  }
+  .macro-drop {
+    min-height: 3em;
+    min-width: 3em;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .pieces.macro-drop {
+    width: 92%;
+    border: none;
+    outline: 1px solid #0f09;
+    height: 81.5%;
+    padding: 0.5em 0em;
+    margin-top: 9px;
+    }
+  .macro-drag {cursor:grab;
+    user-select: none;}
+  
+  
+  
+  .pieces {
+    flex-wrap: wrap;
+  }  
+
+/* Inline #10 | file:///C:/Users/gebruiker/Desktop/Comp%20Fr/export/index.html */
+
+.pieces.macro-drop {
+  /* height: 81.5%; */
+  height: 36%;
+}
+.pieces.macro-drop {
+  /* height: 81.5%; */
+  max-height: 36%;
+  height: auto;
+}  
+
+
+  
+/*************************************** TEXTBOXES ***************************************/
+input:not(:disabled):focus, input:not(:disabled):hover {
+  background: #00ff002b;
+}
+
+#textbox--onea, #textbox--oneb, #textbox--onec, #textbox--twoa, #textbox--threea, #textbox--threeb, #textbox--foura, #textbox--fourb, #textbox--fourc {
+  min-width: 25px;
+  max-width: 25px;
+  padding: 0px 0 0 25%;
+  border: none;
+}
+
+
+
+/*************************************** Progress Bar ***************************************/
+.progress {
+  height: 10px;
+  width: 50%;
+  border: 10px solid #007104;
+  border-radius: 15px;
+  display: block;
+  max-width: 333px;
+  margin: auto;
+}
+.progress .color{
+  background-color: lime;
+  width: 0px;
+  height: 10px;
+  border-radius: 15px;
+  animation: progressingbar 5.5s ease 1 forwards;
+}
+
+
+
+#passage-tests #page div, #passage-personnels #page div {
+  text-align: center;
+  font-size: 125%;
+  color: lime;
+}
+#passage-admintrash table {
+  font-size: 100%;
+  width: 100%;
+  }
+
+
+/* Inline #11 | file:///D:/2022%20Backup/Comp%20Fr/export/index.html */
+
+#passage-jupiter-brockers .letterlist button {
+  font-size: 2em;
+  width: 3em;
+  margin: 0.2em 0;
+}
+
+#passage-jupiter-brockers {
+  height: fit-content;
+  margin-top: 10%;
+}
+
+/* Inline #11 | file:///D:/2022%20Backup/Comp%20Fr/export/index.html */
+
+.erreur {
+  text-align: center;
+  font-size: 48px;
+  height: 80px;
+}
+.black {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  z-index: 10;
+  transition: opacity 5s ease-in;
+}
+
+
+/* Inline #11 | file:///D:/2022%20Backup/Comp%20Fr/export/index.html */
+
+body.end {
+  background: black;
+}
+
+.end #container {
+  background: black;
+  outline: none;
+}
+/* twine-user-stylesheet #3: "keyframes.css" */
+@keyframes noise-animY {
+    0% {
+      clip-path: polygon(0 80px, 100% 80px, 100% 16px, 0 16px);
+    }
+    5% {
+      clip-path: polygon(0 94px, 100% 94px, 100% 17px, 0 17px);
+    }
+    10% {
+      clip-path: polygon(0 9px, 100% 9px, 100% 92px, 0 92px);
+    }
+    15.0% {
+      clip-path: polygon(0 37px, 100% 37px, 100% 4px, 0 4px);
+    }
+    20% {
+      clip-path: polygon(0 53px, 100% 53px, 100% 47px, 0 47px);
+    }
+    25% {
+      clip-path: polygon(0 99px, 100% 99px, 100% 69px, 0 69px);
+    }
+    30.0% {
+      clip-path: polygon(0 15px, 100% 15px, 100% 49px, 0 49px);
+    }
+    35% {
+      clip-path: polygon(0 83px, 100% 83px, 100% 81px, 0 81px);
+    }
+    40% {
+      clip-path: polygon(0 55px, 100% 55px, 100% 43px, 0 43px);
+    }
+    45% {
+      clip-path: polygon(0 28px, 100% 28px, 100% 27px, 0 27px);
+    }
+    50% {
+      clip-path: polygon(0 64px, 100% 64px, 100% 28px, 0 28px);
+    }
+    55.0% {
+      clip-path: polygon(0 76px, 100% 76px, 100% 91px, 0 91px);
+    }
+    60.0% {
+      clip-path: polygon(0 29px, 100% 29px, 100% 72px, 0 72px);
+    }
+    65% {
+      clip-path: polygon(0 70px, 100% 70px, 100% 10px, 0 10px);
+    }
+    70% {
+      clip-path: polygon(0 5px, 100% 5px, 100% 84px, 0 84px);
+    }
+    75% {
+      clip-path: polygon(0 46px, 100% 46px, 100% 81px, 0 81px);
+    }
+    80% {
+      clip-path: polygon(0 7px, 100% 7px, 100% 85px, 0 85px);
+    }
+    85.0% {
+      clip-path: polygon(0 17px, 100% 17px, 100% 89px, 0 89px);
+    }
+    90% {
+      clip-path: polygon(0 41px, 100% 41px, 100% 59px, 0 59px);
+    }
+    95% {
+      clip-path: polygon(0 53px, 100% 53px, 100% 90px, 0 90px);
+    }
+    100% {
+      clip-path: polygon(0 10px, 100% 10px, 100% 30px, 0 30px);
+    }
+}
+@keyframes noise-animY-2 {
+    0% {
+      clip-path: polygon(0 84px, 100% 84px, 100% 3px, 0 3px);
+    }
+    5% {
+      clip-path: polygon(0 31px, 100% 31px, 100% 69px, 0 69px);
+    }
+    10% {
+      clip-path: polygon(0 37px, 100% 37px, 100% 33px, 0 33px);
+    }
+    15.0% {
+      clip-path: polygon(0 18px, 100% 18px, 100% 6px, 0 6px);
+    }
+    20% {
+      clip-path: polygon(0 25px, 100% 25px, 100% 87px, 0 87px);
+    }
+    25% {
+      clip-path: polygon(0 100px, 100% 100px, 100% 8px, 0 8px);
+    }
+    30.0% {
+      clip-path: polygon(0 24px, 100% 24px, 100% 87px, 0 87px);
+    }
+    35% {
+      clip-path: polygon(0 39px, 100% 39px, 100% 16px, 0 16px);
+    }
+    40% {
+      clip-path: polygon(0 96px, 100% 96px, 100% 25px, 0 25px);
+    }
+    45% {
+      clip-path: polygon(0 16px, 100% 16px, 100% 100px, 0 100px);
+    }
+    50% {
+      clip-path: polygon(0 92px, 100% 92px, 100% 76px, 0 76px);
+    }
+    55.0% {
+      clip-path: polygon(0 29px, 100% 29px, 100% 40px, 0 40px);
+    }
+    60.0% {
+      clip-path: polygon(0 40px, 100% 40px, 100% 39px, 0 39px);
+    }
+    65% {
+      clip-path: polygon(0 94px, 100% 94px, 100% 44px, 0 44px);
+    }
+    70% {
+      clip-path: polygon(0 2px, 100% 2px, 100% 78px, 0 78px);
+    }
+    75% {
+      clip-path: polygon(0 86px, 100% 86px, 100% 50px, 0 50px);
+    }
+    80% {
+      clip-path: polygon(0 2px, 100% 2px, 100% 46px, 0 46px);
+    }
+    85.0% {
+      clip-path: polygon(0 41px, 100% 41px, 100% 71px, 0 71px);
+    }
+    90% {
+      clip-path: polygon(0 75px, 100% 75px, 100% 15px, 0 15px);
+    }
+    95% {
+      clip-path: polygon(0 41px, 100% 41px, 100% 8px, 0 8px);
+    }
+    100% {
+      clip-path: polygon(0 23px, 100% 23px, 100% 75px, 0 75px);
+    }
+}
+@keyframes down {
+    to {margin-top: 275px;}
+}
+@keyframes progressingbar {
+    0%{
+      width: 0%;
+    }
+    20% {
+      width: 15%;
+    }
+    30%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    95% {
+      width: 100%;
+    }
+    100%{
+        width: 100%;
+    }
+};
+  
