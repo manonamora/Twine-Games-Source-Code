@@ -1,0 +1,162 @@
+:: StoryTitle
+Dévoiement
+
+
+:: StoryData
+{
+  "ifid": "91D77EF1-F84D-40B8-BEFF-799E070A8018",
+  "format": "Chapbook",
+  "format-version": "1.2.3",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: END1 {"position":"625,550","size":"100,100"}
+Finalement non. Vous n’avez pas envie de vous taper des bouchons, une longue déviation, les blagues pas fameuses de votre oncle, ou les discussions saoules sur la politique. Vous trouverez bien une bonne excuse pour votre mère – elle vous passera un savon, mais ce sera tout de même moins chiant…
+
+~ Fin ~ 
+
+
+
+
+:: Pass1 {"position":"750,425","size":"100,100"}
+*Suite à la découverte de ruines antiques lors du terrassement de la nouvelle bretelle, la RN785 sera fermée jusqu’à nouvel ordre. Un dévoiement est arrangé aux bornes 483 et 509, via Sainte-Caterine. Ajoutez cinquante-cinq–*
+
+[after 8s]
+[[Et merde...|Pass2]]
+
+
+
+:: Pass2 {"position":"750,550","size":"100,100"}
+Alors que vous étiez partie en retard (pour éviter votre lourd oncle Bernard), cette nouvelle information transmise par votre radio ne vous plait pas du tout. Vous avez promis à votre mère d’arriver pour l’apéro, mais là… vous y serez au mieux pour l’entrée, et au pire… pour les huîtres. 
+
+* [[Faire demi-tours et rentrer|END1]]
+* [[Continuer votre chemin|Pass3]]
+
+
+
+
+:: Pass3 {"position":"750,675","size":"100,100"}
+retard: retard + 10
+--
+Avec Papi qui vient avec son eau de vie, vous savez que vous pouvez endurer ce détour (et les blagues pas si fameuses de votre oncle). Et puis, ça fera plaisir à votre mère d’être là, pour une fois – elle vous avez déjà passé un savon le Noël dernier quand vous aviez annulé à la dernière minute.
+
+Sur votre [[droite|Pass4]], le panneau de dévoiement.
+
+
+
+
+:: Pass4 {"position":"750,800","size":"100,100"}
+retard: retard + 5
+chemin: 0
+droite: 0
+gauche: 0
+--
+Vous sortez de la route nationale, suivant avec attention les panneaux de signalisation. Au lieu de traverser la campagne de votre enfance, votre détour vous fait traverser le “*glorieux*” petit village de Sainte-Catherine – votre mère vous plaindra bien…
+
+Avec ses quelques centaines d’habitant, le village est plutôt mal foutu, construit comme un labyrinthe. Vous vous êtes perdue maintes fois. Et…
+
+… c’est aussi ici que la signalisation s’arrête.
+[align center]
+*Merde!*
+[cont]
+Vous tournez à { [[droite]] - [[gauche]] }.
+
+
+
+
+:: Pass5 {"position":"750,1100","size":"100,100"}
+Vous sortez enfin du petit village, après ce que vous pensez être une éternité… Vous jetez un coup d’œil à l’heure et grimacez: vous être {retard} minutes en retard. Votre mère va râler…
+
+Vous appuyez un petit peu plus sur l[[’accélérateur|Pass6]].
+
+
+
+
+:: Pass6 {"position":"750,1225","size":"100,100"}
+Lorsque vous vous garez chez votre mère, celle-ci vous attend, le pied tapant.
+
+– Eh bah, t’as pris ton temps, dis-donc!\
+– Bonjour maman, vous roulez des yeux\.
+– On a presque fini le fois gras, tu sais? Et Bernard est déjà à sa deuxième bouteille!\
+– Heureusement que j’ai ramené la mienne, vous lui tenez un sac.\
+– Mais pourquoi tu es autant en retard, ma chérie, elle s’approche enfin pour vous faire la bise.\
+– Ils ont fermé la nationale.\
+– Et?\
+– Tu dois passer par Sainte-Cathe–\
+– Oh, elle vous prend dans ses bras. Ma pauvre petite chérie. Viens. Rentre. Je vais te faire cuire des toasts. Va t’asseoir.
+
+~ FIN ~
+
+
+
+
+:: Start {"position":"750,300","size":"100,100"}
+retard: 0
+--
+[align center]
+[[**DÉVOIEMENT**|Pass1]]
+
+
+
+:: droite {"position":"750,925","size":"100,100"}
+retard: retard + 5
+chemin: chemin +1
+droite: droite +1
+_random: random.d4
+--
+[if _random === 4]
+Vous prenez la rue à votre droite, espérant trouvez la sortie de ce damné village. Mais vous trouvez seulement une nouvelle intersection.
+[if _random === 2]
+Vous tournez à droite, et vous vous retenez de frapper votre volant lorsque vous tombez sur une intersection et non la sortie.
+[if _random === 1]
+Vous prenez la rue à votre droite, pensant que vous reconnaissez le coin, mais vous êtes encore et toujours perdue…
+[if _random === 3]
+Vous prenez la rue à votre droite, et râlez lorsque vous ne voyez toujours pas de panneau de signalisation. *À tout les coups, ils les ont cachés...*
+
+[if chemin < 8]
+Vous tournez à { [[droite]] - [[gauche]] }.
+[else]
+Vous tournez à { [[droite|Pass5]] - [[gauche|Pass5]] }.
+
+
+
+:: gauche {"position":"875,925","size":"100,100"}
+retard: retard + 5
+chemin: chemin +1
+gauche: gauche +1
+_random: random.d4 
+--
+[if _random === 1]
+Vous prenez la rue à votre gauche, espérant trouvez la sortie de ce damné village. Mais vous trouvez seulement une nouvelle intersection.
+[if _random === 2]
+Vous tournez à gauche, et vous vous retenez de vous mordre les doigts lorsque vous tombez sur une intersection et non la sortie.
+[if _random === 3]
+Vous prenez la rue à votre gauche, pensant que vous reconnaissez le coin, mais vous êtes encore et toujours perdue…
+[if _random === 4]
+Vous prenez la rue à votre gauche, et râlez lorsque vous ne voyez toujours pas de panneau de signalisation. *Ils font vraiment chier...*
+
+[if chemin < 8]
+Vous tournez à { [[droite]] - [[gauche]] }.
+[else]
+Vous tournez à { [[droite|Pass5]] - [[gauche|Pass5]] }.
+
+
+
+:: StoryStylesheet [stylesheet]
+
+/* Inline #3 | http://twinery.org/2/#/stories/2f54ae77-7f2d-4c24-996d-d454c300f0ca/test/1b4d7d99-01a9-4e7b-a30d-0e4c439f1961 */
+
+#backdrop {
+  background: #000039;
+}
+
+#page {
+  background: #070757;
+  color: white;
+}
+
+#page a {
+  color: #d3ffc6;
+}
