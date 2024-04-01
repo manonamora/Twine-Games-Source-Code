@@ -1,0 +1,1061 @@
+:: StoryTitle
+Doctor Jeangille's Letters
+
+
+:: StoryData
+{
+  "ifid": "D251778B-84F4-4C6B-BE1D-322F017C8D1D",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Credits {"position":"725,100","size":"100,100"}
+//Doctor Jeangille's Letters// is a translation of //Les lettres du Docteur Jeangille//, the 2024 entry of the //Concours de Fiction Interactive Francophone//. Both works were created, written, and coded by manonamora.
+
+<ul>
+    <li>Fonts: Google Front, FontAwesome</li>
+    <li>Textures: transparenttexture.com</li>
+</ul>
+
+☙ [[Play the Original Version|https://manonamora.itch.io/les-lettres-du-docteur-jeangille]] ❧
+
+
+:: END SCREEN [title] {"position":"850,100","size":"100,100"}
+<<link "Start anew ?">><<run Engine.restart()>><</link>>
+
+
+:: Letter 1 {"position":"100,225","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of fjiewle</span>,</div>
+<p><<if $olympia gt 10 >>My Island Bird<<else>>My sweet  Olympia<</if>>,</p>
+
+<p>What a surprise to find when I landed in Meaux a sweet missive from you! I did not expect this thoughtfulness from you, nor that it should arrive before my person. Out of selfishness, I had hidden the address of this home in your cabinet, between two sheets perfumed by your care. Believing our separation to have been too cruel, I could not dare hoping for a single word from your hand so soon — //well//, I confess I still prayed for one. All the fatigue and weariness accumulated during this difficult journey disappeared as if by magic as soon as my eyes fell on your charming writing.</p>
+
+<p><<if $prologue is "lovey">>
+    What punishment, thus, to read that you cast me out of your thoughts and prayers! How can you ostracise my adoration so easily? You had sworn, at the dawn of our declarations, that you could never cease to love me, as I could never stop considering you my guardian angel, my goddess, my reason for living. Know that I cannot ever cast you aside!
+<<else>>
+    And what pain to read you do not support my projects! After so much suffering and humiliation, understand that I cannot let this pass. I can still see your beautiful eyes filled with horror when he… Forgive me… I know how serious my situation is, and yours isn’t easy either, but do not despair, my love! I promised you I would do anything to put that smile back on your pretty face!
+<</if>></p>
+
+<<if $prologue is "lovey">><p>Nonetheless, you know that I can read between the lines, decipher the strange curves of your ‘s’ or the flickering dashes on your ‘t’. I could clearly imagine your shaky hand as you put down these words, your chest quivering with sadness, your emeralds full of sobs. To know you weeping so far from me… How this breaks my heart!</p><</if>>
+
+<p>My beloved, I submit at your feet my humble news, hoping that these help you <<if $prologue is "lovey">>regain your lovely smile<<else>>soothe your heart<</if>>. Please do not worry about me!</p>
+
+<p id="choix">Back in my hometown, I could not begin to describe the welcome of the villagers when I arrived. The passing coach turned many heads, for we hardly see any crossing Meaux. Few could hide in their eyes a glimmer of <span id="choice"><<cycle "$letterOne">><<option "animosity" 0>><<option "curiosity" 1>><<option "admiration" 2>><</cycle>>. <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if !$letterOne>><<set $village -= 2>><<elseif $letterOne is 2>><<set $village += 2, $olympia -->><</if>><<replace "#choice" t8n>><<include "Letter 1 Addon">><</replace>><</link>></span></p>
+
+
+:: Letter 1 Addon {"position":"225,225","size":"100,100"}
+<<if !$letterOne>>animosity<<elseif $letterOne is 1>>curiosity<<else>>admiration<</if>>. Remember my travel suit? It is quite possible my outfit would have been the cause for these glares, for <<if $letterOne isnot 2>>the <<if !$letterOne>>mores<<else>>fashions<</if>> of the capital rarely extend to these remote villages<<else>>those people probably believed I was but a man<</if>>.
+
+<p>My parents were not the least surprised by my coming. Mother’s face even contorted when she saw me walk down to our house. As for Father, he had not spoken a word to me until this very morning! Do you see now that ‘warm’ is not part of their vocabulary?</p>
+
+<p>But wait! The noise about my arrival did not stop there! Understand that long before I came, Meaux was in //dire// need for a doctor, a rare resource in the region. The mayor had even received an announcement that a practitioner had finally been assigned to Meaux and that they would arrive shortly. <<if !$letterOne>>Embarrassment<<elseif $letterOne is 1>>Confusion<<else>>Wonder<</if>> reigned in his eyes when it was only I who present myself at city hall that morning, hoping to be shown to the cabinet I had been promised. Thus, before him was not the long-awaited precious doctor, but <<if $letterOne isnot 2>>the black sheep who had escaped the village a few years earlier and sworn never to set foot there again. How embarrassed I was, darling… and //this// is yet to be the worst of it!<<else>>someone far more unobtainable: a doctor who knows both of the countryside and its particular inhabitants. Imagine my surprise, darling… I did not think this little remote village to be so avant-garde!<</if>></p>
+
+<p><<if $letterOne isnot 2>>His eyes widened so much when I related the reason for my return — well, the official and prudent reason, for the truth would surely have thrown me in a cell… Somehow, no one believed me! The mayor laughed to my face and did not even bother to inspect my diplomas and recommendations. <<if !$letterOne>>“A woman doctor, is it some kind of joke?”<<else>>“You, a doctor? I still remember when the teacher would hit your fingers when you didn’t learn your lines!”<</if>> Rage consumed my body inside out, for at that moment, I was only flame. How dare he ridicule my vicissitudes of past years?! A vision of your kind face pulled me back to reason: <<if !$letterOne>>these rural corners are often too backward to understand<<else>>these poor souls receive few second chances to know better<</if>>. It was necessary for the mayor to ask for confirmation <<if !$letterOne>>to the Prefect, who had to contact the School of Medicine (because a woman doctor is not natural…), who loosely supported my remarks so that I could finally be given access, reluctantly still, to the so-called cabinet and its pharmacy. What an utter waste of time!<<else>>to my parents that my words were not false. Having had little contact throughout my stay in the capital, they were as confused as he by this revelation. I had to examine a poor fellow right there and then, under the watchful eye of the pharmacist.<</if>><<else>>I was careful not to reveal the true reasons for my return, lest the truth lead me to a cell… The residents here may be less backward than we believe, though I would not want to gamble on this luck. Then, the mayor embraced me warmly, with pride beaming all over his face! “You, doctor?! What a wonderful surprise!” My words escaped me, darling… He was the first person — after you, of course — to congratulate me on this achievement. He did not waste any more time by giving me the keys to my office, and announced that the whole village would celebrate this occasion.<</if>></p>
+
+<p>During this <<if $letterOne isnot 2>>despicable <<if !$letterOne>>waiting<<else>>exercise<</if>>, which was so <<if !$letterOne>>long I thought I would die of boredom, my dear parents sought to question me day and night about my adventures ‘abroad’<<else>>humiliating I wanted to strangle every neck in the room, I saw in the eyes of my parents a strange disbelief<</if>><<else>>strange commemoration, where spirit flowed, my dear parents sought to question me about my adventures ‘abroad’<</if>>. Although they are very proud of their offspring attending the Écoles, and even more for having sworn their life to Hippocrates, they would have preferred my late brother to be the one in my place. My own should have stayed at home instead, theirs or someone else’s, preferably married, or at worst as a governess. But doctor… “An affront to the profession.”</p>
+
+<p>Since my return, I can hear them plotting behind my back, talking ‘discreetly’ of my future in the village. I find myself back ten — no, fifteen! — years, before my sudden departure, hearing the same words, finding them undertaking the same intrigues. If it were up to them, they would make me mistress of the neighbouring manor! Although today, I discovered them admitting with a sigh that they would even be content if I became a farmer’s wife! Could you imagine, me, a milkmaid…</p>
+
+<p>Seconds becoming minutes, becoming hours, becoming days… and you find me <<if $letterOne isnot 2>>still sorry to be gone. For accepting my fate without a fight. For letting my fears conquer my mind. <<if $prologue is "lovey">>For keeping you so far from me. My Olympia, my love… without you, my lungs are without air, my heart without pulse, my lips without a companion… I beg you, send help to my feeble soul!<<else>>For having forsaken you thus. My Olympia, my beloved… without your support, I do not know how or why I survived this awful ordeal. Without your kind words, I do not know whether I would have been right. I beg you, do not forsake me!<</if>><<else>>strangely at peace. I do not know if my anger has completely disappeared, but I am starting to see that this situation might not be as miserable as I once thought. An absence, however, is greatly felt in my heart: yours.<</if>></p>
+
+<p><<if $letterOne isnot 2>>Your suffering servant, lacking in love,<<else>>Your friend, lacking in your presence,<</if>><br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 2">><</link>></p>
+
+
+:: Letter 10 {"position":"1225,350","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of greo;gnj</span>,</div>
+<p>Olympia, my dearest,</p>
+
+<p>You see my pained by your last letter, by the words you penned down. Do you trust me so little? Do you not believe I can handle my affairs alone? My friend, I am not so blind I cannot see what is happening around me…</p>
+
+<p>You find me, hence, confused by your stringent opinion of Mlle Bouchon. I can gloss upon your disdain for <<if $alice gt 5>>my new friend<<else>>this elegant creature<</if>> — or rather understand where this might stem from — but I cannot comprehend how you could draw such hasty conclusions from the benign information I shared with you!</p>
+
+<p>Pray tell, how could you think this charming individual, who has only extended sympathy and friendliness as of late, could hurt me so? While I would be first to admit she may be of a particular countenance, your attack on her good manners shock me more than I ever thought it possible…</p>
+
+<p>You state that I can only see the best in others, and that this fault, according to you still, would make me turn a blind eye on obvious deceptions, disregard any danger, pull me down my path as if nothing happened, neglect the consequences. Forgive me, my dear, but would you not be the epitome of this? Since, for your love, I could never see any danger in my situation — or should I say, our situation — which landed me here, humiliated, with a trampled honour, while you still parade through town none the worse for wear! Would it not be the pot calling the kettle black?</p>
+
+<p>Darling… it might be time for you to gain some perspective on the matter!</p>
+
+<p id="choix"><<cycle "$letterTen">><<option "For you truly worry for nothing." false>><<option "Although your words to alarm me somehow…" true>><</cycle>> <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if !$letterTen>><<set $village -= 2>><<elseif $letterOne is 2>><<set $village += 2, $olympia -->><</if>><<replace "#choix" t8n>><<include "Letter 10 Addon">><</replace>><</link>></p>
+
+
+:: Letter 10 Addon {"position":"100,475","size":"100,100"}
+<<if !$letterTen>><p>Finding anguish in your words — for nothing, truly, might I add — does worry me quite a bit about your condition… Are you afraid for my safety due to the sordid news I recently shared with you? Would you have reacted thusly had I refrained from doing so? Would you have alerted me of the ‘suspicious’ behaviour of the Countess, nevertheless? Would you have verily thought Mlle Bouchon to be connected to the disappearances had I not mentioned it first?</p>
+
+<p>Regardless… I must admit to selfishly enjoy the attention you are putting on my safety. However, my gentle dame, I am more than capable of defending myself. Or have you already forgotten the act of aggression at the Trocador? I made it out with but one laceration of the lip!</p>
+<<else>><p>Although… your words to alarm me somehow, eerily echoing my own thoughts lately. It is not that I believe Mlle Bouchon to be linked to these terrible disappearances as you do yourself, far from it. But I must admit I can understand your suspicions, that these vanishing acts may be more sordid that they first seemed. All this troubles me greatly, my dear. Worse still, I can see, thanks to your letter, that the simple souls in the village could easily make the same erroneous connection, between these events and the Countess. I fear we are reaching the edge of a cliff, only a step away from the total collapse of our community…</p><</if>>
+
+<p>Know that I will <<cycle "_tracked">><<option "hardly hold onto your unwarranted worries" true>><<else>><<option "endeavour to pay attention to myself, as so to reassure you" false>><</cycle>>.</p>
+
+<p>Your friend still, I hope,<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 11">><<if $alice gt 10 or $village lte 0>><<set $targetted to true>><</if>><</link>></p>
+
+<p>PS: this may not be relevant at all, but when should the cancellation of an appointment be considered an affront? What if… this appointment is cancelled by the person who invited the other in the first place? And how many consecutive cancellations should one forgive before one could claim compensation for these offences?<br>
+PPS: I must warn you not to read between the lines! This has nothing to do with Mlle Bouchon of her invitations!</p>
+
+
+:: Letter 11 {"position":"225,475","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of mfjrisosn</span>,</div>
+<p>Olympia,</p>
+
+<p>I hope you can forgive this rather formal denomination, but I do not know… <s>How could I say…</s></p>
+
+<p>The future — //my// future — within the small village of Meaux frightens me. As you had correctly predicted some months prior, a sort of fanaticism captured the mind of the villagers. For they could not understand the reason for these sudden disappearances, and were unable to imagine who could be responsible for these aberrant losses, they preferred the simplest course of action: turning against one another, scrutinising each other’s movements, accusing neighbours and friends without proof. Even amidst families, none could be exempt of suspicions!</p>
+
+<p>Everything worsened when the body of yet another victim, the gentle Océane, was found by the side of the road, right at the edge of the village. The remains were as dry as a dead autumn leaf. What shock possessed the residents! Every single one of them loved that darling child, such as no one had or would ever think to bring her harm. The poor girl was akin to a saint, renowned for her cheerfulness and generosity. Even Tristan, her departed fiancé, was equally overcome by the news.</p>
+
+<p>Among the disappearances following that of the little Jeannot, this one shocked the village so much that they all rallied to root out the one responsible. None could imagine who amongst them could undertake such offence! Forks and torches in hands, watchmen now roam day and night, monitoring passers-by and grilling any suspicious behaviour. Outsiders, among which the neighbouring villages and even the Marquis were assorted, are refused entry. And I… well, they look at me askance when I go about the hamlet. Many disdain the care I provide for their wounds and ills.</p>
+
+<p>Even more abominably, Mlle Bouchon was too targeted by these accusations. She, the foreigner, only recently settled in our little corner of paradise. //“Eh! Wasn’t it at the same time that—”// I could hear some say. She, who had thrown her money out the window — literally, when she arrived — and thanks to which the village benefited and thrived, now was at the heart of all their suspicions. For whichever reason, I could not begin to say. Nor why could she even have done this. Or how.</p>
+
+<p>Every single day, the villagers come up with new absurd theories, the Countess refuting each without exception. Among the recent ones, the most popular hypothesis claims Mlle Bouchon collects the bodies of our precious residents, using them for horrible experiments, storing the litres of blood so to be used in her baths. //Baths?!// Could you even imagine?</p>
+
+<<if $targetted>><p>Unfortunately, I also find myself mangled in these accusations, due to the prolonged and extensive periods spent near Mlle Alice in recent times, during which they are categorical of my involvement in her sordid affairs, due to my medical knowledge. Even my return is now considered as suspicious — for understandable reasons: it is true I did not leave for the capital in the most ‘diplomatic’ terms with the village some ten years ago, and I still refrain from sharing the details of this forced return, details you are quite versed with, don’t you… And my employment is still unusual, to say the least for my sex. If you were to listen to the residents, it is not a doctor that I am… but a witch! What a joke.</p><</if>>
+
+<p>Olympia, I cannot for the life of me comprehend how we came to this point. It pains me to see my home burning with such fever, because of nonsensical conjectures, because of simple coincidences, because… I do hope common sense finds its way back among the community, though I do not know how to hasten this process.</p>
+
+<p id="choix"><<set _finalarray to ["Mother begs me to visit the Marquis and seek asylum while the village is still in turmoil. Willing even to pack my things for me, she urges me to collect Mlle Bouchon on my way there.", "Father, being conscientious of the affairs of the village, advises me each time we cross paths to avoid going against the will of the villagers, as they know better than all what is and what should be for themselves."]>><<if $alice gt 5>><<set _finalarray.push("Mlle Alice is quite upset to see the villagers’ recent behaviours towards her (and my person), but assures me she has a solution to correct this whole situation… if I could trust her.")>><</if>><<if $olympia gt 10>><<set _finalarray.push("Olympia, my love, you suggest I run away from this cursed village, leave behind these miscreants who care little about my happiness, and find you in this agreed upon venue, the one only we…")>><</if>>
+<<cycle "_finalchoice">>
+    <<optionsfrom _finalarray>>
+<</cycle>>
+
+    <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if _finalchoice is "Mother begs me to visit the Marquis and seek asylum while the village is still in turmoil. Willing even to pack my things for me, she urges me to collect Mlle Bouchon on my way there.">><<set $EndingChoice to "Mom">><<elseif _finalchoice is "Father, being conscientious of the affairs of the village, advises me each time we cross paths to avoid going against the will of the villagers, as they know better than all what is and what should be for themselves.">><<set $EndingChoice to "Dad">><<elseif _finalchoice is "Mlle Alice is quite upset to see the villagers’ recent behaviours towards her (and my person), but assures me she has a solution to correct this whole situation… if I could trust her.">><<set $EndingChoice to "Alice">><<else>><<set $EndingChoice to "Olympia">><</if>><<replace "#choix" t8n>><<include "Letter 11 Addon">><</replace>><</link>></p>
+
+
+:: Letter 11 Addon {"position":"350,475","size":"100,100"}
+<p>_finalchoice</p>
+
+<p><<if $EndingChoice isnot "Olympia">>What should I do, my dear friend? Should I follow <<if $EndingChoice isnot "Dad">>her<<else>>his<</if>> advice?<<else>>Are you positive, my love, that you too can escape the capital? That you will finally join me? That I will once more be able to stroke your delicate soft skin?<</if>></p>
+
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>">>
+    <<if $EndingChoice is "Mom">><<goto "Letter Mom">><<elseif $EndingChoice is "Dad">><<goto "Letter Dad">><<elseif $EndingChoice is "Alice">><<goto "Letter Alice">><<else>><<goto "Letter Olympia">><</if>>
+<</link>>
+
+
+:: Letter 2 {"position":"350,225","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of fjes</span>,</div>
+<p>My <<if $prologue is "lovey">>pearl, my jewel, my precious<<else>>wonderful friend<</if>> Olympia,</p>
+
+<p id="choix">What <<cycle "$letterTwo">><<option "funk" 0>><<option "boredom" 1>><</cycle>>, is this country! <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if !$letterTwo>><<set $village --, $olympia += 2>><<else>><<set $village ++, $olympia -->><</if>><<replace "#choix" t8n>><<include "Letter 2 Addon">><</replace>><</link>></p>
+
+
+:: Letter 2 Addon {"position":"475,225","size":"100,100"}
+<p>What <<if !$letterTwo>>funk<<else>>boredom<</if>> is this country! <<if !$letterTwo>>How can I describe fully the pain that has taken over me lately, so that I long to be anywhere but here. I tire of this incessant silence surrounding me, silence only broken by the few chicks or puppies, and the eventual passer-by. I envy you, my darling, envy the buzzing of the city swarming all day long. Already with little life during the day, the village completely dies at night. Far from overcrowded restaurants, theatres on every street corner, or floating bars, Meaux has… a tavern on the edge of the hamlet. And for entertainment, as replacement for opera, a companie of drunks. <<else>>Meaux being no larger than Quartier Vale, and surrounded by fields and forest, there truly is little to do here. Our only forms of entertainment is a companie of drunks every night at the tavern on the edge of the village and the few children playing on the Grand’ Place. During some Sundays, the local Marquis joins the villagers for mass — we exchanged a few words, it was //quite// uncomfortable. To tell you the truth, few surprises could affect our days…<</if>></p>
+
+<p><<if !$letterTwo>>It is not without saying that my life in this damned village already follows unceasingly the same routine: I must rise at dawn, only finding my bed well after the setting of Phébus, yearning for our late mornings cosy in your apartments. With this early awakening, my day begins with a round of the farms near the village, to visit these disabled parents before the masters of the house go out to the fields (and fail to pay me my dût). A brief lunch commences an overlong afternoon, during which a carousel of sick people fills my office*. Finally, my work ends with a visit to the pharmacy, to ensure prescriptions are filled as they should — I do not trust the apothecary, having caught him selling dubious concoctions to my needy patients.
+<<else>>Because of this more monotonous and peaceful life, compared to the capital, I find myself occasionally smiling for no particular reason. In front of children laughing about foolish things, the beautiful pies of Mother Houlort, the honesty in people’s eyes, the shyness of my patients*, the warmth of the first rays, the beauty of the setting sun… My dearest, I find myself embarrassed because… the charm of this distant countryside inspires me with romanticism. I do not know how to describe the landscape I come across every day without sounding unwieldy. But if you read some passages of //“Ma voisine, cette campagne”//, I am certain you will understand the chaos in my heart.<</if>></p>
+
+<p>* <<if !$letterTwo>>This<<else>>One thing however<</if>> is starting to trouble me… why is it that this small village has more sick than inhabitants?! What is happening in this region for Widower Grogard to come visit me every two or three days? From toddlers to old-timers, I see buggers all day…</p>
+
+<p><<if $letterOne isnot 2>>Despite a somewhat… frisky welcome, the village is warming up to my presence and care. I guess the lack of healing art for such a long time pushed the scales in my favour. I also suspect that the care given to the arm of little Jeannot may influence it as well — I spare you the details, knowing your fragile condition, but assure you that the poor little one was in pain for far too long.
+<<else>>Following the rather warm welcome of the village, I find myself every evening carrying home a heavy basket of food, offered throughout the day. I have already received jams and tarts, small cheeses and spirits, preserves of all kinds and bowls full of stews, and even my own knitted sweater! The Marquis, under the pretext of bringing me some things, invited me for luncheon. I really do not know where to put myself…<</if>></p>
+
+<p><<if !$letterTwo>>All this is to say, my wonderful Olympia, that your letter was not only awaited, but celebrated. I cannot tell you how much warmth and tenderness your words have brought to my heart. If only you could be by my side. Every single night, I only dream of you, longing for your skin against mine, entwined under your satin sheets, nights and days. Your purple lips espousing the curves of my throat. Your fingers gliding down my body. //Oh//, how I miss you, dearest Olympia!
+<<else>>All this to say, my dear, that I wish you too were here. I truly believe you would enjoy the charm and calm of these surroundings, the picturesque landscapes and the genuine buggers. Away from the noisy and busy capital. Away from scandals and vipers… Is it too much to ask to dream of a simple life, with but love and fresh water?<</if>></p>
+
+<p>It goes without saying that I am delighted to learn of my absence being felt so strongly, with my sudden departure; I was afraid I would be too hastily forgotten. But, the sorrow of having brought you — and still continuing to bring you — so much pain, my <<if $olympia gt 10>>love<<else>>darling<</if>>, haunts me. I pray every night for you, that you will receive the strength to continue this path without my presence by your side, and that you will forgive this affront of being gone.</p>
+
+<p>Pray, reassure me, my friend, that you have good appetite and good moods! If any worsens, I would order you immediately a cure! (Will you join me?) In this waiting, I prescribe distractions from dusk till dawn, or dawn till dusk, and ask you to share with me any story or gossip from the capital — unfortunately, I cannot receive our newspaper here…</p>
+
+<p>Quick, answer me without delays!</p>
+
+<p>Your laborious servant, at your service until my last breath,<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 3">><</link>></p>
+
+<p>PS: What about <<if $prologue is "lovey">>Monsieur d'Archambault<<else>>this person whose name I refuse to utter<</if>>? Has there been any trouble since I left?</p>
+
+
+:: Letter 3 {"position":"600,225","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of rgophji</span>,</div>
+<p>My holy saviour, <<if $olympia gt 10>>my Dulcinea,<</if>></p>
+
+<p>I thank you from the bottom of my heart for the novel you sent me condensing the latest news of the capital — without other venues to gather this kind of information, you find me desiring any word you deign providing me. Know that your pages only leave my hands when I must get to work.</p>
+
+<p>I must also ask you to forgive me for this late responding missive. Time has lately been quite pressing, so much so that my few minutes of freedom are swallowed up by my primary needs. And when I can finally have a moment for myself, I cannot string two words together before falling into Morpheus' arms. Dearest darling, a cold wave passed through my countryside recently, bedridden half of the village.</p>
+
+<p><<if $letterOne isnot 2>>I am certain you will claim the villagers finally got their dues… but my vocation requires me to help any of these poor souls, any suffering. Braving the icy wind and the balkers, I had to visit these ‘brave’ people and attempted to get them back on their feet. If you had only glimpsed at all these toddlers coughing their lungs out… it pained me so deeply, that I promised myself to redouble in my efforts to see them again running on the way to school. When all was well and done, in return for my services, I received little thanks, let alone payment — despite the mayor’s promises to pay me compensation for my work. A Sisyphean task that my orders forbid me to refuse.
+<<else>>Oh, if you had seen the faces of those poor souls, coughing and spitting out their lungs, red and white with fevers. And these little toddlers always crying in pain! How your heart would break… Know that it is only reluctantly that the villagers opened their doors to me, relieved that someone came to their rescue, but afraid I would catch their ailments. The mayor, on the other hand, completely refused to allow me inside to examine his family, throwing his purse at me instead. Be sure, my friend, that our cellar will soon be full with thanks, when the villagers will all be back on their feet!<</if>></p>
+
+<p><<if $letterOne isnot 2>>BUT! <</if>>These comings and goings allowed me to hear quite a bit of gossip, and I aimed to collect them for you, my darling. I know you are deleterious of any story, even if you are not acquainted with its subjects, and am well aware of your penchant for the countryside. These rumours could never compare to yours, nor am I able to match your exquisite penmanship. However, I will try to recount them to the best of my ability.</p>
+
+<ul>
+	<li>During the night of <span class="splat">[TÂCHE]</span>,  Michette, the favourite sheep of the neighbouring farm — what am I saying! the mascot of the village — disappeared. Without a trace, neither running away, fighting or struggling, her straw bed was found empty the following morning. Little Suzanne is inconsolable.<br>
+I already hear you say, dearest, that this simple and shallow event will one day be traced as the cause for the destruction of the village, and its residents soon falling into fanaticism or turning against each other without rhyme or reason. Please keep in mind that these are simple but grounded folks! Livestock must die one way or another…</li>
+    <li>The beautiful Océane will finally not marry the handsome Tristan in the spring, since the latter curiously found happiness in the arms of another, one of weak morals during his apprenticeship on the coast. This news was transmitted to his former lover via a few harsh words on a sheet in ruins. The former future in-laws have not dared to show their faces anywhere for the past few days. As for the girl… between denial and torpor… her condition is starting to worry me a little.<br>
+But, do not fret, my love! For you know very well that <<if $prologue is "lovey">>my body, my heart, and my soul belong to you, and to you alone<<else>>no one could ever have all my attention, aside from you<</if>>.</li>
+    <li>The mayor of our small town was once again caught disoriented in his birthday suit on the Grand’ Place at dawn. Failing to remember the previous hours, and his mind still deep in the fog, the aedile tried to fight anyone daring to bring him home — I had to sew up a few arches and cheekbones, and even an ear! His wife was very embarrassed when he was presented to his door. Despite her insistence, the mayor absolutely refuses to come to the cabinet for consultation, claiming that nothing had happened. I did hear some whispers that he would surely lose the upcoming election because of his condition.</li>
+    <li>Mother Roussette gave birth yesterday to her tenth child! And a blessed first daughter for her, too! The exhausted mother cried with joy, counting all her little fingers and toes, and pinching her little arms lest the cherub be only an apparition. Her husband was white as a sheet.<br>
+Despite their unsanitary and tiny housing for such large family, you would have found this painting quite touching. All the little ones lined up around the bed, quiet as a mouse, not daring to touch this pink and new skin, their eyes moist and moved. As for her name, the petiots unanimously chose ‘Isabelle’ — which shows that the lollipops offered after the vaccines have their advantages!</li>
+</ul>
+
+<p>This last tasty piece is less story heard but more an observation. For a few days now, the centre of the village has been buzzing with activity, with an effervescence that even our local festivals do not ever see. Never have I witnessed such an effort from these villagers to restore the little hotel — the abandoned one, if you remember our conversations, in which I often hid from my parents’ scheming. Hence, all these good people, with rolled up sleeves, working hard, coming and going all day long to bring equipment, passing in front of my office and finally stopping to treat some injuries. They never stop!<br>
+Well, since this morning, a bunch of trolleys carrying new pieces fresh out of the workshops and old priceless antiques have been delivering all this furniture without a single break. Between the quantity delivered (how can such a small building accommodate all these rooms?!) and their likely cost (imagine the monthly annuity of Monsieur du Parraix), I cannot say what astounds me the most!</p>
+
+<p>I have been wondering about the identity of our visitor, for putting our insignificant village to work (and how they managed). Who would choose to come here, voluntarily even?! Could it be a person who shares the same fate as I, punished by mistake or torment? Or someone on the run, wanting to hide in the depths of the countryside from some miscreant? I do not hope for this last option, as the villagers gossip much more than our aristocrats on the Boulevard. In any case, I have so far refrained from fishing for information, in fear of appearing too nosy or perhaps even fearing their taunts. If the newcomer — might it be a woman? for I think I have seen some dresses* — were to settle here, <span id="choix"><<cycle "$letterThree">><<option "I would only be delighted!" 0>><<option "I might be sorry for this…" 1>><</cycle>> <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if !$letterThree>><<set $village --, $olympia ++>><<else>><<set $village ++, $olympia --, $alice ++>><</if>><<replace "#choix" t8n>><<include "Letter 3 Addon">><</replace>><</link>></span></p>
+
+
+:: Letter 3 Addon {"position":"725,225","size":"100,100"}
+<<if !$letterThree>>I would only be delighted! These boneheads will finally leave me in peace, and might even stop distrusting me for being the latest arrival. Will they perhaps go as far as to trust or even respect me, think of me as one of their own? Curiously, I do hope so…<<else>>I might be sorry for this… Do not think of me as jealous or sulky, but so little time has passed since my arrival, that I do not feel like I have fully enjoyed the particular attention the village has given me. Is it greedy to hope that the resident will favour me and neglect the newcomer?<</if>><br>
+* Half-heartedly, I was hoping you were coming to settle here, but I remembered how much you despise green.
+
+<p>I will obviously keep you informed of any development, my dearest, as I know you are eager to learn about this mysterious outsider.</p>
+
+<p>With all my distinguished feelings and my <<if $olympia gt 10>>deepest love<<else>>greatest fondness<</if>>,<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 4">><</link>></p>
+
+<p>PS: You see me relieved to learn that <<if $prologe is "lovey">>Monsieur d'Archambault<<else>>the one whose name I will never again utter<</if>> has not bothered you as much as just before my departure. I was afraid that he would have redoubled in his efforts during my absence, paying you unwelcome visits and occupying all your time. Please, do inform me if this changes.</p>
+
+
+:: Letter 4 {"position":"850,225","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of fmioewg</span>,</div>
+<<if $olympia gt 10>><p>My beloved, my goddess, my muse,</p>
+
+<p>The sweetest words from your last missing have completely overwhelmed me with glee. I hold close to my heart, all day long tucked in my bustier, the beautiful words that your quill deigned to deposit on this tenderly perfumed paper. I cannot separate myself from your letter, not for one second, my darling, as they contain your deepest and most sincere feelings. So far from you, you find me longing to put your polished face in-between my hands, as so to cover it with kisses; longing for your docile body quivering in my arms; longing to hear you whisper in the hollow of my ear your intentions and every desire.</p>
+
+<p>This distance between us tortures me, my ravishing Olympia, and I do not know how to remedy it… All this to say I was greatly upset to learn that the new arrival in our little village of Meaux was not you, but another…</p>
+
+<<else>><p>My delightful friend, </p>
+
+<p>You see me enchanted to receive so many letters from you, despite my poor, short, or spaced answers. I cannot count on anyone else to cheer me up and bring a smile to my face after a long and arduous day. Know that often, I take your missives in my bustier, so that I can read a few lines whenever I am able.</p>
+
+<p>There is so much that I would like to discuss with you, so much that I would like to hear from your lips. But while waiting to be able to return to the capital, I will settle for everything you can send me and recount in return my adventures.</p>
+<</if>>
+
+<p><<if $olympia gt 10>>Despite my efforts, I cannot delay the inevitable. <</if>>I have very few stories from the village to share with you and should not waste these sheets describing how much I miss you so, since you must surely know of my feelings… I also do not wish to make you jealous, my dearest, but must satisfy your request for facts about the new addition to the neighbourhood. I understand your reluctance to read references to petticoats other than yourself between these lines — <<if $olympia gt 10>>although I am delighted to know you are so jealous of my attention! Know all the same that none but you can hold on to my heart, and you already have it in your hands.<<else>>you have never been someone to share the stage with others. Pray that you will not be jealous of what I am going to tell you, my dear, for you can be sure to always have all my attention!<</if>></p>
+
+<p>Anyway! Yesterday, I was officially introduced to Mlle Alice Bouchon, Countess of Bondois. I write officially, having seen her profile a few times during my rounds, as well as having briefly exchanged some politeness while I delivered a prescription for headaches. I tried to draw you a simple portrait, but, unlike yours, my gifts are unfortunately not artistic. Pale as snow, with bloody lips, and eyes shining like polished gold, Mlle Bouchon is a beauty one could characterise as eternal… Yet, be assured that she very much pales next to your charms, my dear. She is much too thin for my taste — you well know my penchant for your never-ending curves.<<if $olympia gt 10>> What would I give to explore them with my humble fingers!<</if>></p>
+
+<p>Going back to yesterday, darling. Thinking that ‘the newcomer’ could become a suitor for their offspring — me, if you had not caught up — my parents hastened to invite Mlle Bouchon for lunch, despite proper customs, so that we could get to acquainted with each other — or, better yet, if Mother could have a say in it, get engaged right that instant!</p>
+
+<p>What surprise it was for the two of them when she arrived, to see on their doorstep Mlle Bouchon looking like a gamine in her dandy outfit. Or so I reckon, you have always known better than me the trends: she wore pants and a blouse, in a similar fashion to my travel suit, if only for its luxurious fabric. Mother found nothing else to say but to announce that Mlle Bouchon must surely ride — no other explanation could be possible in her mind. I restrained myself as best I could from snorting, Mlle Bouchon was more diplomatic, offering Mother a smile instead.</p>
+
+<p>Lunch then passed <<cycle "_letterFourOne">><<option "without further embarrassment" 0>><<option "with some embarrassment, Mother did not know how to behave towards her guest — something the Countess found strangely charming" 1>><</cycle>>. and I could converse at length with Mlle Bouchon, who vaguely elucidated on the reason for her arrival in this lost village: she hoped to hide for a season or two from her creditors, wishing to be forgotten or thought dead. Of course, she relies on our discretion not to disclose this to another soul. <span id="choix"><<cycle "$letterFour">><<option "So I beg you not to share these words." 0>><<option "I cannot ask you this without sounding hypocritical." 1>><</cycle>> <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if !$letterFour>><<set $alice += 2, $olympia -=2>><<else>><<set $olympia += 2, $alice -->><</if>><<replace "#choix" t8n>><<include "Letter 4 Addon">><</replace>><</link>></span> </p>
+
+
+:: Letter 4 Addon {"position":"975,225","size":"100,100"}
+<<if !$letterFour>>I beg you not to share these words with our friends, or, at the very least, to care not to utter her name! I plead with you to keep all this in secret, my friend! If you stick to these rules,<<else>>But I could never ask you this, for having disclosed this secret to you, I will find myself becoming quite the hypocrite. And even more,<</if>> I promise to write you again about this whole affair — especially since Mlle Bouchon said she wanted to invite me for tea or maybe supper. It is quite possible I will learn of juicy details sooner than expected — because Mlle Bouchon is also looking for lucid companions, who have at least read the Classics. My dear, <<cycle "_letterFourTwo">><<option "could you send me some of the recent volumes of literature that the capital devours?" 1>><<option "who here has time to read at all? I am sure I am the only one in this village who has read anything other than Scripture…" 0>><</cycle>></p>
+
+<p>One last thing does bother me a little.</p>
+<<if $letterOne isnot 2>><p>When Mlle Bouchon told me of the welcome she received from the villagers, I found it difficult to moderate my countenance. Contrary to my icy reception, full of contempt and apprehension, the Countess was warmly admitted among our residents, with many applause, bouquets, and offerings. To tell you everything, just hearing about it, I was green with envy!</p>
+
+<p>Even though… It should be said: throwing this much money to repair and furnish the wreck that is building, ensuring a safety net for the most precarious of the community, must have helped her reputation… How I curse these buggers! What about my knowledge and efforts? How many lives must I save to reach the respect they give her unprompted?</p>
+<<else>><p>During this lunch, Mother finally came out of her initial shock, only to fall into adulation towards our guest, forgetting entirely my presence or even the course of the meal. It was as if she had eyes for none but the Countess! Between compliments and praise, it was a miracle if she could even remember to breathe!</p>
+
+<p>I do not know why this ticks me so, dearest. Normally, I simply cannot stand my parents and their meddling in my business, their incessant questions and burdens, their constant requests to find a husband and bring them grandchildren… But seeing Mother pamper this stranger with so much tenderness and affection left a bitter taste in my mouth… Why her…</p>
+<</if>>
+
+<p>Therefore, I implore you to send me more sweet words, my darling, so to drive away these gloomy thoughts that drown me! If I cannot catch a glimpse of your magnificent visage, your pen will do.</p>
+
+<p>Your lover in need of affection,
+<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 5">><<set $alice += (_letterFourOne + _letterFourTwo), $olympia -= (_letterFourOne + _letterFourTwo)>><</link>></p>
+
+<p>PS: Do you think that <<if $prologue is "lovey">>Monsieur d'Archambault<<else>>the one whose name I will never mention<</if>> could intercept our correspondence? I have been receiving a few strange notes at my office lately, and I worry about their sender. Some contained vague accusations, others had very specific information about our situation, even I believe allusions to our exchanges. Tell me right now if he causes you trouble!</p>
+
+
+:: Letter 5 {"position":"1100,225","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of gmroghgnds</span>,</div>
+<p>My darling,</p>
+
+<p>I hasten to write these words, for it has already been far too many letters received since I have last replied, and I feel all the more guilty for not having assumed my responsibilities towards you. Please understand that I find myself in greater demand than I imagined, especially since the arrival of Mlle Bouchon. Even if she does not seem to actually require my services — although I believe her to be anaemic — the young lady comes quite often for consultation, only to exchange some chit and some chat, or to bring me some sweets. This <<cycle "_letterFiveOne">><<option "is starting to somewhat annoy me, or these distractions only add to my long working days" 0>><<option "bothers me very little, as these distractions bring me a necessary relaxation during these long and arduous days" 1>><</cycle>>.</p>
+
+<p>Another phenomenon has been demanding of my skills, although I find myself dumbfounded. For some time now, many have complained of pains and itching, especially from the neck to the shoulders. None of my patients seem to share the same ailments or constitution… Between too tense muscles and redness without cause, I can hardly make sense of these symptoms or their reasons, seeing them come and go like pleasant weather.</p>
+
+<p>Speaking of the weather… fall is soon approaching the small village of Meaux, bringing along its orange-coloured waves of clouds and showers. This rainy climate saddens me, hauling those pesky gloomy and melancholic feelings, especially without your precious self by my side. I can still see myself but a few months ago, wrapped in your kisses, peacefully embraced in your warm arms, when the storms struck outside your windows, rumbling with violence. Here, without your fiery face to protect me, I find myself soaked… and oh so alone.</p>
+
+<p id="choix">That being said, my path to and fro my practice often crosses that of Mlle Bouchon as of late. In addition to her regular visits, she has decided to <<cycle "$letterFive">><<option "visit the wonderful sights of the region" 0>><<option "invite me whenever possible for tea" 1>><</cycle>>. <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if !$letterFive>><<set $alice ++, $olympia ++>><<else>><<set $alice += 2, $olympia =- 2>><</if>><<replace "#choix" t8n>><<include "Letter 5 Addon">><</replace>><</link>></p>
+
+
+:: Letter 5 Addon {"position":"1225,225","size":"100,100"}
+<p>That being said, my path to and fro my practice often crosses that of Mlle Bouchon as of late. In addition to her regular visits, she has decided to <<if !$letterFive>>visit the wonderful sights of the region, waking even in its most muddy corners, despite the bad weather. Due to my post, I had to refuse to accompany her, with all the due respect for the Countess. To the delight of my parents, who advised her on seeing the most splendid landscapes the domain had to offer, guiding her with pride. How I would love to take you there, my <<if $olympia gt 10>>love<<else>>friend<</if>>…<<else>>invite me whenever possible for tea in her ‘humble abode’. Due to my post, I had to refuse the many invitations, with all the due respect for the Countess. My parents were furious at my indecent behaviour, raking over the coals at every opportunity. How this would make you laugh…<</if>></p>
+
+<p>They try their darndest to encourage Mlle Bouchon to present herself at the neighbouring Marquis, the one they are already dreaming of settling me with. Unfortunately for them, //“this world does not interest me the slightest,”// preferring the quiet countryside and the simplicity of the villagers to the antiquated manners and dull customs of the aristocracy. She rathers people to visit her in her exquisite and eclectically decorated hotel*. My dear, her countenance would spread like wildfire among our friends. Although… you two might end up pulling each other’s hair.
+<br>
+* I went to visit it some time ago, and was dazzled by the gallery of works adorning the walls, the delicate furniture embellishing all these rooms, and especially… the huge library! Darling, this hotel was surely far bigger and more luxurious inside than its outside.</p>
+
+<p>My parents were obviously disappointed, but would not despair — they are certain Mlle Bouchon to be their key to introducing themselves to Monsieur the Marquis*. I can assure you that this will surely not be the last time you read of their shenanigans.<br>
+* you might laugh, but they still have yet to learn Mlle Bouchon and I have gone to visit the Marquis. The charms of the Countess bewitched him from the moment he laid eyes on her. And I became at that moment lagniappe…</p>
+
+<p>Hey, about our friends,  <<cycle "_forthelolz">><<option "I am surprised I have not heard from or about Gaultier as of late. You know, that unhappy suitor of yours who was often deadwood to our escapades. To be quite honest, I may have been looking forward to your newest adventures with this charming beau — and hi misadventures — since I left. Pray tell, what has become of this noble soul? Does he still bring you these delicious sweets? Do you think he could send me some?">><<option "I was also muddling over the engagement of Josephine and Hyppolite, for which we had received an announcement. But now you inform me of their separation! How could this happen? You indicate nothing else in the matter but this simple news! What is it then? Is it a sordid story? I hope so, because these two characters were far too unsoiled not to have cadavers in their closets. Well, tell me everything, my dearest! I know you possess this information…">><<option "Tell me all about this affair between Alceste and the new prima donna of the Palais! I heard this one wrapped the little Duke around her plump finger, spending his fortune without a single thought. Despite the warnings of his entourage, Alceste continued to turn a blind eye to the dangerous activities of his beloved. Is this indeed true?">><</cycle>></p>
+
+<p>You also see me delighted to read you find my local gossip to your taste. That they even enchant your marvellous eyes. And that you miss them too? For the life of me, I cannot understand this, me beloved, for all this is far too mundane for your preferences. However, I shall try to inform you of the latest news.</p>
+
+<ul>
+    <li>Do you recall Michette, the little missing sheep? Well, new animals from the same farm followed in that same path, it seems, fleeing one after the other. Father Closier is certain that some villain has stolen his beasts, while his wife is certain the drunkard that he is simply forgot to close the gate… Michette, on the other hand, has yet to reappear, and little Suzanne cannot enter the enclosure without sobbing.</li>
+    <li>Aside from Ferme Closier, there have been other disappearing livestock recently — well, since Father Closier banged on the Mayor’s door to demand justice. This list would include: the big pig of Métais (which was planned to be presented in spring for prizes), a cowherd of Vaney, some chickens at Hanotier, a goat of Dallaire, and the harridan of the Marquis. Some, like the old horse of the Marquis, were found lifeless in the middle of a field or in the forest, most of the remaining having surely truly disappeared for good.</li>
+    <li> For a more light hearted bit, the old Seignol offered me a heavy bag full of chestnuts as payment for her healed pains. My father had to be restrained from demanding my due coins, while Mother was delighted with the loot — she who makes superb creams and tartlets. I guarantee you, our little house will only smell sweet nuts for the next few weeks! Oh, if I could send you some… </li>
+    <li> Jean-Sylvain and Pierre, the apprentices of Blacksmith Cureux, fought last night at the tavern on the edge of the village. These two idiots clung their fists and slammed at each other for a good quarter of an hour, throwing themselves and even pots. I was awakened in the middle of the night, because Pierre’s nose decided to stream. The two apprentices came to my office to apologise—well, they were led there, pulled by the ears by Cureux. The reason for their fight: who would go to get bread at “the pretty bakeress with the tasty rolls”.</li>
+</ul>
+
+<p>Do you see, now, that these stories could never compare to what you surely hear day-in and day-out from our friends. I adore reading about what is happening at the capital, who has courted who, or what scandal ended which relationship. This… hardly happens here. The most salacious gossip I could hear was probably Mother Navaite slamming the door on her husband when he finally deigned to return home. If you still wanting of more, please come visit the village and see with your own eyes, hear with your own ears!</p>
+
+<p>Ah! Another trouble demands my attention…</p>
+
+<p>Your relentless servant,<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 6">><<if !_letterFiveOne>><<set $olympia +=2, $alice -=2>><<else>><<set $alice +=2, $olympia-=2>><</if>><</link>></p>
+
+
+:: Letter 6 {"position":"100,350","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of afklp</span>,</div>
+<p><<if $olympia gt 10>>My soulmate, my loving benevolence,<<else>>Olympia,<</if>></p>
+
+<p>How words escape me today… well, they have now for a while. I am so very sorry I have yet to properly reply to your previous missives, as I should have, resorting instead to simple notes as so to assure you or my still living condition. However, I cannot describe my health without worrying you… Thus, you find me, as I have only just received your pressing letter, to lay down on these pages an account of the last events, which have shaken our quiet, little village.</p>
+
+<p>Dearest, I remember mentioning some weeks ago the mundane disappearances of cattle in the area. Despite the bewilderment of the farmers when they realised their animals were missing, most accepted without batting an eyelid that a predator roaming was the cause. But… this… This was so impossible to ignore and has plunged the village into such disbelief, on the verge even of mourning, unable to see the light.</p>
+
+<p>It has now been ten days since Father Fruchard’s little one was last seen. Ten days… <s>I cannot remember his name anymore… </s></p>
+
+<p id="choix">I still recall the last words we exchanged: the youth had come to collect some pills for his mother, and had stayed just a moment longer to show me his new battle wound. <span id="choice"><<cycle "$letterSixOne">><<option "Exhausted, I hardly listened to him." false>><<option "Of course, I took care of him." true>><</cycle>> <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if !$letterSixOne>><<set $village -= 2, $alice ++>><<else>><<set $village ++, $alice -->><</if>><<replace "#choice" t8n>><<include "Letter 6 Addon">><</replace>><</link>></span></p>
+
+
+:: Letter 6 Addon {"position":"225,350","size":"100,100"}
+<<if $letterSixOne>>Bickering with his desk neighbour, he caught the wrath of his teacher, who inflicted dreadful cuts on his little fingers as punishment. Of course, I took care of him, and would not let him leave without a good handful of sweets — you know of my weakness for these charming creatures, their smiles always enchanting my days. Before long, I saw him run off in the rain, his satchel barely protecting him from the precipitation, and disappear at the corner of the alley.<<else>>I hardly listened to his account, exhausted from my long day, overdue of relaxation, and almost cast him out of my office after giving him the prescription. I saw him, sheepish, running off in the rain his satchel barely protecting him from the precipitation, and disappear at the corner of the alley.<</if>>
+
+<p><s>I… How can I have already forgotten it?</s></p>
+
+<p>The village disclosed I was one of the last individuals to have… oh, that poor soul… Olympia, what should… could I do? Remorse is eating away at my soul. <<if $letterSixOne>>For not doing enough… anything to stop the child from leaving my office.<<else>>For having chased him out of my office.<</if>> For not distracting him, entertaining him until his father could come and pick him up. For not walking him back myself. For…</p>
+
+<p>Olympia… my angel. What can I do now?</p>
+
+<p id="choix2">In spite of her daily efforts to console and distract me, Mlle Bouchon castigates me for torturing myself thusly. “For nothing,” she says. “The child would have done what he wanted, no matter what you could have attempted.” Because he was never my responsibility. Like her, I am but a stranger to this case, barely a witness. What would even be the use of worrying for this little soul when nothing in this affair concerns me? Olympia… <span id="choice2"><<cycle "$letterSixTwo">><<option "she could not be right, could she" false>><<option "what if she was right" true>><</cycle>>? <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if !$letterSixTwo>><<set $village ++, $alice -=2, $olympia -->><<else>><<set $village -= 2, $olympia -=2, $alice ++>><</if>><<replace "#choice2" t8n>><<include "Letter 6 Addon2">><</replace>><</link>></span></p>
+
+
+:: Letter 6 Addon2 {"position":"350,350","size":"100,100"}
+<<if !$letterSixTwo>>I cannot comprehend this cavalier opinion of hers. While she provides me with subsistence — one of Mother’s stunt, I am certain — she turns around and tell me these dreadful things… To be forthright, I cannot see why I would not be enmeshed in all of this, when I saw the child with my own two eyes just before he…
+<<else>>The more I listen to her, the more I find her words to ring true. She, who cared for me when not required, without asking for anything in return, bringing me sustenance, easing my mind as best she could… Would I be a horrible person to wish for the torments within my soul to end?<</if>>
+
+<p>My heart breaks a little more every day, seeing the face of Father Fruchard when he comes to get the sedative for his wife. I cannot imagine how she… I do not dare approach their farm…</p>
+
+<p>Did I mention research being undertaken? As early as the morning following his disappearance. Even if always mischievous, the child would never delay his return from school, or even forget to appear for dinner. Father Fruchard retraced the steps of his little one, knocking on every door along his path, hoping to find him at a neighbour’s. Other residents joined him by the next morning, combing the estate and more. However… not a single trace of the child anywhere. Nothing. And with this dreary weather continuing…</p>
+
+<p>My brilliant friend, I do not know what to do. Please, I beg you for advice. Deliver me from this remorse!</p>
+
+<p>Your patient, with her heart in pieces,<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 7">><</link>></p>
+
+
+:: Letter 7 {"position":"475,350","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of dkwap;ognj</span>,</div>
+<p>Ingrate Olympia,</p>
+
+<p>What despicable letter you have deigned to write me! How very dare you, when in the depth of my <<if $letterSixOne>>sorrow<<else>>anguish<</if>>, so far from <<if $olympia gt 8>>your person<<else>>all civilities<</if>>, and pulled from all sides… how very dare you sending me these words! How could you ever think this was the time to describe your treacherous jealousy? How could I have ever persuaded you in my previous missives of the horrible accusations you made of me? How could you truly believe my presence in this gloomy village is wanted by myself<<if $village lte 0>> and the others<</if>>? To disavow your person, surely not?!</p>
+
+<p>Can you not see that apart from stitching up some wounds, I am utterly useless here? Do you know how many souls even let me examine them? Let me prescribe remedies other than those dubious potions of yesteryear? Trust me, them?! <<if $letterTwo is 2>>Even after all this time spent among them, even after their open arms when they welcomed me… <</if>>My dear, not even my parents care for my medical opinion! My talents… are worthless, less than even. I would rather spend my days  <<cycle "_forthelolz">><<option "begging Place Victoire">><<option "dealing with the lepers">><<option "slaughtering death row inmates">><</cycle>> than stay here another single second! But you… you who know full well that I cannot return to the capital! And why…</p>
+
+<p>How does this fail to surprise me…</p>
+
+<p>I wonder sometimes if you have already forgotten the reason for my banishment. The reason I had to endure a long and arduous journey to this godforsaken place! Have you already forgotten who should bear the blame? Must I truly be the only person in this predicament? How could you spend your days with this… monster?! Monsieur d'Archambault terrified us so, forced us to separate, pushed me out of the Congrès des Médecins, revealed my true identity and our secret relationship… And now, you trust him?! YOU?! After all that he has done to us?! How could you still believe d'Archambault learned of our throes of passions by simple chance?</p>
+
+<p>You will surely write back that all this is false, that they must only be conjectures, that my vengeance can only drive me to anger. But, do you truly believe I would jot down these words without proof? Do you really think that our mutual friends have ceased sending me news of their own? That they do not inform me of the gossip and affairs of the capital as you have so far? That I do not share with them my fears and anguish as I have with you? That they fail to notify me of your escapades behind my back? <<if $olympia gt 8>>Cuckolding<<else>>Duping<</if>> me of the sort while I every single day pay for your indiscretions!</p>
+
+<p>Do you presume that I never envy your luxuries, your large, sunny apartments, your warm linens and enchanting sights? That in no circumstances must you need rising before dawn to commence your daily penance? To never have to walk in the cold and in the rain simply to reach your office, as yours is just by your bed? No days or nights forced to touch soiled and sickly bodies, to listen to strings of stupidity and insults from foul mouths? Although… you may understand this last point, would you not? I am sure since my departure you have been in need of payments, as I am no longer able to provide for you. Is it not true you receive it in greater returns and pleasures?</p>
+
+<p>Viper’s tongue, insidious hatred, I despise you! I curse your name! You, who have given me so much pain… you have found the demise of my heart! Your words have trampled my whole being to dust. I wish you all the Evils of the Earth!</p>
+
+<p>Please find my distinctions…<br>
+Dr Isabella Jeangille <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 8a">><<set $olympia -= _sevenextra>><</link>></p>
+
+<p>PS : <<cycle "_sevenextra">><<option "Understand that in no uncertain terms do you measure up to Mlle Alice!" 2>><<option "It isn’t just crabs that  Monsieur d'Archambault caught last month…" 0>><<option "Do not ever expect great love with Monsieur d'Archambault, for he makes all his lovers cuckolded!" 1>><</cycle>><<set _sevenextra to 0>></p>
+
+
+:: Letter 8a {"position":"600,350","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of aicbe</span>,</div>
+<p>Olympia, my <<if $olympia gt 10>>beloved<<else>>dearest  friend<</if>>,</p>
+
+<p>I lay my broken quill at your feel, bowing until my witch’s nose reaches your unsullied slippers. My body, my heart, my soul… all my being at your disposal, for eternity. Make me your puppet, your doll, your slave!</p>
+
+<p>My beautiful Olympia, how you find me forced to swallow, correct, destroy the abject words I deigned to write you, deigned to send you, deigned to let you read. My anger and despair were so great I could not see clearly, or at least no farther than my imbecilic ego. I could not decipher between your lines that anguish and torment you were trying to communicate. <s>I could not…</s></p>
+
+<p id="choix">My angelic friend, I am terribly aware of the evils I have surely borne you by these indiscreet phrases. As soon as the porter departed, I resented having sent this wicked pamphlet. Pray to understand that I am, from the depths of my whole being, extremely, undignifiedly, perfectly sorry. If I could build some sort of time machine, I would <span id="choice"><<cycle "$letterEightA">><<option "rewind to a few days earlier" 0>><<option "get back to a few months earlier" 1>><<option "return as far as my own birth" 2>>!<</cycle>> <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if !$letterEightA>><<set $olympia -->><<elseif $letterEightA is 2>><<set $olympia += 3>><<else>><<set $olympia ++>><</if>><<replace "#choice" t8n>><<include "Letter 8a Addon">><</replace>><</link>></span></p>
+
+
+:: Letter 8a Addon {"position":"725,350","size":"100,100"}
+<<if $letterEightA is 2>>I would not only rewind time to just a few days, but go much further: as far as my own birth! This would be the only way to ensure that none of my hurtful words, none of my indiscreet actions, that nothing, truly nothing, could ever reach you and harm you. Olympia, if you wished it so, I would end my life right this instant!
+<<elseif !$letterEightA>>I would rewind time to a few days earlier, to when my eyes laid on your words, and prevent myself from making you so unhappy, ripping my pen from my own hand and splintering it to a million pieces on the spot! I would fight myself and ensure these words would never reach you.
+<<else>>I would not only go back just a few days, but months, dearest! Coming back long before our fall, long before this treacherous Monsieur d'Archambault used us in his schemes, long before that separation tore us apart. Olympia, I would have moved Heaven and Earth to still be at your side!<</if>>
+
+<p>Please, I beg you to accept my deepest, my most sincere, <s>my most…</s> excuses</p>
+
+<p>I pray to hear from you soon.</p>
+
+<p>Pending your judgement,<br>
+Your servant grovelling at your feet,<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 8b">><</link>></p>
+
+<p>PS: if this letter reaches your delicate hands before the cursed one, pray to never open the latter. Destroy it immediately!</p>
+
+
+:: Letter 8b {"position":"850,350","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of aicbe</span>,</div>
+<p><<if $olympia gt 10>>My angel, my refuge, my solace,<<else>>My darling friend,<</if>></p>
+
+<p><<if $olympia gt 10>>How you find me relieved and oh so delighted to receive those trickle lines from your elegant hand. I could not contain my happiness when I perceived your seal on this delicately scented envelope when the postman delivered it this morning. I could not tell you what I would have attempted had you not forgiven me. Please accept in return these kisses, pledges of my deepest admiration for you.<<else>>How you find me relieved to receive these lines from you. I could not begin to describe my appeasement when reading your letter. Please accept in return my most sincere admiration for your person.<</if>></p>
+
+<p>I assure you, my dear, of my <<if $olympia gt 10>>most complete fidelity<<else>>friendship<</if>>. Do you recall that destined morning, the one we met? Me, poorly disguised with this disciple’s habit drowning my body, running towards the benches of the École, fearing missing yet another lesson. You, against the current, constantly looking over your shoulder, hoping to lose your vicious lover of the moment. I can still see you so clearly, panting and exhilarated, at the edge of fear and ecstasy. You fell into my arms, your face writhing with incomprehension. My beloved, I cannot describe the thoughts crossing my mind at this time, for I had none. You were, and still are, the most wonderful creature I ever met. Your face glowed despite the cloudy weather. I thought I found an angel</p>
+
+<p>You soon became hilarious, looking at my attire, which I remember making me eranged — even though I looked like nothing, as you pointed out. Then, with a gracious hand, you gave me an undeserved kindness. Thanks to you, and your talents of metamorphosis, I can continue my studies without worries, without altercations, without mockery, without refusal. Without you, my divine guardian, I could not ply in this calling. Without you, my aspirations would have been for naught, only fantasy. I could not ever express how much I am indebted to you. By this grace, and all the following. Even after you were satisfied with my cross-dressing skills, you stayed by my side without asking for compensation.</p>
+
+<<if $olympia gt 10>><p>Know that for some time, I have yet to tire thinking of you, imagining you, sitting at your desk, golden rays settling on your tanned skin, your hair shining with warmth, and your organza robe barely dressed on your shoulders. Your hand lets go of the quill you hold, and hangs for a moment, as if surprised. Your head turns to me, flaunting a striking smile. This image, my darling Olympia, helps me overcome every day, every trial set in my way. Without it, I do not know if I could even leave my bed each the morning…</p>
+
+<p>Oh! How I wish I could live in this painting… Unfortunately, work still awaits me. I will attempt to acquaint you with everything when I see you again. In the meantime, escapism shall be my only relief, letting my thoughts, my dream, my fantasies break out, seeking your soft skin caressing my rough palms, your warm neck accepting my feverish lips, your luscious hips attracting my wandering hands…</p>
+<<else>><p>Know that for some time, I have often been thinking of those first days spent together, and the influence you have had on the path that is my life. Even if my current situation is not quite so desirable, I could not have lived all these wonderful experiences without your presence. I will forever cherish these memories.</p><</if>>
+
+<p>Your humble servant, relieved not to have incurred your wrath,<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 9">><</link>> </p>
+
+
+:: Letter 9 {"position":"975,350","size":"100,100"}
+<p>Olympia…</p>
+
+<p>I struggle writing these words, so much so that this is already my umpteenth copy — the others were drenched with tears and muddled with erasures. I could not even dare to ask you for relief, to beg you to keep me in your thoughts and prayers, or even to imagine being comforted by your wonderful embrace for fear of being… selfish? hypocritical? insensitive? I find it difficult to describe my anguish, afraid it would render my pain more real… or perhaps less? Dearest… How could I tell you…</p>
+
+<p><s>Olympia… this remorse… I should have…</s></p>
+
+<p>The body of little Jeannot was found ereyesterday at dawn… well, what remained of the child, the decomposition having already begun its rigorous task. It was not possible to declare without doubts the true cause of his death: the body had been found in a ditch used otherwise to trap wild beasts, his face scratched all other, some limbs missing. How ghastly was this picture! I admit I succumbed to a fainting spell when I saw him. What poor innocent soul!</p>
+
+<p>Understand that these last days were gruelling. I was forced to undertake the autopsy on this child’s so small body <<if $village lt 3>>at the request of Father Fruchard<<else>>because the coroner refused to come<</if>>. I endeavoured to do my best, with all the respect to this child, but could not find a single clue as to his condition: they could not grasp I was a healer, not a medical examiner!</p>
+
+<p>A stranger thing, however… Something I could not bring myself to disclose to the Fruchard family, in fear of increasing confusion and sorrow. The child’s body did no longer contain a single drop of blood within its veins — even dried, there was no trace of that bloody liquid. Oh, how that little body was pale!</p>
+
+<p>Already I can hear you ask: //How could they find the child when any previous research had not unearthed any sign before now?// It is true the village has combed the area without results, but they also doubled in their effort in recent weeks. Strangely, the disappearances have also accumulated since, and were not only just affecting livestock. Children and the elderly, the sick and the healthy… even invalids are afflicted by this queer phenomenon! We could be seeing one morning our friend, neighbour, relative and… //POOF!//<br>
+Oddly enough, these disappearances have yet to happen on a Sunday, or target the very religious…</p>
+
+<p>It is not just by worry, but necessity that research is still ongoing, if not for the survival of the missing, but for our village. To date, a dozen people have simply evaporated. And I am already worried, recognising hints of paranoia taking over the residents’ minds. What once was a peaceful hamlet transformed into a place of suspicion and mistrust… No one believes anyone, as they accuse each other without a shred of proof. Even I, I am not immune to their reproaches, as I find myself being the last person to have crossed paths with the missing or treated them shortly before their disappearances. Few now dare to come for a consultation, fearing this could be their last visit. To say, mystification reigns.</p>
+
+<p>Aside from the cadavers I am forced to auscultate, my only patients are currently Mlle Bouchon’s servants. Igor, a large skeleton pale as snow, and Akasha, a plump redhead with falling circles. I treated their strange bites at the neck and wrists, where dry bloodstains could not be scrapped off. Igor also kept scratching his arm. To tell you, I spend most of my days with corpses…</p>
+
+<p>My only true confidante in this damned village is Mlle Bouchon, the only person who dare speaking to me regularly without ever insulting me. And since the discovery of little Jeannot’s body, she has been visiting me every single day — well, almost — as so to ensure my sanity, afraid I would falter to doom and gloom. If her visits are not in order for the day, she invites me to her house instead — forces me at times even, to join her.</p>
+
+<p id="choix"><<cycle "$letterNine">><<option "Frankly, I am delighted with these distractions.">><<option "These distractions have done little to help me from drowning in contemplation and distress.">><</cycle>> <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if $letterNine is "Frankly, I am delighted with these distractions.">><<set $olympia -= 2, $alice +=2>><<else>><<set $olympia ++, $alice -=2>><</if>><<replace "#choix" t8n>><<include "Letter 9 Addon">><</replace>><</link>></p>
+
+
+:: Letter 9 Addon {"position":"1100,350","size":"100,100"}
+<p>$letterNine <<if $letterNine is "Frankly, I am delighted with these distractions.">>The gossips and insults waving through the village tire me, disgust me considering the turn of events. I thought the villagers were above these cheap shots… How I wish to be <<if $olympia gt 10>>near you<<else>>at the capital<</if>>, where no one knows anyone, where strangers never dare to look or approach each other, where anonymity reigns supreme. In the presence of the Countess, at least, I can forget my situation and my anguish.<<else>>And I do find the Countess quite insistent, maybe too much for my taste. I would rather forget it all — nay, that every single one of them forgets about me and leave me in peace! That they give me time to examine my muddled thoughts and feelings, to find order within my heart… Dearest, I am this close to simply running away and forever hiding in the forest. I would become a hermit in a heartbeat.<</if>></p>
+
+<p>How I wish you could come to console me, but I fear too much for your safety,<br>
+Your servant suffocating in remorse,<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 10">><</link>></p>
+
+<p>PS: Would you be so kind as to covertly take these attached sheets to Ruscassier? You know, my friend at the Hôpital Saint Luc, whom you met during our evening gatherings, with his round glasses always falling from his nose. I am in need of his professional opinion on that odd neck itch I have been noticing in the residents lately. Pray to be discreet! I trust no one but you…</p>
+
+
+:: Letter Alice {"position":"475,475","size":"100,100"}
+<p>Olympia,</p>
+
+<p>These will surely be my last words to you, for it is neither prudent nor necessary for you to receive further news from me. I cannot say which emotion is pressing me to write these lines, but pray to understand this shall never happen again. If I were to wager… something in me still cared enough to send you some explanations.
+</p>
+
+<p>Still, I must ask you to [[destroy|END SCREEN]] this letter when you are finished with [[reading|Letter Alice Addon]] it. The words within and meaning between these lines must not ever be disclosed, to anyone! Already, I am going against Her wishes in writing you. Knowing you cannot stop your tongue, pray to recount this whole affair as some impossible tale, some fantasy of a maybe troubled mind.</p>
+
+<p>Do also ensure that all the letters I might have sent you ab ovo to be thoroughly destroyed.</p>
+
+<p>I remain,<br>
+Dr Isabella Jeangille</p>
+
+
+:: Letter Alice Addon {"position":"600,475","size":"100,100"}
+<p>Olympia, </p>
+
+<p>Firstly, know that your suspicions regarding the Countess were not as illegitimate as I myself believed. Unlike me, it seems, you saw through the veil, understood Her intentions, and tried your best to convince me of Her ills. Well, could it be perhaps you saw in the Countess your own reflection? It is true that, in many aspects, you resemble each other, more than you would ever care to admit — the Countess, Herself, has.</p>
+
+<p>I may have mentioned in a previous letter that the Countess had a solution, a solution to the Troubles, a solution to bring the village back to is calmed, natural state. Understand that it tool little to convince me, for it pained me to see such disarray before my eyes. Shortly after hearing this proposition, the mayor came once again to pester me with his superstitions, hoping, I suppose, to find some refuge in science — he was truly convinced the Countess to be… a witch. He was so certain of this I became fearful for her safety. I could already imagine the village marching as one, pitchforks and torches in hands.</p>
+
+<p>Having alerted the Countess of the imminent danger, the doors of her hotel swung open for me, and She assured me we would both be safe — as long as I stayed indoors and steered clear of the windows. I was not made aware of the Countess’s activities during the following days, as She came and went without even greeting me. Often, She would return soaked in some reddish liquid — how radiant She looked! Still, She would not converse with me, transmitting Her messages through her servants only.</p>
+
+<p>One morning, at last, She returned from her obscure activities, beaming. Bloodied once more, but oh so marvellous, She announced with tamed delight of the destruction of the entire village. As far as She was concerned, this had been the only way to ensure our safety, and regain our freedom. On all sides, I could see through every window flames flourishing and spreading, engulfing houses one after the next, fields and forest. What an intoxicating picture this was!</p>
+
+<p>When we finally visited my former home, after the fire faded away, I could see the Countess feeling remorseful for having harvested thus the souls of my relatives. Yet, I cannot blame Her, could not blame Her, for what She did, for what She had to do, for freeing me of these restraining emotional bonds. Dare I say, a part of myself had already accepted this fate when choosing Her. It the end, it was for the better.</p>
+
+<p>We next went to the Marquis’s homestead, pretending a need for refuge. Having noticed the flames afar from his domain, he accepted without hesitation. Or should I now say the late Marquis? He withstood little under the sway of the Countess. And it was in this elegant mansion that She, at last, recounted Her adventure to me, Her particular influence on the events in the recent months, and… offered something none could refuse.</p>
+
+<p>In your interest, but mainly for Hers, I shall skip the narrated details from before Her arrival, for it would be of very little interest to you. One day, perhaps…</p>
+
+<p>Despite the quaint charm of the village, the Countess saw instead a slice of Paradise, a Cornucopia if you will, an endless meal. She visited covertly the surroundings in the weeks following my own arrival, tasting the pleasures of the tender flesh and virgin liquids. She chose Meaux for the ‘diversity of bodies’ crossing each day the Grand’ place, the square where her hotel stood. In hindsight, it might have been more cautious abiding to a larger city, but the Countess was tired of the incessant noises and sickened hearts. She confessed as well of my indocile presence affecting Her choice, claiming it enchanted her.</p>
+
+<p>Thus, the Countess officially settled in the village. In this little corner, far from everything, where silence reigned supreme, where hunting was only distraction. Even when Her preys walked past Her, oblivious to the danger, she found amusement in luring them to Her, always in different ways: a simple smile, an offering, a chase in the woods, a promise, an end to suffering. She drank and ate to Her hunger, revelled in the delicacies she could consume each day, Her secret cloistered inside Her dark hotel. Rarely did She need to throw away the remains, for She kept the bodies as long as life flickered behind their eyes. Still, She denies to be responsible in any shape or form for the little Jeannot.</p>
+
+<p>As for myself? Why was I, and only myself, saved from this massacre, for you may call it one? A weakness of the Countess, surely, of which I would never deign to complain. She offered me a life without an end, a chance to continue my research — the one I was not allowed or able to complete in the capital — without supervision, without the need to beg for funds. The Countess wished to shower me with pearls and jewels, to indulge me in lust and entertainment. But none of this ever interested me, far from the discovery of the Bloodsuckers, their peculiar properties, and perhaps even their particular genomes. The price for this providence? Only the blood of others. What economy!</p>
+
+<p>However, this has yet to be finalised, and will not for a few more months, when we reach our destination — ah, did I not say we were no longer at the Marquis’? A ritual, it seems, awaits me. As well as a laboratory, and bodies abounding…</p>
+
+<p>I thus bid you farewell,<br>
+And wish you happiness with Monsieur d’Archambault,<br>
+Dr Isabella Jeangille <<link "<i class='fa-solid fa-feather-pointed'></i>" "END SCREEN">><</link>></p>
+
+
+:: Letter Dad {"position":"975,475","size":"100,100"}
+<div id="date">Le <span>18<sup>th</sup> of grjenj</span>,</div>
+<p>My brilliant Olympia,</p>
+
+<p>Before anything else, I beg you to excuse this belated letter. Much has happened since my last missive. I swear on my life I would never forget to answer you! Only that my affairs have been in abundance lately, and I am not even afforded a single minute for myself. But know that I read again and again your sweet words whenever possible.</p>
+
+<p>I must confess, I am delighted to learn you were trying to seek even morsels of news about the circumstances, which I will recount to you below. You, to whom my fate worried terribly. Though… in any instance, involving Monsieur d'Archambault far or near your goals might not have been the greatest of ideas, if you remember our current predicament. Yet, I beg of you to share the heavy burden of the favour you surely owe him. So I may pay for my contribution, of course.</p>
+
+<p>At last… I mustn’t delay retelling the final events of this affair, for you must be eager, as much as I, to close this chapter. I believe I previously presented the village’s accusation towards Mlle Bouchon (as well as myself) concerning the recent disappearances, along with Father’s advice to protect the village at all costs, even if this would require the sacrifice of your companion. It took me quite some time, and the arrival of Ruscassier’s answers, to accept the inevitable. This was the only way to save <<if $targetted>>my skin <<else>>the village<</if>>. </p>
+
+<p>Thereupon, I made my way down to the town hall, in order to reveal all I had managed to collect since: my metal image of Mlle Bouchon’s hotel and its strange interior, the potential connections between the disappearances, the curious symptoms of the living and the odd states of the bodies found, the chilling lack of emotion from the Countess during the tragedies… I even intensely scoured your letters before the assembly, as so not to fail to share all you had notice in between my lines: her strange hours for outings, her aversion to the sun, her cadaveric physiognomy, her obsession with my person…</p>
+
+<p>To my surprise, the council listened with reverence, taking the information as blessings — though, for some, my indecision to come forward or disregard of what could be of importance was to blame, delaying what was necessary. Yet, little of my presentation ended up being heard, as the old windows interjected, crying out in horror: Mlle Bouchon was a vampire, they were certain of it. A wave of agreement took over the villagers, as heads nodded one by one on these fantastical (fanatical?) conclusions. Yet, this did not surprise me, to say the least, knowing that these remote villages have peculiar superstitions towards outsiders and strangers. I was, however, confused by their way of drawing these hasty conclusions. They tried their best to explain it all to me, but I could not find it myself to be convinced, to agree with them… Mlle Bouchon, a vampire? And for what reason? Their answer to any of my questions was obviously: “But who else?”</p>
+
+<p>Despite my protests and requests for a proper investigation, the village gathered, going as far as inviting the Marquis, to hunt the ‘vampire’. Forks and torches in hand, the villagers marched as one to the Countess’s hotel with the intent of arresting her, before setting a cursory court, and executing her. As you can imagine, she, obviously, refused to come out or even open the door to this mob — a door no one could break down either. Instead, she asked for me to be her liaison…</p>
+
+<p id="choix">…a request I <span id="choice"><<cycle "$finalDad">><<option "strongly refused">><<option "reluctantly accepted">><</cycle>>.  <<link "<i class='fa-solid fa-feather-pointed'></i>">><<replace "#choice" t8n>>''$finalDad''. <</replace>><<append "#choix" t8n>><<include "Letter Dad Addon">><</append>><</link>></span></p>
+
+
+:: Letter Dad Addon {"position":"1100,475","size":"100,100"}
+<<if $finalDad is "strongly refused">>
+<p>Unwilling to put myself in danger, in fear the villagers’ beliefs were sound, I could not, for any reason, enter this ungodly house! It is possible their passion affected me more than I would care to admit…</p>
+
+<p>Consequently, the village proceeded to gather up wood, coal, twigs, oils, and matches; scatter their bounty meticulously around the hotel, before setting it ablaze. They posted themselves about, surrounding the building, and ensuring all exits were covered, in the case the Countess attempted an escape. Slowly but surely, the flames ignited the doors and windows — all of which remained closed. Only the screams of a harpy resounded, arising out of the deepest part of the hotel; my skin shuddered.</p>
+
+<p>The fire burned on for days, before the absorbed eyes of the villagers. It was only when the ashes finally went out that we ventured inside the ruins to investigate what remained. Oh, what desolation afore us! Those exquisite pieces of furniture, impeccable decorations, and ravishing dresses that on you would have wreaked havoc… there was nothing else but ashes. We did, however, find a few cadavers: that of Mlle Bouchon in one of the bedrooms, and in the kitchen those we believe to have been her servants (I thought I recognised an arm), but also unidentifiable bodies in the cellar — cattle, we all hoped, obfuscating ourselves to any resemblances with the human anatomy — and walls covered with blood. This… all this had been enough for the village, enough evidence to infer the Countess’s involvement.</p>
+
+<p>The bones of the victims were recovered in the most revered silence I’ve ever witnessed, the villagers even attempting to reconstruct the bodies. All received their last rites before proper burial, and the recent masses have been focusing the payers for their souls. As for the skeleton of Mlle Bouchon, all but the skull was thrown into a pyre, which was displayed on the Grand’ place as some sort of trophy… or warning. Nevertheless, mourning was mandated for all since.</p>
+
+<<else>>
+
+<p>The village had already started to gather wood to set the building ablaze, but I could not let them go forth with their plan! For its future, considering the opulent value of the goods inside these walls and the potential evidence of Countess’s guilt (or innocence!) to be found, I sacrificed myself, and presented my anxious mind at her door.</p>
+
+<p>Mlle Bouchon received me with dark eyes, bulged from abundant flows of tears. “Et tu, Brutus…” were her first words — remorse pulled my eyes to the floor. It is after many sighs and refreshments served in her parlour that she deigned to address me, asking me for a favour: ensuring her servants to be treated kindly, as they too were victims in this affair. She waited for Igor and Akasha to cross the threshold before recounting her story.</p>
+
+<p>I shall skip over the many details irrelevant for this affair, but know that Mlle Bouchon, indeed from her very lips, confessed to me her involvement in the disappearances of these last few months. She described in full, horrid details all her machinations, from her reasons to settle in Meaux rather than another remote town or thriving city, to her choices of victims, and even her methods: starting with just a few bites before swallowing bodies whole. She admitted to only have one regret, for she became too greedy with her meals, unable to space out the consumption of her food, unable to avoid tasting that mortal liquid. Then, she added one more: having missed the opportunity to convince me to stay by her side.</p>
+
+<p>When she suddenly rose, I became frightened, afraid she would throw herself at me and make of me her ultimate victim. But, she only walked towards the door. Deliberately, and without further protest, she opened it, and, before crossing it, asked from me to relate these words to anyone who would listen.</p>
+
+<p>As her foot passed the threshold, the then cloudy sky cleared, revealing a winter sun. And so, frosty astral rays caressed her pale skin, which, before our own eyes, turned to ashes. A total and sudden spontaneous combustion. I did not think a body could perish so quickly.</p>
+
+<p>Yet, the village was not satisfied with this swift resolution, the deep pain of our fallen members still tearing their heart. Instead of escaping so cowardly, The Countess should have been tried and condemned before a group of her peers, them! As such, they set to explore the small hotel… to plunder it! With no tenant, and unable to receive compensation from Mlle Bouchon, this was, to them, only just and equitable. The body of their child, of their neighbour, of their friend… for a set of diamonds, a silk dress, an antique. In my state of distress, I could not take my share of the spoils…</p>
+
+<p>Through exploring the building, we found in the cellar some of our missing members, whose preserved and immaculate bodies looked as if they were sleeping. Before any could say a word, one of the old widows hastened to plunge a stake in their heart. Please know that all received their last rites and were properly buried. As you might understand, it was therefore in mourning that we spend the past few weeks.</p>
+<</if>>
+
+<p>There are still a few knots in this affair to untangle, and documents to fill, before finally closing this chapter forever. Since this altercation, a great void has been felt throughout the village. As if the disappearances felt more real now that the bodies (well, some of them) were found. I… I don’t know what I could even do to help them…</p>
+
+<p>Olympia, I have so much to tell you, so much I could not dare to put on paper. I will try to find you somehow, somewhen soon. I will say it all, I promise you!</p>
+
+<p>Or maybe… would you meet me?</p>
+
+<p>Waiting for this fasted moment,<br>
+Your friend for eternity, your confidante and servant,</p>
+ 
+<p>Isabella<<link "<i class='fa-solid fa-feather-pointed'></i>" "END SCREEN">><</link>></p>
+
+
+:: Letter Mom {"position":"725,475","size":"100,100"}
+<p>Olympia,</p>
+
+<p>These words must be quite overdue, as I am well knowing whether the news of my present situation has reached your lovely ears. My beloved, my life… How I despise myself writing these lines to you but…</p>
+
+<p>I beg — nay, implore — you to forget me. To forsake me.</p>
+
+<p>My fate now is nothing but tragedy. Despite my parents’ numerous attempts to extricate me, these efforts have only cemented that my fate is well and truly sealed. Nothing in this world, Olympia, not even Monsieur d'Archambault, would be able to unravel it. So please, for your sake, do not approach or raise this matter to him.</p>
+
+<p>Isabella</p>
+
+<p>PS: if you do not wish to [[read more|Letter Mom Addon]], please [[destroy|END SCREEN]] these attached pages.</p>
+
+
+:: Letter Mom Addon {"position":"850,475","size":"100,100"}
+<p>My magnificent, my perfect Olympia,</p>
+
+<p>I beg you to forgive the state of these sheets and the stains from my pen. I had to grovel and carry out many favours, just have something presentable for your dazzling emeralds. Oh, how I hope you receive these words…</p>
+
+<p>My fate, therefore, was sealed the moment I acted. Like a ninny, I followed Mother’s advice and helped Mlle <<if $alice gt 5>>Alice<<else>>Bouchon<</if>> escape the village. The ‘poor’ thing was obliged to leave everything behind: her servants, her wealth, the hotel… everything she had invested in until then. A waste, mayhap?</p>
+
+<p>Thanks to the gracious Marquis, we found refuge in his domain for a modicum of days, just long enough to organise the Countess’s departure towards safer pastures, but short enough so that the village would not question <<if $targetted>>our<<else>>her<</if>> disappearance. Oh, what a mistake it was to help her thus!</p>
+
+<p>At the eleventh hour, Mlle <<if $alice gt 5>>Alice<<else>>Bouchon<</if>> called me in her apartments (at the Marquis’s, hence), so to confess her scheming and plots during this dreadful affair. Oh, my beautiful Olympia, what else can I say except that you were entirely scrupulous about her! And of the villagers’ suspicions, too! Alice was not only in the throes of this mystery… she was the entire mystery herself! The one who orchestrated everything from the start: from the sudden disappearance of Michette to the cattle’s strange exodus, ensuring that every corner of the village was affected, before proceeding with the poor little Jeannot, and… and… and all these people. It was her! All her! And the one who had inflicted all these strange symptoms, the ones I had described in my previous letters… her too, evidently! And so, it was she who inflicted this fate on me. This… this vampire!</p>
+
+<p>Ah… you will surely laugh, but Mlle <<if $alice gt 5>>Alice<<else>>Bouchon<</if>> truly is a vampire! An actual bloodsucker! The real deal! Not only did she confess this to me before her departure, she also displayed her long incisors (fangs, which retracted at-will), as well as her skin’s reaction to sunlight (her icy flesh boiled, Olympia! like water!). She even went as far as to bite the maid, and suck on her neck until faintness to rid of any doubts!</p>
+
+<p>Despite the charm of the Countess on our host, the generosity of the Marquis did not extend to my person, as he quickly dismissed me after her departure. He, himself, expelled me out of his residence! Not knowing where else to go, I walked back to the village. And how idiotic this was!</p>
+
+<p>En route, I was stopped by a group of villagers who were searching for the Countess. Since her ‘disappearance’, the village took it upon itself to explore her hotel, investigating every of its corners for clues and evidence of her involvement in this affair. According to this bunch, true evidence of ‘witchcraft’ and other black magic had been found in the cellar, the tools she had clearly used for her schemes.</p>
+
+<p>However, when I recounted the thrills of my previous days, especially what I heard from the lips of the Countess, and what she wound up showing me, I was, without even an explanation, shackled. Not just, as they brought me for a crude trial, during which I was swiftly found guilty — no objections were uttered. Despite my many challenges, my involvement in Mlle Bouchon’s escape was, in the eyes of the court, unforgivable, inexcusable considering the number of victims. Therefore, to life was my sentence.</p>
+
+<p><s>I would so love to… Let me… If you knew that…</s></p>
+
+<p>Forced to leave soon, I must compel myself to shorten this letter.<br>
+My transfer to another gaol is imminent. I was told I was to board one of those ships to the colonies. I cannot say whether our paths will cross de novo.</p>
+
+<p>I wish for you a wonderful life, filled with new loves, joy, and health. Pray to remember spending as much time as humanly possible in the sun and eating lots of garlic!</p>
+
+<p>Please excuse this humble soul who thought it was doing good,</p>
+
+<p>Your foolish servant, writing her last words,<br>
+Isabella Jeangille, former docteur <<link "<i class='fa-solid fa-feather-pointed'></i>" "END SCREEN">><</link>></p>
+
+
+:: Letter Olympia {"position":"1225,475","size":"100,100"}
+<p>Olympia,</p>
+
+<p>I am penning this brief note as to confirm my departing, which you had beseeched of me. I beg of you to beware from now on to avoid sending your responses to Meaux, favouring the agreed upon venue instead. We would not want the villagers on our tracks…</p>
+
+<p>Thankfully, I was able to retrieve a certain sum, which I am certain to be sufficient, to negotiate our crossing and ensure a comfortable between time. However, know that I only escaped with nothing but the attire on my shoulders — I even had to feign a visit to some remote farm to slip away.</p>
+
+<p>As decided, I shall meet with you short of further delays.</p>
+
+<p>My beloved, do find me soon. I hasten to embrace you once more, and to nevermore let you go.<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter Olympia 2">><</link>></p>
+
+
+:: Letter Olympia 2 {"position":"100,600","size":"100,100"}
+<p>Olympia,</p>
+
+<p>It has now been over a sennight since I reached this sanctuary, twiddling my thumbs as I await your entrance. What must still be keeping you, my dear? Pray tell, are you already on your way? I somehow believed my arrival in this place would have been greeted with a word at the very least, some sort of response to my last epistle, an acknowledgement of my departure… at last.</p>
+
+<p>I heeded that not a soul should recognise me, be it on the road or in town. I made sure to trade my dusty attire for a simple, shrivelled garb, and cut my long locks to my ears. Do not fret so, darling, as the few acquaintances who happened to cross my path could not recognise me. Come to me swiftly, so to behold the result of my transformation!</p>
+
+<p>I do hope to receive even just a few lines from your hand soon, as the increasing number of unanswered notes is becoming distressing…<br>
+My beloved, might you be bucking our arrangements? Should I face about myself?</p>
+
+<p>Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter Olympia Fin">><</link>></p>
+
+
+:: Letter Olympia Fin {"position":"225,600","size":"100,100"}
+<p>Olympia,</p>
+
+<p>Some thanks may be in order, it seems. The sending of this announcement has answered many of the questions about your silence esrtwhile. Although I could never congratulate you on your union with Monsieur d'Archambault, thanks to this ultimate wound, your torments shall henceforth have no impact on my heart.</p>
+
+<p>You, to whom I promised the World and the Heavens. You, for whom I abandoned everything: my vocation, my dreams, my friends, my family, my village… You, for whom I had undertaken all the necessary for our departure, going as far as to forge our identification papers for safety. You… you who swore you would love me forevermore, no matter our sufferings and vicissitudes. You, who promised me, before that train, we would forthwith start a new life side-by-side…</p>
+
+<p>Please find attached your ticker, proof of my wavering commitment. Were you to leave this moment, you may arrive before the lifting of the moorings — albeit I no longer expect you there.<br>
+Lest, you will know where I soon could be found.</p>
+
+<p>Adieux,<br>
+Isabella — <<link "<i class='fa-solid fa-feather-pointed'></i>" "END SCREEN">><</link>></p>
+
+
+:: Prologue {"position":"975,100","size":"100,100"}
+<div id="date">The <span>18<sup>th</sup> of aicbe</span>,</div>
+<p>My dear and beloved Olympia,</p>
+
+<p id="choix">No words could ever express how <<cycle "$prologue">><<option "deeply I miss your presence!" "lovey">><<option "grand is my anger!">><</cycle>>! <<link "<i class='fa-solid fa-feather-pointed'></i>">><<if $prologue is "lovey">><<set $olympia ++>><<replace "#choix" t8n>><<include "PrologueA">><</replace>><<else>><<replace "#choix" t8n>><<include "PrologueB">><</replace>><</if>><</link>></p>
+
+
+:: PrologueA {"position":"1100,100","size":"100,100"}
+<p>No words could ever express how deeply I miss your presence! Since our heartbreaking parting, I have yet to spend a single second without thinking of you. Memories of that morning still haunt me — seeing you, standing on the other side of that damned glass, your emeralds glazed by your sobs, your lips quivering, bidding me farewells. The breeze danced with your chestnut curls, untangling and entangling your so lovely locks. Your flushed cheeks, on which I had laid my kisses only moments earlier, were now beaded with tears. Your hand, which had refused to let me go, trembled.</p>
+
+<p>My heart could barely withstand this picture, as the pain tugged and splintered my very soul, pulling me towards the exit. Many times they were forced to restrain me, to prevent me from retracing my steps, jumping out of this prison on rails, just so I could have you back in my arms. What torture it was to hear the whistle announcing the train’s departure, and to see you disappear in a cloud of smoke!</p>
+
+<p>As I write these words, you find all of my being carried away by the sea. I cannot find a reason to remain on this infernal path, the one that surely leads me to my undoing. Halfway through this intendedly endless journey, my final destination now appearing on maps, I pray to soon receive some lines from you. A simple sentence from you, and you shall see me galloping back to you. A simple word, and I will fight any sod on my path just to find you. Ask it of me, I beg you, so I can be with your once more, and with your alone.</p>
+
+<p>Damned my colleagues! Damned the morals! Damned to them all. I swear on my life I will make you mine once again. I will cover you with pearls and silks. I will take you out before the most prestigious eyes. I will bring you everything you so desire.</p>
+
+<p>My beautiful Olympia, a line from you to fill my heart!</p>
+
+<p>Your most humble servant, until my last breath,<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 1">><</link>></p>
+
+
+:: PrologueB {"position":"1225,100","size":"100,100"}
+<p>No words could ever express how grand is my anger! Towards our weak friends. Towards my old-fashioned colleagues. But above all, towards the miscreant who destroyed ''my'' life. To be dismissed in such a humiliating way from my works, due to the fact that I confabulated my person (reading here, my sex) and my honour (reading again, my sex). To see them turn their backs on me and make these horrid faces, because my preferences were not temporary or a simple fantasy. To hear him ask you if you too only played with scissors, when it was far too precarious. To see his smirk as I was thrown out like a wet old dog.</p>
+
+<p>My friend, forgive me for having wasted so much of our time, failing to properly bid us farewell that day. But I could not look at your face covered with tears, when my heart was still too preoccupied with rage. Know that I will never forget the grace you have granted me all these years. Without your help and love, I would never have had the opportunity to undertake this path. Without you, I would not even have accepted my own heart.</p>
+
+<p>My dear, seeing you disappear in a cloud of smoke unleashed my deepest wishes for revenge. Even if I could not escape this prison on rails, be assured that I will do everything in my power to see him humiliated, to see all his relationships in shambles, to see him perish. Damned be Reason!</p>
+
+<p>Halfway now through this intendedly endless journey, I finally see the path that awaits me. Every foot, every league, separating me from the capital, inflames my soul all the more. I promise you I will once again make this trip, in the opposite direction. I promise you, my Artemis, that his affront will be doubly returned!</p>
+
+<p>Olympia, if I may ask you one last favour. Being still anchored in this damned capital, do you think you could find a way to bring me back sooner? Even clandestine, even forced into the shadows, I will accept whichever fashion you could provide me.</p>
+
+<p>Your most humble servant, until my last breath,<br>
+Isabella <<link "<i class='fa-solid fa-feather-pointed'></i>" "Letter 1">><</link>></p>
+
+
+:: Start [title] {"position":"750,300","size":"100,100"}
+<h1>Doctor Jeangille's Letters</h1>
+☙ [[Start Reading|Prologue]] ❧ ☙ <<link 'Settings'>><<run UI.settings()>><</link>> ❧ <br>
+☙ <<link 'Warnings'>><<script>>Dialog.setup("Warnings", "warnings"); Dialog.wiki(Story.get("Warnings").processText()); Dialog.open();<</script>><</link>> ❧<br>
+
+
+:: StoryInit {"position":"225,100","size":"100,100"}
+<<set $olympia to 10, $village to 0, $alice to 0>>
+
+
+:: StoryInterface {"position":"100,100","size":"100,100"}
+<div id="menu" data-passage="menu"></div>
+<div id="container">
+    <div id="story">
+        <div id="passages"></div>
+    </div>
+</div>
+
+
+:: Warnings {"position":"600,100","size":"100,100"}
+<p>This game includes descriptions of, mentions of, or allusions to:</p>
+<ul>
+    <li>disappearances, particularly of a child</li>
+    <li>death and corpses, particularly of a child</li>
+    <li>illnesses, mental and physical</li>
+    <li>abuses, aggression, violence</li>
+    <li>homophobia, sexism</li>
+    <li>alcohol</li>
+</ul>
+
+
+:: menu {"position":"475,100","size":"100,100"}
+<div id="menu-arrow"><<link "❦">><<toggleclass "#menu" "hovered">><</link>></div>
+<div id="menu-links"> 
+☙ <<link "<i class='fa-solid fa-book-bookmark'></i>">><<run UI.saves()>><</link>> ❧ ☙ <<link '<i class="fa-solid fa-gears"></i>'>><<run UI.settings()>><</link>> ❧ <br> 
+☙ <<link '<i class="fa-solid fa-hand-holding-heart"></i>'>><<script>>Dialog.setup("Credits", "credits"); Dialog.wiki(Story.get("Credits").processText()); Dialog.open();<</script>><</link>> ❧ ☙ <<link '<i class="fa-solid fa-triangle-exclamation"></i>'>><<script>>Dialog.setup("Warnings", "warnings"); Dialog.wiki(Story.get("Warnings").processText()); Dialog.open();<</script>><</link>> ❧ 
+</div>
+<div id="menu-arrow-rev"><<link "❦">><<toggleclass "#menu" "hovered">><</link>></div>
+
+
+:: StoryScript [script]
+$(document).on(":passagedisplay", function() {
+	$("#passages").scrollTop(0);
+});
+
+Config.passages.nobr = true;
+
+var settingFontFamily = ["Sans Serif", "Serif", "Monospace", "Allura", "Fuggles", "Homemade Apple", "La Belle Aurore", "Nothing You Could Do", "Parisienne", "WindSong", "Dawning of a New Day"];
+var fontFamily = function() {
+var $html = $("#story"); 
+    $html.removeClass("allura fuggles homemade-apple la-belle-aurore nothing-you parisienne windsong dawning-of monospace serif"); 
+switch (settings.fontFamily) { 
+    case "Allura": 
+        $html.addClass("allura");
+        break;
+    case "Serif": 
+        $html.addClass("serif");
+        break;
+    case "Monospace": 
+        $html.addClass("monospace");
+        break;
+    case "Fuggles":
+        $html.addClass("fuggles");
+        break;
+    case "Homemade Apple":
+        $html.addClass("homemade-apple");
+        break;
+    case "La Belle Aurore":
+        $html.addClass("la-belle-aurore");
+        break;
+    case "Nothing You Could Do":
+        $html.addClass("nothing-you");
+        break;
+    case "Parisienne":
+        $html.addClass("parisienne");
+        break;
+    case "WindSong":
+        $html.addClass("windsong");
+        break;
+    case "Dawning of a New Day":
+        $html.addClass("dawning-of");
+        break;
+}};
+Setting.addList("fontFamily", {//This is the actual Setting visible to the player
+    label		: "Change the Font Family",
+    list		: settingFontFamily,
+    default     : "Homemade Apple",
+    onInit		: fontFamily,
+    onChange	: fontFamily
+});	
+
+Setting.addRange("fontSize", {
+	label       : "Change the Font Size",
+	min         : 14,
+	max         : 50,
+	step        : 4,
+	onChange    : function () {$("#passages").css("font-size", settings.fontSize + "px")}
+});
+
+
+
+
+:: StoryStylesheet [stylesheet]
+ 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Dawning+of+a+New+Day&family=Fuggles&family=Homemade+Apple&family=La+Belle+Aurore&family=Nanum+Brush+Script&family=Nothing+You+Could+Do&family=Parisienne&family=WindSong:wght@400;500&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #94bcc3 transparent;
+}
+
+body {
+  color: black;
+  background-color: rgb(92, 92, 92);
+  padding: 0.1px;
+  box-shadow: inset 0 0 100px rgba(2, 0, 0, 0.9);
+  background: url("https://www.transparenttextures.com/patterns/dark-leather.png"), radial-gradient(circle at 50% 0%,#b35252 10%,#570101);
+  height: 100vh;
+  width: 100vw;
+  overflow: clip;
+}
+#story {
+  background: #fafafa;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+  box-shadow: 0 0 10px rgba(0,0,0,0.3), 0 0 300px 25px rgba(222,198,122,0.7) inset;
+  max-width: 21cm;
+  max-height: 29.7cm;
+  margin: 4em auto 2em;
+  width: 90vw;
+  height: calc(100vh - 6em);
+  padding: 24px;
+  position: relative;
+  border-radius: 5px;
+}
+
+#story:before, #story:after {
+  content: "";
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2), inset 0 0 300px rgba(222,198,122,0.7);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  transition: .5s;
+  border-radius: 3px;
+}
+
+#story:hover::before {
+  left: -5px;
+  top: 2px;  
+  transform: rotate(-1.5deg);
+}
+
+#story:hover::after {
+  right: -3px;
+  top: 0px;
+  transform: rotate(2.4deg);
+}
+
+#story:before {
+  transform: rotate(0deg);
+  border: solid rgba(111,99,61,0.4);
+  border-width: 0px 0px 0px 1px;
+  left: 0px;
+  top: 0px; 
+}
+
+#story:after {
+  transform: rotate(0deg);
+  border: solid rgba(111,99,61,0.4);
+  border-width: 0px 0px 0px 1px;
+  right: 0px;
+  top: 0px;
+}
+
+#passages {
+  overflow: auto;
+  height: 100%;
+  padding: 1em;
+}
+
+
+#menu {
+  outline: 1px solid #367884;
+  background: #78aab3;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  width: 275px;
+  height: 200px;
+  position: absolute;
+  transform: rotate(-135deg);
+  right: -155px;
+  top: -125px;
+  z-index: 10;
+  transition: .5s;
+  text-align: center;
+  font-size: 150%;
+  color: #4e4648;
+  line-height: 1.25;
+  border-radius: 5px;
+}
+
+#menu.hovered {
+  right: -65px;
+  top: -45px;
+  transform: rotate(30deg);
+}
+
+#menu-arrow, #menu-arrow-rev {
+  font-size: 175%;
+  margin: 5px;
+  transition: 0.5s;
+}
+#menu-arrow, #menu.hovered #menu-arrow-rev {
+  transform: rotate(180deg);
+}
+#menu.hovered #menu-arrow {
+  transform: unset;
+}
+
+h3 {
+  margin: 45px 0 0;
+  text-align: right;
+  transform:  rotate(-10deg);
+}
+select {
+  color: #4d0000;
+}
+label {
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: unset;
+}
+.macro-cycle {
+  color: darkgreen;
+  font-weight: bold;
+}
+.macro-cycle:hover {
+  color: rgb(0, 100, 70);
+  font-weight: normal;
+  font-style: italic;
+}
+.link-internal {
+  color: darkred;
+  font-weight: bold;
+  font-size: 110%;
+}
+.link-internal:hover {
+  color: rgb(139, 0, 120);
+}
+
+
+#date {
+  text-align: right;
+}
+#date span {
+  filter: blur(2px);
+  text-shadow: 0 0 5px black, 0 0 10px brown;
+}
+
+.splat {
+  background: repeating-conic-gradient(#000 0 3%, #0000 0 11%), repeating-conic-gradient(#0000 0 5%, #000 0 7%) 50% / 60% 60%, repeating-conic-gradient(#0000 0 7%, #000 0 9%) 50% / 70% 70%, repeating-conic-gradient(#0000 0 11%, #000 0 13%) 50% / 80% 80%, radial-gradient(#000 22%, #0000 0), #fff;
+    background-repeat: repeat, repeat, repeat, repeat, repeat, repeat;
+  background-repeat: no-repeat;
+  filter: blur(20px) contrast(50);
+}
+
+[data-tags~="title"] #story {
+  display: flex;
+  padding-bottom: 4em;
+}
+[data-tags~="title"] #passages {
+  height: auto;
+  margin: auto;
+}
+[data-tags~="title"] .passage {
+  text-align: center;
+}
+
+#story.dawning-of #passages {
+  font-family: "Dawning of a New Day", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#story.windsong #passages {
+  font-family: "WindSong", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#story.parisienne #passages {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#story.nothing-you #passages {
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#story.la-belle-aurore #passages {
+  font-family: "La Belle Aurore", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#story.homemade-apple #passages {
+  font-family: "Homemade Apple", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#story.fuggles #passages {
+  font-family: "Fuggles", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#story.allura #passages {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#story.serif #passages {
+  font-family: serif;
+}
+#story.monospace #passages {
+  font-family: monospace;
+}
+
+
+#ui-dialog {
+  outline: 1px solid #367884;
+  background: #78aab3;
+  background-image: none;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  border-radius: 5px;
+  color: #4e4648;
+  font-weight: bold;
+}
+
+#ui-dialog-title {
+  padding: 14px 0.2em 0.2em;
+}
+#ui-dialog-titlebar {
+  background-color: unset;
+  color: #4d0000;
+  font-family: "Homemade Apple", cursive;
+}
+
+#ui-dialog-body {
+  background-color: unset;
+  border: unset;
+}
+
+#ui-dialog-body.saves td:nth-child(3) {
+  color: #023902;
+}
+#ui-dialog-body.saves .empty {
+  color: #4e4648;
+}
+
+
+button {
+  background-color: darkred;
+  border: 1px solid rgb(139, 0, 120);
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(139, 0, 120);
+  border-color: darkred;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+input:not(:disabled):focus, input:not(:disabled):hover, select:not(:disabled):focus, select:not(:disabled):hover, textarea:not(:disabled):focus, textarea:not(:disabled):hover {
+  background-color: #4d0000;
+  border-color: darkred;
+  color: white;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #023102;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: darkred;
+  border: 1px solid rgb(139, 0, 120);
+}
