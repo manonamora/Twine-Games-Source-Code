@@ -1,0 +1,1115 @@
+:: StoryTitle
+Dévotion
+
+
+:: StoryData
+{
+  "ifid": "C15CE33F-61F6-4909-BB59-73EE7A3D57B1",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Cinq [round] {"position":"100,225","size":"100,100"}
+<<link "Jouer" "Six">><</link>>
+<div class="win">[[Merci à Léo sur le Discord.|Side]]</div>
+
+
+:: Cinquante {"position":"725,725","size":"100,100"}
+Ah! Bah, bien joué!
+<<message "Astuce">>Dans le coin à droite, il y a autre bouton. Si tu cliques <<link "ici" "Un">><<set $ok to true>><</link>>, tu pourras recommencer le jeu, et le texte sera plus visible.<</message>>
+<div class="win">[[Merci d'avoi joué!|Side]]</div>
+
+
+:: Deux [round] {"position":"975,100","size":"100,100"}
+<<link "Jouer" "Trois">><</link>>
+<div class="win">[[Je me demande si quelqu'un va le voir.|Side]]</div>
+
+
+:: Dix [round] {"position":"725,225","size":"100,100"}
+<<link "Jouer" "Onze">><</link>>
+<div class="win">[[Et le spiel du jeu est que le joueur est tellement dévoué à l'auteur...|Side]]</div>
+
+
+:: DixHuit [dotted] {"position":"475,350","size":"100,100"}
+<<link "Jouer" "DixNeuf">><</link>>
+<div class="win">[[J'avais une autre idée en plus.|Side]]</div>
+<style>#lights {opacity:0.6}</style>
+
+
+:: DixNeuf [dotted] {"position":"600,350","size":"100,100"}
+<<link "Jouer" "Vingt">><</link>>
+<div class="win">[[Mais je m'y suis prise trop tard.|Side]]</div>
+<style>#lights {opacity:0.8}</style>
+
+
+:: DixSept [dotted] {"position":"350,350","size":"100,100"}
+<<link "Jouer" "DixHuit">><</link>>
+<div class="win">[[J'ai fait le mien en deux aprèms...|Side]]</div>
+<style>#lights {opacity:0.4}</style>
+
+
+:: Douze [dotted] {"position":"975,225","size":"100,100"}
+<<link "Jouer" "Treize">><</link>>
+<<message "Astuce">>: Vous pouvez utiliser les touche "←" pour retourner en arrière, et "→" pour refaire une action.<</message>>
+<div class="win">[[Mais c'est pas que ça.|Side]]</div>
+
+
+:: Huit [round] {"position":"475,225","size":"100,100"}
+<<link "Jouer" "Neuf">><</link>>
+<div class="win">[[Lol, je viens de remarquer un truc.|Side]]</div>
+
+
+:: Lights {"position":"475,100","size":"100,100"}
+<ul class="lightrope">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+
+:: Neuf [round] {"position":"600,225","size":"100,100"}
+<<link "Jouer" "Dix">><</link>>
+<div class="win">[[Le thème est dévotion.|Side]]</div>
+
+
+:: Onze [dotted] {"position":"850,225","size":"100,100"}
+<<link "Jouer" "Douze">><</link>>
+<div class="win">[[... qu'il continue à cliquer même si il y a pas de jeux en fait.|Side]]</div>
+
+
+:: PassageDone {"position":"725,100","size":"100,100"}
+<<if passage() is "QuaranteUn" or passage() is "QuaranteQuatre">><<timed 3.6s>><<if $ok && passage() is not "Side">><<addclass ".win" "bigger">><</if>><</timed>>
+<<elseif passage() is "QuaranteTrois">><<repeat 1s>><<if $ok && passage() is not "Side">><<addclass ".win" "bigger">><</if>><</repeat>>
+<<else>><<if $ok && passage() is not "Side">><<addclass ".win" "bigger">><</if>><</if>>
+
+
+:: Quarante {"position":"725,600","size":"100,100"}
+Oui, mais est-ce que tu as cliqué sur <span class="moi"><<link "celui-là" "QuaranteUn">><</link>></span>?
+<div class="win">[[J'avais prévu du faire des trucs chelou avec le bouton...|Side]]</div>
+
+
+:: QuaranteCinq {"position":"100,725","size":"100,100"}
+<<link "N'importe quoi ce truc..." "QuaranteSix">><</link>>
+<div class="win">[[Tu peux pas vraiment me répondre...|Side]]</div>
+
+
+:: QuaranteDeux {"position":"975,600","size":"100,100"}
+Non, mais oh!
+<<link "Désolé, mais là quand même..." "QuaranteTrois">><</link>>
+<div class="win">[[Et j'avais la flemme de faire plein de tests.|Side]]</div>
+
+
+:: QuaranteHuit {"position":"475,725","size":"100,100"}
+Bah si!
+<<link "Cliquer sur un seul lien, c'est rien!" "QuaranteNeuf">><</link>>
+<div class="win">[[Bon, on est presque à la fin.|Side]]</div>
+
+
+:: QuaranteNeuf {"position":"600,725","size":"100,100"}
+Y avait pas qu'un seul lien sur la page ;)
+<<link "Hein?!" "Cinquante">><</link>>
+<div class="win">[[Je te souhaite une bonne année pour la prochaine.|Side]]</div>
+
+
+:: QuaranteQuatre {"position":"1225,600","size":"100,100"}
+<<timed 3s>><<link "Bah, tu vois!" "QuaranteCinq">><</link>>
+<div class="win">[[Tu as passé une bonne année?|Side]]</div><</timed>>
+
+
+:: QuaranteSept {"position":"350,725","size":"100,100"}
+Dis pas ça! T'es presque à la fin!
+<<link "Déjà? Mais j'ai rien fait!" "QuaranteHuit">><</link>>
+<div class="win">[[J'espère que ça va un peu quand même.|Side]]</div>
+
+
+:: QuaranteSix {"position":"225,725","size":"100,100"}
+<<link "J'ai perdu mon temps pour rien." "QuaranteSept">><</link>>
+<div class="win">[[Sinon, lâche moi un com'.|Side]]</div>
+
+
+:: QuaranteTrois {"position":"1100,600","size":"100,100"}
+<span id="pas">Vas-y. Clique sur le bouton. Tu verras.
+<<link "Celui-là?">>
+    <<replace "#pas" t8n>>Encore une fois.
+        <<link "Tu abuses un peu quand même.">>
+            <<replace "#pas" t8n>>Et jamais deux sans trois.
+                <<link "À tous les coups, ça va pas marcher..." "QuaranteQuatre">><</link>>
+                <div class="win">[[Et sinon, toi. Ça va?|Side]]</div>
+            <</replace>>
+        <</link>>
+        <div class="win">[[Je me suis quand même bien amusée à faire ça.|Side]]</div>
+    <</replace>>
+<</link>>
+<div class="win">[[Comme quoi, j'ai pas tellement de dévotion envers la FI.|Side]]</div>
+</span>
+
+
+:: QuaranteUn {"position":"850,600","size":"100,100"}
+<<type 1s>>...<</type>>
+<<timed 3.5s>><<link "T'as pas un bug peut-être?" "QuaranteDeux">><</link>>
+<div class="win">[[Mais bon, je m'y suis prise à la dernière minute.|Side]]</div><</timed>>
+
+
+:: Quatorze [dotted] {"position":"1225,225","size":"100,100"}
+<<link "Jouer" "Quinze">><</link>>
+<div class="win">[[Ils sont tellement dévoués à la FI qu'ils ont créé un jeu aussi.|Side]]</div>
+
+
+:: Quatre [round] {"position":"1225,100","size":"100,100"}
+<<link "Jouer" "Cinq">><</link>>
+<div class="win">[[Ce jeux c'était même pas mon idée au départ.|Side]]</div>
+
+
+:: Quinze [dotted] {"position":"100,350","size":"100,100"}
+<<link "Jouer" "Seize">><</link>>
+<div class="win">[[Juste avant Noel!|Side]]</div>
+
+
+:: Seize [dotted] {"position":"225,350","size":"100,100"}
+<<link "Jouer" "DixSept">><</link>>
+<div class="win">[[Ou après...|Side]]</div>
+<style>#lights {opacity:0.2}</style>
+
+
+:: Sept [round] {"position":"350,225","size":"100,100"}
+<<link "Jouer" "Huit">><</link>>
+<div class="win">[[Et puis j'ai aussi appris à faire une nouvelle animation.|Side]]</div>
+
+
+:: Side {"position":"850,725","size":"100,100"}
+T'as trouvé le lien caché!
+
+<<link "Retour">><<run Engine.backward()>><</link>>
+
+
+:: Six [round] {"position":"225,225","size":"100,100"}
+<<link "Jouer" "Sept">><</link>>
+<<message "Astuce">>: Vous pouvez utiliser la touche "1" pour continuer, au lieu de cliquer avec votre souris.<</message>>
+<div class="win">[[C'était bien drôle déssayer de le créer|Side]]</div>
+
+
+:: Start [centre round green] {"position":"600,100","size":"100,100"}
+<<link "Jouer" "Un">><</link>>
+
+
+:: StoryInit {"position":"225,100","size":"100,100"}
+<<on 'keyup'>>
+		<<which 83>> /% the s key %/
+			<<script>>UI.saves();<</script>>
+		<<which 81>> /*Q for settings */
+			<<script>>UI.settings();<</script>>
+		<<which 82>>
+			<<script>>UI.restart();<</script>>
+	<</on>>
+	<<on 'keydown'>>
+		<<which 27>><<trigger 'click' '#ui-dialog-close'>>
+	<</on>>
+
+
+:: StoryInterface {"position":"100,100","size":"100,100"}
+<div id="lights" data-passage="Lights"></div>
+<div id="title" data-init-passage="Title"></div>
+<div id="passages"></div>
+
+
+:: Title {"position":"350,100","size":"100,100"}
+<<if passage() is "Cinquante">>Merci!<<else>>Le Jeu de la Dévotion<</if>>
+
+
+:: Treize [dotted] {"position":"1100,225","size":"100,100"}
+<<link "Jouer" "Quatorze">><</link>>
+<div class="win">[[C'est aussi tous les auteurs de la jam.|Side]]</div>
+
+
+:: Trente [lighting child2] {"position":"725,475","size":"100,100"}
+<<link "Rouge!" "TrenteUn">><</link>>
+<div class="win">[[C'est pas comme si je suivais mes résolutions de toute manière.|Side]]</div>
+
+
+:: TrenteCinq {"position":"100,600","size":"100,100"}
+Toute les bonnes choses prennent du temps.
+<<link "Ton jeu est fini déjà..." "TrenteSix">><</link>>
+<div class="win">[[Si tu arrives à voir ça, c'est quand même gentil de tout lire.|Side]]</div>
+
+
+:: TrenteDeux {"position":"975,475","size":"100,100"}
+Mais, rien du tout. Tiens, je les rentre, même.
+<<link "Ras-bas joie..." "TrenteTrois">><</link>>
+<div class="win">[[Je me suis faites plein de nouveaux copains.|Side]]</div>
+
+
+:: TrenteHuit {"position":"475,600","size":"100,100"}
+Bah, oui, quand même...
+<<link "Je fais quoi, alors?" "TrenteNeuf">><</link>>
+<div class="win">[[Je le mettrais p'être sur mon site à la place.|Side]]
+[[C'est celui-là|https://manonamora.neocities.org/]]</div>
+
+
+:: TrenteNeuf {"position":"600,600","size":"100,100"}
+Tu cliques sur le lien.
+<<link "C'est ce que j'arrête pas de faire..." "Quarante">><</link>>
+<div class="win">[[Bon, sinon. C'est celui-là qu'il faut cliquer, pour "gagner".|Side]]</div>
+
+
+:: TrenteQuatre {"position":"1225,475","size":"100,100"}
+Bientôt.
+<<link "Oui, mais ça commence à faire long, là." "TrenteCinq">><</link>>
+<div class="win">[[J'ai pu aider aussi des gens avec leur code!|Side]]</div>
+
+
+:: TrenteSept {"position":"350,600","size":"100,100"}
+Ça arrive.
+<<link "T'es sûre?" "TrenteHuit">><</link>>
+<div class="win">[[Ça va surement pas rester sur mon compte non plus.|Side]]</div>
+
+
+:: TrenteSix {"position":"225,600","size":"100,100"}
+Patience...
+<<link "T'es bien reloue." "TrenteSept">><</link>>
+<div class="win">[[Je l'ai un peu 'winged it' à la fin quand même.|Side]]</div>
+
+
+:: TrenteTrois {"position":"1100,475","size":"100,100"}
+<<link "Sinon... Je joue quand, en fait?" "TrenteQuatre">><</link>>
+<div class="win">[[J'ai appris à coder plein de nouveaux trucs.|Side]]</div>
+
+
+:: TrenteUn [lighting] {"position":"850,475","size":"100,100"}
+Bon... Ça suffit un peu les lumières, là...
+<<link "Mais--" "TrenteDeux">><</link>>
+<div class="win">[[C'était une bonne année quand même.|Side]]</div>
+
+
+:: Trois [round] {"position":"1100,100","size":"100,100"}
+<<link "Jouer" "Quatre">><</link>>
+<div class="win">[[C'est un petit peu caché.|Side]]</div>
+
+
+:: Un [round] {"position":"850,100","size":"100,100"}
+<<link "Jouer" "Deux">><</link>>
+<div class="win">[[Le bon lien est là.|Side]]</div>
+
+
+:: Vingt [dotted lighting] {"position":"725,350","size":"100,100"}
+<<link "Jouer" "VingtUn">><</link>>
+<div class="win">[[J'ai souvent la flemme en fait...|Side]]</div>
+
+
+:: VingtCinq [lighting child1] {"position":"100,475","size":"100,100"}
+<<link "Vert!" "VingtSix">><</link>>
+<div class="win">[[C'est le plan en fait.|Side]]</div>
+
+
+:: VingtDeux [lighting child2] {"position":"975,350","size":"100,100"}
+<<link "Rouge!" "VingtTrois">><</link>>
+<div class="win">[[Vaut vraiment que je me calme un peu là...|Side]]</div>
+
+
+:: VingtHuit [lighting child2] {"position":"475,475","size":"100,100"}
+C'est pas Versailles, ici!
+<<link "Rouge!" "VingtNeuf">><</link>>
+<div class="win">[[...pas.|Side]]</div>
+
+
+:: VingtNeuf [lighting child1] {"position":"600,475","size":"100,100"}
+<<link "Vert!" "Trente">><</link>>
+<div class="win">[[Faut pas se mentir en fait.|Side]]</div>
+
+
+:: VingtQuatre [lighting child2] {"position":"1225,350","size":"100,100"}
+HÉ! Mais qu'est-ce que tu fais, là?
+<<link "Rouge!" "VingtCinq">><</link>>
+<div class="win">[[Peut-être.|Side]]</div>
+
+
+:: VingtSept [lighting child1] {"position":"350,475","size":"100,100"}
+Laisse les lumières tranquilles, dis-donc!
+<<link "Vert!" "VingtHuit">><</link>>
+<div class="win">[[Surement...|Side]]</div>
+
+
+:: VingtSix [lighting child2] {"position":"225,475","size":"100,100"}
+<<link "Rouge!" "VingtSept">><</link>>
+<div class="win">[[Ce serait bien.|Side]]</div>
+
+
+:: VingtTrois [lighting child1] {"position":"1100,350","size":"100,100"}
+<<link "Vert!" "VingtQuatre">><</link>>
+<div class="win">[[Est-ce que je vais me calmer l'année prochaine?|Side]]</div>
+
+
+:: VingtUn [lighting child1] {"position":"850,350","size":"100,100"}
+<<link "Hehehe" "VingtDeux">><</link>>
+<div class="win">[[C'est quand même mon cinquième jeux en deux mois en plus...|Side]]</div>
+
+
+:: StoryScript [script]
+// dialog API macro set, by chapel; for sugarcube 2
+// <<dialog>> macro
+Macro.add('dialog', {
+    tags : ['onopen', 'onclose'],
+ handler : function () {
+     
+     // handle args (if any)
+     var errors = [];
+     var content = '', onOpen = null, onClose = null;
+     var title = (this.args.length > 0) ? this.args[0] : '';
+     var classes = (this.args.length > 1) ? this.args.slice(1).flatten() : [];
+
+     this.payload.forEach( function (pl, idx) {
+         if (idx === 0) {
+             content = pl.contents;
+         } else {
+             if (pl.name === 'onopen') {
+                 onOpen = onOpen ? onOpen + pl.contents : pl.contents;
+             } else {
+                 onClose = onClose ? onClose + pl.contents : pl.contents;
+             }
+         }
+     });
+     
+     // add the macro- class
+     classes.push('macro-' + this.name);
+     
+     // dialog box
+     Dialog.setup(title, classes.join(' '));
+     Dialog.wiki(content);
+
+     // should these be shadowWrapper-aware?
+     if (onOpen && typeof onOpen === 'string' && onOpen.trim()) {
+         $(document).one(':dialogopened', function () {
+             $.wiki(onOpen);
+         });
+     }
+
+     if (onClose && typeof onClose === 'string' && onClose.trim()) {
+         $(document).one(':dialogclosed', function () {
+             $.wiki(onClose);
+         });
+     }
+
+     Dialog.open();
+     
+ }
+
+});
+// <<popup>> macro
+Macro.add('popup', {
+ handler : function () {
+     
+     // errors
+     if (this.args.length < 1) {
+         return this.error('need at least one argument; the passage to display');
+     }
+     if (!Story.has(this.args[0])) {
+         return this.error('the passage ' + this.args[0] + 'does not exist');
+     }
+     
+     // passage name and title
+     var psg   = this.args[0];
+     var title = (this.args.length > 1) ? this.args[1] : '';
+     var classes = (this.args.length > 2) ? this.args.slice(2).flatten() : [];
+     
+     // add the macro- class
+     classes.push('macro-' + this.name);
+     
+     // dialog box
+     Dialog.setup(title, classes.join(' '));
+     Dialog.wiki(Story.get(psg).processText());
+     Dialog.open();
+     
+ }
+
+});
+// <<dialogclose>> macro
+Macro.add('dialogclose', { 
+ skipArgs : true, 
+ handler : function () {
+     Dialog.close();
+ } 
+});
+// Liveupdate API macro set, by cycy; for sugarcube 2
+(function () {
+ "use strict";
+
+ $(document).on(":liveupdate", function () {
+     $(".macro-live").trigger(":liveupdateinternal");
+ });
+
+ Macro.add(['update', 'upd'], {
+     handler: function handler() {
+         $(document).trigger(":liveupdate");
+     }
+ });
+
+ Macro.add(['live', 'l', 'lh'], {
+     skipArgs: true,
+     handler: function handler() {
+         if (this.args.full.length === 0) {
+             return this.error('no expression specified');
+         }
+         try {
+             var statement = this.args.full;
+             var result = toStringOrDefault(Scripting.evalJavaScript(statement), null);
+             if (result !== null) {
+                 var lh = this.name === "lh";
+                 var $el = $("<span></span>").addClass("macro-live").wiki(lh ? Util.escape(result) : result).appendTo(this.output);
+                 $el.on(":liveupdateinternal", this.createShadowWrapper(function (ev) {
+                     var out = toStringOrDefault(Scripting.evalJavaScript(statement), null);
+                     $el.empty().wiki(lh ? Util.escape(out) : out);
+                 }));
+             }
+         } catch (ex) {
+             return this.error("bad evaluation: " + (_typeof(ex) === 'object' ? ex.message : ex));
+         }
+     }
+ });
+
+ Macro.add(['liveblock', 'lb'], {
+     tags: null,
+     handler: function handler() {
+         try {
+             var content = this.payload[0].contents.trim();
+             if (content) {
+                 var $el = $("<span></span>").addClass("macro-live macro-live-block").wiki(content).appendTo(this.output);
+                 $el.on(":liveupdateinternal", this.createShadowWrapper(function (ev) {
+                     $el.empty().wiki(content);
+                 }));
+             }
+         } catch (ex) {
+             return this.error("bad evaluation: " + (_typeof(ex) === 'object' ? ex.message : ex));
+         }
+     }
+ });
+})();
+
+// KeyBinding API macro set, by HiEv; for sugarcube 2
+var KBIntervalID = 0;
+$(document).on(":passagerender", function (ev) {
+	clearInterval(KBIntervalID);
+	UpdateLinks(ev.content);
+	KBIntervalID = setInterval(UpdateLinks, 300);
+});
+function UpdateLinks(Container) {
+	// Enables keyboard shortcuts on passages that do not have the "DisableKeyLinks" tag
+	if (!tags().includes("DisableKeyLinks")) {
+		var Links, i;
+		if (typeof Container === "undefined") {
+			Container = document;
+			Links = $("#passages a").toArray();
+		} else {
+			Links = $(Container).find("a").toArray();
+		}
+		if (Links.length > 0) {
+			for (i = Links.length - 1; i >= 0; i--) {
+				if ($(Links[i]).data("nokeys") || $(Links[i]).parent().data("nokeys")) {
+					Links.deleteAt(i);
+				}
+			}
+		}
+		if (Links.length === 1) {
+			if (!Links[0].id.includes("Link")) {
+				Links[0].id = "NextLink";
+                if (settings.linkkeybindnumber) {
+                    $(" <sup>[1]</sup>").appendTo(Links[0]);
+                }
+			}
+		} else if (Links.length >= 1 && Links.length <= 10) {
+			var n = 1;
+			for (i = 0; i < Links.length; i++) {
+				if (!Links[i].id.includes("Link")) {
+					while ($(Container).find("#Link" + n).length) {
+						++n;
+						if (n > 10) {
+							break;
+						}
+					}
+                        if (n < 10) {
+					    	if (settings.linkkeybindnumber) {
+								$(" " + " <sup>[" + n + "]</sup>").appendTo(Links[i]);
+							}
+						    Links[i].id = "Link" + n;
+    					} else if (n === 10) {
+							if (settings.linkkeybindnumber) {
+								$(" " +" <sup>[0]</sup>").appendTo(Links[i]);
+							}
+    						Links[i].id = "Link0";
+	    					break;
+		    			} else {
+			    			break;
+				    	}
+                }    
+			}
+		}
+	}
+}
+$(document).on("keyup", function (e) {
+	// Enables keyboard shortcuts on passages that do not have the "DisableKeyLinks" tag
+	if (!tags().includes("DisableKeyLinks") && ($("input:focus").length === 0)) {
+		// Trigger next link click on right arrow key or "1" (normal and numpad)
+		if (((e.key == "1") || (e.keyCode === 97)) && ($("#NextLink").length > 0)) {
+			if (!(tags().includes("IgnoreArrowKeys") && (e.key == "ArrowRight"))) {
+				e.preventDefault();
+				$("#NextLink").click();
+				return false;
+			}
+		} else {
+			// Trigger link click on keys "0" through "9"
+			if ((e.keyCode > 47) && (e.keyCode < 58)) {
+				if ($("#Link" + (e.keyCode - 48)).length) {
+					e.preventDefault();
+					$("#Link" + (e.keyCode - 48)).click();
+					return false;
+				}
+			}
+			// Trigger link click on numpad keys "0" through "9"
+			if ((e.keyCode > 95) && (e.keyCode < 106)) {
+				if ($("#Link" + (e.keyCode - 96)).length) {
+					e.preventDefault();
+					$("#Link" + (e.keyCode - 96)).click();
+					return false;
+				}
+			}
+		}
+		// Trigger back click on left arrow key or backquote
+		if ((e.key == "ArrowLeft")) {
+			if ((!tags().includes("IgnoreArrowKeys")) || (e.key != "ArrowLeft")) {
+				e.preventDefault();
+				Engine.backward();
+				return false;
+			}
+		}
+        if ((e.key == "ArrowRight")) {
+			if ((!tags().includes("IgnoreArrowKeys")) || (e.key != "ArrowRight")) {
+				e.preventDefault();
+				Engine.forward();
+				return false;
+			}
+		}
+	}
+});
+// KeyBinding API macro set, by chapel; for sugarcube 2
+(function () {
+    setup.eventMacroNamespace = 'macro-event';
+
+    // the <<trigger>> macro
+    Macro.add('trigger', {
+        handler : function () {
+            
+            // declare vars
+            var evt, $el;
+            
+            // check for errors
+            if (this.args.length > 2 || this.args.length === 0) {
+                return this.error('incorrect number of arguments');
+            }
+            if (typeof this.args[0] != 'string') {
+                return this.error('first argument should be a string and a valid event type');
+            }
+            
+            // some setup
+            evt = this.args[0];
+            $el = (this.args.length === 1 ||
+                (this.args[1] && typeof this.args[1] === 'string' &&
+                this.args[1].toLowerCase().trim() === 'document')) ?
+                $(document) : $(this.args[1]);
+            
+            // fire the event
+            $el.trigger(evt);
+            
+        }
+    });
+
+    // the <<event>> macro: <<event type [selector] [once]>>
+    Macro.add(['event', 'on', 'one'], {
+           tags : ['which'],
+        handler : function () {
+            
+            var payload = this.payload;
+            var method = 'on';
+            var evt, sel = '', code = '', i;
+            
+            if (this.args.length > 3 || this.args.length === 0) {
+                return this.error('incorrect number of arguments');
+            }
+            if (typeof this.args[0] != 'string') {
+                return this.error('first argument should be a string and a valid event type');
+            }
+            if (this.args.length === 2 && typeof this.args[1] == 'string' && this.args[1] !== 'once') {
+                sel = this.args[1];
+            }
+            
+            if (this.args.includes('once') || this.name === 'one') {
+                method = 'one';
+            }
+
+            evt = this.args[0];
+            
+            $(document)[method](evt + '.' + setup.eventMacroNamespace, sel, this.createShadowWrapper(function (e) {
+                if (!tags().includes("DisableKeyLinks") && ($("input:focus").length === 0)) {
+                code = payload[0].contents;
+                if (payload.length > 1) {
+                    for (i = 1; i < payload.length; i++) {
+                        if (payload[i].args.includes(e.which)) {
+                            code = code + payload[i].contents;
+                        }
+                    }
+                }
+                new Wikifier(null, code);
+            }
+            }));
+            
+        }
+    });
+
+    Macro.add('off', {
+        handler : function () {
+            
+            // declare vars
+            var evt, $el;
+            
+            // check for errors
+            if (this.args.length > 2 || this.args.length === 0) {
+                return this.error('incorrect number of arguments');
+            }
+            if (typeof this.args[0] != 'string') {
+                return this.error('first argument should be a string and a valid event type or namespace');
+            }
+            
+            // some setup
+            evt = this.args[0];
+            $el = (this.args.length === 1 ||
+                (this.args[1] && typeof this.args[1] === 'string' &&
+                this.args[1].toLowerCase().trim() === 'document')) ?
+                $(document) : $(this.args[1]);
+            
+            // fire the event
+            $el.off(evt);
+            
+        }
+    });
+
+}());
+
+// message macro, by chapel (with help from T.M. Edwards); for sugarcube 2
+// version 1.0.1
+// see the documentation: https://github.com/ChapelR/custom-macros-for-sugarcube-2#message-macro
+
+//intialize namespace
+setup.messageMacro = {};
+
+// default text option:
+setup.messageMacro.default = 'Help';
+
+// <<message>> macro
+Macro.add('message', {
+    tags    : null,
+    handler : function () {
+        var message  = this.payload[0].contents;
+        var $wrapper = $(document.createElement('span'));
+        var $link    = $(document.createElement(this.args.includes('btn') ? 'button' : 'a'));
+        var $content = $(document.createElement('span'));
+
+        $link
+            .wiki(this.args.length > 0 && this.args[0] !== 'btn' ? this.args[0] : setup.messageMacro.default)
+            .ariaClick( this.createShadowWrapper( function () {
+                if ($wrapper.hasClass('open')) {
+                    $content
+                        .css('display', 'none')
+                        .empty();
+                }
+                else {
+                    $content
+                        .css('display', 'initial')
+                        .wiki(message);
+                }
+
+                $wrapper.toggleClass('open');
+            }));
+
+        $wrapper
+            .attr('id', 'macro-' + this.name + '-' + this.args.join('').replace(/[^A-Za-z0-9]/g, ''))
+            .addClass('message-text')
+            .append($link)
+            .append($content)
+            .appendTo(this.output);
+    }
+});
+
+:: StoryStylesheet [stylesheet]
+/* twine-user-stylesheet #1: "css.css" */
+@import url('https://fonts.googleapis.com/css2?family=Kranky&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    overflow:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#passages {
+    width: 100vw;
+    min-height: 20%;
+    max-height: 80%;
+    z-index: 100;
+}
+#title {
+    padding: 2%;
+    text-align: center;
+    font-family: 'Kranky', cursive;
+    font-size: 200%;
+}
+.passage {
+    text-align: center;
+    font-family: 'Yatra One', cursive;
+}
+a {
+    color: #dd9866;
+}
+a:hover {
+    color:#e8b693;
+}
+   
+a, a:hover, a:focus {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+.moi a, .moi a:hover, .moi a:focus {
+    font-family: 'Yatra One', cursive;
+}
+.round a {
+    border: 2px ridge;
+    padding: 2px 3px;
+    border-radius: 10px;
+}
+.dotted a {
+    border: 2px dotted;
+    padding: 2px 3px;
+    border-radius: 10px;
+}
+/* Passage Start */
+
+#passage-start a {
+    border-color: rgb(0, 130, 0);
+    color: rgb(0, 185, 0);
+}
+#passage-start a:hover {
+    text-shadow: 0 0 8px rgb(0, 128, 0);
+    box-shadow: 0 0 10px rgb(0, 128, 0);
+}
+#passage-un a {
+    border-color: rgb(0, 150, 0);
+    color: rgb(0, 205, 0);
+}
+#passage-un a:hover {
+    text-shadow: 0 0 8px rgb(0, 148, 0);
+    box-shadow: 0 0 10px rgb(0, 148, 0);
+}
+#passage-deux a {
+    border-color: rgb(0, 170, 0);
+    color: rgb(0, 225, 0);
+}
+#passage-deux a:hover {
+    text-shadow: 0 0 8px rgb(0, 168, 0);
+    box-shadow: 0 0 10px rgb(0, 168, 0);
+}
+#passage-trois a {
+    border-color: rgb(0, 190, 0);
+    color: rgb(0, 245, 0);
+}
+#passage-trois a:hover {
+    text-shadow: 0 0 8px rgb(0, 188, 0);
+    box-shadow: 0 0 10px rgb(0, 188, 0);
+}
+#passage-quatre a {
+    border-color: rgb(0, 210, 0);
+    color: rgb(0, 250, 0);
+}
+#passage-quatre a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 0);
+    box-shadow: 0 0 10px rgb(0, 208, 0);
+}
+#passage-cinq a {
+    border-color: rgb(0, 210, 50);
+    color: rgb(0, 250, 50);
+}
+#passage-cinq a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 50);
+    box-shadow: 0 0 10px rgb(0, 208, 50);
+}
+#passage-six a {
+    border-color: rgb(0, 210, 100);
+    color: rgb(0, 250, 100);
+}
+#passage-six a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 100);
+    box-shadow: 0 0 10px rgb(0, 208, 100);
+}
+#passage-sept a {
+    border-color: rgb(0, 210, 150);
+    color: rgb(0, 250, 150);
+}
+#passage-sept a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 150);
+    box-shadow: 0 0 10px rgb(0, 208, 150);
+}
+#passage-huit a {
+    border-color: rgb(0, 210, 200);
+    color: rgb(0, 250, 200);
+}
+#passage-huit a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 200);
+    box-shadow: 0 0 10px rgb(0, 208, 200);
+}
+#passage-neuf a {
+    border-color: rgb(0, 210, 250);
+    color: rgb(0, 250, 250);
+}
+#passage-neuf a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 250);
+    box-shadow: 0 0 10px rgb(0, 208, 250);
+}
+#passage-onze a {
+    border-color: rgb(0, 150, 250);
+    color: rgb(0, 200, 250);
+}
+#passage-onze a:hover {
+    text-shadow: 0 0 8px rgb(0, 158, 250);
+    box-shadow: 0 0 10px rgb(0, 158, 250);
+}
+#passage-douze a {
+    border-color: rgb(0, 100, 250);
+    color: rgb(0, 150, 250);
+}
+#passage-douze a:hover {
+    text-shadow: 0 0 8px rgb(0, 108, 250);
+    box-shadow: 0 0 10px rgb(0, 108, 250);
+}
+#passage-treize a {
+    border-color: rgb(0, 50, 250);
+    color: rgb(0, 100, 250);
+}
+#passage-treize a:hover {
+    text-shadow: 0 0 8px rgb(0, 58, 250);
+    box-shadow: 0 0 10px rgb(0, 58, 250);
+}
+#passage-quatorze a {
+    border-color: rgb(50, 100, 250);
+    color: rgb(50, 150, 250);
+}
+#passage-quatorze a:hover {
+    text-shadow: 0 0 8px rgb(50, 108, 250);
+    box-shadow: 0 0 10px rgb(50, 108, 250);
+}
+#passage-quinze a {
+    border-color: rgb(100, 100, 250);
+    color: rgb(100, 150, 250);
+}
+#passage-quinze a:hover {
+    text-shadow: 0 0 8px rgb(100, 108, 250);
+    box-shadow: 0 0 10px rgb(100, 108, 250);
+}
+#passage-seize a {
+    border-color: rgb(150, 100, 250);
+    color: rgb(150, 150, 250);
+}
+#passage-seize a:hover {
+    text-shadow: 0 0 8px rgb(150, 108, 250);
+    box-shadow: 0 0 10px rgb(150, 108, 250);
+}
+#passage-dixsept a {
+    border-color: rgb(200, 100, 250);
+    color: rgb(200, 150, 250);
+}
+#passage-dixsept a:hover {
+    text-shadow: 0 0 8px rgb(200, 108, 250);
+    box-shadow: 0 0 10px rgb(200, 108, 250);
+}
+#passage-dixhuit a {
+    border-color: rgb(250, 100, 250);
+    color: rgb(250, 150, 250);
+}
+#passage-dixhuit a:hover {
+    text-shadow: 0 0 8px rgb(250, 108, 250);
+    box-shadow: 0 0 10px rgb(250, 108, 250);
+}
+.test {
+    color: rgb(0, 150, 250);
+}
+.message-text {
+    font-size: 80%;
+}
+.message-text a {
+    border: none;
+    color: #c4c468 !important;
+}
+.message-text a:hover, .message-text a:focus {
+    color: #ececb3 !important;
+    text-shadow: 0 0 8px #c4c468 !important;
+}
+
+.win {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 60%;
+}
+  
+.win a {
+    color: grey !important;
+    border:none;
+}
+
+.bigger a {
+    font-size: 120%;
+    color: white !important;
+}
+
+.child1 a {
+    color: rgba(32, 128, 1, 1);
+}
+.child2 a {
+    color:rgba(202, 1, 9,1);
+}
+/* twine-user-stylesheet #2: "light.css" */
+#lights {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  opacity: 0;
+}
+.lighting #lights {
+  opacity: 1;
+}
+:root {
+  --globe-width:   12px;
+  --globe-height:  28px;
+  --globe-spacing: 40px;
+  --globe-spread: 3px;
+  --light-off-opacity: 0.4;
+}
+
+.lightrope {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  margin: -15px 0 0 0;
+  padding: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+.lightrope li {
+  position: relative;
+  animation-fill-mode: both; 
+  animation-iteration-count:infinite;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: var(--globe-width);
+  height: var(--globe-height);
+  border-radius: 50%;
+  margin: calc(var(--globe-spacing)/2);
+  display: inline-block;
+  background: rgba(202, 1, 9, 0.4);
+  box-shadow: 0px calc(var(--globe-height)/6) calc(var(--globe-width)*2) var(--globe-spread) rgba(202, 1, 9, 0.2);
+}
+.child1 .lightrope li {
+  background: rgba(202, 1, 9,1);
+  box-shadow: 0px calc(var(--globe-height)/6) calc(var(--globe-width)*2) var(--globe-spread) rgba(202, 1, 9,1);
+}
+.lightrope li:nth-child(odd) {
+  background: rgba(32, 128, 1, 0.4);
+  box-shadow: 0px calc(var(--globe-height)/6) calc(var(--globe-width)*2) var(--globe-spread) rgba(32, 128, 1, 0.2);
+}
+.child2 .lightrope li:nth-child(odd) {
+  background: rgba(32, 128, 1, 1);
+  box-shadow: 0px calc(var(--globe-height)/6) calc(var(--globe-width)*2) var(--globe-spread) rgba(32, 128, 1, 1);
+}
+.lightrope li:before {
+  content: "";
+  position: absolute;
+  background: #444;
+  width: calc(var(--globe-width) - 2px);
+  height: calc(var(--globe-height)/3);
+  border-radius: 3px;
+  top: calc(0 - (var(--globe-height)/6));
+  left: 1px;
+}
+.lightrope li:after {
+  content: "";
+  top: -10px;
+  left: 9px;
+  position: absolute;
+  width: calc(var(--globe-spacing) + 12px);
+  height: calc(var(--globe-height)/3 * 2);
+  border-bottom: solid #444 2px;
+  border-radius: 50%;
+}
+.lightrope li:last-child:after {
+  content: none;
+}
+.lightrope li:first-child {
+  margin-left: - var(--globe-spacing);
+}
+
+@keyframes flash-1 { 
+    0%, 100% { background: rgba(202, 1, 9,1);
+    box-shadow: 0px calc(var(--globe-height)/6) calc(var(--globe-width)*2) var(--globe-spread) rgba(202, 1, 9,1);} 
+    50% { background: rgba(202, 1, 9,var(--light-off-opacity));
+    box-shadow: 0px calc(var(--globe-height)/6) calc(var(--globe-width)*2) var(--globe-spread) rgba(202, 1, 9,0.2);}
+}
+@keyframes flash-2 { 
+    0%, 100% { background: rgba(32, 128, 1,1);
+    box-shadow: 0px calc(var(--globe-height)/6) calc(var(--globe-width)*2) var(--globe-spread) rgba(32, 128, 1,1);} 
+    50% { background: rgba(32, 128, 1,var(--light-off-opacity));
+    box-shadow: 0px calc(var(--globe-height)/6) calc(var(--globe-width)*2) var(--globe-spread) rgba(32, 128, 1,0.2);}
+}
