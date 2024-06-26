@@ -1,0 +1,167 @@
+:: StoryTitle
+machina caerulea
+
+:: StoryData
+{
+    "ifid": "0CB2BAE7-C1E3-4DCF-AC6D-F1D8D5D1C86B",
+    "format": "SugarCube",
+    "format-version": "2.36.1",
+    "start": "Start"
+}
+
+:: StoryInterface {"position":"100,100","size":"100,100"}
+    <div id="container">
+        <div id="passages"></div>
+    </div>
+    <div id="menu" data-passage="menu"></div>
+    <div id="press-pls" data-passage="pressit"></div>
+
+:: menu	{"position":"100,225","size":"100,100"}
+    <<link '©'>>
+        <<popup "Credits" "Credits">>
+    <</link>>
+    <<link '🖫'>><<script>>UI.saves();<</script>><</link>>
+	<<link '⛭'>><<script>>UI.settings();<</script>><</link>>
+	<<link '⟲'>><<script>>UI.restart();<</script>><</link>>
+
+:: Credits
+<h1>//''Machina Caerulea''//</h1>
+<p>... is a micro Twine game created by ''manonamora'' for the //[[Neo-Twiny Jam|https://itch.io/jam/neo-twiny-jam-24]]//, //[[Anti-Romance Jam|https://itch.io/jam/anti-romance-2024]]//, //[[Bluebeard Jam|https://itch.io/jam/bluebeard-jam]]//, and the //[[Love/Violence Jam|https://itch.io/jam/loveviolence-jam]]//. It is loosely based on tale of //Bluebeard//.</p>
+<ul>
+    <li> [[Personal Website|https://manonamora.neocities.org/]]</li>
+    <li> [[Tumblr - @manonamora-if|https://manonamora-if.tumblr.com]]</li>
+    <li> [[Itch.io - @manonamora|https://manonamora.itch.io/]]</li>
+    <li> [[Ko-Fi - @manonamora|https://ko-fi.com/manonamora]]</li>
+</ul>
+<hr>
+<p>The game was made possible, thanks to the resources below:</p>
+<h4>Custom Code:</h4>
+<ul>
+    <li> [[Chapel|https://github.com/ChapelR/custom-macros-for-sugarcube-2/]]</li>
+    <li> [[Cycy|https://github.com/cyrusfirheir/cycy-wrote-custom-macros/]]</li>
+    <li> Old projects of mine</li>
+</ul>
+<h4>Assets:</h4>
+<ul>
+    <li> [[GoogleFonts|https://fonts.google.com/specimen/Kode+Mono]]</li>
+</ul>
+<h4>Twine:</h4>
+<ul>
+    <li> [[Twinery.org|https://twinery.org/]]</li>
+    <li> [[SugarCube Documentation|http://www.motoslave.net/sugarcube/2/docs/]]</li>
+    <li> [[Twine Resources List|https://intfiction.org/t/twine-resource-masterlist-wiki/65903]]</li>
+    <li> [[Intfiction.org Forum|https://intfiction.org/c/authoring/twine]]</li>
+    <li> [[Reddit r/twinegames|https://www.reddit.com/r/twinegames/]]</li>
+    <li> [[Twine Discord|https://discordapp.com/invite/n5dJvPp]]</li>
+</ul>
+
+:: Widgets [widget]
+<<widget "Papers">>\
+    <<link "Papers">>\
+        <<append "#response">><p id="papers">Notes. <<timed 0.5s>>Models. <<next>>Pictures. <<next>>Drawings. <<next>>Records. <<next>>Diaries.<</timed>></p><</append>>
+        <<timed 3s>>\
+            <<replace "#papers">><p>Notes. <<Models>>. <<Pictures>>. <<Drawings>>. <<Records>>. Diaries.</p><</replace>>\
+        <</timed>>\
+    <</link>>\
+<</widget>>
+<<widget "Models">>\
+    <<link "Models">>\
+        <<append "#response">><p>Robotics. <<timed 0.5s>>Electronics. <<next>>Human Form.<</timed>></p><</append>>\
+    <</link>>\
+<</widget>>
+<<widget "Pictures">>\
+    <<link "Pictures">>\
+        <<append "#response">><p>A man and <<timed 0.5s>>a woman. <<next>>Him and… <<next>>Burnt.<</timed>></p><</append>>\
+    <</link>>\
+<</widget>>
+<<widget "Drawings">>\
+    <<link "Drawings">>\
+        <<append "#response">><p>Faces. <<timed 0.5s>>Always the same. <<next>>Always different. <<next>><<if $seen>>As reflection.<</if>><</timed>></p><</append>>\
+    <</link>>\
+<</widget>>
+<<widget "Records">>\
+    <<link "Records">>\
+        <<append "#response">><p>Medical. <<timed 0.5s>>Terminal illness. <<next>>Expiration. <<next>>Redacted.<</timed>></p><</append>>\
+    <</link>>\
+<</widget>>
+<<widget "tools">>\
+    <<link "tools">>\
+        <<append "#response">><p id="tools">Screwdrivers. <<timed 0.5s>>Soldering iron. <<next>>Hammers. <<next>>Meters.<</timed>></p><</append>>
+        <<timed 2s>>\
+            <<replace "#tools">><p>Screwdrivers. <<Solderingiron>>. Hammers. Meters.</p><</replace>>\
+        <</timed>>\
+    <</link>>\
+<</widget>>
+<<widget "Solderingiron">>\
+    <<liveblock>><<if !$iron>>\
+        <<link "Soldering iron">>\
+            <<append "#response">><p>Taken.</p><</append>>\
+            <<set $iron to true>>\
+            <<update>>\
+        <</link>>\
+    <<else>>\
+        Soldering iron\
+    <</if>><</liveblock>>\
+<</widget>>
+<<widget "materials">>\
+    <<link "materials">>\
+        <<append "#response">><p>Titanium. <<timed 0.5s>>Wiring. <<next>>Chips. <<next>>Scraps of <<skin>>.<</timed>></p><</append>>\
+    <</link>>\
+<</widget>>
+<<widget "skin">>\
+    <<link "skin">>\
+        <<append "#response">><p>Colour: <<timed 0.5s>>olive.<</timed>></p><</append>>\
+    <</link>>\
+<</widget>>
+<<widget "frames">>\
+    <<link "frames">>\
+        <<append "#response">><p id="frames">Past mementos. <<timed 0.5s>>Diplomas. <<next>>Pictures.<</timed>></p><</append>>
+        <<timed 1.5s>>\
+            <<replace "#frames">><p>Past mementos. <<Diplomas>>. <<Pictures>>.</p><</replace>>\
+        <</timed>>\
+    <</link>>\
+<</widget>>
+<<widget "Diplomas">>\
+    <<link "Diplomas">>\
+        <<append "#response">><p>Robotic. <<timed 0.5s>>Computer science.<</timed>></p><</append>>\
+    <</link>>\
+<</widget>>
+<<widget "Mirror">>\
+    <<link "Mirror">>\
+        <<append "#response">><p>Electric eyes. <<timed 0.5s>>Silky hair. <<next>>Flawless skin.<</timed>></p><</append>>\
+        <<set $seen to true>>\
+    <</link>>\
+<</widget>>
+<<widget "BlueDoor">>\
+    <<link "Blue Door">>\
+        <<append "#response">><p>He left through there. <<timed 0.5s>>Door doesn’t react to touch.<</timed>></p><</append>>\
+    <</link>>\
+<</widget>>
+<<widget "RedDoor">>\
+    <<link "Red Door">>\
+        <<append "#response">><p>Forbidden entrance. <<timed 0.5s>>Unlocked.<</timed>></p><</append>>\
+        <<set _leaving to true>><<update>>
+    <</link>>\
+<</widget>>
+<<widget "PRESS">>
+    <<set $NEEDTOPRESS to true>><<update>>
+<</widget>>
+<<widget "UNPRESS">>
+    <<set $NEEDTOPRESS to false>><<update>>
+<</widget>>
+
+:: Start
+<h1>machina caerulea</h1>
+<div id="choices" style="font-size: 125%">
+    [[Start|Intro]]
+</div>
+
+:: Intro 
+<<PRESS>>
+When this symbol 𒍨 appears in the corner of the screen, press any key of your keyboard or click anywhere on the page to continue.
+<<cont append keypress>><<UNPRESS>>
+    <<type 40ms keep>><div id="choices">[[Booting up...|First]]</div><</type>>
+<</cont>>
+
+:: pressit
+<<liveblock>><<if $NEEDTOPRESS>>𒍨<</if>><</liveblock>>
