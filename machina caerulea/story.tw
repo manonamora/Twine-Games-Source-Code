@@ -1,0 +1,393 @@
+:: First [centered page]
+<<type 20ms keep>><span class="to-hide">01101110 01101111 01110100 00100000 01110100 01101000 01100101 00100000 01110011 01110100 01101111 01110010</span> <span class="stay">Hello</span> <span class="to-hide">01111001 00100000 01101111 01100110 00100000 01100010 01101100 01100001 01101110 01100011</span> <span class="stay">Blanche…</span> <span class="to-hide">01101000 01100101 00101100 00100000 01100010 01101100 01110101 01100101 01100010 01100101 01100001 01110010 01100100 00100111 01110011 00100000 01110111 01101001 01100110 01100101</span><</type>>
+<div id="choices"></div>
+<<script>>
+$(document).on(':typingcomplete', function (ev) {
+    $(".to-hide").addClass("hidden");
+    $(".stay").addClass("bigger");
+
+    $('#choices').delay(3000).queue(function(nxt) {
+      $(this).wiki(Story.get("First-Bis").processText());
+      nxt();
+    }).fadeIn();
+});
+<</script>>
+
+:: First-Bis
+[[Open Eyes|Second]]
+
+:: Second [page]
+<<PRESS>>
+<p>Strapped in a pod. 
+    <<cont append keypress>>
+        A man, standing close.
+        <<cont append keypress>>
+            Arms wrapped around.
+            <<cont append keypress>>
+                <<include "Second-Bis">>
+            <</cont>>
+        <</cont>>
+    <</cont>></p>
+
+:: Second-Bis
+<p>“You’ll be out soon enough,” he whispers.
+    <<cont append keypress>>
+        <p>Breath smells of alcohol.</p><<UNPRESS>>
+        <<timed 1s>>
+            <span id="response"></span>
+            <div id="choices">
+                <<link "Scan man.">>
+                    <<append "#response">><p>Middle Age. <<timed 1s>>Dark black hair, almost seems blue. <<next>>Stubble covering his jaw. <<next>>Dark circles under his eyes.<</timed>></p><</append>>
+                <</link>>
+                <<link "Scan room.">>
+                    <<append "#response">><p>Messy laboratory. <<timed 1s>>Papers, tools, <<next>>material spread all around. <<next>>Crooked frames on the wall.<</timed>></p><</append>>
+                <</link>>
+                <<timed 12s>>[[Exit pod.|Third]]<</timed>>
+            </div>
+        <<next 10s>>
+            <<append "#response" t8n>><p>“Here we are…” he mumbles, pulling cables from the neck. “Careful, now. Slowly.”</p><</append>>
+        <</timed>>
+    <</cont>></p>
+
+:: Third [page]
+<<set _tick to 0>><<PRESS>>
+<p>Arms interlocked. 
+    <<cont append keypress>>Cold floor. 
+        <<cont append keypress>>Faint smile. 
+            <<cont append keypress>>Sad eyes.<<UNPRESS>>
+                <<timed 0.5s>><p>“Breathe in deeply.”</p>
+                    <span id="response"></span>
+                    <<next>><<liveblock>>
+                        <div id="choices">
+                            <<if _tick is 4>>
+                                <<link "Look">>
+                                    <<append "#response">><<include "Third-Bis">><</append>>
+                                    <<set _tick to 99999>><<update>>
+                                <</link>>
+                            <<elseif !_exhale>>
+                                <<if _tick is 0>>
+                                    <<link "Inhale">>
+                                        <<append "#response">><p>“And exhale slowly.”</p><</append>>
+                                        <<set _exhale to true, _tick += 1>>
+                                        <<update>>
+                                    <</link>>
+                                <<else>>
+                                    <<timed 3s>>
+                                        <<link "Inhale">>
+                                        <<set _exhale to true, _tick += 1>>
+                                        <<update>>
+                                    <</link>>
+                                    <</timed>>
+                                <</if>>
+                            <<elseif _tick is 1 or _tick is 3>>
+                                <<link "Exhale">>
+                                    <<if _tick is 1>>
+                                        <<append "#response">><p>“Yes, like this.<<timed 1.5s>> Again.<</timed>>”</p><</append>>
+                                        <<set _exhale to false>>
+                                    <<elseif _tick is 3>>
+                                        <<append "#response">><p>“Now, look into the light.”</p><</append>>
+                                    <</if>>
+                                    <<set _tick += 1>>
+                                    <<update>>
+                                <</link>>
+                            <<elseif _choices>>
+                                <<timed 2.2s>>
+                                    <div id="choices">
+                                    [[No?|Fourth]]
+                                    [[Should I?|Fourth]]
+                                    [[Why don’t I?|Fourth]]
+                                    </div>
+                                <</timed>>
+                            <</if>>
+                        </div>
+                    <</liveblock>>
+                <</timed>>
+            <</cont>>
+        <</cont>>
+    <</cont>></p>
+    
+:: Third-Bis
+<<PRESS>>
+<p>Bright. <<timed 0.5s>>Blinding.
+<<cont append keypress>>
+    <p>“No defect this time, good.”</p>
+    <<cont append keypress>><p>And darkness. 
+        <<cont append keypress>>Footsteps away. 
+            <<cont append keypress>>Blurry shapes return to focus.
+                <<cont append keypress>><<UNPRESS>>
+                    <p>“Blanche…” <<timed 0.5s>>//Sigh.// <<next 1.5s>>“Do… what’s the last thing you remember?”<</timed>></p>
+                    <<set _choices to true>><<update>>
+                <</cont>>
+            <</cont>>
+        <</cont>></p>
+    <</cont>>
+<</cont>>
+<</timed>></p>
+
+:: Fourth [page]
+<<PRESS>>
+<p>“Hmm… Unfortunate, but…” 
+<<cont append keypress>><<UNPRESS>>
+    //Sigh.// <<timed 0.5s>>“Expected.”<<PRESS>><</timed>>
+    <<cont append keypress>>
+        <p>He approaches. 
+        <<cont append keypress>>
+            In his hands, a mirror.
+            <<cont append keypress>><<UNPRESS>>
+                <p>“Blanche, my love… <<timed 1s>><<PRESS>>How do I…<</timed>>” 
+                <<cont append keypress>>
+                His eyes ache with pain. 
+                    <<cont append keypress>>
+                        “You… you had an accident, and…” 
+                        <<cont append keypress>><<UNPRESS>>
+                            Raising the mirror.
+                            <span id="response"></span>
+                            <div id="choices">
+                                <<link "Look in mirror">>
+                                    <<remove "#choices">>
+                                    <<set $seen to true>>
+                                    <<append "#response">><p>Electric eyes.<<PRESS>>
+                                        <<cont append keypress>>Silky hair.
+                                            <<cont append keypress>>Flawless skin.
+                                                <<cont append keypress>><p>“I did all I could.” 
+                                                    <<cont append keypress>>Disappointed look.<<UNPRESS>>
+                                                        <<timed 1s>><div id="choices">[[Look at him.|Fifth]]</div><</timed>>
+                                                    <</cont>></p>
+                                                <</cont>>
+                                            <</cont>>
+                                        <</cont>></p>
+                                    <</append>>
+                                <</link>>
+                                <<link "Look away">>
+                                    <<remove "#choices">>
+                                    <<append "#response">>
+                                        <p>“Ah… <<timed 0.5s>>Yes, I understand.<</timed>>”</p>
+                                        <<timed 1.5s>><div id="choices">[[Look at him.|Fifth]]</div><</timed>>
+                                    <</append>>
+                                <</link>>
+                            </div>
+                        <</cont>>
+                    <</cont>>
+                <</cont>></p>
+            <</cont>>
+        <</cont>></p>
+    <</cont>>
+<</cont>></p>
+
+:: Fifth [page]
+<<PRESS>>
+<p>He puts the mirror away.</p>
+<<cont append keypress>>
+    <p>“You will need some time to adjust…” 
+    <<cont append keypress>>
+        Pursed lips. 
+        <<cont append keypress>>
+            “We… we’ll take it bit by bit, then.”
+            <<cont append keypress>><<UNPRESS>>
+                <p>Ringtone. <<timed 0.5s>>Grumbles.<<PRESS>><</timed>></p>
+                <<cont append keypress>><<UNPRESS>>
+                    <p>“I have to take this. <<timed 0.5s>>Stay here.<<PRESS>><</timed>>” 
+                    <<cont append keypress>>
+                        Hesitation. 
+                        <<cont append keypress>><<UNPRESS>>
+                            “Explore. <<timed 0.5s>>Look. <<next>>Search. <<next>>Read. <<next>>But…<<PRESS>><</timed>>”
+                            <<cont append keypress>><<UNPRESS>>
+                                <p>Interlocked gaze. <<timed 0.5s>>Stern look.<<PRESS>><</timed>></p>
+                                <<cont append keypress>>
+                                    <p>“Do not //''ever''// enter this room.” 
+                                    <<cont append keypress>>
+                                        Points at the red door. 
+                                        <<cont append keypress>>
+                                            “Do you understand?”<<UNPRESS>>
+                                            <<timed 1s>><div id="choices">[[Nod.|Sixth]]</div><</timed>>
+                                        <</cont>>
+                                    <</cont>></p>
+                                <</cont>>
+                            <</cont>>
+                        <</cont>>
+                    <</cont>></p>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>></p>
+<</cont>>
+
+:: Sixth [page] 
+<<PRESS>>
+<p>Door closes behind him. 
+<<cont append keypress>><<UNPRESS>>
+    //''Alone''// in the cold room.
+    <<timed 1s>><span id="response"></span>
+    <<liveblock>><div id="choices">
+        <<if !_leaving>>
+            <<link "Scan Room">>
+                <<append "#response">>
+                    <p id="room">Messy laboratory. <<timed 0.5s>>Papers, <<next>>tools, <<next>>materials spread all around. <<next>>Crooked frames on the wall. <<next>>Mirror on desk. <<next>>Red Door. <<next>>Blue Door.<</timed>></p>
+                <</append>>
+                <<timed 5s>>
+                    <<replace "#room">><p>Messy laboratory. <<Papers>>, <<tools>>, <<materials>> spread all around. Crooked <<frames>> on the wall. <<Mirror>> on desk. <<RedDoor>>. <<BlueDoor>>.</p><</replace>>
+                <</timed>>
+            <</link>>
+            <<link "Scan Self">>
+                <<append "#response">>
+                    <p>Naked body. <<timed 0.5s>>Olive Skin. <<next>>Odourless.<</timed>></p>
+                <</append>>
+            <</link>>
+        <<else>>
+            <<link "Leave be for now">><<set _leaving to false>><<update>><</link>>
+            [[Enter?|Seventh]]
+        <</if>>
+    </div><</liveblock>><</timed>>
+<</cont>></p>
+
+:: Seventh [page]
+<<PRESS>><<set _turn to false>>
+<p>Opened door. 
+    <<cont append keypress>>Icy fog escaping. 
+        <<cont append keypress>>Cold? 
+            <<cont append keypress>>Unfelt.
+                <<timed 1.5s>><span id="response"></span>
+                <div id="choices"><<liveblock>>
+                    <<if !_turn>>
+                        <<link "Further.">>
+                            <<append "#response">>
+                                <p>Tanks lined against the wall. <<timed 0.5s>>Condensation on glass. <<next>>Buzzing motor. Familiar?<</timed>></p>
+                            <</append>>
+                            <<set _turn to 1>>
+                            <<timed 1s>><<update>><</timed>>
+                        <</link>>
+                    <<elseif _turn is "look">>
+                        <<link "Look closer.">>
+                            <<append "#response">>
+                                <p>Sickly face.</p>
+                                <<timed 0.5s>><p>//Like her…//</p><</timed>>
+                            <</append>>
+                            <<set _turn to "blink">>
+                            <<timed 0.5s>><<update>><</timed>>
+                        <</link>>
+                    <<elseif _turn is "blink">>
+                        <<link "Blink.">>
+                            <<append "#response">>
+                                <p>Perfect face reflecting on glass.</p>
+                                <<timed 0.5s>><p>She… I…</p>
+                                <<next 2s>><p>//''SLAM!''//</p><</timed>>
+                            <</append>>
+                            <<set _turn to "turn">>
+                            <<timed 3s>><<update>><</timed>>
+                        <</link>>
+                    <<elseif _turn is "turn">>
+                        <<timed 2.2s>>
+                        <<link "Turn around.">>
+                            <<append "#response">>
+                                <p>Shock. <<timed 0.5s>>Anger. <<next>>Conflicted face.
+                                <<next>><p>//''HE!''//</p>
+                                <<next>><p>“What are you doing here? I told you–”</p>
+                                <</timed>></p>
+                            <</append>>
+                            <<set _turn to "final">>
+                            <<timed 2s>><<update>><</timed>>
+                        <</link>>
+                        <</timed>>
+                    <<elseif _turn is "final">>
+                        <<if $iron>>[[Stab him.|Ending][$end to "him"]]
+                        [[Stab body.|Ending][$end to "you"]]
+                        [[Drop iron.|Ending][$end to "cry"]]
+                        <<else>>
+                            [[Fall on knees.|Ending][$end to "cry"]]
+                        <</if>>
+                    <<else>>
+                        <<link "Wipe tank.">>
+                            <<if _turn is 1>>
+                                <<append "#response">>
+                                    <p>Asleep woman, <<timed 0.5s>>with olive skin. <<next>>Missing legs.
+                                    <<next>><p>//Like…//</p>
+                                    <</timed>></p>
+                                <</append>>
+                                <<set _turn +=1>>
+                            <<elseif _turn is 2>>
+                                <<append "#response">>
+                                    <p>Same woman. <<timed 0.5s>>Hanging jaw. <<next>>Bloody hands. <<next>>Silky hair floating.
+                                    <<next>><p>//Like me…//</p>
+                                    <</timed>></p>
+                                <</append>>
+                                <<set _turn +=1>>
+                            <<elseif _turn is 3>>
+                                <<append "#response">>
+                                    <p>Same woman. <<timed 0.5s>>Electric eye missing. <<next>>Clenched fist.
+                                    <<next>><p>//Like me… Like…//</p>
+                                    <</timed>></p>
+                                <</append>>
+                                <<set _turn +=1>>
+                            <<elseif _turn is 4>>
+                                <<append "#response">>
+                                    <p>Same woman. <<timed 0.5s>>Knife in throat. <<next>>Hand on handle. <<next>>Shock.
+                                    <<next>><p>//Like me… Like the…//</p>
+                                    <</timed>></p>
+                                <</append>>
+                                <<set _turn +=1>>
+                            <<elseif _turn is 5>>
+                                <<append "#response">>
+                                    <p>Same woman. <<timed 0.5s>>Ripped arm. <<next>>Hanging from the other hand. <<next>>Fingers tight around wrist.
+                                    <<next>><p>//Like me… Like the woman…//</p>
+                                    <</timed>></p>
+                                <</append>>
+                                <<set _turn +=1>>
+                            <<elseif _turn is 6>>
+                                <<append "#response">>
+                                    <p>Same woman. <<timed 0.5s>>Emaciated body. <<next>>Perfusions on every crevice.
+                                    <<next>><p>//Like me…//</p>
+                                    <</timed>></p>
+                                <</append>>
+                                <<set _turn to "look">>
+                                <<timed 1.5s>><<update>><</timed>>
+                            <</if>>
+                        <</link>>
+                    <</if>>
+                <</liveblock>></div><</timed>>
+            <</cont>>
+        <</cont>>
+    <</cont>></p>
+
+:: Ending 
+<<PRESS>>
+<<if $end is "him">>
+<p>Like butter. 
+    <<cont append keypress>>Choked scream. 
+        <<cont append keypress>>Warm liquid. 
+            <<cont append keypress>>Relief.
+                <<cont append keypress>>
+                    <<UNPRESS>><<timed 2s t8n>><p>//Justice… For them…//</p>
+                        <<next 1s>><div id="choices"><<link "Again?">><<run Engine.restart()>><</link>></div>
+                    <</timed>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>></p>
+<<elseif $end is "you">>
+<p>Dark liquid. 
+    <<cont append keypress>>Sparks. 
+        <<cont append keypress>>Energy bursting. 
+            <<cont append keypress>>Burning.
+                <<cont append keypress>>
+                    <<UNPRESS>><<timed 2s t8n>><p>//Free… Like them…//</p>
+                        <<next 1s>><div id="choices"><<link "Again?">><<run Engine.restart()>><</link>></div>
+                    <</timed>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>></p>
+
+<<else>>
+<p>>Fall on ground. 
+    <<cont append keypress>>Liquid rolling down cheeks. 
+        <<cont append keypress>>Bodies meeting. 
+            <<cont append keypress>>Sorrow.
+                <<cont append keypress>><<UNPRESS>>
+                    <p>“I… Blanche… <<timed 1.5s>>I’m sorry… <<next>>I’m so sorry. <<next>>I shouldn’t have promised…<</timed>>”</p>
+                    <<timed 6s>><div id="choices"><<link "Again?">><<run Engine.restart()>><</link>></div>
+                    <</timed>>
+                <</cont>>
+            <</cont>>
+        <</cont>>
+    <</cont>></p>
+<</if>>
