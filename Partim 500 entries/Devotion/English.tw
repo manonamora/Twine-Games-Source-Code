@@ -1,0 +1,295 @@
+:: First [round premier]
+//Are you devoted enough to reach the end?//
+[[Play|One]]
+
+
+:: One [round un]
+[[Play|Two]]
+<div class="win">[[The correct link is here.|ENSide]]</div>
+
+
+:: Two [round deux]
+[[Play|Three]]
+<div class="win">[[I wonder if someone will see it.|ENSide]]</div>
+
+
+:: Three [round trois]
+[[Play|Four]]
+<div class="win">[[It's a little bit hidden.|ENSide]]</div>
+
+
+:: Four [round quatre]
+[[Play|Five]]
+<div class="win">[[This game wasn't even my idea to begin with.|ENSide]]</div>
+
+
+:: Five [round cinq]
+[[Play|SixEN]]
+<div class="win">[[Thanks to Léo on the French IF Discord.|ENSide]]</div>
+
+
+:: SixEN [round six]
+[[Play|Seven]]
+<details><summary>Hint</summary>: You can press the "1" key to continue instead of using the mouse.</details>
+<div class="win">[[It was pretty fun trying to create it.|ENSide]]</div>
+
+
+:: Seven [round sept]
+[[Play|Eight]]
+<div class="win">[[And I also learned how to do a new animation.|ENSide]]</div>
+
+
+:: Eight [round huit]
+[[Play|Nine]]
+<div class="win">[[Lol, I just noticed something.|ENSide]]</div>
+
+
+:: Nine [round neuf]
+[[Play|Ten]]
+<div class="win">[[The theme is devotion.|ENSide]]</div>
+
+
+:: Ten [round dix]
+[[Play|Eleven]]
+<div class="win">[[And the game's spiel is that the player is so devoted to the author...|ENSide]]</div>
+
+
+:: Eleven [dotted onze]
+[[Play|Twelve]]
+<div class="win">[[... that they continue to click, even if there's actually no game.|ENSide]]</div>
+
+
+:: Twelve [dotted douze]
+[[Play|Thirteen]]
+<details><summary>Hint</summary>: You can use the keys "←" to rewind, and "→" to redo the previous action.</details>
+<div class="win">[[But that's not it.|ENSide]]</div>
+
+
+:: Thirteen [dotted treize]
+[[Play|Fourteen]]
+<div class="win">[[It's also the case for all the authors in the game jam.|ENSide]]</div>
+
+
+:: Fourteen [dotted quatorze]
+[[Play|Fifteen]]
+<div class="win">[[They are so devoted to IF that they also created a game.|ENSide]]</div>
+
+
+:: Fifteen [dotted quinze]
+[[Play|Sixteen]]
+<div class="win">[[Just before Christmas!|ENSide]]</div>
+
+
+:: Sixteen [dotted seize]
+[[Play|Seventeen]]
+<div class="win">[[Or just after...|ENSide]]</div>
+<style>#lights {opacity:0.2}</style>
+
+
+:: Seventeen [dotted dixsept]
+[[Play|Eighteen]]
+<div class="win">[[I did mine in two afternoons...|ENSide]]</div>
+<style>#lights {opacity:0.4}</style>
+
+
+:: Eighteen [dotted dixhuit]
+[[Play|Nineteen]]
+<div class="win">[[I even had a different idea.|ENSide]]</div>
+<style>#lights {opacity:0.6}</style>
+
+
+:: Nineteen [dotted dixneuf]
+[[Play|Twenty]]
+<div class="win">[[But I started too late.|ENSide]]</div>
+<style>#lights {opacity:0.8}</style>
+
+
+:: Twenty [dotted lighting vingt]
+[[Play|Twentyone]]
+<div class="win">[[I'm often procrastinating actually...|ENSide]]</div>
+
+
+:: Twentyone [lighting child1]
+[[Hehehe|Twentytwo]]
+<div class="win">[[*This* is even my fifth game in two months...|ENSide]]</div>
+
+
+:: Twentytwo [lighting child2]
+[[Red!|Twentythree]]
+<div class="win">[[Should really pump the brakes a bit now...|ENSide]]</div>
+
+
+:: Twentythree [lighting child1]
+[[Green!|Twentyfour]]
+<div class="win">[[Will I keep it easy next year?|ENSide]]</div>
+
+
+:: Twentyfour [lighting child2]
+Hey! But, what are you doing, here?
+[[Red!|Twentyfive]]
+<div class="win">[[Maybe.|ENSide]]</div>
+
+
+:: Twentyfive [lighting child1]
+[[Green!|Twentysix]]
+<div class="win">[[That's the plan, at least.|ENSide]]</div>
+
+
+:: Twentysix [lighting child2]
+[[Red!|Twentyseven]]
+<div class="win">[[That would be good.|ENSide]]</div>
+
+
+:: Twentyseven [lighting child1]
+Let the lights be, say!
+[[Green!|Twentyeight]]
+<div class="win">[[Probably...|ENSide]]</div>
+
+
+:: Twentyeight [lighting child2]
+We're not in Versailles, here!
+[[Red!|Twentynine]]
+<div class="win">[[...not.|ENSide]]</div>
+
+
+:: Twentynine [lighting child1]
+[[Green!|Thirty]]
+<div class="win">[[Shouldn't lie to myself, heh.|ENSide]]</div>
+
+
+:: Thirty [lighting child2]
+[[Red!|Thirtyone]]
+<div class="win">[[It's not like I follow my resolutions, anyway.|ENSide]]</div>
+
+
+:: Thirtyone [lighting]
+Well... Enough with the lights, now... 
+[[But--|Thirtytwo]]
+<div class="win">[[It was a good year, actually.|ENSide]]</div>
+
+
+:: Thirtytwo
+But, nothing. Look, even taking them back.
+[[Killjoy...|Thirtythree]]
+<div class="win">[[I've made myself loads of new friends.|ENSide]]</div>
+
+
+:: Thirtythree
+[[So... when do I play, then?|Thirtyfour]]
+<div class="win">[[I learned how to code loads of new things too.|ENSide]]</div>
+
+
+:: Thirtyfour
+[[Yeah, it's getting a bit long, now|Thirtyfive]]
+<div class="win">[[I could also help other people with their codes!|ENSide]]</div>
+
+
+:: Thirtyfive
+All good things take time.
+[[You're game is already done...|Thirtysix]]
+<div class="win">[[If you manage to read this, it's so nince you read it all.|ENSide]]</div>
+
+
+:: Thirtysix
+Patience...
+[[You're such a pain.|Thirtyseven]]
+<div class="win">[[I kinda 'winged it' at the end.|ENSide]]</div>
+
+
+:: Thirtyseven
+It's coming.
+[[You're sure?|Thirtyeight]]
+<div class="win">[[It probably won't stay on my account either.|ENSide]]</div>
+
+
+:: Thirtyeight
+Well, duh, of course...
+[[So, what do I do then?|Thirtynine]]
+<div class="win">[[I might put it on my website instead.|ENSide]]
+[[C'est celui-là|https://manonamora.neocities.org/]]</div>
+
+
+:: Thirtynine
+You click on the link.
+[[That's what I keep doing!|Forty]]
+<div class="win">[[So, anyway. It's this link that you should click to "win.|ENSide]]</div>
+
+
+:: Forty
+Yes, but did you click on <span class="moi">[[this one|Fortyone]]</span>?
+<div class="win">[[I had planned on doing weird things with the button...|ENSide]]</div>
+
+
+:: Fortyone
+<<type 1s>>...<</type>>
+<<timed 3.5s>>[[Maybe there's a bug?|Fortytwo]]
+<div class="win">[[But, well, I really started at the last minute.|ENSide]]</div>
+<</timed>>
+
+
+:: Fortytwo
+What the heck, no!
+[[Sorry, but come on, now...|Fortythree]]
+<div class="win">[[And I was too lazy to do a bunch of tests.|ENSide]]</div>
+
+
+:: Fortythree
+<span id="pas">Go on. Click the button. You'll see.
+<<link "This one?">>
+    <<replace "#pas">>Another time.
+        <<link "You're pushing it a bit.">>
+            <<replace "#pas">>Third time's the charm!
+                [[Betting it won't even work...|Fortyfour]]
+                <div class="win">[[Anywho, how are ya?|ENSide]]</div>
+            <</replace>>
+        <</link>>
+        <div class="win">[[I still had tons of fun creating this.|ENSide]]</div>
+    <</replace>>
+<</link>>
+<div class="win">[[Just shows how little devotion I have towards IF.|ENSide]]</div>
+</span>
+
+
+:: Fortyfour
+<<timed 3s>>[[Here, see!|Fortyfive]]
+<div class="win">[[Did you have a good year?|ENSide]]</div><</timed>>
+
+
+:: Fortyfive
+[[This is just nonsense...|Fortysix]]
+<div class="win">[[Well... you can't really answer, can you...|ENSide]]</div>
+
+
+:: Fortysix
+[[I wasted time for nothing!|Fortyseven]]
+<div class="win">[[You can leave a comment, if you want.|ENSide]]</div>
+
+
+:: Fortyseven
+Don't say that! You're almost there!
+[[Already? But I didn't do anything!|Fortyeight]]
+<div class="win">[[I hope you're doing well enough, anyway.|ENSide]]</div>
+
+
+:: Fortyeight
+Oh, but yes!
+[[Clicking on just one link, it's nothing!|Fortynine]]
+<div class="win">[[Well, we're almost at the end.|ENSide]]</div>
+
+
+:: Fortynine
+Not just //*one*// link on the page ;)
+[[Huh?!|fifty]]
+<div class="win">[[I wish you a good year for the next one.|ENSide]]</div>
+
+
+:: Fifty
+Ah! Well played!
+<details><summary>Hint</summary>: In the top left corner, there is a hidden link. If you click [[here|One][$ok to true]], you will be able to start the game again. But this time, that text will be more visible.</details>
+<div class="win">[[Thanks for playing!|ENSide]]</div>
+
+
+:: ENSide
+You found the hidden link!
+
+<<link "Return">><<run Engine.backward()>><</link>>

@@ -1,0 +1,157 @@
+:: StoryTitle
+Dévotion
+
+:: StoryData
+{
+	"ifid": "C15CE33F-61F6-4909-BB59-73EE7A3D57B1", 
+	"format": "SugarCube",
+	"format-version": "2.37.3",
+	"start": "Start"
+}
+
+:: StoryInterface
+<div id="lights" data-passage="Lights"></div>
+<div id="title" data-passage="Title"></div>
+<div id="passages"></div>
+<div id="bottom-menu" data-passage="Menu"></div>
+
+:: Start [start]
+<center>
+  [[EN|First][$lang to "English"]] - [[FR|Premier][$lang to "Français"]] - [[NL|Eerst][$lang to "Nederlands"]]
+</center>
+
+
+:: Menu
+<<if passage() is "Start">>
+    <a href="https://twinery.org/"><img src="img/twine.svg"></a> <a ref="https://www.motoslave.net/sugarcube/2"><img src="img/SugarCube.png"></a> <a href="https://manonamora.neocities.org/"><img src="img/Manonamora.png"></a>
+<<else>>
+    <<link '<<switch $lang>><<case "English">>Restart<<case "Français">>Recommencer<<case "Nederlands">>Herstart<</switch>>'>>
+        <<if $lang is "English">>
+            <<run Dialog.create("Restart").wikiPassage("Restart").open();>>
+        <<elseif $lang is "Français">>
+            <<run Dialog.create("Recommencer").wikiPassage("Restart").open();>>
+        <<else>>
+            <<run Dialog.create("Herstart").wikiPassage("Restart").open();>>
+        <</if>>
+    <</link>> | <<link '<<switch $lang>><<case "English">>About<<case "Français">>À Propos<<case "Nederlands">>Over<</switch>>'>>
+        <<if $lang is "English">>
+            <<run Dialog.create("About").wikiPassage("Credits").open();>>
+        <<elseif $lang is "Français">>
+            <<run Dialog.create("À Propos").wikiPassage("Credits").open();>>
+        <<else>>
+            <<run Dialog.create("Over").wikiPassage("Credits").open();>>
+        <</if>>
+    <</link>>
+<</if>>
+
+
+:: Restart
+<<if $lang is "English">>
+    <center>You will be sent back to the language screen.<br>Are you sure you want to restart the game?</center>
+    <<button "Restart">><<run Engine.restart()>><</button>>
+<<elseif $lang is "Français">>
+    <center>Vous allez revenir à l'écran du choix de langue.<br>Êtes-vous sûr(e) de vouloir recommencer le jeu?</center>
+    <<button "Recommencer">><<run Engine.restart()>><</button>>
+<<else>>
+    <center>Je wordt teruggestuurd naar het taalscherm.<br>Weet je zeker dat je het spel opnieuw wilt starten?</center>
+    <<button "Herstart">><<run Engine.restart()>><</button>>
+<</if>>
+
+:: Credits 
+<<if $lang is "English">>
+    <p>//The Devotion Game// was a short IF game, originally created for the [[Partim500|https://itch.io/jam/fr-partim-500-an-2022]] game jam in 2022, before being recently translated. It had been made on a whim during the last few days of the jam, based on an idea by Léo in the [[French IF Community|https://www.fiction-interactive.fr/]]'s Discord.</p>
+
+    <p>This was an exercise in conciseness, due to the writing limit of 500 words, as well as an opportunity in exploring the Twine engine/SugarCube format (which was fairly new for me at the time), all the while rushing towards the tight deadline. This was a really fun experience, which I've been repeating the past years, in both French (Partim500/Nouvim3000) and English (NeoTwiny Jam).</p>
+
+    <p>There isn't really much to the story, the game is more about the meta take on that year's theme (i.e. devotion). This is sort of explained in the "hidden" links on the page, throughout the game. I wanted to use this space to try new things, in both customisations (i.e. formatting between pages) and integrating new bits of codes (i.e. keybinding, lightbulbs). An experimentation, if you will.</p>
+
+    <p>Nevertheless, I still hope you will have/had fun playing through it all!</p>
+    
+<<elseif $lang is "Français">>
+    <p>//Le Jeu de la Dévotion// est une toute petite FI, créée en 2022 pour la [[Partim500|https://itch.io/jam/fr-partim-500-an-2022]], faite complètement à la dernière minute, et basée sur une idée de Léo sur le Discord de la [[Communauté Francophone de la Fiction Interactive|https://www.fiction-interactive.fr/]].</p>
+
+    <p>Ce jeu fut un exercice de concision, du fait de la limite à 500 mots, ainsi qu'une opportunité d'exploration de Twine/du format SugarCube (qui était à ce moment-là encore assez nouveau pour moi), tout en ayant la date butoir de la jam approchant très rapidement. C'était une très bonne expérience, et que, depuis, j'ai répété chaque année, en français (Partim500/Nouvim3000) et en anglais (NeoTwiny Jam).</p>
+
+    <p>Il n'y a pas vraiment d'histoire à proprement parler, mais plus une interprétation méta du thème (i.e. dévotion). C'est plus ou moins expliqué dans les liens "cachés" du jeu. Pas tellement de réflection à vrai dire, plutôt une utilisation de l'évènement pour essayer de nouvelles choses, que ce soit en customisation (i.e. formatting) ou intégration de code (i.e. keybinding, lumières). Une expérimentation, si vous voulez.</p>
+
+    <p>Tout de même, j'espère que vous avez aimé/aimerez jouer à ce jeu !</p>
+<<else>>
+    <p>//Het Spel van Devotie// is een kort IF-spel, oorspronkelijk gemaakt for de [[Partim500|https://itch.io/jam/fr-partim-500-an-2022]] game jam in 2022, voordat het onlangs werd vertaald. Ik heb het gemaakt tijdens de laatste dagen van de jam. Het spel is gebaseerd op een idee van Léo in de [[Franse IF-gemeenschap| https://www.fiction-interactive.fr/]] Discord.</p>
+
+    <p>Dit was een oefening in beknoptheid, vanwege de limiet van 500 woorden, alsmede een kans om het Twine-engine/SugarCube-format te verkennen (dat op dat moment voor mij vrij nieu wasw), terwijl ik me haastte naar de strakke deadline. Dit was echt een leuke ervaring, die ik de afgelopen jaren heb herhaald, zowels in het Frans (Partim500/Nouvim3000) als in het Engels (NeoTwiny Jam)</p>
+
+    <p>Het is geen compleet verhaal, eerder een experiment met het format et de thema van de game jam (d.w.z. toewijding). Dit wordt min or meer uitgelegd in de "verbogen" links op de pagina, gedurende het hele spel. Ik wilde de mogelijkheid gebruiken om nieuwe dingen te proberen, zowel met betrekking tot visuele aanpassingen (d.w.z opmaak) en het integreren van nieuwe beetjes code (d.w.z. keybinding, gloeilampen). Een experiment, als wilt je.</p>
+
+    <p>Desalniettemin hoop ik dat men hier plezier aan kan beleven!</p>
+<</if>>
+<hr>
+<small>Made in <a href="https://twinery.org/">Twine <img src="img/twine.svg"></a>/<a href="https://www.motoslave.net/sugarcube/2">SugarCube <img src="img/SugarCube.png"></a>. Fonts by [[Catherine Leigh Schmidt|https://fonts.google.com/?query=Catherine+Leigh+Schmidt]], [[Sideshow|https://fonts.google.com/?query=Sideshow]] and [[Steve Matteson|https://fonts.google.com/?query=Steve+Matteson]]. Christmas Lights by [[Tobyj|https://codepen.io/tobyj]]. Game by [[Manonamora|https://manonamora.itch.io/]].</small>
+
+
+:: Title
+<<switch $lang>>
+    <<case "English">>
+        <<if passage() is "Fifty">>Thanks!<<else>>The Devotion Game<</if>>
+    <<case "Français">>
+        <<if passage() is "Cinquante">>Merci!<<else>>Le Jeu de la Dévotion<</if>>
+    <<case "Nederlands">>
+        <<if passage() is "Vijftig">>Bedankt!<<else>>Het Spel van Devotie<</if>>
+<</switch>>
+
+
+:: Lights
+<ul id="lightrope">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+:: PassageDone
+<<if $ok && not ["Side", "ENSide", "NLSide"].includes(passage())>>
+    <<if ["QuaranteUn", "QuaranteQuatre", "Fortyone", "Fortyfour", "EenenViertig", "VierenViertig"].includes(passage())>>
+        <<timed 3.6s>><<if $ok && passage() is not "Side">><<addclass ".win" "bigger">><</if>><</timed>>
+    <<elseif ["QuaranteTrois", "Fortythree", "DrieenViertig"].includes(passage())>>
+        <<repeat 1s>><<addclass ".win" "bigger">><</repeat>>
+    <<else>>
+        <<addclass ".win" "bigger">>
+    <</if>>
+<</if>>

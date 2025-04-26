@@ -1,0 +1,250 @@
+:: Premier [round premier]
+//Avez-vous assez de dévotion pour arriver à la fin ?//
+[[Jouer|Un]]
+
+
+:: Un [round un]
+[[Jouer|Deux]]
+<div class="win">[[Le bon lien est là.|Side]]</div>
+
+
+:: Deux [round deux] 
+[[Jouer|Trois]]
+<div class="win">[[Je me demande si quelqu'un va le voir.|Side]]</div>
+
+
+:: Trois [round trois]
+[[Jouer|Quatre]]
+<div class="win">[[C'est un petit peu caché.|Side]]</div>
+
+
+:: Quatre [round quatre]
+[[Jouer|Cinq]]
+<div class="win">[[Ce jeu, c'était même pas mon idée au départ.|Side]]</div>
+
+
+:: Cinq [round cinq] 
+[[Jouer|Six]]
+<div class="win">[[Merci à Léo sur le Discord.|Side]]</div>
+
+
+:: Six [round six] 
+[[Jouer|Sept]]
+<details><summary>Astuce</summary>: Vous pouvez utiliser la touche "1" pour continuer, au lieu de cliquer avec votre souris.</details>
+<div class="win">[[C'était bien drôle d'essayer de le créer.|Side]]</div>
+
+:: Sept [round sept] 
+[[Jouer|Huit]]
+<div class="win">[[Et puis j'ai aussi appris à faire une nouvelle animation.|Side]]</div>
+
+:: Huit [round huit] 
+[[Jouer|Neuf]]
+<div class="win">[[MDR, je viens de remarquer un truc.|Side]]</div>
+
+:: Neuf [round neuf] 
+[[Jouer|Dix]]
+<div class="win">[[Le thème est dévotion.|Side]]</div>
+
+:: Dix [round dix]
+[[Jouer|Onze]]
+<div class="win">[[Et le spiel du jeu est que le joueur est tellement dévoué à l'auteur...|Side]]</div>
+
+:: Onze [dotted onze] 
+[[Jouer|Douze]]
+<div class="win">[[... qu'il continue à cliquer même s'il y a pas de jeu, en fait.|Side]]</div>
+
+:: Douze [dotted douze] 
+[[Jouer|Treize]]
+<details><summary>Astuce</summary>: Vous pouvez utiliser les touches "←" pour retourner en arrière, et "→" pour refaire une action.</details>
+<div class="win">[[Mais c'est pas que ça.|Side]]</div>
+
+:: Treize [dotted treize]
+[[Jouer|Quatorze]]
+<div class="win">[[C'est aussi le cas pour tous les auteurs de la jam.|Side]]</div>
+
+:: Quatorze [dotted quatorze] 
+[[Jouer|Quinze]]
+<div class="win">[[Ils sont tellement dévoués à la FI qu'ils ont créé un jeu aussi.|Side]]</div>
+
+:: Quinze [dotted quinze] 
+[[Jouer|Seize]]
+<div class="win">[[Juste avant Noël !|Side]]</div>
+
+:: Seize [dotted seize]
+[[Jouer|DixSept]]
+<div class="win">[[Ou juste après...|Side]]</div>
+<style>#lights {opacity:0.2}</style>
+
+:: DixSept [dotted dixsept]
+[[Jouer|DixHuit]]
+<div class="win">[[J'ai fait le mien en deux aprèms...|Side]]</div>
+<style>#lights {opacity:0.4}</style>
+
+:: DixHuit [dotted dixhuit]
+[[Jouer|DixNeuf]]
+<div class="win">[[J'avais une autre idée en plus.|Side]]</div>
+<style>#lights {opacity:0.6}</style>
+
+:: DixNeuf [dotted dixneuf]
+[[Jouer|Vingt]]
+<div class="win">[[Mais je m'y suis prise trop tard.|Side]]</div>
+<style>#lights {opacity:0.8}</style>
+
+:: Vingt [dotted lighting vingt]
+[[Jouer|VingtUn]]
+<div class="win">[[J'ai souvent la flemme en fait...|Side]]</div>
+
+:: VingtUn [lighting child1] 
+[[Hehehe|VingtDeux]]
+<div class="win">[[C'est quand même mon cinquième jeu en deux mois en plus...|Side]]</div>
+
+:: VingtDeux [lighting child2] 
+[[Rouge !|VingtTrois]]
+<div class="win">[[Faut vraiment que je me calme un peu là...|Side]]</div>
+
+:: VingtTrois [lighting child1] 
+[[Vert !|VingtQuatre]]
+<div class="win">[[Est-ce que je vais me calmer l'année prochaine ?|Side]]</div>
+
+:: VingtQuatre [lighting child2] 
+HÉ ! Mais qu'est-ce que tu fais, là ?
+[[Rouge !|VingtCinq]]
+<div class="win">[[Peut-être.|Side]]</div>
+
+:: VingtCinq [lighting child1]
+[[Vert !|VingtSix]]
+<div class="win">[[C'est le plan, en fait.|Side]]</div>
+
+:: VingtSix [lighting child2]
+[[Rouge !|VingtSept]]
+<div class="win">[[Ce serait bien.|Side]]</div>
+
+:: VingtSept [lighting child1]
+Laisse les lumières tranquilles, dis-donc !
+[[Vert !|VingtHuit]]
+<div class="win">[[Sûrement...|Side]]</div>
+
+:: VingtHuit [lighting child2]
+C'est pas Versailles, ici !
+[[Rouge !|VingtNeuf]]
+<div class="win">[[...pas.|Side]]</div>
+
+:: VingtNeuf [lighting child1]
+[[Vert !|Trente]]
+<div class="win">[[Faut pas se mentir, heh.|Side]]</div>
+
+:: Trente [lighting child2]
+[[Rouge !|TrenteUn]]
+<div class="win">[[C'est pas comme si je tenais mes résolutions de toute manière.|Side]]</div>
+
+:: TrenteUn [lighting]
+Bon... Ça suffit un peu les lumières, là...
+[[Mais--|TrenteDeux]]
+<div class="win">[[C'était une bonne année quand même.|Side]]</div>
+
+:: TrenteDeux
+Mais, rien du tout. Tiens, je les rentre, même.
+[[Rabat-joie...|TrenteTrois]]
+<div class="win">[[Je me suis faite plein de nouveaux copains.|Side]]</div>
+
+:: TrenteTrois
+[[Sinon... Je joue quand, en fait ?|TrenteQuatre]]
+<div class="win">[[J'ai appris à coder plein de nouveaux trucs.|Side]]</div>
+
+:: TrenteQuatre
+Bientôt.
+[[Oui, mais ça commence à faire long, là.|TrenteCinq]]
+<div class="win">[[J'ai pu aider aussi des gens avec leur code !|Side]]</div>
+
+:: TrenteCinq
+Toute les bonnes choses prennent du temps.
+[[Ton jeu est fini déjà...|TrenteSix]]
+<div class="win">[[Si tu arrives à voir ça, c'est quand même gentil de tout lire.|Side]]</div>
+
+:: TrenteSix
+Patience...
+[[T'es bien reloue.|TrenteSept]]
+<div class="win">[[Je l'ai un peu 'winged it' à la fin quand même.|Side]]</div>
+
+:: TrenteSept
+Ça arrive.
+[[T'es sûre ?|TrenteHuit]]
+<div class="win">[[Ça va sûrement pas rester sur mon compte non plus.|Side]]</div>
+
+:: TrenteHuit
+Bah, oui, quand même...
+[[Je fais quoi, alors ?|TrenteNeuf]]
+<div class="win">[[Je le mettrais p'être sur mon site à la place.|Side]]
+[[C'est celui-là.|https://manonamora.neocities.org/]]</div>
+
+:: TrenteNeuf
+Tu cliques sur le lien.
+[[C'est ce que j'arrête pas de faire !|Quarante]]
+<div class="win">[[Bon, sinon. C'est celui-là qu'il faut cliquer, pour "gagner".|Side]]</div>
+
+:: Quarante
+Oui, mais est-ce que tu as cliqué sur <span class="moi">[[celui-là|QuaranteUn]]</span> ?
+<div class="win">[[J'avais prévu du faire des trucs chelou avec le bouton...|Side]]</div>
+
+:: QuaranteUn
+<<type 1s>>...<</type>>
+<<timed 3.5s>>[[T'as pas un bug peut-être ?|QuaranteDeux]]
+<div class="win">[[Mais bon, je m'y suis prise à la dernière minute.|Side]]</div><</timed>>
+
+:: QuaranteDeux
+Non, mais oh !
+[[Désolé, mais là quand même...|QuaranteTrois]]
+<div class="win">[[Et j'avais la flemme de faire plein de tests.|Side]]</div>
+
+:: QuaranteTrois
+<span id="pas">Vas-y. Clique sur le bouton. Tu verras.
+<<link "Celui-là ?">>
+    <<replace "#pas" t8n>>Encore une fois.
+        <<link "Tu abuses un peu quand même.">>
+            <<replace "#pas" t8n>>Et jamais deux sans trois !
+                [[À tous les coups, ça va pas marcher...|QuaranteQuatre]]
+                <div class="win">[[Et sinon, toi. Ça va ?|Side]]</div>
+            <</replace>>
+        <</link>>
+        <div class="win">[[Je me suis quand même bien amusée à faire ça.|Side]]</div>
+    <</replace>>
+<</link>>
+<div class="win">[[Comme quoi, j'ai pas tellement de dévotion envers la FI.|Side]]</div>
+</span>
+
+:: QuaranteQuatre 
+<<timed 3s>>[[Bah, tu vois !|QuaranteCinq]]
+<div class="win">[[Tu as passé une bonne année ?|Side]]</div><</timed>>
+
+:: QuaranteCinq
+[[N'importe quoi ce truc...|QuaranteSix]]
+<div class="win">[[Tu peux pas vraiment me répondre...|Side]]</div>
+
+:: QuaranteSix
+[[J'ai perdu mon temps pour rien !|QuaranteSept]]
+<div class="win">[[Sinon, lâche moi un com'.|Side]]</div>
+
+:: QuaranteSept
+Dis pas ça ! T'es presque à la fin !
+[[Déjà ? Mais j'ai rien fait !|QuaranteHuit]]
+<div class="win">[[J'espère que ça va un peu quand même.|Side]]</div>
+
+:: QuaranteHuit
+Bah si !
+[[Cliquer sur un seul lien, c'est rien !|QuaranteNeuf]]
+<div class="win">[[Bon, on est presque à la fin.|Side]]</div>
+
+:: QuaranteNeuf
+Y avait pas qu'un seul lien sur la page ;)
+[[Hein ?!|Cinquante]]
+<div class="win">[[Je te souhaite une bonne année pour la prochaine.|Side]]</div>
+
+:: Cinquante
+Ah ! Bah, bien joué !
+<details><summary>Astuce</summary>: Dans le coin à droite, il y a autre bouton. Si tu cliques [[ici|Un][$ok to true]], tu pourras recommencer le jeu, et le texte sera plus visible.</details>
+<div class="win">[[Merci d'avoir joué !|Side]]</div>
+
+:: Side
+T'as trouvé le lien caché !
+
+<<link "Retour">><<run Engine.backward()>><</link>>

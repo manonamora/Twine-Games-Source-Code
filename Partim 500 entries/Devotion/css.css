@@ -1,0 +1,368 @@
+@font-face {
+    font-family: "Kranky";
+    src: url('fonts/Kranky-Regular.ttf') format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+  @font-face {
+    font-family: 'Yatra One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/YatraOne-Regular.ttf) format('truetype');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  
+@font-face {
+    font-family: "Open Sans";
+    src: url('fonts/OpenSans-Regular.ttf') format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+:root {
+    --kranky: "Kranky", serif;
+    --yatra: "Yatra One", system-ui;
+    --open: "Open Sans", sans-serif;
+}
+
+#story {
+    overflow:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#title {
+    padding: 2%;
+    text-align: center;
+    font-family: var(--kranky);
+    font-size: 200%;
+}
+[data-tags~="start"] #title {
+    display: none;
+}
+
+#bottom-menu {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  color: grey;
+}
+#bottom-menu a.link-external::after {
+    display: none;
+}
+
+#passages {
+    width: 100vw;
+    min-height: 20%;
+    max-height: 80%;
+}
+.passage {
+    text-align: center;
+    font-family: var(--yatra);
+}
+#passage-start {
+    font-size:150%;
+}
+
+a img {
+    max-height: 30px;
+    padding: 0 5px;
+}
+
+button {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #dd9866;
+    color: black;
+    border-color: #935121;
+}
+button:hover {
+    background-color: #e8b693;
+    border-color: #935121;
+}
+
+
+.passage a {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+a {
+    color: rgb(221, 152, 102);
+}
+a:hover {
+    color:#e8b693;
+}  
+a, a:hover, a:focus {
+    text-decoration: none;
+    font-family: var(--open);
+}
+
+.moi a, .moi a:hover, .moi a:focus {
+    font-family: var(--yatra);
+    display: inherit;
+}
+
+[data-tags~="round"] #passages a {
+    border: 2px ridge;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+[data-tags~="dotted"] #passages a {
+    border: 2px dotted;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+
+[data-tags~="premier"] a {
+    border-color: rgb(0, 130, 0);
+    color: rgb(0, 185, 0);
+}
+[data-tags~="premier"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 128, 0);
+    box-shadow: 0 0 10px rgb(0, 128, 0);
+}
+[data-tags~="un"] a {
+    border-color: rgb(0, 150, 0);
+    color: rgb(0, 205, 0);
+}
+[data-tags~="un"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 148, 0);
+    box-shadow: 0 0 10px rgb(0, 148, 0);
+}
+[data-tags~="deux"] a {
+    border-color: rgb(0, 170, 0);
+    color: rgb(0, 225, 0);
+}
+[data-tags~="deux"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 168, 0);
+    box-shadow: 0 0 10px rgb(0, 168, 0);
+}
+[data-tags~="trois"] a {
+    border-color: rgb(0, 190, 0);
+    color: rgb(0, 245, 0);
+}
+[data-tags~="trois"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 188, 0);
+    box-shadow: 0 0 10px rgb(0, 188, 0);
+}
+[data-tags~="quatre"] a {
+    border-color: rgb(0, 210, 0);
+    color: rgb(0, 250, 0);
+}
+[data-tags~="quatre"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 0);
+    box-shadow: 0 0 10px rgb(0, 208, 0);
+}
+[data-tags~="cinq"] a {
+    border-color: rgb(0, 210, 50);
+    color: rgb(0, 250, 50);
+}
+[data-tags~="cinq"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 50);
+    box-shadow: 0 0 10px rgb(0, 208, 50);
+}
+[data-tags~="six"] a {
+    border-color: rgb(0, 210, 100);
+    color: rgb(0, 250, 100);
+}
+[data-tags~="six"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 100);
+    box-shadow: 0 0 10px rgb(0, 208, 100);
+}
+[data-tags~="sept"] a {
+    border-color: rgb(0, 210, 150);
+    color: rgb(0, 250, 150);
+}
+[data-tags~="sept"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 150);
+    box-shadow: 0 0 10px rgb(0, 208, 150);
+}
+[data-tags~="huit"] a {
+    border-color: rgb(0, 210, 200);
+    color: rgb(0, 250, 200);
+}
+[data-tags~="huit"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 200);
+    box-shadow: 0 0 10px rgb(0, 208, 200);
+}
+[data-tags~="neuf"] a {
+    border-color: rgb(0, 210, 250);
+    color: rgb(0, 250, 250);
+}
+[data-tags~="neuf"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 208, 250);
+    box-shadow: 0 0 10px rgb(0, 208, 250);
+}
+[data-tags~="dix"] a {
+    border-color: rgb(0, 175, 250);
+    color: rgb(0, 225, 250);
+}
+[data-tags~="dix"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 173, 250);
+    box-shadow: 0 0 10px rgb(0, 173, 250);
+}
+[data-tags~="onze"] a {
+    border-color: rgb(0, 150, 250);
+    color: rgb(0, 200, 250);
+}
+[data-tags~="onze"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 158, 250);
+    box-shadow: 0 0 10px rgb(0, 158, 250);
+}
+[data-tags~="douze"] a {
+    border-color: rgb(0, 100, 250);
+    color: rgb(0, 150, 250);
+}
+[data-tags~="douze"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 108, 250);
+    box-shadow: 0 0 10px rgb(0, 108, 250);
+}
+[data-tags~="treize"] a {
+    border-color: rgb(0, 50, 250);
+    color: rgb(0, 100, 250);
+}
+[data-tags~="treize"] a:hover {
+    text-shadow: 0 0 8px rgb(0, 58, 250);
+    box-shadow: 0 0 10px rgb(0, 58, 250);
+}
+[data-tags~="quatorze"] a {
+    border-color: rgb(50, 100, 250);
+    color: rgb(50, 150, 250);
+}
+[data-tags~="quatorze"] a:hover {
+    text-shadow: 0 0 8px rgb(50, 108, 250);
+    box-shadow: 0 0 10px rgb(50, 108, 250);
+}
+[data-tags~="quinze"] a {
+    border-color: rgb(100, 100, 250);
+    color: rgb(100, 150, 250);
+}
+[data-tags~="quinze"] a:hover {
+    text-shadow: 0 0 8px rgb(100, 108, 250);
+    box-shadow: 0 0 10px rgb(100, 108, 250);
+}
+[data-tags~="seize"] a {
+    border-color: rgb(150, 100, 250);
+    color: rgb(150, 150, 250);
+}
+[data-tags~="seize"] a:hover {
+    text-shadow: 0 0 8px rgb(150, 108, 250);
+    box-shadow: 0 0 10px rgb(150, 108, 250);
+}
+[data-tags~="dixsept"] a {
+    border-color: rgb(200, 100, 250);
+    color: rgb(200, 150, 250);
+}
+[data-tags~="dixsept"] a:hover {
+    text-shadow: 0 0 8px rgb(200, 108, 250);
+    box-shadow: 0 0 10px rgb(200, 108, 250);
+}
+[data-tags~="dixhuit"] a {
+    border-color: rgb(250, 100, 250);
+    color: rgb(250, 150, 250);
+}
+[data-tags~="dixhuit"] a:hover {
+    text-shadow: 0 0 8px rgb(250, 108, 250);
+    box-shadow: 0 0 10px rgb(250, 108, 250);
+}
+[data-tags~="dixneuf"] a {
+    border-color: rgb(225, 100, 250);
+    color: rgb(225, 150, 250);
+
+}
+[data-tags~="dixneuf"] a:hover {
+    text-shadow: 0 0 8px rgb(250, 108, 200);
+    box-shadow: 0 0 10px rgb(250, 108, 200);
+}
+[data-tags~="vingt"] a {
+    border-color: rgb(250, 100, 200);
+    color: rgb(250, 150, 200);
+
+}
+[data-tags~="vingt"] a:hover {
+    text-shadow: 0 0 8px rgb(250, 108, 175);
+    box-shadow: 0 0 10px rgb(250, 108, 175);
+}
+
+details {
+    font-size: 80%;
+}
+details summary {
+    color: #c4c468;
+    display: inherit;
+    cursor: pointer;
+}
+details summary:hover, details summary:focus {
+    color: #ececb3;
+    text-shadow: 0 0 8px #c4c468;
+    box-shadow: unset;
+}
+
+.bigger a {
+    font-size: 120%;
+    color: white !important;
+}
+
+[data-tags~="child1"] a {
+    color: #00ae00;
+}
+[data-tags~="child2"] a {
+    color:rgba(202, 1, 9,1);
+}
+
+.win {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 60%;
+}
+  
+#passages .win a {
+    color: #7d7d7d;
+    border:none;
+}
+
+#passages .win a:hover {
+    text-shadow: 0 0 8px grey !important;
+    box-shadow: unset;
+}
+
+
+#bottom-menu  a {
+    opacity: 0.5;
+    transition: all 0.5s;
+    color: #dd9866;
+}
+#bottom-menu a:hover {
+    opacity: 1;
+    color:#e8b693;
+    box-shadow: none;
+}
+
+
+#ui-dialog {
+    max-width: 600px;
+}
+#ui-dialog-title {
+    padding: .2em 3.5em;
+}
+#ui-dialog-close {
+    height: 100%;
+    width: 3em;
+    color: white;
+}
+#ui-dialog-titlebar {
+    background-color: #111;
+    border: 1px solid #222;
+    border-bottom: none;
+}
+#ui-dialog-body {
+    border: 1px solid #222;
+    border-top: none;
+}

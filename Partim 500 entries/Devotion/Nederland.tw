@@ -1,0 +1,244 @@
+:: Eerst [round premier]
+//Heb je genoeg toewijding om het einde te bereiken?//
+[[Spelen|Een]]
+
+:: Een [round un] 
+[[Spelen|Twee]]
+<div class="win">[[De goede link is hier.|NLSide]]</div>
+
+:: Twee [round deux] 
+[[Spelen|Drie]]
+<div class="win">[[Ik vraag me af of iemand het zal zien.|NLSide]]</div>
+
+:: Drie [round trois]
+[[Spelen|Vier]]
+<div class="win">[[Het is een beetje verborgen.|NLSide]]</div>
+
+:: Vier [round quatre]
+[[Spelen|Vijf]]
+<div class="win">[[Dit spel was aanvankelijk niet eens mijn idee.|NLSide]]</div>
+
+:: Vijf [round cinq] 
+[[Spelen|Zes]]
+<div class="win">[[Dank aan Léo van de Franse IF Discord.|NLSide]]</div>
+
+:: Zes [round six] 
+[[Spelen|Zeven]]
+<details><summary>Tip</summary>: Jij kan de "1" toets om te doorgaan, in plaats van de muis te klikken.</details>
+<div class="win">[[Het was grappig om het te creëren.|NLSide]]</div>
+
+:: Zeven [round sept] 
+[[Spelen|Acht]]
+<div class="win">[[En ik heb een nieuwe animatie vorm geleerd.|NLSide]]</div>
+
+:: Acht [round huit] 
+[[Spelen|Negen]]
+<div class="win">[[LOL, ik heb net iets opgemerkt.|NLSide]]</div>
+
+:: Negen [round neuf] 
+[[Spelen|Tien]]
+<div class="win">[[Het thema is toewijding.|NLSide]]</div>
+
+:: Tien [round dix]
+[[Spelen|Elf]]
+<div class="win">[[En het verhaaltje van het spel is, dat de speler zo toegewijd is aan de auteur...|NLSide]]</div>
+
+:: Elf [dotted onze] 
+[[Spelen|Twalf]]
+<div class="win">[[... dat hij blijft klikken zelf als er geen spel is, eigenlijk.|NLSide]]</div>
+
+:: Twalf [dotted douze] 
+[[Spelen|Dertien]]
+<details><summary>Tip</summary>: Jij kan de toetsen "←" en "→" gebruiken om te terugspoelen en opnieuw doen.</details>
+<div class="win">[[Maar dat is niet alles.|NLSide]]</div>
+
+:: Dertien [dotted treize]
+[[Spelen|Viertien]]
+<div class="win">[[Dit was ook het geval voor alle auteurs van de jam.|NLSide]]</div>
+
+:: Viertien [dotted quatorze] 
+[[Spelen|Vijftien]]
+<div class="win">[[Ze zijn so toegewijd aan de IF dat ze ook een spel hebben gemaakt.|NLSide]]</div>
+
+:: Vijftien [dotted quinze] 
+[[Spelen|Zestien]]
+<div class="win">[[Net voor Kerst!|NLSide]]</div>
+
+:: Zestien [dotted seize]
+[[Spelen|Zeventien]]
+<div class="win">[[Of net na...|NLSide]]</div>
+<style>#lights {opacity:0.2}</style>
+
+:: Zeventien [dotted dixsept]
+[[Spelen|Achttien]]
+<div class="win">[[Ik heb die van mij in twee namiddagen gemaakt...|NLSide]]</div>
+<style>#lights {opacity:0.4}</style>
+
+:: Achttien [dotted dixhuit]
+[[Spelen|Negentien]]
+<div class="win">[[En ik had nog een idee.|NLSide]]</div>
+<style>#lights {opacity:0.6}</style>
+
+:: Negentien [dotted dixneuf]
+[[Spelen|Twintig]]
+<div class="win">[[Maar ik begon het te laat.|NLSide]]</div>
+<style>#lights {opacity:0.8}</style>
+
+:: Twintig [dotted lighting vingt]
+[[Spelen|Eenentwintig]]
+<div class="win">[[Ik zit net iets te vaak te niksen...|NLSide]]</div>
+
+:: Eenentwintig [lighting child1] 
+[[Hehehe|Tweeentwintig]]
+<div class="win">[[Hoewel het mijn vijfde spel in twee maanden is...|NLSide]]</div>
+
+:: Tweeentwintig [lighting child2] 
+[[Rood!|Drieentwintig]]
+<div class="win">[[Moet nu echt een beetje remmen...|NLSide]]</div>
+
+:: Drieentwintig [lighting child1] 
+[[Groen!|Vierentwintig]]
+<div class="win">[[Zal ik volgend jaar langzaam gaan?|NLSide]]</div>
+
+:: Vierentwintig [lighting child2] 
+HEE! Maar wat doe jij hier?
+[[Rood!|Vijfentwintig]]
+<div class="win">[[Misschien.|NLSide]]</div>
+
+:: Vijfentwintig [lighting child1]
+[[Groen!|Zesentwintig]]
+<div class="win">[[Eigenlijk, is dat het plan.|NLSide]]</div>
+
+:: Zesentwintig [lighting child2]
+[[Rood!|Zevenentwintig]]
+<div class="win">[[Het zou fijn.|NLSide]]</div>
+
+:: Zevenentwintig [lighting child1]
+Laat the lichten met rust, hé!
+[[Groen!|Achtentwintig]]
+<div class="win">[[Zeker...|NLSide]]</div>
+
+:: Achtentwintig [lighting child2]
+Hier is het niet Versailles!
+[[Rood!|Negenentwintig]]
+<div class="win">[[... niet.|NLSide]]</div>
+
+:: Negenentwintig [lighting child1]
+[[Groen!|Dertig]]
+<div class="win">[[Moet niet liegen, hé.|NLSide]]</div>
+
+:: Dertig [lighting child2]
+[[Rood!|EenenDertig]]
+<div class="win">[[Het is niet zo, dat ik aan mijn resoluties vasthoud.|NLSide]]</div>
+
+:: EenenDertig [lighting]
+Oké... Genoeg met de lichten, daar...
+[[Maar--|TweeenDertig]]
+<div class="win">[[Het was sowieso een goed jaar.|NLSide]]</div>
+
+:: TweeenDertig
+Maar, helemaal niets. Ik stop ze weg.
+[[Zuurpruim...|DrieenDertig]]
+<div class="win">[[Ik heb veel nieuwe vrienden gemaakt.|NLSide]]</div>
+
+:: DrieenDertig
+[[Oké... dus wanneer kan ik spelen?|VierenDertig]]
+<div class="win">[[Ik heb veel nieuwe dingen te coderen geleerd.|NLSide]]</div>
+
+:: VierenDertig
+Bijna.
+[[Ja, maar het begint lang te duren.|VijfenDertig]]
+<div class="win">[[Ik kon ook mensen helpen met hun code!|NLSide]]</div>
+
+:: VijfenDertig
+Alle goede dingen kosten tijd.
+[[Jouw spel is ooit klaar...|ZesenDertig]]
+<div class="win">[[Als je dit kunt zien, is het nog steeds leuk om alles te lezen.|NLSide]]</div>
+
+:: ZesenDertig
+Geduld...
+[[Je bent heel vervelend.|ZevenenDertig]]
+<div class="win">[[Aan het eind, heb it een beetje 'gewinged'.|NLSide]]</div>
+
+:: ZevenenDertig
+Het komt eraan.
+[[Weet je dat zeker?|Achtendertig]]
+<div class="win">[[Het bijft waarschinlijk ook niet op mijn account.|NLSide]]</div>
+
+:: Achtendertig
+Bah, ja, natuurlijk...
+[[Wat doe ik dan?|Negenendertig]]
+<div class="win">[[Misschien zou ik het op mijn website zetten.|NLSide]]
+[[Dit is het.|https://manonamora.neocities.org/]]</div>
+
+:: Negenendertig
+Jij klikt op de link.
+[[Dat is wat ik blijf doen!|Viertig]]
+<div class="win">[[Hoe dan ook, dit is degene om op te klikken om te "winnen".|NLSide]]</div>
+
+:: Viertig
+Ja, maar heb je <span class="moi">[[daarop|EenenViertig]]</span> geklikt?
+<div class="win">[[Ik was van plan wat rare digen te doen met de knop...|NLSide]]</div>
+
+:: EenenViertig
+<<type 1s>>...<</type>>
+<<timed 3.5s>>[[Heb je misschien een bug?|TweeenViertig]]
+<div class="win">[[Maar goed, ik ben op het laatste moment begonnen.|NLSide]]</div><</timed>>
+
+:: TweeenViertig
+Kom op!
+[[Sorry, maar...|DrieenViertig]]
+<div class="win">[[En ik was te lui om veel tests uit de voeren.|NLSide]]</div>
+
+:: DrieenViertig
+<span id="pas">Doe maar. Klik op de knop. Zal het zien.
+<<link "Dit?">>
+    <<replace "#pas" t8n>>Een andere keer.
+        <<link "Nu wordt het me teveel.">>
+            <<replace "#pas" t8n>>Driemaal is scheepsrecht !
+                [[Zeg ik... Het gaat niet werken.|VierenViertig]]
+                <div class="win">[[En dan jij. Hoe gaat het met je?|NLSide]]</div>
+            <</replace>>
+        <</link>>
+        <div class="win">[[Ik heb er hoe dan ook plezier aan gehad.|NLSide]]</div>
+    <</replace>>
+<</link>>
+<div class="win">[[Ik... heb niet veel toewijding aand de IF.|NLSide]]</div>
+</span>
+
+:: VierenViertig 
+<<timed 3s>>[[Zie je wel!|VijfenViertig]]
+<div class="win">[[Heb je een goed jaar gehad?|NLSide]]</div><</timed>>
+
+:: VijfenViertig
+[[Dit is gewoon onzin...|ZesenViertig]]
+<div class="win">[[Je kunt me niet echt antwoorden, heh...|NLSide]]</div>
+
+:: ZesenViertig
+[[Ik heb mijn tijd voor niets verspild!|ZevenenViertig]]
+<div class="win">[[Anders kun je een opmerking achterlaten.|NLSide]]</div>
+
+:: ZevenenViertig
+Zeg dat niet! Je bent bijna klaar!
+[[Toch? Maar ik heb niks gedaan!|AchtenViertig]]
+<div class="win">[[Ik hoop dat alles goed is.|NLSide]]</div>
+
+:: AchtenViertig
+Jawel!
+[[Klikken op een enkele link is niets|NegenenViertig]]
+<div class="win">[[We zijn bijna aan het einde.|NLSide]]</div>
+
+:: NegenenViertig
+Er was niet slechts één link op de pagina ;)
+[[Hè?!|Vijftig]]
+<div class="win">[[Ik wens je een gelukkig nieuwjaar.|NLSide]]</div>
+
+:: Vijftig
+Topie! Goed gespeld!
+<details><summary>Tip</summary>: In de rechterhoek zit nog een knop. Als je [[hier|Een][$ok to true]] klikt, kun je het spel opnieuw starten en is de tekst zichtbaarder.</details>
+<div class="win">[[Bedankt voor het spelen!|NLSide]]</div>
+
+:: NLSide
+Je hebt de verborgen link gevonden!
+
+<<link "Terug">><<run Engine.backward()>><</link>>
