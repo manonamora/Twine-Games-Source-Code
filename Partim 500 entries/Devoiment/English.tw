@@ -1,0 +1,105 @@
+:: ENPass1
+retard: 0
+--
+*Following the discovery of ancient ruins during the excavation for the new ramp, the RN758 will be closed until further notice. A deviation has been settled at poles 483 and 509, via Sainte-Catherine. Add fifty-five–*
+
+[after 8s]
+[align center]
+[[Well, shit…|ENPass2]]
+
+
+:: ENPass2
+Although you were purposefully running late (to avoid your tedious uncle Bernard), this radio broadcast does not please you. Not one bit. You had promised your mother to arrive in time for the aperitif, but now… you’d be lucky to be there for the entrée. Maybe even before the oysters.
+
+* [[Turn around and go home|ENEND1]]
+* [[Continue forth|ENPass3]]
+
+
+:: ENPass3
+retard: retard + 10
+--
+Since Gramps always attend with his schnapps, you know you can endure this detour (and your uncle’s not-so-funny jokes). And well, it will make your mother happy to see you there, for once – she already racked you over the coals last Christmas when you cancelled last minute.
+
+On your [[right|ENPass4]], the deviation sign.
+
+
+:: ENPass4
+retard: retard + 5
+chemin: 0
+--
+You exit national road and carefully follow the traffic signs. Instead of crossing the countryside of your childhood, your detour takes you through the “*glorious*” hamlet of Sainte-Catherine – your mother will feel sorry for you…
+
+Harboring some hundred inhabitants, the village is quite strangely built. A real-life labyrinth, in which you've lost yourself many times. And…
+
+… this is also where the deviation signs disappear.
+[align center]
+*Shit!*
+[cont]
+You turn { [[right]] - [[left]] }.
+
+
+:: right
+retard: retard + 5
+chemin: chemin + 1
+_random: random.d4
+--
+[if _random === 4]
+You enter the first street on your right, hoping to find the exit of *this damned village*. But, you only find a new crossing.
+[if _random === 2]
+You turn right, and stop yourself from punching the steering wheel when you come across an intersection at the end of the street, instead of the wished exit.
+[if _random === 1]
+You take the street on your right, believing that you recognize the area, but… you are still quite lost.
+[if _random === 3]
+Turning right, you hope to catch a traffic sign. You soon find yourself grumbling when you still find none. *I bet they hid them all…*
+
+[if chemin < 8]
+You turn { [[right]] - [[left]] }.
+[else]
+You turn { [[right|ENPass5]] - [[left|ENPass5]] }.
+
+
+:: left
+retard: retard + 5
+chemin: chemin + 1
+_random: random.d4 
+--
+[if _random === 1]
+You enter the first street on your left, hoping to find the exit of *this damned village*. But, you only find a new crossing.
+[if _random === 2]
+You turn left, and hold yourself from biting your fingers when you come across an intersection at the end of the street, instead of the wished exit.
+[if _random === 3]
+You take the street on your left, believing that you recognize the area, but… you are still quite lost.
+[if _random === 4]
+Turning left, you hope to find a traffic sign. You soon hear yourself grumbling when none are around. *They really suck…*
+
+[if chemin < 8]
+You turn { [[right]] - [[left]] }.
+[else]
+You turn { [[right|ENPass5]] - [[left|ENPass5]] }.
+
+
+:: ENPass5
+After what feels like an eternity, you finally leave the cursed village… You look at the time and grimace: you are {retard} minutes late. Your mother will definitely nag you, now…
+
+You press a little harder on the [[accelerator|ENPass6]].
+
+
+:: ENPass6
+When you park by your mother’s house, you find her already waiting by the door, tapping her foot.
+
+– Weeell… you took your sweet time!\
+– Hi Mom, you roll your eyes.\
+– You know we’re almost done with the foie-gras, right? And Bernard is drowning his second bottle already!\
+– It’s a good thing I brought my own, you hand her your bag.\
+– But, sweetie, why are you so late, she finally comes forward to embrace you.\
+– They closed the national road.\
+– And?\
+– You have to go through Sainte-Cathe–\
+– *Oh*, she pulls you into her arms. My poor little girl. Come. Get inside. I'll toast you a few slices. Go sit.
+
+~ FIN ~
+
+:: ENEND1 
+Ultimately, *no*. You don't want to get stuck in traffic, or drive the long detour, or handle your uncle’s atrocious jokes, nor any drunken discussion about politics. You’ll surely find some good excuse for your mother – she’ll definitely give you a hard time, but it’ll still be less annoying…
+
+~ Fin ~ 

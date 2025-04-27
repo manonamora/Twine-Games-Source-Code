@@ -1,0 +1,123 @@
+:: StoryTitle
+Dévoiement
+
+
+:: StoryData
+{
+  "ifid": "91D77EF1-F84D-40B8-BEFF-799E070A8018",
+  "format": "Chapbook",
+  "format-version": "2.3.0",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Start
+lang: ''
+about: ''
+config.footer.right: '{embed passage:"Restart"}'
+config.footer.left: '{embed passage:"Title"}'
+config.footer.center: '{embed passage:"Extra"}'
+config.style.backdrop: '#000039'
+config.style.page.color: "white"
+config.style.page.link.active.color: "raspberry-4 on raspberry-2"
+config.style.page.link.active.font: "red-1"
+config.style.page.link.active.lineColor: "red-8"
+config.style.page.link.color: "#d3ffc6"
+--
+[align center]
+
+[[EN]] - [[FR]] - [[NL]]
+[CSS]
+#page > footer {display: none;}
+
+
+:: Title 
+[if lang === "English"]
+*Deviation*
+
+[if lang === "Français"]
+*Dévoiement*
+
+[if lang === "Nederlands"]
+*Omleiding*
+
+
+:: Extra 
+<p id="about" class="link" onclick="setup.showPopup('popup-about')">{about}</p>
+<div id="popup-about" style='display:none;visibility: hidden;'>
+	<div id="popup-about-wrapper">
+		<div id="popup-titlebar">
+  			<h2 id="popup-title">{about}</h2>
+	  		<span id="popup-close" onclick="setup.closePopup('popup-about')">X</span>
+  		</div>
+		<div id="popup-body">{embed passage: "Credits"}</div>
+	</div>
+</div>
+
+:: Credits
+[if lang === "English" ]
+*Deviation* was a mini-IF, originally created in 2023 for the [[Partim500|https://itch.io/jam/fr-partim-500-an-2023]], before being recently translated. Written in only a couple of hours, the story is set during the holiday season, following a complex trip through a small remote village. The inspiration for this setting came after a discussion on the [[French IF Community|https://www.fiction-interactive.fr/]]'s Discord, which pointed out the lack of games around Christmas.
+
+This game follows the previous jam entry, in that I tried something new: here, a new Twine format (i.e. Chapbook). As well, I wanted to try downscaling a mechanic ("labyrinth") from another game to this short of a space. Which I think worked pretty well.
+
+While it has two distinct endings and a maze called Saint-Catherine, the story still stays quite linear and unchanging. It plays instead with random variation in the text to keep the driving interesting.
+
+So, I hope you will have/had fun playting through it all!
+[if lang === "Français"]
+*Dévoiement* est une mini-FI, créée en 2023 pendant l’estivale [[Partim500|https://itch.io/jam/fr-partim-500-an-2023]]. Écrite seulement en quelques heures, l’histoire prend forme pendant les fêtes de fin d’année, suivant le trajet plutôt compliqué dans un petit village perdu. L’inspiration pour ce décor est venue à la suite d’une discussion sur le Discord de la [[Communauté Francophone de la Fiction Interactive|https://www.fiction-interactive.fr/]], remarquant le manque de jeux autour de Noël.
+
+Ce jeu suit ma précédente entrée à la game jam, du fait que j’ai utilisé cette opportunité pour essayer un nouveau format de Twine (i.e. Chapbook), ainsi que de répéter une mécanique en plus petit format ("labyrinthe" mais hasardeux). Je pense que ça a plutôt bien marché, finalement.
+
+Malgré ses deux fins distinctes et le dédale nommé Sainte-Catherine, l’histoire reste tout de même très linéaire et inchangeable, jouant avec la variation aléatoire du texte pour rendre la conduite plus intéressante.
+
+Bref, j'espère que vous avez aimé/aimerez jouer à ce jeu !
+[if lang === "Nederlands"]
+*Omleiding* was een mini-IF, oorspronkelijk gemaakt in 2023 voor de [[Partim500|https://itch.io/jam/fr-partim-500-an-2023]], voordat het onlangs werd vertaald. Het verhaal is in slechts een paar uur geschreven en speelt zich af tijdens de feestdagen, na een complexe reis door een klein afgelegen dorp. De inspiratie voor deze setting kwam na een discussie in de [[Franse IF-gemeenschap| https://www.fiction-interactive.fr/]] Discord, waarin werd gewezen op het gebrek aan games rond Kerstmis.
+
+Deze game volgt de vorige jam-vermelding, omdat ik iets nieuws probeerde: hier een nieuw Twine-formaat (d.w.z. Chapbook). Ook wilde ik proberen een monteur ("labyrint") te verkleinen van een ander spel naar een korte ruimte. Wat volgens mij redelijk goed werkte.
+
+Hoewel het twee verschillende eindes heeft en een doolhof genaamd Saint-Catherine, blijft het verhaal nog steeds vrij lineair en onveranderlijk. Het speelt in plaats daarvan met willekeurige variatie in de tekst om het rijden interessant te houden.
+
+Dus hoop ik dat men hier plezier aan kan beleven!
+[continue]
+Made with [[Twine|https://twinery.org/]]/[[Chapbook|https://klembot.github.io/chapbook/guide/]]. Game by [[Manonamora|https://manonamora.itch.io/]].
+
+
+:: Restart
+[if lang === "English"]
+{restart link}
+
+[if lang === "Français"]
+{restart link, label: "Recommencer"}
+
+[if lang === "Nederlands"]
+{restart link, label: "Herstart"}
+
+
+:: EN
+lang: 'English'
+about: 'ABOUT'
+--
+[align center]
+Twists and turns and a...
+[[**DEVIATION**|ENPass1]]
+
+
+:: NL 
+lang: 'Nederlands'
+about: 'OVER'
+--
+[align center]
+[[**OMLEIDING**|NLPass1]]
+
+
+:: FR
+lang:'Français'
+about: 'À PROPOS'
+--
+[align center]
+Tournants et rebondissements et un...
+[[**DÉVOIEMENT**|Pass1]]
+
+
