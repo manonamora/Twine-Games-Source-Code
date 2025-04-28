@@ -1,198 +1,186 @@
 :: AE1_en [english]
-    <<timed 1s t8n>>Blue, red, no shirts. 
-    <<next>>Pile of immobile bodies. 
-    <<next>>Black and Yellow chequered patterns. 
-    <<next>>Dead eyes. 
-    <<next>>Tangled damaged cables. 
-    <<next>>Discarded dummies…
-    <<next>>
-    <<next>>[[One of them?|END]]<</timed>>
+<<timed $timerOne t8n>>Blue, red, no shirts. 
+<<next>>Pile of immobile bodies. 
+<<next>>Black and Yellow chequered patterns. 
+<<next>>Dead eyes. 
+<<next>>Tangled damaged cables. 
+<<next>>Discarded dummies…
+<<next>>
+<<next>>[[One of them?|END]]<</timed>>
 
 :: ActualEnd_en [english]
-    [[Open Eyes|AE1]]
-    <<unset $crash>>
+[[Open Eyes|AE1]]
+<<unset $crash>>
 
 :: Crash_en [english]
-    <<audio "crash" play>>
-    <<timed 3s>><<set $turn to 0>><<goto "TryAgain">><</timed>>
-
-:: Credits_en [english]
-    <center><h3>COLLISION</h3>\
-    A short game created by [[manonamora|https://manonamora.itch.io/]] for the Neo Twiny Jam.
-    <hr>
-    <h4>Assets</h4>\
-    Dialog API: [[Chapel|https://github.com/ChapelR/custom-macros-for-sugarcube-2]]
-    Text Animation: [[Unused CSS|https://unused-css.com/blog/css-shake-animation/]]
-    SFX: [[Eponn|https://freesound.org/people/Eponn/]]
-    <hr>
-    Find my other games on [[itch|https://manonamora.itch.io/]] or follow my [[dev blog|https://manonamora-if.tumblr.com]].
-    </center>
+<<audio "crash" play>>
+<<timed $timerThree>><<set $turn to 0>><<goto "TryAgain">><</timed>>
 
 :: END_en [english]
-    <div id="title">COLLISION</div>
-    <div id="start"><<link "Restart?">><<script>>Engine.restart()<</script>><</link>></div>
+<div id="title">COLLISION</div>
+<div id="start"><<link "Restart?">><<run Engine.restart()>><</link>></div>
 
 :: ExamineCar_en [english]
-    <<timed 1s t8n>>Bare silver frame.
-    <<next>>Missing windshield.
-    <<next>>Back and side mirrors.
-    <<next>>Chequered wheel.
-    <<next>>Two passengers.
-    <<next>>Cables everywhere.
+<<timed $timerOne t8n>>Bare silver frame.
+<<next>>Missing windshield.
+<<next>>Back and side mirrors.
+<<next>>Chequered wheel.
+<<next>>Two passengers.
+<<next>>Cables everywhere.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: ExamineVehicle_en [english]
-    <<timed 1s t8n>>Bright light.
-    <<next>>Blurred lines.
-    <<next>>Approaching mass.
-    <<next>>Roaring engine.
-    <<next>>Immobile limbs.
+<<timed $timerOne t8n>>Bright light.
+<<next>>Blurred lines.
+<<next>>Approaching mass.
+<<next>>Roaring engine.
+<<next>>Immobile limbs.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: LookAhead_en [english]
-    <<timed 1s t8n>>Bare silver frame.
-    <<next>>Missing windshield.
-    <<next>>Bright light.
-    <<next>>Empty moving vehicle.
+<<timed $timerOne t8n>>Bare silver frame.
+<<next>>Missing windshield.
+<<next>>Bright light.
+<<next>>Empty moving vehicle.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: LookAround_en [english]
-    <<timed 1s t8n>>Stuck neck.
-    <<next>>Passenger.
-    <<next>>Bald.
-    <<next>>Red shirt.
-    <<next>>Beige pants.
-    <<next>>Chequered Lines.
-    <<next>>Seat belt.
+<<timed $timerOne t8n>>Stuck neck.
+<<next>>Passenger.
+<<next>>Bald.
+<<next>>Red shirt.
+<<next>>Beige pants.
+<<next>>Chequered Lines.
+<<next>>Seat belt.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: LookSelf_en [english]
-    <<timed 1s t8n>>Stuck neck.
-    <<next>>Blue shirt.
-    <<next>>No pants.
-    <<next>>Yellow and black dots on arms.
+<<timed $timerOne t8n>>Stuck neck.
+<<next>>Blue shirt.
+<<next>>No pants.
+<<next>>Yellow and black dots on arms.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: LookSelfAgain_en [english] 
-    <<timed 1s t8n>>Stuck neck.
-    <<next>>Blue shirt.
-    <<next>>No pants.
-    <<next>>Yellow and black dots on arms.
-    <<next>>Missing seat belt.
+<<timed $timerOne t8n>>Stuck neck.
+<<next>>Blue shirt.
+<<next>>No pants.
+<<next>>Yellow and black dots on arms.
+<<next>>Missing seat belt.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: LookUp_en [english]
-    <<timed 1s t8n>>Stuck neck.
-    <<next>>Glance in mirror.
-    <<next>>Seated child.
-    <<next>>Grey suit.
-    <<next>>Yellow and black circles on cheeks.
-    <<next>>Missing seat belt.
+<<timed $timerOne t8n>>Stuck neck.
+<<next>>Glance in mirror.
+<<next>>Seated child.
+<<next>>Grey suit.
+<<next>>Yellow and black circles on cheeks.
+<<next>>Missing seat belt.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: MoveHands_en [english]
-    <<timed 1s t8n>>Hands on chequered wheel.
-    <<next>>Attached fingers.
-    <<next>>Immobile limbs.
-    <<next>>Silence.
+<<timed $timerOne t8n>>Hands on chequered wheel.
+<<next>>Attached fingers.
+<<next>>Immobile limbs.
+<<next>>Silence.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: MoveEnd_en [english]
-    <<timed 0.5s t8n>>Immobile limbs.
-    <<next>>Escape impossible.<</timed>>
+<<timed $timerZeroFive t8n>>Immobile limbs.
+<<next>>Escape impossible.<</timed>>
 
-    <<timed 2.5s>><<goto "Crash">><</timed>>
+<<timed $timerTwoFive>><<goto "Crash">><</timed>>
 
 :: OpenEyes_en [english]
-    <<timed 1s t8n>>Hands on chequered wheel.
-    <<next>>Attached fingers.
-    <<next>>Immobile limbs.
-    <<next>>Silence.
+<<timed $timerOne t8n>>Hands on chequered wheel.
+<<next>>Attached fingers.
+<<next>>Immobile limbs.
+<<next>>Silence.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: OrderChild_en [english]
-    <<timed 1s t8n>>No word.
-    <<next>>No voice.
-    <<next>>No sound.
-    <<next>>Immobile child.
-    <<next>>Dead eyes.
-    <<next>>Worries.
+<<timed $timerOne t8n>>No word.
+<<next>>No voice.
+<<next>>No sound.
+<<next>>Immobile child.
+<<next>>Dead eyes.
+<<next>>Worries.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: PullOwnSeatBelt_en [english]
-    <<timed 1s t8n>>Immobile limbs.
-    <<next>>Stuck neck.
-    <<next>>Worries.
+<<timed $timerOne t8n>>Immobile limbs.
+<<next>>Stuck neck.
+<<next>>Worries.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: Scream_en [english]
-    <<timed 1s t8n>>No word.
-    <<next>>No voice.
-    <<next>>No sound.
-    <<next>>No breath.
+<<timed $timerOne t8n>>No word.
+<<next>>No voice.
+<<next>>No sound.
+<<next>>No breath.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: First_en [english]
-    [[Open Eyes|OpenEyes][$turn ++]]
+[[Open Eyes|OpenEyes][$turn ++]]
 
 :: TalkPassenger_en [english]
-    <<timed 1s t8n>>No word.
-    <<next>>No voice.
-    <<next>>No sound.
-    <<next>>No movement.
-    <<next>>Immobile passenger.
-    <<next>>Stuck neck.
-    <<next>>Worries.
+<<timed $timerOne t8n>>No word.
+<<next>>No voice.
+<<next>>No sound.
+<<next>>No movement.
+<<next>>Immobile passenger.
+<<next>>Stuck neck.
+<<next>>Worries.
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: Think_en [english]
-    <<timed 1s t8n>>Incoherent thoughts.
-    <<next>>Incomprehension.
-    <<next>>Concerns.
-    <<next>>Confusion.
-    <<next>>Scared?
+<<timed $timerOne t8n>>Incoherent thoughts.
+<<next>>Incomprehension.
+<<next>>Concerns.
+<<next>>Confusion.
+<<next>>Scared?
 
-    <<next>><<Car>>
-    <<next>><<Actions>><</timed>>
+<<next>><<Car>>
+<<next>><<Actions>><</timed>>
 
 :: Title_en [english]
-    <div id="title">COLLISION</div>
-    <div id="start">[[Start|First]]</div>
+<div id="title">COLLISION</div>
+<div id="start">[[Start|First]]</div>
     <span id="underhr"><hr>
     Warning: animated text, loud noise.
-    <<link "Settings">><<script>>UI.settings()<</script>><</link>>
-    <<link "Credits">><<popup 'Credits_en' "Credits">><</link>>
-    </span>
+    <<link "Settings">><<run UI.settings()>><</link>>
+    <<link "Credits">><<run Dialog.create("About").wikiPassage("Credits").open();>><</link>>
+</span>
 
 :: TryAgain_en [english]
-    <<timed 0.1s t8n>><center>Try $number</center><div id="start" class="start">FAILURE</div>
-    <div class="circle">[[Again?|First][$turn to 0, $actions to {}, $number ++, $crash ++]]</div><</timed>>
+<<timed 0.1s t8n>><center>Try $number</center><div id="start" class="start">FAILURE</div>
+<div class="circle">[[Again?|First][$turn to 0, $actions to {}, $number ++, $crash ++]]</div><</timed>>
 
 :: Start_en
-<<link "English" "Title">><<set settings.lang to "English">><<run Setting.save();>><</link>> | <<link "Français" "Title">><<set settings.lang to "Français">><<run Setting.save();>><</link>>
+<<LanguagePick>>

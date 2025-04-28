@@ -61,7 +61,7 @@ config.style.page.link.color: "#d3ffc6"
 
 This game follows the previous jam entry, in that I tried something new: here, a new Twine format (i.e. Chapbook). As well, I wanted to try downscaling a mechanic ("labyrinth") from another game to this short of a space. Which I think worked pretty well.
 
-While it has two distinct endings and a maze called Saint-Catherine, the story still stays quite linear and unchanging. It plays instead with random variation in the text to keep the driving interesting.
+While it has two distinct endings and a maze called Sainte-Catherine, the story still stays quite linear and unchanging. It plays instead with random variation in the text to keep the driving interesting.
 
 So, I hope you will have/had fun playting through it all!
 [if lang === "Français"]
@@ -77,7 +77,7 @@ Bref, j'espère que vous avez aimé/aimerez jouer à ce jeu !
 
 Deze game volgt de vorige jam-vermelding, omdat ik iets nieuws probeerde: hier een nieuw Twine-formaat (d.w.z. Chapbook). Ook wilde ik proberen een monteur ("labyrint") te verkleinen van een ander spel naar een korte ruimte. Wat volgens mij redelijk goed werkte.
 
-Hoewel het twee verschillende eindes heeft en een doolhof genaamd Saint-Catherine, blijft het verhaal nog steeds vrij lineair en onveranderlijk. Het speelt in plaats daarvan met willekeurige variatie in de tekst om het rijden interessant te houden.
+Hoewel het twee verschillende eindes en een doolhof genaamd Sainte-Catherine heeft, blijft het verhaal nog steeds vrij lineair en onveranderlijk. Het speelt in plaats daarvan met willekeurige variatie in de tekst om het rijden interessant te houden.
 
 Dus hoop ik dat men hier plezier aan kan beleven!
 [continue]

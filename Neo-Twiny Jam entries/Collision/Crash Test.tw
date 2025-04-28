@@ -1,73 +1,110 @@
 :: StoryTitle
-  COLLISION
+    COLLISION
 
 :: StoryData
-  {
+{
     "ifid": "7825D16E-D51C-4611-A824-06BF305A38B3",
     "format": "SugarCube",
-    "format-version": "2.36.1",
+    "format-version": "2.37.3",
     "start": "Start",
-    "tag-colors": {
-      "widget": "red",
-      "nobr": "orange"
-    },
     "zoom": 1
-  }
+}
 
 :: StoryInit {"position":"475,300","size":"100,100"}
-  <<set $number to random(458, 20398)>>
-  <<set $actions to {}>>
-  <<set $turn to 0>>
-  <<set $crash to 0>>
-  <<cacheaudio "crash" "crash-audio.wav">>
+<<set $number to random(458, 20398)>>
+<<set $actions to {}>>
+<<set $turn to 0>>
+<<set $crash to 0>>
+<<cacheaudio "crash" "crash-audio.wav">>
 
 :: StoryInterface {"position":"850,300","size":"100,100"}
-    <div id="container">
-        <div id="passages"></div>
-        <div id="menu" data-passage="menu"></div>
-    </div>
+<div id="container">
+    <div id="passages"></div>
+    <div id="menu" data-passage="menu"></div>
+</div>
+
 :: Start [starting]
+
 :: Widget [widget nobr] {"position":"600,300","size":"100,100"}
-  <<widget "Actions">>
-      <ul>
-          <<if !$actions.movehands>><li> <<link '<<if settings.lang is "English">>Move Hands<<else>>Bouger les Mains<</if>>' "MoveHands">><<set $actions.movehands to true, $turn ++>><</link>></li><</if>>
+<<widget "Actions">>
+    <ul>
+        <<if !$actions.movehands>><li> <<link '<<if settings.lang is "Nederlands">>Handen Bewegen<<elseif settings.lang is "English">>Move Hands<<else>>Bouger les Mains<</if>>' "MoveHands">><<set $actions.movehands to true, $turn ++>><</link>></li><</if>>
           
-          <<if !$actions.lookself>><li> <<link '<<if settings.lang is "English">>Look Self<<else>>Se Regarder<</if>>' "LookSelf">><<set $actions.lookself to true, $turn ++>><</link>></li><</if>>
-          <<if ($actions.lookaround or $actions.lookup) and $actions.lookself and !$actions.lookselfagain>><li> <<link '<<if settings.lang is "English">>Look Self Again<<else>>Se Regarder de Nouveau<</if>>' "LookSelfAgain">><<set $actions.lookselfagain to true, $turn ++>><</link>></li><</if>>
-          <<if $actions.lookselfagain and !$actions.ownseatbelt>><li> <<link '<<if settings.lang is "English">>Pull Own Seat Belt<<else>>Tirer Ceinture de Sécurité<</if>>' "PullOwnSeatBelt">><<set $actions.ownseatbelt to true, $turn ++>><</link>></li><</if>>
+        <<if !$actions.lookself>><li> <<link '<<if settings.lang is "Nederlands">>Zelf Kijken<<elseif settings.lang is "English">>Look Self<<else>>Se Regarder<</if>>' "LookSelf">><<set $actions.lookself to true, $turn ++>><</link>></li><</if>>
+        <<if ($actions.lookaround or $actions.lookup) and $actions.lookself and !$actions.lookselfagain>><li> <<link '<<if settings.lang is "Nederlands">>Zelf Opnieuw Kijken<<elseif settings.lang is "English">>Look Self Again<<else>>Se Regarder de Nouveau<</if>>' "LookSelfAgain">><<set $actions.lookselfagain to true, $turn ++>><</link>></li><</if>>
+        <<if $actions.lookselfagain and !$actions.ownseatbelt>><li> <<link '<<if settings.lang is "Nederlands">>de Veiligheidsgordel Omtreken<<elseif settings.lang is "English">>Pull Own Seat Belt<<else>>Tirer Ceinture de Sécurité<</if>>' "PullOwnSeatBelt">><<set $actions.ownseatbelt to true, $turn ++>><</link>></li><</if>>
           
-          <<if !$actions.lookaround>><li> <<link '<<if settings.lang is "English">>Look Around<<else>>Regarder Autour<</if>>' "LookAround">><<set $actions.lookaround to true, $turn ++>><</link>></li><</if>>
-          <<if $actions.lookaround and !$actions.talkpassenger>><li> <<link '<<if settings.lang is "English">>Talk Passenger<<else>>Parler au Passager<</if>>' "TalkPassenger">><<set $actions.talkpassenger to true, $turn ++>><</link>></li><</if>>
+        <<if !$actions.lookaround>><li> <<link '<<if settings.lang is "Nederlands">>Rondkijken<<elseif settings.lang is "English">>Look Around<<else>>Regarder Autour<</if>>' "LookAround">><<set $actions.lookaround to true, $turn ++>><</link>></li><</if>>
+        <<if $actions.lookaround and !$actions.talkpassenger>><li> <<link '<<if settings.lang is "Nederlands">>met Passagier Praten<<elseif settings.lang is "English">>Talk Passenger<<else>>Parler au Passager<</if>>' "TalkPassenger">><<set $actions.talkpassenger to true, $turn ++>><</link>></li><</if>>
 
           
-          <<if !$actions.lookup>><li> <<link '<<if settings.lang is "English">>Look Up<<else>>Regarder en Haut<</if>>' "LookUp">><<set $actions.lookup to true, $turn ++>><</link>></li><</if>>
-          <<if $actions.lookup and !$actions.orderchild>><li> <<link '<<if settings.lang is "English">>Order Child<<else>>Commander Enfant<</if>>' "OrderChild">><<set $actions.orderchild to true, $turn ++>><</link>></li><</if>>
+        <<if !$actions.lookup>><li> <<link '<<if settings.lang is "Nederlands">>Omhoog Kijken<<elseif settings.lang is "English">>Look Up<<else>>Regarder en Haut<</if>>' "LookUp">><<set $actions.lookup to true, $turn ++>><</link>></li><</if>>
+        <<if $actions.lookup and !$actions.orderchild>><li> <<link '<<if settings.lang is "Nederlands">>Commanderen Kind<<elseif settings.lang is "English">>Order Child<<else>>Commander Enfant<</if>>' "OrderChild">><<set $actions.orderchild to true, $turn ++>><</link>></li><</if>>
           
-          <<if !$actions.lookahead>><li> <<link '<<if settings.lang is "English">>Look Ahead<<else>>Regarder Devant<</if>>' "LookAhead">><<set $actions.lookahead to true, $turn ++>><</link>></li><</if>>
-          <<if $actions.lookahead and !$actions.examcar>><li> <<link '<<if settings.lang is "English">>Examine Car<<else>>Examiner Voiture<</if>>' "ExamineCar">><<set $actions.examcar to true, $turn ++>><</link>></li><</if>>
-          <<if $actions.lookahead and !$actions.examvehicle>><li> <<link '<<if settings.lang is "English">>Examine Vehicle<<else>>Examiner Véhicule<</if>>' "ExamineVehicle">><<set $actions.examvehicle to true, $turn ++>><</link>></li><</if>>
+        <<if !$actions.lookahead>><li> <<link '<<if settings.lang is "Nederlands">>Vooruit Kijken<<elseif settings.lang is "English">>Look Ahead<<else>>Regarder Devant<</if>>' "LookAhead">><<set $actions.lookahead to true, $turn ++>><</link>></li><</if>>
+        <<if $actions.lookahead and !$actions.examcar>><li> <<link '<<if settings.lang is "Nederlands">>Auto Onderzoeken<<elseif settings.lang is "English">>Examine Car<<else>>Examiner Voiture<</if>>' "ExamineCar">><<set $actions.examcar to true, $turn ++>><</link>></li><</if>>
+        <<if $actions.lookahead and !$actions.examvehicle>><li> <<link '<<if settings.lang is "Nederlands">>Voertuig Onderzoeken<<elseif settings.lang is "English">>Examine Vehicle<<else>>Examiner Véhicule<</if>>' "ExamineVehicle">><<set $actions.examvehicle to true, $turn ++>><</link>></li><</if>>
           
-          <<if !$actions.think and $turn > 3>><li> <<link '<<if settings.lang is "English">>Think<<else>>Réfléchir<</if>>' "Think">><<set $actions.think to true, $turn ++>><</link>></li><</if>>
-          <<if !$actions.scream and $turn > 3>><li> <<link '<<if settings.lang is "English">>Scream<<else>>Hurler<</if>>' "Scream">><<set $actions.scream to true, $turn ++>><</link>></li><</if>>
+        <<if !$actions.think and $turn > 3>><li> <<link '<<if settings.lang is "Nederlands">>Denken<<elseif settings.lang is "English">>Think<<else>>Réfléchir<</if>>' "Think">><<set $actions.think to true, $turn ++>><</link>></li><</if>>
+        <<if !$actions.scream and $turn > 3>><li> <<link '<<if settings.lang is "Nederlands">>Schreeuwen<<elseif settings.lang is "English">>Scream<<else>>Hurler<</if>>' "Scream">><<set $actions.scream to true, $turn ++>><</link>></li><</if>>
           
-          <<if $turn gt 4>><li> <<link '<<if settings.lang is "English">>Open Door<<else>>Ouvrir la Porte<</if>>' "MoveEnd">><</link>></li><</if>>
-          <<if $turn gt 4>><li> <<link '<<if settings.lang is "English">>Turn Wheel<<else>>Tourner le Volant<</if>>' "MoveEnd">><</link>></li><</if>>
-          <<if $turn gt 4>><li> <<link '<<if settings.lang is "English">>Escape<<else>>Fuire<</if>>' "MoveEnd">><</link>></li><</if>>
-      </ul>
-  <</widget>>
+        <<if $turn gt 4>><li> <<link '<<if settings.lang is "Nederlands">>Deur Openen<<elseif settings.lang is "English">>Open Door<<else>>Ouvrir la Porte<</if>>' "MoveEnd">><</link>></li><</if>>
+        <<if $turn gt 4>><li> <<link '<<if settings.lang is "Nederlands">>Wiel Draaien<<elseif settings.lang is "English">>Turn Wheel<<else>>Tourner le Volant<</if>>' "MoveEnd">><</link>></li><</if>>
+        <<if $turn gt 4>><li> <<link '<<if settings.lang is "Nederlands">>Ontsnappen<<elseif settings.lang is "English">>Escape<<else>>Fuire<</if>>' "MoveEnd">><</link>></li><</if>>
+    </ul>
+<</widget>>
 
-  <<widget "Car">>
+<<widget "Car">>
     <<switch $turn>>
-        <<case 1>><span class="rise-shake"><<if settings.lang is "English">>Clanking noise<<else>>Bruit de cliquetis<</if>>.</span>
-          <<case 2>><span class="constant-tilt-shaking"><<if settings.lang is "English">>Incoherent mumbles<<else>>Marmonnements incohérents<</if>>.</span>
-          <<case 3>><span class="skew-shake-x"><<if settings.lang is "English">>Roaring engine<<else>>Moteur rugissant<</if>>.</span>
-          <<case 4>><<if settings.lang is "English">>Rolling tires<<else>>Pneus roulants<</if>>.
-          <<case 5>><<if settings.lang is "English">>Blinding lights<<else>>Voyants aveuglants<</if>>.
-      <</switch>>
-  <</widget>>
+        <<case 1>><span class="rise-shake"><<if settings.lang is "Nederlands">>Ruisend geluid<<elseif settings.lang is "English">>Clanking noise<<else>>Bruit de cliquetis<</if>>.</span>
+        <<case 2>><span class="constant-tilt-shaking"><<if settings.lang is "Nederlands">>Onsamenhangende mompelt<<elseif settings.lang is "English">>Incoherent mumbles<<else>>Marmonnements incohérents<</if>>.</span>
+        <<case 3>><span class="skew-shake-x"><<if settings.lang is "Nederlands">>Ronkende motor<<elseif settings.lang is "English">>Roaring engine<<else>>Moteur rugissant<</if>>.</span>
+        <<case 4>><<if settings.lang is "Nederlands">>Rollende banden<<elseif settings.lang is "English">>Rolling tires<<else>>Pneus roulants<</if>>.
+        <<case 5>><<if settings.lang is "Nederlands">>Verblindende lichten<<elseif settings.lang is "English">>Blinding lights<<else>>Voyants aveuglants<</if>>.
+    <</switch>>
+<</widget>>
+
+<<widget "LanguagePick">>
+    <<link "English" "Title">><<set settings.lang to "English">><<run Setting.save();>><</link>> | <<link "Français" "Title">><<set settings.lang to "Français">><<run Setting.save();>><</link>> | <<link "Nederlands" "Title">><<set settings.lang to "Nederlands">><<run Setting.save();>><</link>>
+    <div id="mini-menu"><a href="https://twinery.org/"><img src="img/twine.svg"></a> <a ref="https://www.motoslave.net/sugarcube/2"><img src="img/SugarCube.png"></a> <a href="https://manonamora.neocities.org/"><img src="img/Manonamora.png"></a></div>
+<</widget>>
 
 :: menu [nobr] {"position":"1075,300","size":"100,100"}
-  <<if !["Title", "Start"].contains(passage())>>
-    <<link '<<switch settings.lang>><<case "English">>Settings<<case "Français">>Paramètres<</switch>>'>><<script>>UI.settings()<</script>><</link>>
-    <<link '<<switch settings.lang>><<case "English">>Credits<<case "Français">>Crédits<</switch>>'>><<switch settings.lang>><<case "English">><<popup 'Credits_en' "Credits">><<case "Français">><<popup 'Credits_fr' "Crédits">><</switch>><</link>>
-  <</if>>
+<<if !["Title", "Start"].includes(passage())>>
+    <<link '<<switch settings.lang>><<case "English">>Settings<<case "Français">>Paramètres<<case "Nederlands">>Instellingen<</switch>>'>><<run UI.settings()>><</link>>
+    <<link '<<switch settings.lang>><<case "English">>About<<case "Français">>À Propos<<case "Nederlands">>Over<</switch>>'>>
+        <<switch settings.lang>>
+            <<case "English">><<run Dialog.create("About").wikiPassage("Credits").open();>>
+            <<case "Français">><<run Dialog.create("À Propos").wikiPassage("Credits").open();>>
+            <<case "Nederlands">><<run Dialog.create("Over").wikiPassage("Credits").open();>>
+        <</switch>>
+    <</link>>
+<</if>>
+
+:: Credits
+<<if settings.lang is "English">>\
+    //COLLISION// is a short game created in 2023 for the [[NeoTwiny Jam|https://itch.io/jam/neo-twiny-jam]], with the additional personal goal of using as few words as possible (here, less than 250). It was particularly challenging, as I prefer long flowy sentences and large chunks of text.
+    
+    To manage this, I removed as many unnecessary elements to convey the story as best I could: only a couple of words at a time. I think it made the reveals throughout the story all the more poignant, especially considering the character you are supposed to embody.
+
+    And while I was constrained by the wordcount, the player is too limited by the shortness of the game. Though you have an array of choice before you, some paths even expanding further, the game still limits the amount you can actually pick before it ends. Exploration of the different paths is possible, thanks to the looping mechanism – still, escaping is not guarranteed!
+
+    Nevertheless, I hope you will have/had fun playting through it all!
+<<elseif settings.lang is "Français">>\
+    //COLLISION// est un court jeu originellement créé en 2023 pour la [[NeoTwiny Jam|https://itch.io/jam/neo-twiny-jam]], avant d’être traduit en français, puis plus récemment en néerlandais. À cette création, s’est vu ajouté un objectif personnel: utiliser le moins de mots possible (ici, moins de 250). Ceci fut plutôt ambitieux, du fait que je préfère une écriture plus fleurie avec des longs paragraphes.
+    
+    Pour y parvenir, j’ai dépouillé mes phrases tout mot superflu pour transmettre l’histoire du mieux possible. À la fin, seulement quelques mots par lignes. Je pense que ceci rend les révélations tout au long de l’histoire d’autant plus poignantes, envers le personnage que vous êtes censé incarner.
+
+    Alors que j’étais contrainte par la limite de mots, les joueurs aussi l’étaient avec la courte durée du jeu en lui-même. Même si vous avez plusieurs choix à chaque instant – certains s’étendant même – le jeu limite le nombre de choix pouvant être fait avant la fin. Explorer les différents chemins restent possible, grâce à la boucle du jeu – mais l’évasion n’est pas garantie !
+
+    Tout de même, j'espère que vous avez aimé/aimerez jouer à ce jeu !
+<<else>>\
+    //COLLISION// is een kort spel dat oorspronkelijk in 2023 is gemaakt voor de [[NeoTwiny Jam|https://itch.io/jam/neo-twiny-jam]], voordat het in het Frans en meer recentelijk in het Nederlands werd vertaald. Aan deze creatie is een persoonlijk doel toegevoegd: gebruik zo min mogelijk woorden (hier minder dan 250). Dit was nogal ambitieus, omdat ik de voorkeur geef aan een bloemiger schrift met lange leden.
+
+    Om dit te beheren, heb ik zoveel onnodige elementen verwijderd om het verhaal zo goed mogelijk over te brengen: slechts een paar woorden tegelijk. Ik denk dat het de onthullingen in het hele verhaal des te aangrijpender maakte, vooral gezien het personage dat je zou moeten belichamen.
+
+    En hoewel ik werd beperkt door het aantal woorden, is de speler te beperkt door de kortheid van het spel. Hoewel je een reeks keuzes voor je hebt, sommige paden die zelfs verder uitzetten, beperkt het spel nog steeds het bedrag dat je daadwerkelijk kunt kiezen voordat het eindigt. Verkenning van de verschillende paden is mogelijk, dankzij het looping-mechanisme – nog steeds, ontsnappen is niet gegarandeerd!
+
+    Dus hoop ik dat men hier plezier aan kan beleven!
+<</if>>
+Made in <a href="https://twinery.org/">Twine <img src="twine.svg"></a>/<a href="https://www.motoslave.net/sugarcube/2">SugarCube <img src="SugarCube.png"></a>. Text annimations by [[Unused CSS|https://unused-css.com/blog/css-shake-animation/]]. Sound by [[Eponn|https://freesound.org/people/Eponn/]]. Game by [[Manonamora|https://manonamora.itch.io/]].

@@ -1,15 +1,15 @@
 :: NLPass1
 retard: 0
 --
-*Na de ontdekking van oude ruïnes tijdens de opgraving voor de nieuwe oprit, wordt de RN758 tot nader order gesloten. Een omleiding wordt geregeld op de posten 483 en 509 via Sainte-Catherine. Voeg vijfenviftig–*
+*Na de ontdekking van oude ruïnes tijdens de opgraving voor de nieuwe oprit, wordt de RN758 tot nader order gesloten. Een omleiding wordt geregeld op de posten 483 en 509 via Sainte-Catherine. Voeg vijfenvijftig–*
 
 [after 8s]
 [align center]
-[[Nou, shit…|NLPass2]]
+[[Shit…|NLPass2]]
 
 
 :: NLPass2
-Terwiijl je doelbewust laat vertrok (om je vervelende oom Bernard te vermijden), bevalt deze radio-uizending je niet. Helemaal niet. Je hebt je moeder beloofd op tijd aan te komen voor het aperitief, maar nu… zou je geluk hebben om daar te zijn voor het voorgerecht. Misschien zelfs voor de oesters.
+Hoewel je doelbewust laat vertrok (om je vervelende oom Bernard te vermijden), bevalt deze radio-uizending je niet. Helemaal niet. Je hebt je moeder beloofd op tijd aan te komen voor het aperitief, maar nu… je zou geluk hebben om aan te komen voor het voorgerecht, of zelfs de oesters.
 
 * [[Draai je om en ga naar huis|NLEND1]]
 * [[Ga verder|NLPass3]]
@@ -18,28 +18,28 @@ Terwiijl je doelbewust laat vertrok (om je vervelende oom Bernard te vermijden),
 :: NLPass3
 retard: retard + 10
 --
-Omdat Opa altijd aanwezig is met zijn schnapps, weet je dat je deze omweg (en de niet-zo-grappige grappen van je oom) kunt doorstaan. En goed, het zal je moeder er graag maken je daar te zien – ze heeft je afgelopen Kerst al uitgescholden toen je op het laatste moment annuleerde.
+Omdat Opa altijd aanwezig is met zijn schnapps, weet je dat je deze omweg (en de niet-zo-grappige grappen van je oom) kunt doorstaan. En goed, het zal je moeder blij maken je daar te zien – ze heeft je afgelopen Kerst al uitgescholden toen je op het laatste moment annuleerde.
 
-Op jouw [[rechts|NLPass4]], het afwijkingsteken.
+Aan je [[rechterhand|NLPass4]], de afslag.
 
 
 :: NLPass4
 retard: retard + 5
 chemin: 0
 --
-Je verlaat de nationale weg en volgt zorgvuldig de verkeersborden. In plaats van het platteland van je jeugd over te steken, neemt je omweg je mee door het “*glorieuze*” dorpje Sainte-Catherine – je moeder zal medelijden met je hebben…
+Je verlaat de nationale weg en volgt zorgvuldig de verkeersborden. De omweg leidt je door het “*glorieuze*” dorpje Sainte-Catherine, in plaats van het platteland van je jeugd. Je moeder zal medelijden met je hebben…
 
-Het dorp heeft zo'n honderd inwoners en is heel vreemd gebouwd. Een echt labyrint, waarin je jezelf vaak hebt verloren. En…
+Het dorp heeft zo'n honderd inwoners en is heel vreemd gebouwd. Een echt labyrint, waarin je vaak de weg bent kwijt geraakt. En…
 
-… dit is ook waar de afwijkingsborden verdwijnen.
+… dit is ook waar de aanwijzingsborden verdwijnen.
 
 [align center]
 *Shit!*
 [cont]
-Je draait { [[rechts]] - [[links]] }.
+Je slaat { [[rechtsaf]] - [[linksaf]] }.
 
 
-:: rechts
+:: rechtsaf
 retard: retard + 5
 chemin: chemin + 1
 _random: random.d4
@@ -47,19 +47,19 @@ _random: random.d4
 [if _random === 4]
 Je komt de eerste straat aan je rechterkant binnen, in de hoop de uitgang van *dit verdomde dorp* te vinden. Maar je vindt alleen een nieuw kruispunt.
 [if _random === 2]
-Je slaat rechtsaf en je voorkomt dat je je stuur slaat wanneer je aan het einde van de straat een kruispunt tegenkomt, in plaats van de gewenste uitgang.
+Je slaat rechtsaf en slaat bijna uit frustratie op je stuur, wanneer je nog een kruispunt tegenkomt in plaats van de gewenste uitweg.
 [if _random === 1]
 Je neemt de straat aan je rechterkant, in de overtuiging dat je het gebied herkent, maar… je bent nog steeds behoorlijk verdwaald.
 [if _random === 3]
-Als je rechtsaf slaat, hoopt je een verkeersbord te vangen. Je zult snel merken dat je aan het mopperen bent als je er nog steeds geen vindt. *Ik wd dat ze ze allemaal verborgen hebben…*
+Je slaat rechtsaf en hoopt een verkeersbord te zien. Je begint te mopperen, wanneer blijkt dat er nog steeds geen aanwijzingen zijn. *Ik wed, dat ze ze allemaal verborgen hebben…*
 
 [if chemin < 8]
-Je draait { [[rechts]] - [[links]] }.
+Je slaat { [[rechtsaf]] - [[linksaf]] }.
 [else]
 Je draait { [[rechts|NLPass5]] - [[links|NLPass5]] }.
 
 
-:: links
+:: linksaf
 retard: retard + 5
 chemin: chemin + 1
 _random: random.d4 
@@ -67,14 +67,14 @@ _random: random.d4
 [if _random === 1]
 Je komt de eerste straat aan je linkerkant binnen, in de hoop de uitgang van *dit verdomde dorp* te vinden. Maar je vindt alleen een nieuw kruispunt.
 [if _random === 2]
-Je slaat linksaf en houdt jezelf tegen het bijten van jouw vingers wanneer je aan het einde van de straat een kruispunt tegenkomt, in plaats van de gewenste uitgang.
+Je slaat linksaf en slaat een diepe zucht wanneer je aan het einde van de straat een kruispunt tegenkomt, in plaats van de gewenste uitgang.
 [if _random === 3]
 Je neemt de straat aan je linkerkant, in de overtuiging dat je het gebied herkent, maar… je bent nog steeds behoorlijk verdwaald.
 [if _random === 4]
-Als je linksaf slaat, hoopt je een verkeersbord te vinden. Je hoort jezelf al snel mopperen als er geen zijn. *Ze zijn echt slecht…*
+Wanneer je linksaf slaat, hoop je een verkeersbord te vinden. Je begint te mopperen, omdat ze er weer niet zijn. *Lekker bezig, zeg…*
 
 [if chemin < 8]
-Je draait { [[rechts]] - [[links]] }.
+Je slaat { [[rechtsaf]] - [[linksaf]] }.
 [else]
 Je draait { [[rechts|NLPass5]] - [[links|NLPass5]] }.
 
@@ -82,25 +82,25 @@ Je draait { [[rechts|NLPass5]] - [[links|NLPass5]] }.
 :: NLPass5
 Na wat voelt als een eeuwigheid, verlaat je eindelijk het vervloekte dorp… Je kijkt naar de tijd en grimast: je bent {retard} minuten te laat. Je moeder zal klagen…
 
-Je drukt iets harder op de [[versneller|NLPass6]].
+Je zet iets [[meer gas|NLPass6]] erop.
 
 
 :: NLPass6
 Als je bij het huis van je moeder parkeert, zie je haar al bij de deur wachten en op haar voet tikken.
 
-– Nouuu… je hebt je lieve tijd genomen!\
-– Hallo mam, je rolt met je ogen.\
-– Je weet dat we bijna klaar zijn met de foie-gras, toch? En Bernard verdrinkt al zijn tweede fles!\
-– Het is maar goed dat ik de mijne heb meegenomen, je geeft haar je tas.\
-– Maar, lieverdtje, waarom ben je zo laat, ze eindelijk naar voren komt om je te omarmen.\
-– Ze hebben de nationale weg afgesloten.\
-– En?\
-– Je moet door Sainte-Cathe–\
-– *Oh*, ze trekt je in haar armen. Mijn arme meisje. Kom. Ga naar binnen. Ik zal wat toast voor je maken. Ga zitten.
+– *Nouuu… je hebt je lieve tijd genomen!*\
+– *Hallo mam*, je rolt met je ogen.\
+– *Je weet dat we bijna klaar zijn met de foie-gras, toch? En Bernard is al met z'n tweede fles bezig!*\
+– *Het is maar goed dat ik de mijne heb meegenomen*, je geeft haar je tas.\
+– *Maar, lieverdtje, waarom ben je zo laat*, zegt ze, als ze je eindelijk omarmt.\
+– *Ze hebben de nationale weg afgesloten*.\
+– *En?8\
+– *Je moet door Sainte-Cathe–*\
+– *Oh*, ze trekt je in haar armen. *Mijn arme meisje. Kom. Ga naar binnen. Ik zal wat toast voor je maken. Ga zitten.*
 
 ~ FIN ~
 
 :: NLEND1 
-Eindelijk *nee*. Je wilt niet vast komen te zitten in het verkeer, de lange omweg niet rijden, of de gruwelijke grappen van je oom of dronken discussie over politiek behandelen. Je zult zeker een goed excuus vinden voor je moeder – ze zal het je zeker moeilijk maken, maar het zal nog steeds minder vervelend zijn…
+*Weet je wat? Nee*. Je wilt niet vast komen te zitten in het verkeer, de lange omweg niet rijden, of de gruwelijke grappen van je oom of dronken discussie over politiek aanhoren. Je zult zeker een goed excuus vinden voor je moeder – ze zal het je zeker moeilijk maken, maar het zal steeds minder vervelend zijn…
 
 ~ Fin ~ 

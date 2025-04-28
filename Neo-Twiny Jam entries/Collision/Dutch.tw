@@ -1,0 +1,186 @@
+:: AE1_nl [nederlands]
+<<timed $timerOne t8n>>Blauw, rood, geen shirts. 
+<<next>>Stapel immobiele lichamen. 
+<<next>>Gele en Zwarte geblokte patronen. 
+<<next>>Dode ogen. 
+<<next>>Verstoorde beschadigde kabels. 
+<<next>>Afgedankte dummies…
+<<next>>
+<<next>>[[Één ervan?|END]]<</timed>>
+
+:: ActualEnd_nl [nederlands]
+[[Open Ogen|AE1]]
+<<unset $crash>>
+
+:: Crash_nl [nederlands]
+<<audio "crash" play>>
+<<timed $timerThree>><<set $turn to 0>><<goto "TryAgain">><</timed>>
+
+:: END_nl [nederlands]
+<div id="title">COLLISION</div>
+<div id="start"><<link "Herstart?">><<run Engine.restart()>><</link>></div>
+
+:: ExamineCar_nl [nederlands]
+    <<timed $timerOne t8n>>Leeg zilveren frame.
+    <<next>>Ontbrekende voorruit.
+    <<next>>Achter- en zijspiegels.
+    <<next>>Geruit stuurwiel.
+    <<next>>Twee passagiers.
+    <<next>>Overal kabels.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: ExamineVehicle_nl [nederlands]
+    <<timed $timerOne t8n>>Fel licht.
+    <<next>>Vage grenzen.
+    <<next>>Benadering massa.
+    <<next>>Ronkende motor.
+    <<next>>Immobiele ledematen.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: LookAhead_nl [nederlands]
+    <<timed $timerOne t8n>>Leeg zilveren frame.
+    <<next>>Ontbrekende voorruit.
+    <<next>>Fel licht.
+    <<next>>Leeg bewegend voertuig.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: LookAround_nl [nederlands]
+    <<timed $timerOne t8n>>Vastzittende nek.
+    <<next>>Passagier.
+    <<next>>Kaal.
+    <<next>>Rood shirt.
+    <<next>>Beige broek.
+    <<next>>Geruit lijnen.
+    <<next>>Veiligheidsgordel.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: LookSelf_nl [nederlands]
+    <<timed $timerOne t8n>>Vastzittende nek.
+    <<next>>Blauw shirt.
+    <<next>>Geen broek.
+    <<next>>Gele en zwarte stippen op armen.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: LookSelfAgain_nl [nederlands] 
+    <<timed $timerOne t8n>>Vastzittende nek.
+    <<next>>Blauw shirt.
+    <<next>>Geen broek.
+    <<next>>Gele en zwarte stippen op armen.
+    <<next>>Ontbrekende veiligheidsgordel.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: LookUp_nl [nederlands]
+    <<timed $timerOne t8n>>Vastzittende nek.
+    <<next>>Glans in spiegel.
+    <<next>>Zittend kind.
+    <<next>>Grijs pak.
+    <<next>>Gele en zwarte cirkels op wangen.
+    <<next>>Ontbrekende veiligheidsgordel.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: MoveHands_nl [nederlands]
+    <<timed $timerOne t8n>>Handen op geruit stuurwiel.
+    <<next>>Vastgebonden vingers.
+    <<next>>Immobiele ledematen.
+    <<next>>Stilte.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: MoveEnd_nl [nederlands]
+    <<timed $timerZeroFive t8n>>Immobiele ledematen.
+    <<next>>Ontsnappen onmogelijk.<</timed>>
+
+    <<timed $timerTwoFive>><<goto "Crash">><</timed>>
+
+:: OpenEyes_nl [nederlands]
+    <<timed $timerOne t8n>>Handen op geruit stuurwiel.
+    <<next>>Vastgebonden vingers.
+    <<next>>Immobiele ledematen.
+    <<next>>Stilte.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: OrderChild_nl [nederlands]
+    <<timed $timerOne t8n>>Geen woord.
+    <<next>>Geen stem.
+    <<next>>Geen geluid.
+    <<next>>Immobiel kind.
+    <<next>>Dode ogen.
+    <<next>>Zorgen.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: PullOwnSeatBelt_nl [nederlands]
+    <<timed $timerOne t8n>>Immobiele ledematen.
+    <<next>>Vastzittende nek.
+    <<next>>Zorgen.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: Scream_nl [nederlands]
+    <<timed $timerOne t8n>>Geen woord.
+    <<next>>Geen stem.
+    <<next>>Geen geluid.
+    <<next>>No adem.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: First_nl [nederlands]
+    [[Open Ogen|OpenEyes][$turn ++]]
+
+:: TalkPassenger_nl [nederlands]
+    <<timed $timerOne t8n>>Geen woord.
+    <<next>>Geen stem.
+    <<next>>Geen geluid.
+    <<next>>No movement.
+    <<next>>Immobiel passagier.
+    <<next>>Vastzittende nek.
+    <<next>>Zorgen.
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: Think_nl [nederlands]
+    <<timed $timerOne t8n>>Incoherent thoughts.
+    <<next>>Onbegrip.
+    <<next>>Bezorgheid.
+    <<next>>Verwarring.
+    <<next>>Bang?
+
+    <<next>><<Car>>
+    <<next>><<Actions>><</timed>>
+
+:: Title_nl [nederlands]
+<div id="title">COLLISION</div>
+<div id="start">[[Start|First]]</div>
+<span id="underhr"><hr>
+    Waarschuwing: geanimeerde tekst, hard geluid.
+    <<link "Instellingen">><<run UI.settings()>><</link>>
+    <<link "Over">><<run Dialog.create("Over").wikiPassage("Credits").open();>><</link>>
+</span>
+
+:: TryAgain_nl [nederlands]
+<<timed 0.1s t8n>><center>Proef $number</center><div id="start" class="start">FAAL</div>
+<div class="circle">[[Opnieuw?|First][$turn to 0, $actions to {}, $number ++, $crash ++]]</div><</timed>>
+
+:: Start_nl
+<<LanguagePick>>

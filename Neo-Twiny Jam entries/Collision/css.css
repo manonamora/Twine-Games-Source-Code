@@ -34,241 +34,233 @@ html {
 }
 
 #menu {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
+position: absolute;
+bottom: 0;
+display: flex;
+width: 100%;
+justify-content: space-evenly;
 }
 
 #passages {
-  flex-grow: 1;
-  overflow: auto;
-  height: 95%;
+flex-grow: 1;
+overflow: auto;
+height: 95%;
 }
 [data-tags~="starting"] #passages {
-  display: flex;
-  height: 90%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  font-size: 200%;
-  color: yellow;
+display: flex;
+height: 90%;
+width: 100%;
+justify-content: center;
+align-items: center;
+font-size: 200%;
+color: yellow;
 }
 
 a {
-  opacity: 0.5;
-  color: yellow;
+opacity: 0.5;
+color: yellow;
 }
 
 a:hover {
-  opacity: 1;
-  color: black;
-  text-decoration: none;
-  text-shadow: 
-    0 0 10px yellow, 
-    0 0 10px yellow, 
-    0 0 10px yellow, 
-    0 0 10px yellow, 
-    0 0 10px yellow;
+opacity: 1;
+color: black;
+text-decoration: none;
+text-shadow: 
+  0 0 10px yellow, 
+  0 0 10px yellow, 
+  0 0 10px yellow, 
+  0 0 10px yellow, 
+  0 0 10px yellow;
+}
+
+a img {
+  max-height: 30px;
+  padding: 0 5px;
 }
 
 button {
-  color: yellow;
-  background: black;
-  border-color: #ffff005c;
+color: yellow;
+background: black;
+border-color: #ffff005c;
 }
 
 button:hover {
-  background: #ffff00a6;
-  color: black;
-  border-color: yellow;
+background: #ffff00a6;
+color: black;
+border-color: yellow;
 }
 
 hr {
-  border-color: yellow;
+border-color: yellow;
 }
 li::marker {
-  content: "▸ ";
-  color: yellow;
+content: "▸ ";
+color: yellow;
 }
 
 .circle {
-  width: fit-content;
-  border-radius: 100%;
-	background-image: 
-    linear-gradient(to right, rgba(192, 192, 192, 0), rgba(192, 192, 192, 0)), 
-    linear-gradient(to right, black 50%, yellow 50%), 
-    linear-gradient(to bottom, black 50%, yellow 50%);
-  background-blend-mode: normal, difference, normal;
-	border: 2px solid black;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-  aspect-ratio: 1/1;
-  padding: 2%;
-  margin: auto;
+width: fit-content;
+border-radius: 100%;
+background-image: 
+  linear-gradient(to right, rgba(192, 192, 192, 0), rgba(192, 192, 192, 0)), 
+  linear-gradient(to right, black 50%, yellow 50%), 
+  linear-gradient(to bottom, black 50%, yellow 50%);
+background-blend-mode: normal, difference, normal;
+border: 2px solid black;
+justify-content: center;
+align-items: center;
+display: flex;
+aspect-ratio: 1/1;
+padding: 2%;
+margin: auto;
 }
 .circle a {
-  text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,0 0 10px black;
-  opacity: 1;
+text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black,0 0 10px black;
+opacity: 1;
 }
 
 #underhr {
-  width: 100%;
-  text-align: center;
-  font-size: 75%;
-  position: absolute;
-  bottom:0;
+width: 100%;
+text-align: center;
+font-size: 75%;
+position: absolute;
+bottom:0;
 }
 #title {
-  font-size: 64px;
-  text-align: center;
-  letter-spacing: 0.3em;
-  color: yellow;
+font-size: 64px;
+text-align: center;
+letter-spacing: 0.3em;
+color: yellow;
 }
 
 #start {
-  text-align: center;
-  font-size: 200%;
-  padding-top: 2em;
-  animation: blink 2s linear infinite;
+text-align: center;
+font-size: 200%;
+padding-top: 2em;
+animation: blink 2s linear infinite;
 }
 .start {
-  color: red;
-  font-weight: bold;
+color: red;
+font-weight: bold;
 }
 #ui-dialog {
-  background: #0000008c;
+background: #0000008c;
 }
 #ui-dialog-titlebar {
-  background: transparent;
+background: transparent;
 }
 #ui-dialog-title {
-  padding: 0.2em;
-  color: yellow;
+padding: 0.2em;
+color: yellow;
 }
 #ui-dialog-close {
-  height: 100%;
-  width: 2em;
-  color: yellow;
-  opacity: 0.5;
-  border: none;
+height: 100%;
+width: 2em;
+color: yellow;
+opacity: 0.5;
+border: none;
 }
 #ui-dialog-close:hover {
-  background-color: yellow;
-  color: black;
-  opacity: 0.6;
+background-color: yellow;
+color: black;
+opacity: 0.6;
 }
 #ui-dialog-body {
-  border: none;
-  background: none;
+border: none;
+background: none;
 }
 #ui-dialog-body ul.buttons {
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 0.4em;
+display: flex;
+justify-content: space-evenly;
+padding-top: 0.4em;
 }
 #ui-dialog-body ul.buttons li {
-  padding: 0;
+padding: 0;
 }
 #ui-dialog-body ul.buttons li:first-child button {
-  width: 6em;
+width: 6em;
 }
 
 #ui-dialog-body.settings button[id|="setting-control"].enabled {
-  background: yellow;
-  color: black;
-  border-color: #ffff005c;
+background: yellow;
+color: black;
+border-color: #ffff005c;
 }
 
 #ui-dialog-body.settings button[id|="setting-control"].enabled:hover {
-  background: #ffff005c;
-  color: white;
-  border-color: yellow;
+background: #ffff005c;
+color: white;
+border-color: yellow;
 }
 
 
 input {
-  border-color: #ffff005c;
+border-color: #ffff005c;
 }
 
 input:not(:disabled):hover, input:not(:disabled):focus {
-  border-color: yellow;
-  background: #ffff005c;
+border-color: yellow;
+background: #ffff005c;
 }
 input[type="range"]::-moz-range-thumb {
-  background: yellow;
-  border-color: #ffff005c;
+background: yellow;
+border-color: #ffff005c;
 }
 
 input[type="range"]::-moz-range-thumb:hover {
-  background: black;
+background: black;
 }
 
 input[type="range"]::-moz-range-track {
-  background: #ffff005c;
+background: #ffff005c;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-	background: #ffff005c;
+background: #ffff005c;
 }
 input[type="range"]::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	background: yellow;
-	border: 1px solid #ffff005c;
+-webkit-appearance: none;
+background: yellow;
+border: 1px solid #ffff005c;
 }
 input[type="range"]::-webkit-slider-thumb:hover {
-	-webkit-appearance: none;
-	background: black;
+-webkit-appearance: none;
+background: black;
 }
 
 select {
-  background-color: #ffff001a;
-  border-color: #ffff005c;
+background-color: #ffff001a;
+border-color: #ffff005c;
 }
 select:not(:disabled):focus, select:not(:disabled):hover {
-  background: #5d5d01;
-  border-color: yellow;
+background: #5d5d01;
+border-color: yellow;
 }
+
 @keyframes blink {  
   0% {
-    opacity: 0;
+      opacity: 0;
   }
   100% {
-    opacity: 1;
+      opacity: 1;
   }
 }
 
 span.constant-tilt-shake {
-  animation: tilt-shaking 0.3s infinite;
-  display: inline-block;
-}
-
-span.vertical-shake {
-  animation: vertical-shaking 0.35s infinite;
-  display: inline-block;
-}
-
-span.horizontal-shake {
-  animation: horizontal-shaking 0.35s infinite;
-  display: inline-block;
+animation: tilt-shaking 0.3s infinite;
+display: inline-block;
 }
 
 span.rise-shake {
-  animation: jump-shaking 1s infinite;
-  display: inline-block;
+animation: jump-shaking 1s infinite;
+display: inline-block;
 }
 
 span.skew-shake-x {
-  animation: skew-x-shake 1.3s infinite;
-  display: inline-block;
+animation: skew-x-shake 1.3s infinite;
+display: inline-block;
 }
 
-span.skew-shake-y {
-  animation: skew-y-shake 1.3s infinite;
-  display: inline-block;
-}
 
 @keyframes tilt-shaking {
   0% { transform: rotate(0deg); }
@@ -276,30 +268,6 @@ span.skew-shake-y {
   50% { transform: rotate(0eg); }
   75% { transform: rotate(-5deg); }
   100% { transform: rotate(0deg); }
-}
-
-@keyframes tilt-n-move-shaking {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(5px, 5px) rotate(5deg); }
-  50% { transform: translate(0, 0) rotate(0eg); }
-  75% { transform: translate(-5px, 5px) rotate(-5deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
-}
-
-@keyframes vertical-shaking {
-  0% { transform: translateY(0) }
-  25% { transform: translateY(5px) }
-  50% { transform: translateY(-5px) }
-  75% { transform: translateY(5px) }
-  100% { transform: translateY(0) }
-}
-
-@keyframes horizontal-shaking {
-  0% { transform: translateX(0) }
-  25% { transform: translateX(5px) }
-  50% { transform: translateX(-5px) }
-  75% { transform: translateX(5px) }
-  100% { transform: translateX(0) }
 }
 
 @keyframes jump-shaking {
@@ -321,19 +289,7 @@ span.skew-shake-y {
   100% { transform: skewX(0deg); }  
 }
 
-@keyframes skew-y-shake {
-  0% { transform: skewY(-15deg); }
-  5% { transform: skewY(15deg); }
-  10% { transform: skewY(-15deg); }
-  15% { transform: skewY(15deg); }
-  20% { transform: skewY(0deg); }
-  100% { transform: skewY(0deg); }  
-}
 
-
-
-
-
-.nogif span.constant-tilt-shake, .nogif span.vertical-shake, .nogif span.horizontal-shake, .nogif span.rise-shake, .nogif span.skew-shake-x, .nogif span.skew-shake-y, .nogif #start {
-    animation: none;
+.nogif span.constant-tilt-shake, .nogif span.rise-shake, .nogif span.skew-shake-x, .nogif #start {
+  animation: none;
 }
