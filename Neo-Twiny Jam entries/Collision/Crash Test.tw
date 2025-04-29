@@ -66,7 +66,7 @@
 
 <<widget "LanguagePick">>
     <<link "English" "Title">><<set settings.lang to "English">><<run Setting.save();>><</link>> | <<link "Français" "Title">><<set settings.lang to "Français">><<run Setting.save();>><</link>> | <<link "Nederlands" "Title">><<set settings.lang to "Nederlands">><<run Setting.save();>><</link>>
-    <div id="mini-menu"><a href="https://twinery.org/"><img src="img/twine.svg"></a> <a ref="https://www.motoslave.net/sugarcube/2"><img src="img/SugarCube.png"></a> <a href="https://manonamora.neocities.org/"><img src="img/Manonamora.png"></a></div>
+    <div id="mini-menu"><a href="https://twinery.org/"><img src="twine.svg"></a> <a href="https://www.motoslave.net/sugarcube/2"><img src="SugarCube.png"></a> <a href="https://manonamora.neocities.org/"><img src="Manonamora.png"></a></div>
 <</widget>>
 
 :: menu [nobr] {"position":"1075,300","size":"100,100"}

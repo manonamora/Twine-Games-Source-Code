@@ -166,34 +166,34 @@ Setting.addToggle("textanim", {
     onChange : settingAnimationHandler
 });
 
-// var settingTimer = function () {
-//     if (settings.timer) { // is true
-// 		State.getVar('$timerOne') = "1s";
-// 		State.getVar('$timerZeroFive') = "0.5s";
-// 		State.getVar('$timerTwoFive') = "2.5s";
-// 		State.getVar('$timerThree') = "3s";
-//     } else { // is false
-// 		State.getVar('$timerOne') = "0s";
-// 		State.getVar('$timerZeroFive') = "0s";
-// 		State.getVar('$timerTwoFive') = "1.5s";
-// 		State.getVar('$timerThree') = "1.5s";
-// }};
+var settingTimer = function () {
+    if (settings.timer) { // is true
+		State.setVar('$timerOne', "1s");
+		State.setVar('$timerZeroFive', "0.5s");
+		State.setVar('$timerTwoFive', "2.5s");
+		State.setVar('$timerThree', "3s");
+    } else { // is false
+		State.setVar('$timerOne', "0s");
+		State.setVar('$timerZeroFive', "0s");
+		State.setVar('$timerTwoFive', "1.5s");
+		State.setVar('$timerThree', "1.5s");
+}};
 
-// Setting.addToggle("timer", {
-//     label    : `<<switch settings.lang>>
-// 					<<case "English">>Enable Timed Text.
-// 					<<case "Français">>Délais de texte.
-// 					<<case "Nederlands">>Schakel getimede tekst in.
-// 				<</switch>>`,
-//     desc     : `<<switch settings.lang>>
-// 					<<case "English">>Recommended for first playthrough.
-// 					<<case "Français">>Recommendé pour la première partie.
-// 					<<case "Nederlands">>Aanbevolen voor eerste playthrough.
-// 				<</switch>>`,
-//     default  : true,
-//     onInit   : settingTimer,
-//     onChange : settingTimer
-// });
+Setting.addToggle("timer", {
+    label    : `<<switch settings.lang>>
+					<<case "English">>Enable Timed Text.
+					<<case "Français">>Délais de texte.
+					<<case "Nederlands">>Schakel getimede tekst in.
+				<</switch>>`,
+    desc     : `<<switch settings.lang>>
+					<<case "English">>Recommended for first playthrough.
+					<<case "Français">>Recommendé pour la première partie.
+					<<case "Nederlands">>Aanbevolen voor eerste playthrough.
+				<</switch>>`,
+    default  : true,
+    onInit   : settingTimer,
+    onChange : settingTimer
+});
 
 
 Setting.addRange("masterVolume", {

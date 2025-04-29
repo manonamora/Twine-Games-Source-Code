@@ -23,7 +23,7 @@ Dévotion
 
 :: Menu
 <<if passage() is "Start">>
-    <a href="https://twinery.org/"><img src="img/twine.svg"></a> <a ref="https://www.motoslave.net/sugarcube/2"><img src="img/SugarCube.png"></a> <a href="https://manonamora.neocities.org/"><img src="img/Manonamora.png"></a>
+    <a href="https://twinery.org/"><img src="img/twine.svg"></a> <a href="https://www.motoslave.net/sugarcube/2"><img src="img/SugarCube.png"></a> <a href="https://manonamora.neocities.org/"><img src="img/Manonamora.png"></a>
 <<else>>
     <<link '<<switch $lang>><<case "English">>Restart<<case "Français">>Recommencer<<case "Nederlands">>Herstart<</switch>>'>>
         <<if $lang is "English">>

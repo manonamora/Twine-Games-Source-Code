@@ -40,7 +40,16 @@ display: flex;
 width: 100%;
 justify-content: space-evenly;
 }
-
+#mini-menu {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+text-align: center;
+}
+#mini-menu a.link-external::after {
+display: none;
+}
 #passages {
 flex-grow: 1;
 overflow: auto;
@@ -54,6 +63,9 @@ justify-content: center;
 align-items: center;
 font-size: 200%;
 color: yellow;
+}
+.passage {
+padding: 0.5em 1em;
 }
 
 a {
