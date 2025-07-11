@@ -1,0 +1,187 @@
+:: Intro
+<p>Welcome, player, to another round of Twee voor Twaalf!</p>
+<p>I have 12 lovely questions for you this round – each different from the next. Don’t forget to <<link "note the first letter">><<run Dialog.create('Explanation').wiki("<<LettersPopup>>").open();>><</link>> of each of your answer, as they will form the mystery word at the end!</p>
+<p>You can use the <<link "books behind you">><<run Dialog.create('Explanation').wiki("<<BookPopup>>").open();>><</link>> to find an answer. But don’t forget to Ring Bell, or you’ll lose <<link "too many points">><<run Dialog.create('Explanation').wiki("<<PointsPopup>>").open();>><</link>>!</p>
+<p>When you are ready, we’ll start!</p>
+<<button [[Start Round|First]]>><</button>>
+
+:: First
+<p>What is the name of the Interactive Fiction Game created by William Rous, which took the IF world by storm at the start of 2025?</p>
+
+<div class="link-button">
+    <<textbox "$questionOne" "">><<link [[Confirm|Second]]>><<FirstQCheck>><</link>>
+    <div>
+        <<link "Search Answer">><<set $timer to true, $lookedUp[0] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> 
+    </div>
+</div>
+<<done>><<run $("input#textbox-questionone").prop("placeholder", "Enter Answer Here")>><</done>>
+
+
+:: Second
+<p>Runner-up of the 10th season of //Nouvelle Star//, this French singer and model was featured on many songs, most famously “Alibi” by the Iranian-Dutch singer Sevdaliza. What is the artist name of this singer, who performed at the 2024 Summer Olympics Closing Ceremony?</p>
+
+<<textbox "$questionTwo" "">>
+<div class="link-button">
+    <<link "Search Answer">><<set $timer to true, $lookedUp[1] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> <<link [[Confirm|Third]]>><<SecondQCheck>><</link>>
+</div>
+<<done>><<run $(".textbox-questiontwo input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: Third
+<p>Frequented by the jet-set of the world during the 20th century, where actor Louis de Funès starred as a gendarme in his most famous movie. What is its name?</p>
+
+<<textbox "$questionThree" "">>
+<div class="link-button">
+    <<link "Search Answer">><<set $timer to true, $lookedUp[2] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> <<link [[Confirm|Fourth]]>><<ThirdQCheck>><</link>>
+</div>
+<<done>><<run $(".textbox-questionthree input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: Fourth
+<p>A French-suited card deck contains 13 ranks, including 10 numerals and 3 court cards. What is the name of the card representing 1?</p>
+
+<<textbox "$questionFour" "">>
+<div class="link-button">
+    <<link "Search Answer">><<set $timer to true, $lookedUp[3] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> <<link [[Confirm|Fifth]]>><<FourthQCheck>><</link>>
+</div>
+<<done>><<run $(".textbox-questionfour input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: Fifth
+<p>Born in the Grand Duchy of Tuscany, this British nurse was also known as “The Lady of the Lamp”, and pioneered modern medicine through promotion of better hygiene and living standard. What is her surname?</p>
+
+<<textbox "$questionFive" "">>
+<div class="link-button">
+    <<link "Search Answer">><<set $timer to true, $lookedUp[4] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> <<link [[Confirm|Sixth]]>><<FifthQCheck>><</link>>
+</div>
+<<done>><<run $(".textbox-questionfive input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: Sixth
+<p>There are many different ways of making fruit preserves, each preparation varying on method and type of fruit. This particular one is either clear or translucent, achieved by filtering the fruit pulp after initial cooking. What is it called?</p>
+
+<<textbox "$questionSix" "">>
+<div class="link-button">
+    <<link "Search Answer">><<set $timer to true, $lookedUp[5] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> <<link [[Confirm|Seventh]]>><<SixthQCheck>><</link>>
+</div>
+<<done>><<run $(".textbox-questionsix input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: Seventh
+<p>In 2008, Meryl Streep and Amanda Seyfried appeared on screen as a Mother-Dauther duo, singing to the tunes of Swedish band ABBA. What is this movie?</p>
+
+<<textbox "$questionSeven" "">>
+<div class="link-button">
+    <<link "Search Answer">><<set $timer to true, $lookedUp[6] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> <<link [[Confirm|Eighth]]>><<SeventhQCheck>><</link>>
+</div>
+<<done>><<run $(".textbox-questionseven input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: Eighth
+<p>Usually formed into triangular shapes, wrapped in nori and filled with sour or salty filling, this Japanese rice ball is sold in convenient stores as a quick meal. What is its name?</p>
+
+<<textbox "$questionEight" "">>
+<div class="link-button">
+    <<link "Search Answer">><<set $timer to true, $lookedUp[7] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> <<link [[Confirm|Ninth]]>><<EighthQCheck>><</link>>
+</div>
+<<done>><<run $(".textbox-questioneight input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: Ninth 
+<p>Find the missing letter in this word.</p>
+<div id="tartPuzzle">
+    <div>C</div>
+    <div>K</div>
+    <div>?</div>
+    <div>A</div>
+    <div>L</div>
+    <div>K</div>
+    <div>D</div>
+    <div>U</div>
+</div>
+<<textbox "$questionNine" "">>
+<div class="link-button">
+    <<link [[Confirm|Tenth]]>>
+        <<set $lookedUp[8] to false>>
+        <<if $questionNine.toLowerCase() is "w">>
+            <<set $ninth to "W", $correctAnswer[8] to true>>
+        <<else>>
+            <<set $ninth to $questionNine[0].toUpperCase(), $correctAnswer[8] to false>>
+        <</if>>
+        <<redo "letters">>
+    <</link>>
+</div>
+<<done>><<run $(".textbox-questionnine input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: Tenth
+<p>Filled with mythical beasts and magic, this fantasy world can be reached by crossing a wardrobe. What is the name of this world, created by C.S. Lewis, and based on his native Ireland?</p>
+
+<<textbox "$questionTen" "">>
+<div class="link-button">
+    <<link "Search Answer">><<set $timer to true, $lookedUp[9] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> <<link [[Confirm|Eleventh]]>><<TenthQCheck>><</link>>
+</div>
+<<done>><<run $(".textbox-questionten input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: Eleventh
+<p>In computer science, conditionals are constructs performing different actions depending on the value of a tested condition. With what word do conditional expressions begin?</p>
+
+<<textbox "$questionEleven" "">>
+<div class="link-button">
+    <<link "Search Answer">><<set $timer to true, $lookedUp[10] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> <<link [[Confirm|Twelfth]]>><<EleventhQCheck>><</link>>
+</div>
+<<done>><<run $(".textbox-questioneleven input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: Twelfth
+<p>While being the basic particle of all things, an atom is itself composed of three specific elements: a nucleus of neutrons and positively charged protons, and a swarm of negative sub-particles. What is its name?</p>
+
+<<textbox "$questionTwelve" "">>
+<div class="link-button">
+    <<link "Search Answer">><<set $timer to true, $lookedUp[11] to true>><<TimerTickDown>><<run window.open('https://en.wikipedia.org/wiki/Main_Page', '_blank').focus();>><</link>> <<link "Ring Bell">><<set $timer to false>><</link>> <<link [[Confirm|CheckAnswers]]>><<TwelfthQCheck>><</link>>
+</div>
+<<done>><<run $(".textbox-questiontwelve input").prop("placeholder", "Enter Answer Here")>><</done>>
+
+:: CheckAnswers [no-bottom]
+<p>“And now we can move on to the word!”</p>
+
+<p>//Click on the letters to find its correct position. But be warned! Each click will cost you points!//</p>
+
+<div class="letters-final">
+    <div class="letter"><<ClickOne>></div>
+    <div class="letter"><<ClickTwo>></div>
+    <div class="letter"><<ClickThree>></div>
+    <div class="letter"><<ClickFour>></div>
+    <div class="letter"><<ClickFive>></div>
+    <div class="letter"><<ClickSix>></div>
+    <div class="letter"><<ClickSeven>></div>
+    <div class="letter"><<ClickEight>></div>
+    <div class="letter"><<ClickNine>></div>
+    <div class="letter"><<ClickTen>></div>
+    <div class="letter"><<ClickEleven>></div>
+    <div class="letter"><<ClickTwelve>></div>
+</div>
+
+
+<div class="letters-final"><<do tag "bought">>
+    <div id="one" class="letter"><<if _tenth>>$tenth<</if>></div>
+    <div id="two" class="letter"><<if _twelfth>>$twelfth<</if>></div>
+    <div id="three" class="letter"><<if _eighth>>$eighth<</if>></div>
+    <div id="four" class="letter"><<if _first>>$first<</if>></div>
+    <div id="five" class="letter"><<if _ninth>>$ninth<</if>></div>
+    <div id="six" class="letter"><<if _eleventh>>$eleventh<</if>></div>
+    <div id="seven" class="letter"><<if _fifth>>$fifth<</if>></div>
+    <div id="eight" class="letter"><<if _second>>$second<</if>></div>
+    <div id="nine" class="letter"><<if _sixth>>$sixth<</if>></div>
+    <div id="ten" class="letter"><<if _fourth>>$fourth<</if>></div>
+    <div id="eleven" class="letter"><<if _seventh>>$seventh<</if>></div>
+    <div id="twelve" class="letter"><<if _third>>$third<</if>></div>
+<</do>></div>
+
+<<textbox "$finalword" "">>
+<<button [[Confirm|FinalScore]]>><<if $finalword.toLowerCase() is "neotwinyjams">><<set $won to true>><<else>><<set $won to false>><</if>>><</button>>
+<<done>><<run $(".textbox-finalword input").prop("placeholder", "Enter Final Word Here")>><</done>>
+
+:: FinalScore [no-bottom]
+<<FinalScore>>
+<<if $won>>
+    <h2>Congratulations!</h2>
+<<else>>
+    <h2>Better luck next time...</h2>
+<</if>>
+<p>Total score: <<do tag "points">>$points<</do>></p>
+<p>Breakdown:<<do tag "points">> <<= 12 - _correctCount>> mistake(s), <<= (_notLooked/10)>> correct answers without searching.
+<</do>></p>
+
+<<button [[Back to Start|Start]]>><</button>>

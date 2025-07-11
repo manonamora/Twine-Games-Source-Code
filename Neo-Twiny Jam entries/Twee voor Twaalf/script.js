@@ -1,0 +1,1 @@
+Config.passages.nobr = true;

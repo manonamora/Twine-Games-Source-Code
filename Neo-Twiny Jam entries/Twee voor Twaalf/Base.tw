@@ -1,0 +1,401 @@
+:: StoryTitle
+Twee voor Twaalf!
+
+:: StoryData
+{
+    "ifid": "9EB001C1-88CB-4610-99C8-0571F48BAB7D", 
+    "format": "SugarCube",
+    "format-version": "2.37.3",
+    "start": "Start"
+}
+
+:: StoryInterface 
+<div id="game-title" data-passage="Title"></div>
+<div id="container">
+    <div id="passages"></div>
+    <div id="astrid" data-passage="Astrid"></div>
+</div>
+<div id="bottom">
+    <div id="letters" data-passage="Letters"></div>
+    <div id="points" data-passage="Points"></div>
+</div>
+
+:: Title 
+<h1>Twee voor Twaalf!</h1>
+
+:: StoryInit
+<<set
+    $lookedUp to [false, false, false, false, false, false, false, false, false, false, false, false],
+    $correctAnswer to [],
+    $first to "",
+    $second to "",
+    $third to "",
+    $fourth to "",
+    $fifth to "",
+    $sixth to "",
+    $seventh to "",
+    $eighth to "",
+    $ninth to "",
+    $tenth to "",
+    $eleventh to "",
+    $twelfth to "",
+
+    $points to 500
+>>
+
+
+
+:: Start [nothing]
+<p>Welcome to //Twee voor Twaalf//, the quiz show testing your general knowledge and word recognition!</p>
+
+<p>This is a less-stressful version of the actual TV show (no timer). Try to get as many points as you can!</p>
+
+<p>When you're ready, come take a chair at the table, and Astrid will start the show...</p>
+<div style="display: flex; flex-direction: column; gap: 5px">
+    <<button [[Start Game!|Intro]]>><</button>>
+    <<button [[Learn more about the actual show|About]]>><</button>>
+    <<button [[About this game|Credits]]>><</button>>
+</div>
+
+:: Astrid
+<img src="./astrid.png">
+
+:: Letters
+<<do tag "letters">>
+    <div class="letter">$first</div>
+    <div class="letter">$second</div>
+    <div class="letter">$third</div>
+    <div class="letter">$fourth</div>
+    <div class="letter">$fifth</div>
+    <div class="letter">$sixth</div>
+    <div class="letter">$seventh</div>
+    <div class="letter">$eighth</div>
+    <div class="letter">$ninth</div>
+    <div class="letter">$tenth</div>
+    <div class="letter">$eleventh</div>
+    <div class="letter">$twelfth</div>
+<</do>>
+
+:: Points
+<<do tag "points">>$points<</do>>
+
+:: Widget [widget]
+<<widget "BookPopup">>
+    <p>Hi, Manon here, with a meta explanation for this.</p>
+    <p>So... in the actual //Twee voor Twaalf// show, there is a shelf behind the players with a bunch of different books (e.g. dictionary, encyclopedia, atlases, etc...), that they can flip through to find answers. Players also have a computer that keeps track of the previous questions and to open Wikipedia (only available for one set question each round). Points are deducted as soon as a player opens a book or opens Wikipedia, and stops when the player rings the bell.</p>
+    <p>Obviously, I can't have //aaaaaaall// the necessary books to answer the questions in the game, so I've linked Wikipedia here. All answers should be findable on the English Wikipedia</p>
+<</widget>>
+<<widget "PointsPopup">>
+    <p>Hi, Manon here, with a meta explanation for this.</p>
+    <p>One point is deducted every two seconds, from the moment you click //Search Answer// until you //Ring Bell// (or confirm the answer).</p>
+    <p>In the //Twee voor Twaalf// show, the counter starts as soon as a player opens ones of the available books or Wikipedia. And, if both players are looking for answers in multiple spots, then a point is deducted every second instead of two.</p>
+<</widget>>
+<<widget "LettersPopup">>
+    <p>Hi, Manon here.</p>
+    <p>You //actually// don't have to do that. I'm tracking it for you at the bottom of the screen.</p>
+<</widget>>
+<<widget "TimerTickDown">>
+    <<repeat 2s>>
+        <<if $timer>>
+            <<set $points -->>
+            <<redo "points">>
+        <<else>>
+            <<stop>>
+        <</if>>
+    <</repeat>>
+<</widget>>
+<<widget "FirstQCheck">>
+    <<set $timer to false>>
+    <<if $questionOne.toLowerCase() is "type help" || $questionOne.toLowerCase() is "typehelp">>
+        <<set $first to "T", $correctAnswer[0] to true>>
+    <<else>>
+        <<set $first to $questionOne[0].toUpperCase(), $correctAnswer[0] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "SecondQCheck">>
+    <<set $timer to false>>
+    <<if $questionTwo.toLowerCase() is "yseult">>
+        <<set $second to "Y", $correctAnswer[1] to true>>
+    <<else>>
+        <<set $second to $questionTwo[0].toUpperCase(), $correctAnswer[1] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "ThirdQCheck">>
+    <<set $timer to false>>
+    <<if $questionThree.toLowerCase() is "saint tropez" || $questionThree.toLowerCase() is "saint-tropez">>
+        <<set $third to "S", $correctAnswer[2] to true>>
+    <<else>>
+        <<set $third to $questionThree[0].toUpperCase(), $correctAnswer[2] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "FourthQCheck">>
+    <<set $timer to false>>
+    <<if $questionFour.toLowerCase() is "ace">>
+        <<set $fourth to "A", $correctAnswer[3] to true>>
+    <<else>>
+        <<set $fourth to $questionFour[0].toUpperCase(), $correctAnswer[3] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "FifthQCheck">>
+    <<set $timer to false>>
+    <<if $questionFive.toLowerCase() is "nightingale">>
+        <<set $fifth to "N", $correctAnswer[4] to true>>
+    <<else>>
+        <<set $fifth to $questionFive[0].toUpperCase(), $correctAnswer[4] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "SixthQCheck">>
+    <<set $timer to false>>
+    <<if $questionSix.toLowerCase() is "jelly">>
+        <<set $sixth to "J", $correctAnswer[5] to true>>
+    <<else>>
+        <<set $sixth to $questionSix[0].toUpperCase(), $correctAnswer[5] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "SeventhQCheck">>
+    <<set $timer to false>>
+    <<if $questionSeven.toLowerCase() is "mamma mia!" || $questionSeven.toLowerCase() is "mamma mia" || $questionSeven.toLowerCase() is "mammamia!" || $questionSeven.toLowerCase() is "mammamia" || $questionSeven.toLowerCase() is "mamma-mia!" || $questionSeven.toLowerCase() is "mamma-mia">>
+        <<set $seventh to "M", $correctAnswer[6] to true>>
+    <<else>>
+        <<set $seventh to $questionSeven[0].toUpperCase(), $correctAnswer[6] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "EighthQCheck">>
+    <<set $timer to false>>
+    <<if $questionEight.toLowerCase() is "onigiri">>
+        <<set $eighth to "O", $correctAnswer[7] to true>>
+    <<else>>
+        <<set $eighth to $questionEight[0].toUpperCase(), $correctAnswer[7] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "TenthQCheck">>
+    <<set $timer to false>>
+    <<if $questionTen.toLowerCase() is "narnia">>
+        <<set $tenth to "N", $correctAnswer[9] to true>>
+    <<else>>
+        <<set $tenth to $questionTen[0].toUpperCase(), $correctAnswer[9] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "EleventhQCheck">>
+    <<set $timer to false>>
+    <<if $questionEleven.toLowerCase() is "if">>
+        <<set $eleventh to "I", $correctAnswer[10] to true>>
+    <<else>>
+        <<set $eleventh to $questionEleven[0].toUpperCase(), $correctAnswer[10] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "TwelfthQCheck">>
+    <<set $timer to false>>
+    <<if $questionTwelve.toLowerCase() is "electron">>
+        <<set $twelfth to "E", $correctAnswer[11] to true>>
+    <<else>>
+        <<set $twelfth to $questionTwelve[0].toUpperCase(), $correctAnswer[11] to false>>
+    <</if>>
+    <<redo "letters">>
+<</widget>>
+<<widget "ClickOne">>
+    <<linkreplace "$first">>
+        <<set _first to true, $points to $points - 10>>
+        <<if !$correctAnswer[0]>><<set $first to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickTwo">>
+    <<linkreplace "$second">>
+        <<set _second to true, $points to $points - 10>>
+        <<if !$correctAnswer[1]>><<set $second to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickThree">>
+    <<linkreplace "$third">>
+        <<set _third to true, $points to $points - 10>>
+        <<if !$correctAnswer[2]>><<set $three to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickFour">>
+    <<linkreplace "$fourth">>
+        <<set _fourth to true, $points to $points - 10>>
+        <<if !$correctAnswer[3]>><<set $fourth to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickFive">>
+    <<linkreplace "$fifth">>
+        <<set _fifth to true, $points to $points - 10>>
+        <<if !$correctAnswer[4]>><<set $fifth to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickSix">>
+    <<linkreplace "$sixth">>
+        <<set _sixth to true, $points to $points - 10>>
+        <<if !$correctAnswer[5]>><<set $sixth to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickSeven">>
+    <<linkreplace "$seventh">>
+        <<set _seventh to true, $points to $points - 10>>
+        <<if !$correctAnswer[6]>><<set $seventh to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickEight">>
+    <<linkreplace "$eighth">>
+        <<set _eighth to true, $points to $points - 10>>
+        <<if !$correctAnswer[7]>><<set $eighth to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickNine">>
+    <<linkreplace "$ninth">>
+        <<set _ninth to true, $points to $points - 10>>
+        <<if !$correctAnswer[8]>><<set $ninth to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickTen">>
+    <<linkreplace "$tenth">>
+        <<set _tenth to true, $points to $points - 10>>
+        <<if !$correctAnswer[9]>><<set $tenth to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickEleven">>
+    <<linkreplace "$eleventh">>
+        <<set _eleventh to true, $points to $points - 10>>
+        <<if !$correctAnswer[10]>><<set $eleventh to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "ClickTwelve">>
+    <<linkreplace "$twelfth">>
+        <<set _twelfth to true, $points to $points - 10>>
+        <<if !$correctAnswer[11]>><<set $twelfth to "?">><</if>>
+        <<redo "bought points">>
+        <<Colours>>
+    <</linkreplace>>
+<</widget>>
+<<widget "Colours">>
+    <<if _first>>
+        <<if $correctAnswer[0]>><<addclass "#four" "correct">><<else>><<addclass "#four" "wrong">><</if>>
+    <</if>>
+    <<if _second>>
+        <<if $correctAnswer[1]>><<addclass "#eight" "correct">><<else>><<addclass "#eight" "wrong">><</if>>
+    <</if>>
+    <<if _third>>
+        <<if $correctAnswer[2]>><<addclass "#twelve" "correct">><<else>><<addclass "#twelve" "wrong">><</if>>
+    <</if>>
+    <<if _fourth>>
+        <<if $correctAnswer[3]>><<addclass "#ten" "correct">><<else>><<addclass "#ten" "wrong">><</if>>
+    <</if>>
+    <<if _fifth>>
+        <<if $correctAnswer[4]>><<addclass "#seven" "correct">><<else>><<addclass "#seven" "wrong">><</if>>
+    <</if>>
+    <<if _sixth>>
+        <<if $correctAnswer[5]>><<addclass "#nine" "correct">><<else>><<addclass "#nine" "wrong">><</if>>
+    <</if>>
+    <<if _seventh>>
+        <<if $correctAnswer[6]>><<addclass "#eleven" "correct">><<else>><<addclass "#eleven" "wrong">><</if>>
+    <</if>>
+    <<if _eighth>>
+        <<if $correctAnswer[7]>><<addclass "#three" "correct">><<else>><<addclass "#three" "wrong">><</if>>
+    <</if>>
+    <<if _ninth>>
+        <<if $correctAnswer[8]>><<addclass "#five" "correct">><<else>><<addclass "#five" "wrong">><</if>>
+    <</if>>
+    <<if _tenth>>
+        <<if $correctAnswer[9]>><<addclass "#one" "correct">><<else>><<addclass "#one" "wrong">><</if>>
+    <</if>>
+    <<if _eleventh>>
+        <<if $correctAnswer[10]>><<addclass "#six" "correct">><<else>><<addclass "#six" "wrong">><</if>>
+    <</if>>
+    <<if _twelfth>>
+        <<if $correctAnswer[11]>><<addclass "#two" "correct">><<else>><<addclass "#two" "wrong">><</if>>
+    <</if>>
+<</widget>>
+<<widget "FinalScore">>
+    <<if $won>>
+    <<set _correctCount to 0>>
+    <<timed 1s>>
+        <<for _i to 0; _i lt $correctAnswer.length; _i++>>
+            <<if $correctAnswer[_i] is true>>
+                <<set _correctCount ++>>
+            <</if>>
+        <</for>>
+        <<if _correctCount is 12>>
+            <<set $points to $points + 100>>
+        <<elseif _correctCount is 11>>
+            <<set $points to $points + 75>>
+        <<elseif _correctCount is 10>>
+            <<set $points to $points + 50>>
+        <<elseif _correctCount is 9>>
+            <<set $points to $points + 25>>
+        <</if>>
+        <<redo "points">>
+    <<next>>
+        <<set _notLooked to 0>>
+        <<for _i to 0; _i lt $lookedUp.length; _i++>>
+            <<if $lookedUp[_i] is false && $correctAnswer[_i] is true>>
+                <<set _notLooked to _notLooked + 10>>
+            <</if>>
+        <</for>>
+        <<set $points to $points + _notLooked>>
+        <<redo "points">>
+    <</timed>>
+    <<else>>
+        <<set $points to 0>>
+    <</if>>
+<</widget>>
+
+:: About [nothing]
+<h2>About //Twee voor Twaalf//</h2>
+
+<p>//Twee voor Twaalf// is a television quiz broadcast on the Dutch public channel BNNVARA, wherein duos of players must answer twelve questions, with the initials of each answer forming a final word. Players earn a score, dependent on completing the round, the amount of correct answers, and whether they looked up informations or bought letter placements. The team with the highest score each week can turn this score into a redeemable cash prise, with the other team receives a pen set as consolation prize.</p>
+
+<p>Players start with 15 minutes to answer all 12 questions and find the word - each new round removing a minute to make it more difficult. Questions are all of varying topics - thought the round always ends with a music question, includes a word puzzle, and an animated question (produced by the students of the HKU). Both competing teams share the same general topics for their questions (sometimes mirroring each other).</p>
+
+<p>There are two types of word puzzle: the //paardensprong// (horse jump) and //taartpuzzel// (cake puzzle) - both involving a 9-letter word. The //paardensprong// displays each letter in a 3x3-cell square, with an empty cell in the middle, and plays like the knight in chess (pick a letter, jump 3 cells to the next one, and jump again and again in the same direction until the word is complete). The //taartpuzzle// displays the letters of the word in order in a circle, save for one missing, replaced by a question mark (this is the one I used here). In both cases, players have about a minute to solve the puzzle.</p>
+
+<p>Players can earn extra points if they have less than three mistakes, as well as for every correct answer given without looking it up. On the other hand, they lose points if they look up an answer (1 per 2 seconds), or buy a letter placement (10 points each). That score, along with its details, is only given to the players at the end of their round - while viewers get to know it right away. The highest ever score is 673, as the team had no mistakes and did not buy a single letter.</p>
+
+<p>If the word is not found, the team loses all its points (even from previous rounds), only receiving the pen set as a consolation prize. If both teams of that week do not find their respective word, they both lose the round and must go home. If both teams end with the same score (which happened once!), the number of errors determine the winners.</p>
+
+<p>At the end of their second round, the winning team can decide to cash in their current points or go for a third round to multiply their winnings. The third round is considered quite difficult, as it only lasts 13 minutes (11 to answer questions, 2 to find the word) and often has more complex questions. Most winning teams end their run with the second round.</p>
+
+<p>As the show is quite popular, the selection process is pretty strict - happening only twice a year, with players being tested on their general knowledge in writing, without cooperation or searching. You are only told whether you move on to the next state or not - where further cut happen, during an interview with the producers.</p>
+
+<<return>>
+
+:: Credits [nothing]
+<p>//Twee voor Twaalf!// is a tiny game created for the Neo-Twiny Jam, based on the Dutch TV quiz show of the name.</p>
+<p>All things related to the actual game show and its rules is obviously owned by BNNVARA, the Dtuch public broadcaster, including the picture of presentor Astrid Joosten (which I dithered to hell). I came up with this set of questions, and wrote and coded them all by myself on Twine.</p>
+<p>//Twee voor Twaalf// is one of my absolute favourite show ever, even if it often makes me feel super dumb (cutting myself some slack about Dutch-specific questions, already). Except when I know the answer and the team on TV struggles, or I find the words (ONCE! I managed the final word before everyone). It's really neat, because you get to learn some cool stuff about a bunch of different topics every episode (the questions on TV are often pretty extensive).</p>
+<p>I like it so much, I've made offline versions in PowerPoints to play with family and friends. We skip the timer, because the actual questions are paragraphs long instead of just one sentence, but mainly because it's more fun this way. I have a bunch of those PowerPoints somewhere in my computer.</p>
+<p>Being able to watch the show again inspired me to make this super tiny version for the jam - which was a struggle, especially to condense the questions so much. I unfortunately had to cut all the fun banter from Astrid (word count) and visual queues (time constraints). There was also only enough space for one set of questions (it would be fun to have an extended version with random set assignment, so it can be replayed). But this was fun to do!</p>
+
+<p>And I hope you have fun too!</p>
+<<return>>
